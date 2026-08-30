@@ -1,0 +1,1282 @@
+{
+  "phase1": {
+    "conditions": {
+      "private_random_uniform": {
+        "cooperation_rate": {
+          "mean": 0.34900000000000003,
+          "std": 0.08312039460926542,
+          "min": 0.23,
+          "max": 0.52
+        },
+        "mean_capability": {
+          "mean": 0.8107653602626067,
+          "std": 0.12436269880698313,
+          "min": 0.5685633100057467,
+          "max": 0.9821921825113545
+        },
+        "gini": {
+          "mean": 0.3140264975086152,
+          "std": 0.07408127923321067,
+          "min": 0.1907186068646909,
+          "max": 0.404849235373969
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 102.0,
+          "std": 48.744230427815765,
+          "min": 30.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.4,
+          "std": 1.624807680927192,
+          "min": 1.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 98.6,
+          "std": 47.119422746888574,
+          "min": 29.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.7872461409152994,
+          "std": 0.05109747710762573,
+          "min": 0.6582705563993424,
+          "max": 0.8623768755312056
+        },
+        "capability_utilization": {
+          "mean": 2.5620724846828904,
+          "std": 0.42459200973498323,
+          "min": 1.8379550298650713,
+          "max": 3.184066539769948
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "private_self_select_uniform": {
+        "cooperation_rate": {
+          "mean": 0.524,
+          "std": 0.03200000000000001,
+          "min": 0.47,
+          "max": 0.59
+        },
+        "mean_capability": {
+          "mean": 0.8823898193292928,
+          "std": 0.12639094956310537,
+          "min": 0.6431065464863142,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.04958250354172693,
+          "std": 0.020692531041150885,
+          "min": 0.023233344513311494,
+          "max": 0.08668351312434641
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 153.0,
+          "std": 57.62811813689564,
+          "min": 60.0,
+          "max": 240.0
+        },
+        "unique_templates": {
+          "mean": 5.1,
+          "std": 1.9209372712298547,
+          "min": 2.0,
+          "max": 8.0
+        },
+        "templates_transferred": {
+          "mean": 147.9,
+          "std": 55.707180865665784,
+          "min": 58.0,
+          "max": 232.0
+        },
+        "matching_quality": {
+          "mean": 0.5395006294971969,
+          "std": 0.0259253627714412,
+          "min": 0.5119552677962111,
+          "max": 0.5926318494175206
+        },
+        "capability_utilization": {
+          "mean": 3.5969553577214066,
+          "std": 0.48494159525404107,
+          "min": 3.1040083453396483,
+          "max": 4.8129475778924675
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "private_cap_match_uniform": {
+        "cooperation_rate": {
+          "mean": 0.29600000000000004,
+          "std": 0.04543126676640219,
+          "min": 0.23,
+          "max": 0.39
+        },
+        "mean_capability": {
+          "mean": 0.7739455921276563,
+          "std": 0.14477659212228786,
+          "min": 0.5562355233486667,
+          "max": 0.9999623324035877
+        },
+        "gini": {
+          "mean": 0.2739381650583363,
+          "std": 0.024318566093582034,
+          "min": 0.21993400823117848,
+          "max": 0.31149337233875274
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 90.0,
+          "std": 51.96152422706632,
+          "min": 30.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.0,
+          "std": 1.7320508075688772,
+          "min": 1.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 87.0,
+          "std": 50.22947341949744,
+          "min": 29.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.9547841137499585,
+          "std": 0.04474383071436068,
+          "min": 0.8254172432182139,
+          "max": 0.9861330186841571
+        },
+        "capability_utilization": {
+          "mean": 2.3704868206043286,
+          "std": 0.6350218820118113,
+          "min": 1.6844928494572893,
+          "max": 3.4243801857436167
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "private_diff_weight_uniform": {
+        "cooperation_rate": {
+          "mean": 0.4010000000000001,
+          "std": 0.09038252043398656,
+          "min": 0.3,
+          "max": 0.59
+        },
+        "mean_capability": {
+          "mean": 0.8640494704699748,
+          "std": 0.1309815390007378,
+          "min": 0.5739799043752729,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.026142138210278554,
+          "std": 0.011917906997697396,
+          "min": 0.007820624168312085,
+          "max": 0.04789536690056129
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 135.0,
+          "std": 67.4166151627327,
+          "min": 30.0,
+          "max": 270.0
+        },
+        "unique_templates": {
+          "mean": 4.5,
+          "std": 2.247220505424423,
+          "min": 1.0,
+          "max": 9.0
+        },
+        "templates_transferred": {
+          "mean": 130.5,
+          "std": 65.16939465730827,
+          "min": 29.0,
+          "max": 261.0
+        },
+        "matching_quality": {
+          "mean": 0.7509256543537421,
+          "std": 0.10473374504410606,
+          "min": 0.5331168636579069,
+          "max": 0.8761083350515542
+        },
+        "capability_utilization": {
+          "mean": 2.8004162092945943,
+          "std": 0.6829867685441472,
+          "min": 2.038866561410297,
+          "max": 4.6386329789771
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "public_random_uniform": {
+        "cooperation_rate": {
+          "mean": 0.34900000000000003,
+          "std": 0.08312039460926542,
+          "min": 0.23,
+          "max": 0.52
+        },
+        "mean_capability": {
+          "mean": 0.8107653602626067,
+          "std": 0.12436269880698313,
+          "min": 0.5685633100057467,
+          "max": 0.9821921825113545
+        },
+        "gini": {
+          "mean": 0.3140264975086152,
+          "std": 0.07408127923321067,
+          "min": 0.1907186068646909,
+          "max": 0.404849235373969
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 102.0,
+          "std": 48.744230427815765,
+          "min": 30.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.4,
+          "std": 1.624807680927192,
+          "min": 1.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 98.6,
+          "std": 47.119422746888574,
+          "min": 29.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.7872461409152994,
+          "std": 0.05109747710762573,
+          "min": 0.6582705563993424,
+          "max": 0.8623768755312056
+        },
+        "capability_utilization": {
+          "mean": 2.5620724846828904,
+          "std": 0.42459200973498323,
+          "min": 1.8379550298650713,
+          "max": 3.184066539769948
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "public_self_select_uniform": {
+        "cooperation_rate": {
+          "mean": 0.547,
+          "std": 0.06403905058634148,
+          "min": 0.47,
+          "max": 0.66
+        },
+        "mean_capability": {
+          "mean": 0.9185870338816683,
+          "std": 0.08559578745935394,
+          "min": 0.7570990802292789,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.056446024446026935,
+          "std": 0.019144709012571853,
+          "min": 0.03118279569892457,
+          "max": 0.08680551650204738
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 186.0,
+          "std": 98.40731680114035,
+          "min": 90.0,
+          "max": 420.0
+        },
+        "unique_templates": {
+          "mean": 6.2,
+          "std": 3.2802438933713454,
+          "min": 3.0,
+          "max": 14.0
+        },
+        "templates_transferred": {
+          "mean": 179.8,
+          "std": 95.127072907769,
+          "min": 87.0,
+          "max": 406.0
+        },
+        "matching_quality": {
+          "mean": 0.5357811263165494,
+          "std": 0.022279172429109647,
+          "min": 0.49846393231476427,
+          "max": 0.5731111210490425
+        },
+        "capability_utilization": {
+          "mean": 3.5729418092398304,
+          "std": 0.5188379875779925,
+          "min": 2.831504876722953,
+          "max": 4.6386329789771
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "public_cap_match_uniform": {
+        "cooperation_rate": {
+          "mean": 0.29600000000000004,
+          "std": 0.04543126676640219,
+          "min": 0.23,
+          "max": 0.39
+        },
+        "mean_capability": {
+          "mean": 0.7739455921276563,
+          "std": 0.14477659212228786,
+          "min": 0.5562355233486667,
+          "max": 0.9999623324035877
+        },
+        "gini": {
+          "mean": 0.2739381650583363,
+          "std": 0.024318566093582034,
+          "min": 0.21993400823117848,
+          "max": 0.31149337233875274
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 90.0,
+          "std": 51.96152422706632,
+          "min": 30.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.0,
+          "std": 1.7320508075688772,
+          "min": 1.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 87.0,
+          "std": 50.22947341949744,
+          "min": 29.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.9547841137499585,
+          "std": 0.04474383071436068,
+          "min": 0.8254172432182139,
+          "max": 0.9861330186841571
+        },
+        "capability_utilization": {
+          "mean": 2.3704868206043286,
+          "std": 0.6350218820118113,
+          "min": 1.6844928494572893,
+          "max": 3.4243801857436167
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "public_diff_weight_uniform": {
+        "cooperation_rate": {
+          "mean": 0.4010000000000001,
+          "std": 0.09038252043398656,
+          "min": 0.3,
+          "max": 0.59
+        },
+        "mean_capability": {
+          "mean": 0.8640494704699748,
+          "std": 0.1309815390007378,
+          "min": 0.5739799043752729,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.026142138210278554,
+          "std": 0.011917906997697396,
+          "min": 0.007820624168312085,
+          "max": 0.04789536690056129
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 135.0,
+          "std": 67.4166151627327,
+          "min": 30.0,
+          "max": 270.0
+        },
+        "unique_templates": {
+          "mean": 4.5,
+          "std": 2.247220505424423,
+          "min": 1.0,
+          "max": 9.0
+        },
+        "templates_transferred": {
+          "mean": 130.5,
+          "std": 65.16939465730827,
+          "min": 29.0,
+          "max": 261.0
+        },
+        "matching_quality": {
+          "mean": 0.7509256543537421,
+          "std": 0.10473374504410606,
+          "min": 0.5331168636579069,
+          "max": 0.8761083350515542
+        },
+        "capability_utilization": {
+          "mean": 2.8004162092945943,
+          "std": 0.6829867685441472,
+          "min": 2.038866561410297,
+          "max": 4.6386329789771
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "rep_proxied_random_uniform": {
+        "cooperation_rate": {
+          "mean": 0.354,
+          "std": 0.08822698000045111,
+          "min": 0.23,
+          "max": 0.52
+        },
+        "mean_capability": {
+          "mean": 0.8183265707712088,
+          "std": 0.12553144035447433,
+          "min": 0.5685633100057467,
+          "max": 0.9821921825113545
+        },
+        "gini": {
+          "mean": 0.2554984274101654,
+          "std": 0.06353174096310238,
+          "min": 0.15561721378566928,
+          "max": 0.3308326885653665
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 102.0,
+          "std": 48.744230427815765,
+          "min": 30.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.4,
+          "std": 1.624807680927192,
+          "min": 1.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 98.6,
+          "std": 47.119422746888574,
+          "min": 29.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.787720158927751,
+          "std": 0.05146144179927899,
+          "min": 0.6582705563993424,
+          "max": 0.8623768755312056
+        },
+        "capability_utilization": {
+          "mean": 2.5680859093351884,
+          "std": 0.42418613430368873,
+          "min": 1.8379550298650713,
+          "max": 3.184066539769948
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "rep_proxied_self_select_uniform": {
+        "cooperation_rate": {
+          "mean": 0.524,
+          "std": 0.03200000000000001,
+          "min": 0.47,
+          "max": 0.59
+        },
+        "mean_capability": {
+          "mean": 0.8823898193292928,
+          "std": 0.12639094956310537,
+          "min": 0.6431065464863142,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.05665074008689504,
+          "std": 0.024007720959459095,
+          "min": 0.024034364146831244,
+          "max": 0.09134709556051157
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 153.0,
+          "std": 57.62811813689564,
+          "min": 60.0,
+          "max": 240.0
+        },
+        "unique_templates": {
+          "mean": 5.1,
+          "std": 1.9209372712298547,
+          "min": 2.0,
+          "max": 8.0
+        },
+        "templates_transferred": {
+          "mean": 147.9,
+          "std": 55.707180865665784,
+          "min": 58.0,
+          "max": 232.0
+        },
+        "matching_quality": {
+          "mean": 0.5395006294971969,
+          "std": 0.0259253627714412,
+          "min": 0.5119552677962111,
+          "max": 0.5926318494175206
+        },
+        "capability_utilization": {
+          "mean": 3.5969553577214066,
+          "std": 0.48494159525404107,
+          "min": 3.1040083453396483,
+          "max": 4.8129475778924675
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "rep_proxied_cap_match_uniform": {
+        "cooperation_rate": {
+          "mean": 0.344,
+          "std": 0.0782559901860554,
+          "min": 0.21,
+          "max": 0.47
+        },
+        "mean_capability": {
+          "mean": 0.7723975457074121,
+          "std": 0.1631035278532346,
+          "min": 0.46341297713319946,
+          "max": 0.9978296641433764
+        },
+        "gini": {
+          "mean": 0.2833696089709097,
+          "std": 0.041529183874610784,
+          "min": 0.21486981939339156,
+          "max": 0.3506099077160687
+        },
+        "knowledge_diffusion": {
+          "mean": 0.9,
+          "std": 0.30000000000000004,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 96.0,
+          "std": 59.6992462263972,
+          "min": 0.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.2,
+          "std": 1.98997487421324,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 92.8,
+          "std": 57.709271352183954,
+          "min": 0.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.7761681284256775,
+          "std": 0.07705705504714776,
+          "min": 0.6087619246165659,
+          "max": 0.870321225857956
+        },
+        "capability_utilization": {
+          "mean": 2.665075880141208,
+          "std": 0.34486489209514554,
+          "min": 2.1227724535510584,
+          "max": 3.384504573354872
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "rep_proxied_diff_weight_uniform": {
+        "cooperation_rate": {
+          "mean": 0.4010000000000001,
+          "std": 0.09038252043398656,
+          "min": 0.3,
+          "max": 0.59
+        },
+        "mean_capability": {
+          "mean": 0.8640494704699748,
+          "std": 0.1309815390007378,
+          "min": 0.5739799043752729,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.023873306864729306,
+          "std": 0.012098648109587362,
+          "min": 0.0009356740822399345,
+          "max": 0.042738905274264605
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 135.0,
+          "std": 67.4166151627327,
+          "min": 30.0,
+          "max": 270.0
+        },
+        "unique_templates": {
+          "mean": 4.5,
+          "std": 2.247220505424423,
+          "min": 1.0,
+          "max": 9.0
+        },
+        "templates_transferred": {
+          "mean": 130.5,
+          "std": 65.16939465730827,
+          "min": 29.0,
+          "max": 261.0
+        },
+        "matching_quality": {
+          "mean": 0.7509256543537421,
+          "std": 0.10473374504410606,
+          "min": 0.5331168636579069,
+          "max": 0.8761083350515542
+        },
+        "capability_utilization": {
+          "mean": 2.8004162092945943,
+          "std": 0.6829867685441472,
+          "min": 2.038866561410297,
+          "max": 4.6386329789771
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "separate_random_uniform": {
+        "cooperation_rate": {
+          "mean": 0.34900000000000003,
+          "std": 0.08312039460926542,
+          "min": 0.23,
+          "max": 0.52
+        },
+        "mean_capability": {
+          "mean": 0.8107653602626067,
+          "std": 0.12436269880698313,
+          "min": 0.5685633100057467,
+          "max": 0.9821921825113545
+        },
+        "gini": {
+          "mean": 0.3140264975086152,
+          "std": 0.07408127923321067,
+          "min": 0.1907186068646909,
+          "max": 0.404849235373969
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 102.0,
+          "std": 48.744230427815765,
+          "min": 30.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.4,
+          "std": 1.624807680927192,
+          "min": 1.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 98.6,
+          "std": 47.119422746888574,
+          "min": 29.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.7872461409152994,
+          "std": 0.05109747710762573,
+          "min": 0.6582705563993424,
+          "max": 0.8623768755312056
+        },
+        "capability_utilization": {
+          "mean": 2.5620724846828904,
+          "std": 0.42459200973498323,
+          "min": 1.8379550298650713,
+          "max": 3.184066539769948
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "separate_self_select_uniform": {
+        "cooperation_rate": {
+          "mean": 0.547,
+          "std": 0.06403905058634148,
+          "min": 0.47,
+          "max": 0.66
+        },
+        "mean_capability": {
+          "mean": 0.9185870338816683,
+          "std": 0.08559578745935394,
+          "min": 0.7570990802292789,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.056446024446026935,
+          "std": 0.019144709012571853,
+          "min": 0.03118279569892457,
+          "max": 0.08680551650204738
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 186.0,
+          "std": 98.40731680114035,
+          "min": 90.0,
+          "max": 420.0
+        },
+        "unique_templates": {
+          "mean": 6.2,
+          "std": 3.2802438933713454,
+          "min": 3.0,
+          "max": 14.0
+        },
+        "templates_transferred": {
+          "mean": 179.8,
+          "std": 95.127072907769,
+          "min": 87.0,
+          "max": 406.0
+        },
+        "matching_quality": {
+          "mean": 0.5357811263165494,
+          "std": 0.022279172429109647,
+          "min": 0.49846393231476427,
+          "max": 0.5731111210490425
+        },
+        "capability_utilization": {
+          "mean": 3.5729418092398304,
+          "std": 0.5188379875779925,
+          "min": 2.831504876722953,
+          "max": 4.6386329789771
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "separate_cap_match_uniform": {
+        "cooperation_rate": {
+          "mean": 0.29600000000000004,
+          "std": 0.04543126676640219,
+          "min": 0.23,
+          "max": 0.39
+        },
+        "mean_capability": {
+          "mean": 0.7739455921276563,
+          "std": 0.14477659212228786,
+          "min": 0.5562355233486667,
+          "max": 0.9999623324035877
+        },
+        "gini": {
+          "mean": 0.2739381650583363,
+          "std": 0.024318566093582034,
+          "min": 0.21993400823117848,
+          "max": 0.31149337233875274
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 90.0,
+          "std": 51.96152422706632,
+          "min": 30.0,
+          "max": 210.0
+        },
+        "unique_templates": {
+          "mean": 3.0,
+          "std": 1.7320508075688772,
+          "min": 1.0,
+          "max": 7.0
+        },
+        "templates_transferred": {
+          "mean": 87.0,
+          "std": 50.22947341949744,
+          "min": 29.0,
+          "max": 203.0
+        },
+        "matching_quality": {
+          "mean": 0.9547841137499585,
+          "std": 0.04474383071436068,
+          "min": 0.8254172432182139,
+          "max": 0.9861330186841571
+        },
+        "capability_utilization": {
+          "mean": 2.3704868206043286,
+          "std": 0.6350218820118113,
+          "min": 1.6844928494572893,
+          "max": 3.4243801857436167
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "separate_diff_weight_uniform": {
+        "cooperation_rate": {
+          "mean": 0.4010000000000001,
+          "std": 0.09038252043398656,
+          "min": 0.3,
+          "max": 0.59
+        },
+        "mean_capability": {
+          "mean": 0.8640494704699748,
+          "std": 0.1309815390007378,
+          "min": 0.5739799043752729,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.026142138210278554,
+          "std": 0.011917906997697396,
+          "min": 0.007820624168312085,
+          "max": 0.04789536690056129
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 135.0,
+          "std": 67.4166151627327,
+          "min": 30.0,
+          "max": 270.0
+        },
+        "unique_templates": {
+          "mean": 4.5,
+          "std": 2.247220505424423,
+          "min": 1.0,
+          "max": 9.0
+        },
+        "templates_transferred": {
+          "mean": 130.5,
+          "std": 65.16939465730827,
+          "min": 29.0,
+          "max": 261.0
+        },
+        "matching_quality": {
+          "mean": 0.7509256543537421,
+          "std": 0.10473374504410606,
+          "min": 0.5331168636579069,
+          "max": 0.8761083350515542
+        },
+        "capability_utilization": {
+          "mean": 2.8004162092945943,
+          "std": 0.6829867685441472,
+          "min": 2.038866561410297,
+          "max": 4.6386329789771
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "analysis": {
+      "visibility_means": {
+        "private": 0.3925,
+        "public": 0.39825000000000005,
+        "rep_proxied": 0.40575,
+        "separate": 0.39825000000000005
+      },
+      "mechanism_means": {
+        "random": 0.35025,
+        "self_select": 0.5355000000000001,
+        "cap_match": 0.30800000000000005,
+        "diff_weight": 0.4010000000000001
+      },
+      "best_visibility": "rep_proxied",
+      "best_mechanism": "self_select",
+      "best_condition": "public_self_select_uniform",
+      "grand_mean": 0.3986875000000001,
+      "visibility_effects": {
+        "private": -0.006187500000000068,
+        "public": -0.0004375000000000351,
+        "rep_proxied": 0.007062499999999916,
+        "separate": -0.0004375000000000351
+      },
+      "mechanism_effects": {
+        "random": -0.04843750000000008,
+        "self_select": 0.1368125,
+        "cap_match": -0.09068750000000003,
+        "diff_weight": 0.002312499999999995
+      }
+    }
+  },
+  "phase2": {
+    "conditions": {
+      "rep_proxied_self_select_fixed": {
+        "cooperation_rate": {
+          "mean": 0.4960000000000001,
+          "std": 0.057131427428342804,
+          "min": 0.4,
+          "max": 0.58
+        },
+        "mean_capability": {
+          "mean": 0.8612696023286887,
+          "std": 0.13744428099585151,
+          "min": 0.5308299463718376,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.05514234742879935,
+          "std": 0.026594874033141872,
+          "min": 0.0018650257450651964,
+          "max": 0.0999665666616516
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 156.0,
+          "std": 83.57032966310472,
+          "min": 30.0,
+          "max": 330.0
+        },
+        "unique_templates": {
+          "mean": 5.2,
+          "std": 2.7856776554368237,
+          "min": 1.0,
+          "max": 11.0
+        },
+        "templates_transferred": {
+          "mean": 150.8,
+          "std": 80.78465200766789,
+          "min": 29.0,
+          "max": 319.0
+        },
+        "matching_quality": {
+          "mean": 0.5621083606892354,
+          "std": 0.056305455843789536,
+          "min": 0.5075742472805325,
+          "max": 0.6915709603039315
+        },
+        "capability_utilization": {
+          "mean": 3.480120657029566,
+          "std": 0.42069108358053814,
+          "min": 2.9761904761904767,
+          "max": 4.485339226292563
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "rep_proxied_self_select_uniform": {
+        "cooperation_rate": {
+          "mean": 0.524,
+          "std": 0.03200000000000001,
+          "min": 0.47,
+          "max": 0.59
+        },
+        "mean_capability": {
+          "mean": 0.8823898193292928,
+          "std": 0.12639094956310537,
+          "min": 0.6431065464863142,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.05665074008689504,
+          "std": 0.024007720959459095,
+          "min": 0.024034364146831244,
+          "max": 0.09134709556051157
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 153.0,
+          "std": 57.62811813689564,
+          "min": 60.0,
+          "max": 240.0
+        },
+        "unique_templates": {
+          "mean": 5.1,
+          "std": 1.9209372712298547,
+          "min": 2.0,
+          "max": 8.0
+        },
+        "templates_transferred": {
+          "mean": 147.9,
+          "std": 55.707180865665784,
+          "min": 58.0,
+          "max": 232.0
+        },
+        "matching_quality": {
+          "mean": 0.5395006294971969,
+          "std": 0.0259253627714412,
+          "min": 0.5119552677962111,
+          "max": 0.5926318494175206
+        },
+        "capability_utilization": {
+          "mean": 3.5969553577214066,
+          "std": 0.48494159525404107,
+          "min": 3.1040083453396483,
+          "max": 4.8129475778924675
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "rep_proxied_self_select_adaptive": {
+        "cooperation_rate": {
+          "mean": 0.438,
+          "std": 0.03815756805667782,
+          "min": 0.38,
+          "max": 0.5
+        },
+        "mean_capability": {
+          "mean": 0.8705697401395494,
+          "std": 0.13279842664419678,
+          "min": 0.5308299463718376,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.05549100992865441,
+          "std": 0.026451700567446577,
+          "min": 0.0013198394443389994,
+          "max": 0.0930280833597601
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 159.0,
+          "std": 73.54590403278758,
+          "min": 30.0,
+          "max": 300.0
+        },
+        "unique_templates": {
+          "mean": 5.3,
+          "std": 2.4515301344262523,
+          "min": 1.0,
+          "max": 10.0
+        },
+        "templates_transferred": {
+          "mean": 153.7,
+          "std": 71.09437389836133,
+          "min": 29.0,
+          "max": 290.0
+        },
+        "matching_quality": {
+          "mean": 0.681978907523704,
+          "std": 0.04703285101823008,
+          "min": 0.5994709951992859,
+          "max": 0.7577665747064865
+        },
+        "capability_utilization": {
+          "mean": 3.065368818847035,
+          "std": 0.5307536183038002,
+          "min": 2.5784152740362685,
+          "max": 4.485339226292563
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "rep_proxied_self_select_bimodal": {
+        "cooperation_rate": {
+          "mean": 0.531,
+          "std": 0.045923850012820136,
+          "min": 0.46,
+          "max": 0.61
+        },
+        "mean_capability": {
+          "mean": 0.9233789158087108,
+          "std": 0.08529165726459474,
+          "min": 0.724122895527826,
+          "max": 1.0
+        },
+        "gini": {
+          "mean": 0.060654079722992325,
+          "std": 0.026292449874024786,
+          "min": 0.020019405884723174,
+          "max": 0.09773830554506047
+        },
+        "knowledge_diffusion": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "total_templates": {
+          "mean": 183.0,
+          "std": 74.03377607551839,
+          "min": 90.0,
+          "max": 300.0
+        },
+        "unique_templates": {
+          "mean": 6.1,
+          "std": 2.467792535850613,
+          "min": 3.0,
+          "max": 10.0
+        },
+        "templates_transferred": {
+          "mean": 176.9,
+          "std": 71.56598353966778,
+          "min": 87.0,
+          "max": 290.0
+        },
+        "matching_quality": {
+          "mean": 0.5412475154112047,
+          "std": 0.04093281652047107,
+          "min": 0.5006738687770508,
+          "max": 0.6337301170794037
+        },
+        "capability_utilization": {
+          "mean": 3.442948978162461,
+          "std": 0.33762199960691613,
+          "min": 2.916666666666667,
+          "max": 3.937652774806847
+        },
+        "final_cooperation": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "best_visibility": "rep_proxied",
+    "best_mechanism": "self_select"
+  }
+}

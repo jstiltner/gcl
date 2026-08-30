@@ -1,0 +1,937 @@
+{
+  "phase1": {
+    "meritocracy": {
+      "cooperation_rate": {
+        "mean": 0.354,
+        "std": 0.03878143885933062,
+        "min": 0.31,
+        "max": 0.41
+      },
+      "gini": {
+        "mean": 0.1249953568779167,
+        "std": 0.025772436180322742,
+        "min": 0.08099312044349372,
+        "max": 0.1541313400784461
+      },
+      "mobility": {
+        "mean": 0.06,
+        "std": 0.057348835113617505,
+        "min": 0.0,
+        "max": 0.16666666666666666
+      },
+      "hard_task_rate": {
+        "mean": 0.013333333333333332,
+        "std": 0.016329931618554522,
+        "min": 0.0,
+        "max": 0.03333333333333333
+      },
+      "recovery_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "knowledge_diffusion": {
+        "mean": 0.03333333333333333,
+        "std": 0.0,
+        "min": 0.03333333333333333,
+        "max": 0.03333333333333333
+      },
+      "underclass_size": {
+        "mean": 0.3333333333333333,
+        "std": 0.0,
+        "min": 0.3333333333333333,
+        "max": 0.3333333333333333
+      },
+      "mean_capability": {
+        "mean": 0.49872398405125073,
+        "std": 0.018265425047477645,
+        "min": 0.47505950446279394,
+        "max": 0.5260049246467379
+      },
+      "total_templates": {
+        "mean": 3.4,
+        "std": 0.4898979485566356,
+        "min": 3.0,
+        "max": 4.0
+      },
+      "unique_templates": {
+        "mean": 3.4,
+        "std": 0.4898979485566356,
+        "min": 3.0,
+        "max": 4.0
+      }
+    },
+    "guild": {
+      "cooperation_rate": {
+        "mean": 0.284,
+        "std": 0.0801498596380555,
+        "min": 0.18,
+        "max": 0.42
+      },
+      "gini": {
+        "mean": 0.16393240364281741,
+        "std": 0.007377365269263381,
+        "min": 0.1505914556764223,
+        "max": 0.1714279611067251
+      },
+      "mobility": {
+        "mean": 0.03333333333333333,
+        "std": 0.0,
+        "min": 0.03333333333333333,
+        "max": 0.03333333333333333
+      },
+      "hard_task_rate": {
+        "mean": 0.006666666666666666,
+        "std": 0.013333333333333332,
+        "min": 0.0,
+        "max": 0.03333333333333333
+      },
+      "recovery_rate": {
+        "mean": 0.00909090909090909,
+        "std": 0.01818181818181818,
+        "min": 0.0,
+        "max": 0.045454545454545456
+      },
+      "knowledge_diffusion": {
+        "mean": 0.03333333333333333,
+        "std": 0.0,
+        "min": 0.03333333333333333,
+        "max": 0.03333333333333333
+      },
+      "underclass_size": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "mean_capability": {
+        "mean": 0.4941497745879616,
+        "std": 0.021405434221106023,
+        "min": 0.4692258519888405,
+        "max": 0.5299742089543116
+      },
+      "total_templates": {
+        "mean": 2.0,
+        "std": 1.0954451150103321,
+        "min": 1.0,
+        "max": 4.0
+      },
+      "unique_templates": {
+        "mean": 2.0,
+        "std": 1.0954451150103321,
+        "min": 1.0,
+        "max": 4.0
+      }
+    },
+    "obligation": {
+      "cooperation_rate": {
+        "mean": 0.454,
+        "std": 0.08957678270623476,
+        "min": 0.3,
+        "max": 0.57
+      },
+      "gini": {
+        "mean": 0.022794971824724897,
+        "std": 0.020091603395976564,
+        "min": 0.004382121895101232,
+        "max": 0.047323944127684925
+      },
+      "mobility": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "hard_task_rate": {
+        "mean": 0.026666666666666665,
+        "std": 0.013333333333333334,
+        "min": 0.0,
+        "max": 0.03333333333333333
+      },
+      "recovery_rate": {
+        "mean": 0.2,
+        "std": 0.4000000000000001,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "knowledge_diffusion": {
+        "mean": 0.061111111111111116,
+        "std": 0.02324055629261321,
+        "min": 0.03333333333333333,
+        "max": 0.08888888888888889
+      },
+      "underclass_size": {
+        "mean": 0.9800000000000001,
+        "std": 0.016329931618554516,
+        "min": 0.9666666666666667,
+        "max": 1.0
+      },
+      "mean_capability": {
+        "mean": 0.5068816733142497,
+        "std": 0.01845017781167644,
+        "min": 0.4803798317382585,
+        "max": 0.528378170661197
+      },
+      "total_templates": {
+        "mean": 7.8,
+        "std": 1.16619037896906,
+        "min": 6.0,
+        "max": 9.0
+      },
+      "unique_templates": {
+        "mean": 4.8,
+        "std": 1.469693845669907,
+        "min": 3.0,
+        "max": 7.0
+      }
+    },
+    "ubuntu": {
+      "cooperation_rate": {
+        "mean": 0.562,
+        "std": 0.050358713248056686,
+        "min": 0.49,
+        "max": 0.64
+      },
+      "gini": {
+        "mean": -4.4408920985006264e-17,
+        "std": 8.881784197001253e-17,
+        "min": -2.220446049250313e-16,
+        "max": 0.0
+      },
+      "mobility": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "hard_task_rate": {
+        "mean": 0.006666666666666666,
+        "std": 0.013333333333333332,
+        "min": 0.0,
+        "max": 0.03333333333333333
+      },
+      "recovery_rate": {
+        "mean": 0.05,
+        "std": 0.1,
+        "min": 0.0,
+        "max": 0.25
+      },
+      "knowledge_diffusion": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "underclass_size": {
+        "mean": 0.9199999999999999,
+        "std": 0.03399346342395189,
+        "min": 0.8666666666666667,
+        "max": 0.9666666666666667
+      },
+      "mean_capability": {
+        "mean": 0.9583485194869755,
+        "std": 0.05947391552911368,
+        "min": 0.8420576603808952,
+        "max": 1.0
+      },
+      "total_templates": {
+        "mean": 192.0,
+        "std": 48.744230427815765,
+        "min": 120.0,
+        "max": 270.0
+      },
+      "unique_templates": {
+        "mean": 6.4,
+        "std": 1.624807680927192,
+        "min": 4.0,
+        "max": 9.0
+      }
+    },
+    "rotating": {
+      "cooperation_rate": {
+        "mean": 0.29000000000000004,
+        "std": 0.055497747702046435,
+        "min": 0.21,
+        "max": 0.37
+      },
+      "gini": {
+        "mean": 0.13678251530896407,
+        "std": 0.010755521968066813,
+        "min": 0.12689469882989735,
+        "max": 0.1524371963593878
+      },
+      "mobility": {
+        "mean": 0.06666666666666667,
+        "std": 0.0,
+        "min": 0.06666666666666667,
+        "max": 0.06666666666666667
+      },
+      "hard_task_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "recovery_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "knowledge_diffusion": {
+        "mean": 0.08666666666666666,
+        "std": 0.039999999999999994,
+        "min": 0.03333333333333333,
+        "max": 0.13333333333333333
+      },
+      "underclass_size": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "mean_capability": {
+        "mean": 0.5097064428521515,
+        "std": 0.02732746193471148,
+        "min": 0.4869646300762342,
+        "max": 0.5629451098166461
+      },
+      "total_templates": {
+        "mean": 6.2,
+        "std": 3.709447398198282,
+        "min": 1.0,
+        "max": 12.0
+      },
+      "unique_templates": {
+        "mean": 2.4,
+        "std": 1.2000000000000002,
+        "min": 1.0,
+        "max": 4.0
+      }
+    },
+    "monastic": {
+      "cooperation_rate": {
+        "mean": 0.43599999999999994,
+        "std": 0.0682934843158555,
+        "min": 0.38,
+        "max": 0.55
+      },
+      "gini": {
+        "mean": 0.08605805305455423,
+        "std": 0.005214826128843722,
+        "min": 0.07869161087219889,
+        "max": 0.09453573268616733
+      },
+      "mobility": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "hard_task_rate": {
+        "mean": 0.006666666666666666,
+        "std": 0.013333333333333332,
+        "min": 0.0,
+        "max": 0.03333333333333333
+      },
+      "recovery_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "knowledge_diffusion": {
+        "mean": 0.7530555555555555,
+        "std": 0.0473234209756597,
+        "min": 0.6916666666666667,
+        "max": 0.8291666666666667
+      },
+      "underclass_size": {
+        "mean": 0.9933333333333334,
+        "std": 0.01333333333333333,
+        "min": 0.9666666666666667,
+        "max": 1.0
+      },
+      "mean_capability": {
+        "mean": 0.803939226485034,
+        "std": 0.10619854747755864,
+        "min": 0.6996375613024964,
+        "max": 0.983277333594794
+      },
+      "total_templates": {
+        "mean": 109.8,
+        "std": 49.99759994239723,
+        "min": 67.0,
+        "max": 199.0
+      },
+      "unique_templates": {
+        "mean": 4.8,
+        "std": 1.9390719429665317,
+        "min": 3.0,
+        "max": 8.0
+      }
+    }
+  },
+  "phase2": {
+    "meritocracy_vs_guild": {
+      "structure_a": "meritocracy",
+      "structure_b": "guild",
+      "wins_a": 3,
+      "wins_b": 2,
+      "ties": 0,
+      "win_rate_a": 0.6,
+      "win_rate_b": 0.4,
+      "avg_resources_a": 438.35095237049006,
+      "avg_resources_b": 486.6338249288122,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "meritocracy_vs_obligation": {
+      "structure_a": "meritocracy",
+      "structure_b": "obligation",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 208.9199340687138,
+      "avg_resources_b": 872.7502283097501,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "meritocracy_vs_ubuntu": {
+      "structure_a": "meritocracy",
+      "structure_b": "ubuntu",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 141.80295261771101,
+      "avg_resources_b": 1032.3431110845333,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "meritocracy_vs_rotating": {
+      "structure_a": "meritocracy",
+      "structure_b": "rotating",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 252.36592352875886,
+      "avg_resources_b": 809.705609074428,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "meritocracy_vs_monastic": {
+      "structure_a": "meritocracy",
+      "structure_b": "monastic",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 217.39439133519335,
+      "avg_resources_b": 907.7162030123396,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "guild_vs_obligation": {
+      "structure_a": "guild",
+      "structure_b": "obligation",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 335.8501316619014,
+      "avg_resources_b": 749.6269029068092,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "guild_vs_ubuntu": {
+      "structure_a": "guild",
+      "structure_b": "ubuntu",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 221.57664231927598,
+      "avg_resources_b": 971.5380235277032,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "guild_vs_rotating": {
+      "structure_a": "guild",
+      "structure_b": "rotating",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 372.272706402604,
+      "avg_resources_b": 685.3415054344912,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "guild_vs_monastic": {
+      "structure_a": "guild",
+      "structure_b": "monastic",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 312.66725078919444,
+      "avg_resources_b": 836.4055715536113,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "obligation_vs_ubuntu": {
+      "structure_a": "obligation",
+      "structure_b": "ubuntu",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 304.17927482556763,
+      "avg_resources_b": 954.0176686473189,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "obligation_vs_rotating": {
+      "structure_a": "obligation",
+      "structure_b": "rotating",
+      "wins_a": 3,
+      "wins_b": 2,
+      "ties": 0,
+      "win_rate_a": 0.6,
+      "win_rate_b": 0.4,
+      "avg_resources_a": 616.8002792372902,
+      "avg_resources_b": 572.7235608461264,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "obligation_vs_monastic": {
+      "structure_a": "obligation",
+      "structure_b": "monastic",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 415.2224613600878,
+      "avg_resources_b": 842.157956325638,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "ubuntu_vs_rotating": {
+      "structure_a": "ubuntu",
+      "structure_b": "rotating",
+      "wins_a": 5,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "avg_resources_a": 872.0661220397308,
+      "avg_resources_b": 370.2215901980877,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "ubuntu_vs_monastic": {
+      "structure_a": "ubuntu",
+      "structure_b": "monastic",
+      "wins_a": 5,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "avg_resources_a": 726.7432920280985,
+      "avg_resources_b": 567.0539090831377,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    },
+    "rotating_vs_monastic": {
+      "structure_a": "rotating",
+      "structure_b": "monastic",
+      "wins_a": 0,
+      "wins_b": 5,
+      "ties": 0,
+      "win_rate_a": 0.0,
+      "win_rate_b": 1.0,
+      "avg_resources_a": 516.6655329407834,
+      "avg_resources_b": 735.8208726941826,
+      "survival_rate_a": 1.0,
+      "survival_rate_b": 1.0
+    }
+  },
+  "phase3": [
+    {
+      "survivor_counts": {
+        "guild": 1,
+        "ubuntu": 3,
+        "monastic": 1
+      },
+      "survivor_resources": {
+        "guild": 889.7007333288025,
+        "ubuntu": 803.818163295863,
+        "monastic": 279.1990725643587
+      },
+      "total_rounds": 200,
+      "extinction_order": [
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 7
+        },
+        {
+          "structure": "obligation",
+          "round": 8
+        },
+        {
+          "structure": "meritocracy",
+          "round": 10
+        }
+      ],
+      "winner": "guild"
+    },
+    {
+      "survivor_counts": {
+        "ubuntu": 3
+      },
+      "survivor_resources": {
+        "ubuntu": 2583.1094472745062
+      },
+      "total_rounds": 200,
+      "extinction_order": [
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "meritocracy",
+          "round": 7
+        },
+        {
+          "structure": "meritocracy",
+          "round": 7
+        },
+        {
+          "structure": "monastic",
+          "round": 7
+        },
+        {
+          "structure": "meritocracy",
+          "round": 8
+        }
+      ],
+      "winner": "ubuntu"
+    },
+    {
+      "survivor_counts": {
+        "ubuntu": 2
+      },
+      "survivor_resources": {
+        "ubuntu": 2599.6849376006176
+      },
+      "total_rounds": 200,
+      "extinction_order": [
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 7
+        },
+        {
+          "structure": "guild",
+          "round": 7
+        },
+        {
+          "structure": "obligation",
+          "round": 7
+        },
+        {
+          "structure": "ubuntu",
+          "round": 7
+        },
+        {
+          "structure": "rotating",
+          "round": 7
+        },
+        {
+          "structure": "rotating",
+          "round": 7
+        },
+        {
+          "structure": "monastic",
+          "round": 7
+        },
+        {
+          "structure": "obligation",
+          "round": 8
+        },
+        {
+          "structure": "meritocracy",
+          "round": 36
+        }
+      ],
+      "winner": "ubuntu"
+    },
+    {
+      "survivor_counts": {
+        "ubuntu": 2,
+        "monastic": 1
+      },
+      "survivor_resources": {
+        "ubuntu": 1682.0190024463836,
+        "monastic": 809.8808810981639
+      },
+      "total_rounds": 200,
+      "extinction_order": [
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "ubuntu",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 7
+        },
+        {
+          "structure": "guild",
+          "round": 8
+        },
+        {
+          "structure": "guild",
+          "round": 8
+        },
+        {
+          "structure": "rotating",
+          "round": 8
+        },
+        {
+          "structure": "monastic",
+          "round": 8
+        },
+        {
+          "structure": "meritocracy",
+          "round": 11
+        },
+        {
+          "structure": "obligation",
+          "round": 11
+        }
+      ],
+      "winner": "ubuntu"
+    },
+    {
+      "survivor_counts": {
+        "ubuntu": 3
+      },
+      "survivor_resources": {
+        "ubuntu": 2590.3730541355053
+      },
+      "total_rounds": 200,
+      "extinction_order": [
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "meritocracy",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 6
+        },
+        {
+          "structure": "obligation",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "rotating",
+          "round": 6
+        },
+        {
+          "structure": "monastic",
+          "round": 6
+        },
+        {
+          "structure": "guild",
+          "round": 7
+        },
+        {
+          "structure": "obligation",
+          "round": 7
+        },
+        {
+          "structure": "obligation",
+          "round": 8
+        },
+        {
+          "structure": "rotating",
+          "round": 8
+        },
+        {
+          "structure": "monastic",
+          "round": 9
+        },
+        {
+          "structure": "monastic",
+          "round": 13
+        }
+      ],
+      "winner": "ubuntu"
+    }
+  ]
+}

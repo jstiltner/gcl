@@ -1,0 +1,92 @@
+{
+  "conditions": {
+    "random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      }
+    },
+    "round_robin": {
+      "cooperation_rate": {
+        "mean": 0.29,
+        "std": 0.0340587727318528
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      }
+    },
+    "self_selection": {
+      "cooperation_rate": {
+        "mean": 0.5130000000000001,
+        "std": 0.05831809324729334
+      },
+      "mean_effort": {
+        "mean": 0.9000000000000007,
+        "std": 1.1102230246251565e-16
+      }
+    },
+    "auction": {
+      "cooperation_rate": {
+        "mean": 0.33599999999999997,
+        "std": 0.031048349392520044
+      },
+      "mean_effort": {
+        "mean": 0.8499999999999993,
+        "std": 0.0
+      }
+    },
+    "contract_net": {
+      "cooperation_rate": {
+        "mean": 0.48600000000000004,
+        "std": 0.04317406628984581
+      },
+      "mean_effort": {
+        "mean": 0.8499999999999993,
+        "std": 0.0
+      }
+    },
+    "centralized_optimal": {
+      "cooperation_rate": {
+        "mean": 0.27999999999999997,
+        "std": 0.03898717737923586
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      }
+    }
+  },
+  "analysis": {
+    "ranking": [
+      "self_selection",
+      "contract_net",
+      "auction",
+      "random",
+      "round_robin",
+      "centralized_optimal"
+    ],
+    "cooperation_rates": {
+      "random": 0.29900000000000004,
+      "round_robin": 0.29,
+      "self_selection": 0.5130000000000001,
+      "auction": 0.33599999999999997,
+      "contract_net": 0.48600000000000004,
+      "centralized_optimal": 0.27999999999999997
+    },
+    "self_selection_coop": 0.5130000000000001,
+    "vs_random": 0.21400000000000008,
+    "vs_round_robin": 0.22300000000000014,
+    "vs_auction": 0.17700000000000016,
+    "vs_contract_net": 0.02700000000000008,
+    "vs_centralized_optimal": 0.23300000000000015,
+    "self_selection_rank": 1,
+    "self_selection_is_best": true,
+    "vs_optimal": 0.23300000000000015,
+    "efficiency_vs_optimal": 1.8321428571428577
+  }
+}

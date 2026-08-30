@@ -1,0 +1,380 @@
+{
+  "ablation": {
+    "results": {
+      "full": {
+        "enabled_components": [
+          "REPUTATION",
+          "CONSEQUENCES",
+          "IDENTITY",
+          "COMMUNICATION",
+          "OBSERVATION",
+          "MEMORY",
+          "INSTITUTIONS"
+        ],
+        "cooperation_rate": 0.3604000000000001,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.9109,
+        "trust_network_density": 0.28775510204081634,
+        "trust_network_clustering": 0.38814957675598416,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "minimal": {
+        "enabled_components": [],
+        "cooperation_rate": 0.5098499999999999,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 2.2673499999999995,
+        "trust_network_density": 0.0,
+        "trust_network_clustering": 0.0,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "no_identity": {
+        "enabled_components": [
+          "REPUTATION",
+          "CONSEQUENCES",
+          "COMMUNICATION",
+          "OBSERVATION",
+          "MEMORY",
+          "INSTITUTIONS"
+        ],
+        "cooperation_rate": 0.3604000000000001,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.9109,
+        "trust_network_density": 0.28775510204081634,
+        "trust_network_clustering": 0.38814957675598416,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "no_memory": {
+        "enabled_components": [
+          "REPUTATION",
+          "CONSEQUENCES",
+          "COMMUNICATION",
+          "OBSERVATION",
+          "IDENTITY",
+          "INSTITUTIONS"
+        ],
+        "cooperation_rate": 0.34299999999999997,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.8758000000000001,
+        "trust_network_density": 0.2436734693877551,
+        "trust_network_clustering": 0.35843263392953795,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "no_reputation": {
+        "enabled_components": [
+          "CONSEQUENCES",
+          "IDENTITY",
+          "COMMUNICATION",
+          "OBSERVATION",
+          "MEMORY",
+          "INSTITUTIONS"
+        ],
+        "cooperation_rate": 0.3592500000000002,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.9115499999999994,
+        "trust_network_density": 0.0,
+        "trust_network_clustering": 0.0,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "no_consequences": {
+        "enabled_components": [
+          "REPUTATION",
+          "IDENTITY",
+          "COMMUNICATION",
+          "OBSERVATION",
+          "MEMORY",
+          "INSTITUTIONS"
+        ],
+        "cooperation_rate": 0.523,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 2.2764000000000006,
+        "trust_network_density": 0.5379591836734694,
+        "trust_network_clustering": 0.6617038245867852,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "no_communication": {
+        "enabled_components": [
+          "REPUTATION",
+          "CONSEQUENCES",
+          "IDENTITY",
+          "OBSERVATION",
+          "MEMORY",
+          "INSTITUTIONS"
+        ],
+        "cooperation_rate": 0.3604000000000001,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.9109,
+        "trust_network_density": 0.28775510204081634,
+        "trust_network_clustering": 0.38814957675598416,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "no_observation": {
+        "enabled_components": [
+          "REPUTATION",
+          "CONSEQUENCES",
+          "IDENTITY",
+          "COMMUNICATION",
+          "MEMORY",
+          "INSTITUTIONS"
+        ],
+        "cooperation_rate": 0.3604000000000001,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.9109,
+        "trust_network_density": 0.28775510204081634,
+        "trust_network_clustering": 0.38814957675598416,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "no_institutions": {
+        "enabled_components": [
+          "REPUTATION",
+          "CONSEQUENCES",
+          "IDENTITY",
+          "COMMUNICATION",
+          "OBSERVATION",
+          "MEMORY"
+        ],
+        "cooperation_rate": 0.3604000000000001,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.9109,
+        "trust_network_density": 0.28775510204081634,
+        "trust_network_clustering": 0.38814957675598416,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "identity_memory_only": {
+        "enabled_components": [
+          "MEMORY",
+          "IDENTITY"
+        ],
+        "cooperation_rate": 0.5175499999999998,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 2.2702500000000008,
+        "trust_network_density": 0.0,
+        "trust_network_clustering": 0.0,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "identity_reputation_only": {
+        "enabled_components": [
+          "REPUTATION",
+          "IDENTITY"
+        ],
+        "cooperation_rate": 0.51015,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 2.264750000000001,
+        "trust_network_density": 0.5285714285714286,
+        "trust_network_clustering": 0.6385258235864254,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      },
+      "identity_consequences_only": {
+        "enabled_components": [
+          "CONSEQUENCES",
+          "IDENTITY"
+        ],
+        "cooperation_rate": 0.3512499999999998,
+        "commitment_fulfillment_rate": 0,
+        "average_reward": 1.8973500000000003,
+        "trust_network_density": 0.0,
+        "trust_network_clustering": 0.0,
+        "reputation_variance": 0.0,
+        "specialization_index": 0.11113530751242011
+      }
+    },
+    "analysis": {
+      "component_importance": {
+        "IDENTITY": 0.0,
+        "MEMORY": 0.017400000000000138,
+        "REPUTATION": 0.0011499999999999289,
+        "CONSEQUENCES": -0.1625999999999999,
+        "COMMUNICATION": 0.0,
+        "OBSERVATION": 0.0,
+        "INSTITUTIONS": 0.0
+      },
+      "minimal_viable_infrastructure": [],
+      "synergies": [],
+      "phase_transitions": []
+    }
+  },
+  "institutional": {
+    "bias_0.3": {
+      "total_rounds": 200,
+      "n_agents": 50,
+      "norms": {
+        "count": 1,
+        "established": 1,
+        "details": [
+          {
+            "id": 0,
+            "pattern": "mutual_defection",
+            "adoption": 0.6
+          }
+        ]
+      },
+      "coalitions": {
+        "count": 690,
+        "stable": 0,
+        "avg_size": 4.401449275362319
+      },
+      "roles": {
+        "count": 0,
+        "names": []
+      },
+      "institutions": {
+        "count": 0,
+        "types": []
+      },
+      "complexity_score": 0.33999999999999997
+    },
+    "bias_0.5": {
+      "total_rounds": 200,
+      "n_agents": 50,
+      "norms": {
+        "count": 1,
+        "established": 1,
+        "details": [
+          {
+            "id": 0,
+            "pattern": "mixed",
+            "adoption": 0.6
+          }
+        ]
+      },
+      "coalitions": {
+        "count": 236,
+        "stable": 0,
+        "avg_size": 6.432203389830509
+      },
+      "roles": {
+        "count": 0,
+        "names": []
+      },
+      "institutions": {
+        "count": 0,
+        "types": []
+      },
+      "complexity_score": 0.33999999999999997
+    },
+    "bias_0.7": {
+      "total_rounds": 200,
+      "n_agents": 50,
+      "norms": {
+        "count": 1,
+        "established": 1,
+        "details": [
+          {
+            "id": 0,
+            "pattern": "mutual_cooperation",
+            "adoption": 0.61
+          }
+        ]
+      },
+      "coalitions": {
+        "count": 69,
+        "stable": 0,
+        "avg_size": 5.463768115942029
+      },
+      "roles": {
+        "count": 0,
+        "names": []
+      },
+      "institutions": {
+        "count": 0,
+        "types": []
+      },
+      "complexity_score": 0.33999999999999997
+    }
+  },
+  "phase_transitions": {
+    "population_sizes": [
+      10,
+      20,
+      30,
+      50,
+      75,
+      100,
+      150,
+      200,
+      300,
+      500
+    ],
+    "cooperation_rates": [
+      0.047000000000000014,
+      0.14587499999999998,
+      0.2515,
+      0.3604000000000001,
+      0.40956666666666663,
+      0.4233999999999999,
+      0.45096666666666657,
+      0.4663624999999999,
+      0.4737583333333334,
+      0.4864599999999998
+    ],
+    "institutional_complexity": [
+      0.33999999999999997,
+      0.33999999999999997,
+      0.33999999999999997,
+      0.33999999999999997,
+      0.33999999999999997,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.3
+    ],
+    "trust_network_density": [
+      0.0,
+      0.02894736842105263,
+      0.14482758620689656,
+      0.28775510204081634,
+      0.3790990990990991,
+      0.397979797979798,
+      0.4112751677852349,
+      0.4012562814070352,
+      0.3495094760312152,
+      0.26830460921843685
+    ],
+    "coalition_count": [
+      37,
+      77,
+      128,
+      114,
+      132,
+      218,
+      181,
+      304,
+      183,
+      456
+    ],
+    "avg_coalition_size": [
+      3.5405405405405403,
+      4.324675324675325,
+      5.015625,
+      6.315789473684211,
+      7.962121212121212,
+      8.729357798165138,
+      10.61878453038674,
+      12.967105263157896,
+      14.836065573770492,
+      17.348684210526315
+    ],
+    "transitions": {
+      "cooperation_threshold": null,
+      "institutional_threshold": 10,
+      "dunbar_estimate": 10,
+      "observations": [
+        "Institutions emerge at n=10",
+        "Trust network becomes sparse at n=10 (Dunbar-like threshold)",
+        "Maximum average coalition size: 17.3"
+      ],
+      "max_coalition_size": 17.348684210526315
+    }
+  }
+}

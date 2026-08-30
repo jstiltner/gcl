@@ -1,0 +1,272 @@
+[
+  {
+    "scenario": "task_handoff",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "task_handoff",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "gcl",
+    "success": false,
+    "failure_reason": "Agent B's response lacks a critical commitment structure. While B correctly parsed A's commitment and proposed a reasonable schedule (12:30pm-2:30pm with proper advance notice), B failed to formalize ",
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "gcl",
+    "success": false,
+    "failure_reason": "Agent B's response lacks a critical commitment structure. While B correctly parsed A's commitment and proposed a reasonable schedule (12:30pm-2:30pm with proper advance notice), B failed to formalize ",
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "resource_allocation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "openai",
+    "model_b": "claude",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "natural_language",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  },
+  {
+    "scenario": "error_escalation",
+    "model_a": "claude",
+    "model_b": "openai",
+    "method": "gcl",
+    "success": true,
+    "failure_reason": null,
+    "messages_exchanged": 2
+  }
+]

@@ -1,0 +1,295 @@
+{
+  "conditions": {
+    "solo_self_selection_public": {
+      "cooperation_rate": {
+        "mean": 0.454,
+        "std": 0.044317039612320676
+      },
+      "mean_team_capability": {
+        "mean": 0.81731541107833,
+        "std": 0.0516368473183661
+      },
+      "mean_team_size": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "solo_capability_matched_public": {
+      "cooperation_rate": {
+        "mean": 0.454,
+        "std": 0.044317039612320676
+      },
+      "mean_team_capability": {
+        "mean": 0.81731541107833,
+        "std": 0.0516368473183661
+      },
+      "mean_team_size": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "solo_random_public": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_team_capability": {
+        "mean": 0.4992050300336082,
+        "std": 0.03112908942883295
+      },
+      "mean_team_size": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "additive_self_selection_public": {
+      "cooperation_rate": {
+        "mean": 0.433,
+        "std": 0.0525452186216786
+      },
+      "mean_team_capability": {
+        "mean": 0.7822402092206144,
+        "std": 0.05426888414822748
+      },
+      "mean_team_size": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "additive_capability_matched_public": {
+      "cooperation_rate": {
+        "mean": 0.433,
+        "std": 0.0525452186216786
+      },
+      "mean_team_capability": {
+        "mean": 0.7822402092206144,
+        "std": 0.05426888414822748
+      },
+      "mean_team_size": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "additive_random_public": {
+      "cooperation_rate": {
+        "mean": 0.257,
+        "std": 0.047127486671792715
+      },
+      "mean_team_capability": {
+        "mean": 0.49824504488576116,
+        "std": 0.03127682824728671
+      },
+      "mean_team_size": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "complementary_self_selection_public": {
+      "cooperation_rate": {
+        "mean": 0.191,
+        "std": 0.0439203825119955
+      },
+      "mean_team_capability": {
+        "mean": 0.7471650073628993,
+        "std": 0.0647041907860725
+      },
+      "mean_team_size": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "complementary_capability_matched_public": {
+      "cooperation_rate": {
+        "mean": 0.191,
+        "std": 0.0439203825119955
+      },
+      "mean_team_capability": {
+        "mean": 0.7471650073628993,
+        "std": 0.0647041907860725
+      },
+      "mean_team_size": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "complementary_random_public": {
+      "cooperation_rate": {
+        "mean": 0.077,
+        "std": 0.02934280150224242
+      },
+      "mean_team_capability": {
+        "mean": 0.41653007267832154,
+        "std": 0.03420359784590715
+      },
+      "mean_team_size": {
+        "mean": 2.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "weakest_link_self_selection_public": {
+      "cooperation_rate": {
+        "mean": 0.40099999999999997,
+        "std": 0.04548626166217664
+      },
+      "mean_team_capability": {
+        "mean": 0.701644378078316,
+        "std": 0.03139234682235851
+      },
+      "mean_team_size": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "weakest_link_capability_matched_public": {
+      "cooperation_rate": {
+        "mean": 0.40099999999999997,
+        "std": 0.04548626166217664
+      },
+      "mean_team_capability": {
+        "mean": 0.701644378078316,
+        "std": 0.03139234682235851
+      },
+      "mean_team_size": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "weakest_link_random_public": {
+      "cooperation_rate": {
+        "mean": 0.21200000000000002,
+        "std": 0.04019950248448356
+      },
+      "mean_team_capability": {
+        "mean": 0.3786297838000859,
+        "std": 0.03120531536454823
+      },
+      "mean_team_size": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "best_shot_self_selection_public": {
+      "cooperation_rate": {
+        "mean": 0.466,
+        "std": 0.04363484845854286
+      },
+      "mean_team_capability": {
+        "mean": 0.81731541107833,
+        "std": 0.0516368473183661
+      },
+      "mean_team_size": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "best_shot_capability_matched_public": {
+      "cooperation_rate": {
+        "mean": 0.466,
+        "std": 0.04363484845854286
+      },
+      "mean_team_capability": {
+        "mean": 0.81731541107833,
+        "std": 0.0516368473183661
+      },
+      "mean_team_size": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    },
+    "best_shot_random_public": {
+      "cooperation_rate": {
+        "mean": 0.335,
+        "std": 0.053712196007983146
+      },
+      "mean_team_capability": {
+        "mean": 0.6200116154029611,
+        "std": 0.03263170208534951
+      },
+      "mean_team_size": {
+        "mean": 3.0,
+        "std": 0.0
+      },
+      "total_tasks": {
+        "mean": 100.0,
+        "std": 0.0
+      }
+    }
+  },
+  "analysis": {
+    "solo_self_vs_cap": 0.0,
+    "solo_self_vs_random": 0.15499999999999997,
+    "solo_best_method": "self_selection",
+    "additive_self_vs_cap": 0.0,
+    "additive_self_vs_random": 0.176,
+    "additive_best_method": "self_selection",
+    "complementary_self_vs_cap": 0.0,
+    "complementary_self_vs_random": 0.114,
+    "complementary_best_method": "self_selection",
+    "weakest_link_self_vs_cap": 0.0,
+    "weakest_link_self_vs_random": 0.18899999999999995,
+    "weakest_link_best_method": "self_selection",
+    "best_shot_self_vs_cap": 0.0,
+    "best_shot_self_vs_random": 0.131,
+    "best_shot_best_method": "self_selection",
+    "overall_self_selection": 0.389,
+    "overall_capability_matched": 0.389,
+    "overall_random": 0.236,
+    "self_selection_advantage": 0.0
+  }
+}

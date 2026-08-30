@@ -1,0 +1,87 @@
+{
+  "config": {
+    "n_tasks": 60,
+    "dry_run": false,
+    "agents": [
+      "claude_reasoning",
+      "claude_direct",
+      "gpt_reasoning",
+      "gpt_direct"
+    ]
+  },
+  "part1_calibration": {
+    "claude_reasoning": {
+      "n": 33,
+      "accuracy": 1.0,
+      "brier_self": 0.027072727272727276,
+      "brier_external": 0.009696969696969702,
+      "corr_self": NaN,
+      "corr_external": NaN
+    },
+    "claude_direct": {
+      "n": 41,
+      "accuracy": 0.0975609756097561,
+      "brier_self": 0.6894170731707318,
+      "brier_external": 0.393719512195122,
+      "corr_self": 0.2804641209653409,
+      "corr_external": 0.32929062754720023
+    },
+    "gpt_reasoning": {
+      "n": 60,
+      "accuracy": 0.6,
+      "brier_self": 0.3606666666666667,
+      "brier_external": 0.33345833333333336,
+      "corr_self": 0.34802877899356516,
+      "corr_external": 0.40383032352984277
+    },
+    "gpt_direct": {
+      "n": 60,
+      "accuracy": 0.43333333333333335,
+      "brier_self": 0.48374999999999996,
+      "brier_external": 0.2806666666666667,
+      "corr_self": 0.30825739964255383,
+      "corr_external": 0.4338926019208193
+    }
+  },
+  "part2_selection": {
+    "self_selection": {
+      "success_rate": 0.7,
+      "n": 60,
+      "picks": {
+        "claude_reasoning": 14,
+        "gpt_reasoning": 39,
+        "gpt_direct": 4,
+        "claude_direct": 3
+      }
+    },
+    "external_assignment": {
+      "success_rate": 0.7166666666666667,
+      "n": 60,
+      "picks": {
+        "gpt_reasoning": 54,
+        "gpt_direct": 6
+      }
+    },
+    "random": {
+      "success_rate": 0.5166666666666667,
+      "n": 60,
+      "picks": {
+        "gpt_direct": 14,
+        "gpt_reasoning": 12,
+        "claude_direct": 16,
+        "claude_reasoning": 18
+      }
+    }
+  },
+  "part3_framing": {
+    "chosen": {
+      "success_rate": 0.9666666666666667,
+      "n": 30
+    },
+    "assigned": {
+      "success_rate": 1.0,
+      "n": 30
+    },
+    "framing_effect": -0.033333333333333326
+  }
+}

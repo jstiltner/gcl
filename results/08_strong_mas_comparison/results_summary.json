@@ -1,0 +1,84 @@
+{
+  "experiment": "08_strong_mas_comparison",
+  "timestamp": "2024-12-23",
+  "configuration": {
+    "n_agents_list": [5, 10, 15],
+    "n_tasks_list": [5, 10, 15],
+    "n_trials": 5,
+    "seed": 42
+  },
+  "summary": {
+    "GCL": {
+      "mean_efficiency": 0.645,
+      "std_efficiency": 0.194,
+      "mean_messages": 84.0,
+      "std_messages": 47.0,
+      "mean_runtime_ms": 1.32,
+      "success_rate": 1.0
+    },
+    "CNP": {
+      "mean_efficiency": 0.824,
+      "std_efficiency": 0.250,
+      "mean_messages": 109.5,
+      "std_messages": 69.7,
+      "mean_runtime_ms": 0.18,
+      "success_rate": 1.0
+    },
+    "FIPA-ACL": {
+      "mean_efficiency": 0.818,
+      "std_efficiency": 0.252,
+      "mean_messages": 190.2,
+      "std_messages": 122.1,
+      "mean_runtime_ms": 1.39,
+      "success_rate": 1.0
+    },
+    "Auction-1st": {
+      "mean_efficiency": 0.661,
+      "std_efficiency": 0.188,
+      "mean_messages": 175.6,
+      "std_messages": 110.4,
+      "mean_runtime_ms": 0.20,
+      "success_rate": 1.0
+    },
+    "Auction-2nd": {
+      "mean_efficiency": 0.661,
+      "std_efficiency": 0.188,
+      "mean_messages": 175.6,
+      "std_messages": 110.4,
+      "mean_runtime_ms": 0.16,
+      "success_rate": 1.0
+    },
+    "MARL-IQL": {
+      "mean_efficiency": 0.755,
+      "std_efficiency": 0.254,
+      "mean_messages": 0.0,
+      "std_messages": 0.0,
+      "mean_runtime_ms": 58.76,
+      "success_rate": 1.0
+    }
+  },
+  "key_findings": {
+    "highest_efficiency": "CNP (0.824)",
+    "lowest_messages": "GCL (84.0)",
+    "gcl_message_reduction_vs_cnp": "23.3%",
+    "gcl_message_reduction_vs_fipa": "55.8%",
+    "gcl_message_reduction_vs_auction": "52.2%"
+  },
+  "analysis": {
+    "gcl_strengths": [
+      "Lowest message complexity among communication-based protocols",
+      "Competitive efficiency in low-contention scenarios (5 agents, 5 tasks: 100%)",
+      "Scales well with agent count (message growth is sub-linear)"
+    ],
+    "gcl_weaknesses": [
+      "Lower efficiency than CNP in high-contention scenarios",
+      "Current implementation doesn't fully exploit multi-agent parallelism"
+    ],
+    "gcl_unique_value": [
+      "Verifiable commitments (not just task assignment)",
+      "Failure-first specification (handles incompleteness)",
+      "Template transfer (reusable coordination patterns)",
+      "Alignment guarantees (value-consistent commitments)"
+    ]
+  }
+}

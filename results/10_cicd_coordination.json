@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "gcl_avg_stages": 2.02,
+    "baseline_avg_stages": 2.02,
+    "gcl_deployments": 29,
+    "baseline_deployments": 29,
+    "gcl_avg_reward": 0.3235,
+    "baseline_avg_reward": 0.3235,
+    "gcl_advantage_stages": 0.0,
+    "gcl_advantage_deployments": 0
+  },
+  "by_drift": {
+    "0.00-0.05": {
+      "gcl_completion": 2.1,
+      "baseline_completion": 2.1,
+      "gcl_deployments": 4,
+      "baseline_deployments": 4
+    },
+    "0.05-0.10": {
+      "gcl_completion": 2.3,
+      "baseline_completion": 2.3,
+      "gcl_deployments": 4,
+      "baseline_deployments": 4
+    },
+    "0.10-0.15": {
+      "gcl_completion": 2.3636363636363638,
+      "baseline_completion": 2.3636363636363638,
+      "gcl_deployments": 5,
+      "baseline_deployments": 5
+    },
+    "0.15-0.20": {
+      "gcl_completion": 2.2222222222222223,
+      "baseline_completion": 2.2222222222222223,
+      "gcl_deployments": 2,
+      "baseline_deployments": 2
+    },
+    "0.20-0.25": {
+      "gcl_completion": 2.4,
+      "baseline_completion": 2.4,
+      "gcl_deployments": 4,
+      "baseline_deployments": 4
+    },
+    "0.25-0.30": {
+      "gcl_completion": 2.3636363636363638,
+      "baseline_completion": 2.3636363636363638,
+      "gcl_deployments": 4,
+      "baseline_deployments": 4
+    },
+    "0.30-0.35": {
+      "gcl_completion": 1.9,
+      "baseline_completion": 1.9,
+      "gcl_deployments": 3,
+      "baseline_deployments": 3
+    },
+    "0.35-0.40": {
+      "gcl_completion": 1.7777777777777777,
+      "baseline_completion": 1.7777777777777777,
+      "gcl_deployments": 0,
+      "baseline_deployments": 0
+    },
+    "0.40-0.45": {
+      "gcl_completion": 1.2,
+      "baseline_completion": 1.2,
+      "gcl_deployments": 1,
+      "baseline_deployments": 1
+    },
+    "0.45-0.50": {
+      "gcl_completion": 1.5,
+      "baseline_completion": 1.5,
+      "gcl_deployments": 2,
+      "baseline_deployments": 2
+    }
+  }
+}

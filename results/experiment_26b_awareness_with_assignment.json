@@ -1,0 +1,656 @@
+{
+  "results": {
+    "blind_assigned": [
+      {
+        "cooperation_rate": 0.279,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5401395637439622,
+        "gini": 0.3798865775553619
+      },
+      {
+        "cooperation_rate": 0.261,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5476745459418881,
+        "gini": 0.39214630522685034
+      },
+      {
+        "cooperation_rate": 0.288,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6471921816205186,
+        "gini": 0.30158972010334395
+      },
+      {
+        "cooperation_rate": 0.253,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5666577834405029,
+        "gini": 0.37427673631851466
+      },
+      {
+        "cooperation_rate": 0.266,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5413775988839636,
+        "gini": 0.39853753720832086
+      },
+      {
+        "cooperation_rate": 0.278,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5860237732772026,
+        "gini": 0.3519805841590584
+      },
+      {
+        "cooperation_rate": 0.263,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5887234119925728,
+        "gini": 0.33725031071240386
+      },
+      {
+        "cooperation_rate": 0.302,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6127602167691406,
+        "gini": 0.33113699796181395
+      },
+      {
+        "cooperation_rate": 0.277,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6097773772691906,
+        "gini": 0.325418086818001
+      },
+      {
+        "cooperation_rate": 0.3,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6465742926376674,
+        "gini": 0.2882407266350435
+      }
+    ],
+    "self_assigned": [
+      {
+        "cooperation_rate": 0.28600000000000003,
+        "mean_effort": 0.7866000000000002,
+        "mean_reputation": 0.6011955648917356,
+        "gini": 0.3251526817010859
+      },
+      {
+        "cooperation_rate": 0.27099999999999996,
+        "mean_effort": 0.7826000000000002,
+        "mean_reputation": 0.6227803656145161,
+        "gini": 0.27660777870306386
+      },
+      {
+        "cooperation_rate": 0.24700000000000003,
+        "mean_effort": 0.8150000000000001,
+        "mean_reputation": 0.49682640195993355,
+        "gini": 0.3890718180967263
+      },
+      {
+        "cooperation_rate": 0.29300000000000004,
+        "mean_effort": 0.7863500000000001,
+        "mean_reputation": 0.6110933462710846,
+        "gini": 0.3028350170206242
+      },
+      {
+        "cooperation_rate": 0.261,
+        "mean_effort": 0.8106,
+        "mean_reputation": 0.519648835227751,
+        "gini": 0.3995727427671767
+      },
+      {
+        "cooperation_rate": 0.26400000000000007,
+        "mean_effort": 0.7926,
+        "mean_reputation": 0.5956717383316356,
+        "gini": 0.3100458408868665
+      },
+      {
+        "cooperation_rate": 0.29300000000000004,
+        "mean_effort": 0.77885,
+        "mean_reputation": 0.6258185491498551,
+        "gini": 0.2886475150234964
+      },
+      {
+        "cooperation_rate": 0.266,
+        "mean_effort": 0.8066500000000001,
+        "mean_reputation": 0.5396734712965344,
+        "gini": 0.4072120690525456
+      },
+      {
+        "cooperation_rate": 0.268,
+        "mean_effort": 0.81135,
+        "mean_reputation": 0.524740455371747,
+        "gini": 0.3606345377329878
+      },
+      {
+        "cooperation_rate": 0.27,
+        "mean_effort": 0.8041,
+        "mean_reputation": 0.5472251826214564,
+        "gini": 0.37821757449166027
+      }
+    ],
+    "social_assigned": [
+      {
+        "cooperation_rate": 0.31,
+        "mean_effort": 0.8325000000000001,
+        "mean_reputation": 0.6248641239053636,
+        "gini": 0.34019858364046907
+      },
+      {
+        "cooperation_rate": 0.317,
+        "mean_effort": 0.8493999999999999,
+        "mean_reputation": 0.6858682878085609,
+        "gini": 0.248677012179648
+      },
+      {
+        "cooperation_rate": 0.28200000000000003,
+        "mean_effort": 0.8321999999999999,
+        "mean_reputation": 0.6001851058165384,
+        "gini": 0.3369772283807295
+      },
+      {
+        "cooperation_rate": 0.285,
+        "mean_effort": 0.8369000000000002,
+        "mean_reputation": 0.6264370705347907,
+        "gini": 0.32885695264584447
+      },
+      {
+        "cooperation_rate": 0.31200000000000006,
+        "mean_effort": 0.8402000000000001,
+        "mean_reputation": 0.6561541469645548,
+        "gini": 0.2995749577434732
+      },
+      {
+        "cooperation_rate": 0.29700000000000004,
+        "mean_effort": 0.8353999999999999,
+        "mean_reputation": 0.6248204371603908,
+        "gini": 0.30179936379177663
+      },
+      {
+        "cooperation_rate": 0.31099999999999994,
+        "mean_effort": 0.8436,
+        "mean_reputation": 0.6734571021153549,
+        "gini": 0.2794610220235332
+      },
+      {
+        "cooperation_rate": 0.324,
+        "mean_effort": 0.8469000000000001,
+        "mean_reputation": 0.6955527875925551,
+        "gini": 0.26349390271348305
+      },
+      {
+        "cooperation_rate": 0.277,
+        "mean_effort": 0.8372000000000002,
+        "mean_reputation": 0.6077151524826243,
+        "gini": 0.3342454431014108
+      },
+      {
+        "cooperation_rate": 0.30700000000000005,
+        "mean_effort": 0.8578000000000001,
+        "mean_reputation": 0.6947549170949665,
+        "gini": 0.23463088943647525
+      }
+    ],
+    "strategic_assigned": [
+      {
+        "cooperation_rate": 0.305,
+        "mean_effort": 0.8737999999999999,
+        "mean_reputation": 0.7344286546402854,
+        "gini": 0.21047489406820286
+      },
+      {
+        "cooperation_rate": 0.269,
+        "mean_effort": 0.8708500000000001,
+        "mean_reputation": 0.5737098804861263,
+        "gini": 0.3397502324830981
+      },
+      {
+        "cooperation_rate": 0.342,
+        "mean_effort": 0.87615,
+        "mean_reputation": 0.7676796298695178,
+        "gini": 0.17752431717799233
+      },
+      {
+        "cooperation_rate": 0.31100000000000005,
+        "mean_effort": 0.8650499999999999,
+        "mean_reputation": 0.6741852448577277,
+        "gini": 0.2537313616378434
+      },
+      {
+        "cooperation_rate": 0.31,
+        "mean_effort": 0.87285,
+        "mean_reputation": 0.629991128005543,
+        "gini": 0.30890163098558854
+      },
+      {
+        "cooperation_rate": 0.301,
+        "mean_effort": 0.87135,
+        "mean_reputation": 0.6393184288258111,
+        "gini": 0.26675094819968925
+      },
+      {
+        "cooperation_rate": 0.318,
+        "mean_effort": 0.8619499999999999,
+        "mean_reputation": 0.6567863727277633,
+        "gini": 0.29015430395992503
+      },
+      {
+        "cooperation_rate": 0.31399999999999995,
+        "mean_effort": 0.8750500000000001,
+        "mean_reputation": 0.7500302110591888,
+        "gini": 0.19441583016716946
+      },
+      {
+        "cooperation_rate": 0.273,
+        "mean_effort": 0.8674,
+        "mean_reputation": 0.6176078617794513,
+        "gini": 0.3237481675196885
+      },
+      {
+        "cooperation_rate": 0.30599999999999994,
+        "mean_effort": 0.8694000000000001,
+        "mean_reputation": 0.621520713814711,
+        "gini": 0.30288998549704105
+      }
+    ],
+    "blind_choice": [
+      {
+        "cooperation_rate": 0.25600000000000006,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.4997665968878465,
+        "gini": 0.43373841160462767
+      },
+      {
+        "cooperation_rate": 0.24399999999999994,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5049479175541493,
+        "gini": 0.44197266728153495
+      },
+      {
+        "cooperation_rate": 0.256,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6043483182487966,
+        "gini": 0.3326919409116804
+      },
+      {
+        "cooperation_rate": 0.26899999999999996,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5591842345921799,
+        "gini": 0.3427474975371181
+      },
+      {
+        "cooperation_rate": 0.29999999999999993,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6052695918775536,
+        "gini": 0.3239549360221423
+      },
+      {
+        "cooperation_rate": 0.28400000000000003,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6342634864420275,
+        "gini": 0.32622198070112485
+      },
+      {
+        "cooperation_rate": 0.255,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5009487073922245,
+        "gini": 0.43426032577478013
+      },
+      {
+        "cooperation_rate": 0.2800000000000001,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5828088580027044,
+        "gini": 0.3339405199922174
+      },
+      {
+        "cooperation_rate": 0.30700000000000005,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6391378035854265,
+        "gini": 0.296815738220392
+      },
+      {
+        "cooperation_rate": 0.29800000000000004,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5939804915732542,
+        "gini": 0.35235532273608006
+      }
+    ],
+    "self_choice": [
+      {
+        "cooperation_rate": 0.281,
+        "mean_effort": 0.7952000000000001,
+        "mean_reputation": 0.5980942519994855,
+        "gini": 0.32903731412428505
+      },
+      {
+        "cooperation_rate": 0.279,
+        "mean_effort": 0.7978500000000001,
+        "mean_reputation": 0.5903587587450295,
+        "gini": 0.31442226938478646
+      },
+      {
+        "cooperation_rate": 0.259,
+        "mean_effort": 0.8162,
+        "mean_reputation": 0.48379063843488646,
+        "gini": 0.40502985389101753
+      },
+      {
+        "cooperation_rate": 0.282,
+        "mean_effort": 0.79985,
+        "mean_reputation": 0.5609832513473594,
+        "gini": 0.353566632635389
+      },
+      {
+        "cooperation_rate": 0.24899999999999997,
+        "mean_effort": 0.7917500000000001,
+        "mean_reputation": 0.5746394864769739,
+        "gini": 0.3306441635992421
+      },
+      {
+        "cooperation_rate": 0.24800000000000005,
+        "mean_effort": 0.7961500000000001,
+        "mean_reputation": 0.55075780453993,
+        "gini": 0.355497799848
+      },
+      {
+        "cooperation_rate": 0.2860000000000001,
+        "mean_effort": 0.7673000000000001,
+        "mean_reputation": 0.655274077772415,
+        "gini": 0.2418051625434241
+      },
+      {
+        "cooperation_rate": 0.27,
+        "mean_effort": 0.8102000000000003,
+        "mean_reputation": 0.5416125988497591,
+        "gini": 0.3952466754267199
+      },
+      {
+        "cooperation_rate": 0.24,
+        "mean_effort": 0.8089000000000002,
+        "mean_reputation": 0.512808078232943,
+        "gini": 0.3864081836347406
+      },
+      {
+        "cooperation_rate": 0.26999999999999996,
+        "mean_effort": 0.8060500000000002,
+        "mean_reputation": 0.5399085943142761,
+        "gini": 0.38229147214378956
+      }
+    ],
+    "social_choice": [
+      {
+        "cooperation_rate": 0.27199999999999996,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5615101892753946,
+        "gini": 0.35197612610423357
+      },
+      {
+        "cooperation_rate": 0.267,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6443305614548769,
+        "gini": 0.2851364392231066
+      },
+      {
+        "cooperation_rate": 0.275,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5610360691672848,
+        "gini": 0.37667065654914933
+      },
+      {
+        "cooperation_rate": 0.272,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.49374450285616306,
+        "gini": 0.40685959811784
+      },
+      {
+        "cooperation_rate": 0.30100000000000005,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6118194657586247,
+        "gini": 0.3259945050416728
+      },
+      {
+        "cooperation_rate": 0.257,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.536911631608841,
+        "gini": 0.3862479680090749
+      },
+      {
+        "cooperation_rate": 0.30100000000000005,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6090849906571533,
+        "gini": 0.325794282613338
+      },
+      {
+        "cooperation_rate": 0.29000000000000004,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6434547139508869,
+        "gini": 0.307130296884067
+      },
+      {
+        "cooperation_rate": 0.29100000000000004,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.5378630558192627,
+        "gini": 0.40736526447286314
+      },
+      {
+        "cooperation_rate": 0.267,
+        "mean_effort": 0.8,
+        "mean_reputation": 0.6036968230585414,
+        "gini": 0.3170401111335577
+      }
+    ],
+    "strategic_choice": [
+      {
+        "cooperation_rate": 0.254,
+        "mean_effort": 0.8326256839125146,
+        "mean_reputation": 0.6043564831383269,
+        "gini": 0.3380924856506564
+      },
+      {
+        "cooperation_rate": 0.22600000000000003,
+        "mean_effort": 0.8507176741589998,
+        "mean_reputation": 0.4981304319473853,
+        "gini": 0.4231739652921065
+      },
+      {
+        "cooperation_rate": 0.31300000000000006,
+        "mean_effort": 0.8227006679100883,
+        "mean_reputation": 0.7231969546514747,
+        "gini": 0.22070065944660766
+      },
+      {
+        "cooperation_rate": 0.261,
+        "mean_effort": 0.837191386046585,
+        "mean_reputation": 0.5653089765225683,
+        "gini": 0.36239530021145394
+      },
+      {
+        "cooperation_rate": 0.244,
+        "mean_effort": 0.8461695578020928,
+        "mean_reputation": 0.5256510765926468,
+        "gini": 0.3978351951453811
+      },
+      {
+        "cooperation_rate": 0.28900000000000003,
+        "mean_effort": 0.8405694352636932,
+        "mean_reputation": 0.6060082172281168,
+        "gini": 0.33023484120068236
+      },
+      {
+        "cooperation_rate": 0.25000000000000006,
+        "mean_effort": 0.8367715940143269,
+        "mean_reputation": 0.5836829455342433,
+        "gini": 0.362096850113673
+      },
+      {
+        "cooperation_rate": 0.32300000000000006,
+        "mean_effort": 0.82861421334846,
+        "mean_reputation": 0.7008419375237546,
+        "gini": 0.25732688909628876
+      },
+      {
+        "cooperation_rate": 0.23899999999999996,
+        "mean_effort": 0.8409761249810881,
+        "mean_reputation": 0.5534711582400205,
+        "gini": 0.37880583096797293
+      },
+      {
+        "cooperation_rate": 0.251,
+        "mean_effort": 0.838526519619142,
+        "mean_reputation": 0.5278761399618281,
+        "gini": 0.3607326465623082
+      }
+    ]
+  },
+  "analysis": {
+    "summary": {
+      "blind_assigned": {
+        "cooperation_rate": {
+          "mean": 0.2767,
+          "std": 0.015582361823549079
+        },
+        "mean_effort": {
+          "mean": 0.8,
+          "std": 0.0
+        },
+        "gini": {
+          "mean": 0.3480463582698713,
+          "std": 0.035862135303185196
+        }
+      },
+      "self_assigned": {
+        "cooperation_rate": {
+          "mean": 0.2719,
+          "std": 0.013945967159003356
+        },
+        "mean_effort": {
+          "mean": 0.79747,
+          "std": 0.012782531048270492
+        },
+        "gini": {
+          "mean": 0.3437997575476234,
+          "std": 0.046228762383003816
+        }
+      },
+      "social_assigned": {
+        "cooperation_rate": {
+          "mean": 0.3022,
+          "std": 0.015223665787188048
+        },
+        "mean_effort": {
+          "mean": 0.84121,
+          "std": 0.007790179715513633
+        },
+        "gini": {
+          "mean": 0.29679153556568433,
+          "std": 0.03681155527199841
+        }
+      },
+      "strategic_assigned": {
+        "cooperation_rate": {
+          "mean": 0.3049,
+          "std": 0.020042205467462902
+        },
+        "mean_effort": {
+          "mean": 0.8703850000000001,
+          "std": 0.0042822336461244585
+        },
+        "gini": {
+          "mean": 0.2668341671696239,
+          "std": 0.05360802298740509
+        }
+      },
+      "blind_choice": {
+        "cooperation_rate": {
+          "mean": 0.27490000000000003,
+          "std": 0.020983088428541696
+        },
+        "mean_effort": {
+          "mean": 0.8,
+          "std": 0.0
+        },
+        "gini": {
+          "mean": 0.36186993407816975,
+          "std": 0.05084276709576071
+        }
+      },
+      "self_choice": {
+        "cooperation_rate": {
+          "mean": 0.2664,
+          "std": 0.015551205741035013
+        },
+        "mean_effort": {
+          "mean": 0.7989450000000001,
+          "std": 0.01284921106527558
+        },
+        "gini": {
+          "mean": 0.3493949527231394,
+          "std": 0.046118442823413194
+        }
+      },
+      "social_choice": {
+        "cooperation_rate": {
+          "mean": 0.2793,
+          "std": 0.014553693689232315
+        },
+        "mean_effort": {
+          "mean": 0.8,
+          "std": 0.0
+        },
+        "gini": {
+          "mean": 0.34902152481489035,
+          "std": 0.04103289569066009
+        }
+      },
+      "strategic_choice": {
+        "cooperation_rate": {
+          "mean": 0.265,
+          "std": 0.03072458299147445
+        },
+        "mean_effort": {
+          "mean": 0.837486285705699,
+          "std": 0.007712244109118765
+        },
+        "gini": {
+          "mean": 0.34313946636871306,
+          "std": 0.058528611871933436
+        }
+      }
+    },
+    "hypotheses": {
+      "H1_no_gaming_difference": {
+        "description": "With peer assignment, awareness level doesn't affect gaming",
+        "f_statistic": 9.758328274573891,
+        "p_value": 7.521392175721584e-05,
+        "passed": "False",
+        "interpretation": "Awareness still affects cooperation even with peer assignment"
+      },
+      "H2_social_enables_trust": {
+        "description": "Social awareness + peer assignment enables trust-based cooperation",
+        "social_mean": 0.3022,
+        "blind_mean": 0.2767,
+        "t_statistic": 3.511650572050967,
+        "p_value": 0.0024914285415271764,
+        "passed": "True",
+        "interpretation": "Social awareness maintains cooperation with peer assignment"
+      },
+      "H3_no_overcaution": {
+        "description": "Strategic awareness + peer assignment doesn't cause over-caution",
+        "assigned_mean": 0.3049,
+        "choice_mean": 0.265,
+        "t_statistic": 3.263034291475234,
+        "p_value": 0.004319541866418398,
+        "passed": "True",
+        "interpretation": "Peer assignment prevents strategic over-caution"
+      },
+      "H4_combined_best": {
+        "description": "Social+assignment outperforms blind and strategic-choice",
+        "social_assigned": 0.3022,
+        "blind_choice": 0.27490000000000003,
+        "strategic_choice": 0.265,
+        "passed": "True",
+        "interpretation": "Combined system is optimal"
+      }
+    },
+    "overall": {
+      "hypotheses_passed": 3,
+      "total_hypotheses": 4,
+      "conclusion": "VALIDATED"
+    }
+  }
+}

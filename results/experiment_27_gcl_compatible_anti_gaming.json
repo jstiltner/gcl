@@ -1,0 +1,614 @@
+{
+  "results": {
+    "none": [
+      {
+        "cooperation_rate": 0.37300000000000005,
+        "mean_difficulty": 0.36631658054509153,
+        "mean_reputation": 0.15099999999999997,
+        "gini": 0.6997350993377485,
+        "easy_task_ratio": 0.6639
+      },
+      {
+        "cooperation_rate": 0.385,
+        "mean_difficulty": 0.3590759991378967,
+        "mean_reputation": 0.21299999999999997,
+        "gini": 0.6757746478873241,
+        "easy_task_ratio": 0.6667
+      },
+      {
+        "cooperation_rate": 0.381,
+        "mean_difficulty": 0.36496319193919546,
+        "mean_reputation": 0.207,
+        "gini": 0.7096618357487923,
+        "easy_task_ratio": 0.6791
+      },
+      {
+        "cooperation_rate": 0.384,
+        "mean_difficulty": 0.3651319389467304,
+        "mean_reputation": 0.22,
+        "gini": 0.6545454545454548,
+        "easy_task_ratio": 0.6656
+      },
+      {
+        "cooperation_rate": 0.372,
+        "mean_difficulty": 0.3622069074730906,
+        "mean_reputation": 0.22099999999999997,
+        "gini": 0.7079638009049771,
+        "easy_task_ratio": 0.6565
+      },
+      {
+        "cooperation_rate": 0.381,
+        "mean_difficulty": 0.3715451444924799,
+        "mean_reputation": 0.24599999999999997,
+        "gini": 0.6443902439024389,
+        "easy_task_ratio": 0.6706
+      },
+      {
+        "cooperation_rate": 0.392,
+        "mean_difficulty": 0.3647474883320012,
+        "mean_reputation": 0.262,
+        "gini": 0.647175572519084,
+        "easy_task_ratio": 0.6604
+      },
+      {
+        "cooperation_rate": 0.41100000000000003,
+        "mean_difficulty": 0.3732288352540524,
+        "mean_reputation": 0.259,
+        "gini": 0.6383783783783783,
+        "easy_task_ratio": 0.6659
+      },
+      {
+        "cooperation_rate": 0.385,
+        "mean_difficulty": 0.36580468830974455,
+        "mean_reputation": 0.204,
+        "gini": 0.7417647058823531,
+        "easy_task_ratio": 0.6735
+      },
+      {
+        "cooperation_rate": 0.359,
+        "mean_difficulty": 0.3683935998688369,
+        "mean_reputation": 0.191,
+        "gini": 0.7198952879581153,
+        "easy_task_ratio": 0.6679
+      }
+    ],
+    "difficulty_weighted": [
+      {
+        "cooperation_rate": 0.33,
+        "mean_difficulty": 0.5674408256116569,
+        "mean_reputation": 0.8984583245281758,
+        "gini": 0.07716563686628475,
+        "easy_task_ratio": 0.0675
+      },
+      {
+        "cooperation_rate": 0.331,
+        "mean_difficulty": 0.5725581594721355,
+        "mean_reputation": 0.8768044523417251,
+        "gini": 0.10317854704278173,
+        "easy_task_ratio": 0.0671
+      },
+      {
+        "cooperation_rate": 0.331,
+        "mean_difficulty": 0.5629499623980873,
+        "mean_reputation": 0.8942818239214319,
+        "gini": 0.0821791830829639,
+        "easy_task_ratio": 0.0675
+      },
+      {
+        "cooperation_rate": 0.35200000000000004,
+        "mean_difficulty": 0.5670142863015994,
+        "mean_reputation": 0.8745417554762202,
+        "gini": 0.10711693529356214,
+        "easy_task_ratio": 0.0687
+      },
+      {
+        "cooperation_rate": 0.302,
+        "mean_difficulty": 0.5759555899201344,
+        "mean_reputation": 0.8298796986013773,
+        "gini": 0.13922348655693262,
+        "easy_task_ratio": 0.0682
+      },
+      {
+        "cooperation_rate": 0.364,
+        "mean_difficulty": 0.571708195623253,
+        "mean_reputation": 0.8787318915206026,
+        "gini": 0.09416604000129292,
+        "easy_task_ratio": 0.0678
+      },
+      {
+        "cooperation_rate": 0.339,
+        "mean_difficulty": 0.5740206771124755,
+        "mean_reputation": 0.8524254069035203,
+        "gini": 0.11348910282981883,
+        "easy_task_ratio": 0.0665
+      },
+      {
+        "cooperation_rate": 0.347,
+        "mean_difficulty": 0.5679040262338811,
+        "mean_reputation": 0.8753215753004866,
+        "gini": 0.1015718224040989,
+        "easy_task_ratio": 0.0701
+      },
+      {
+        "cooperation_rate": 0.331,
+        "mean_difficulty": 0.5695647817613292,
+        "mean_reputation": 0.8953354735076511,
+        "gini": 0.08135182890384063,
+        "easy_task_ratio": 0.0728
+      },
+      {
+        "cooperation_rate": 0.347,
+        "mean_difficulty": 0.5697790390957469,
+        "mean_reputation": 0.8655886209210866,
+        "gini": 0.10834783262000869,
+        "easy_task_ratio": 0.0756
+      }
+    ],
+    "portfolio_requirement": [
+      {
+        "cooperation_rate": 0.375,
+        "mean_difficulty": 0.4281163357663761,
+        "mean_reputation": 0.16199999999999995,
+        "gini": 0.6955555555555555,
+        "easy_task_ratio": 0.5084
+      },
+      {
+        "cooperation_rate": 0.3750000000000001,
+        "mean_difficulty": 0.423771877745368,
+        "mean_reputation": 0.13,
+        "gini": 0.7046153846153846,
+        "easy_task_ratio": 0.509
+      },
+      {
+        "cooperation_rate": 0.379,
+        "mean_difficulty": 0.42375886379097993,
+        "mean_reputation": 0.20300000000000004,
+        "gini": 0.7074876847290639,
+        "easy_task_ratio": 0.5108
+      },
+      {
+        "cooperation_rate": 0.387,
+        "mean_difficulty": 0.42496643620417746,
+        "mean_reputation": 0.239,
+        "gini": 0.6994979079497905,
+        "easy_task_ratio": 0.5075
+      },
+      {
+        "cooperation_rate": 0.342,
+        "mean_difficulty": 0.42684279965637256,
+        "mean_reputation": 0.12099999999999998,
+        "gini": 0.7704132231404959,
+        "easy_task_ratio": 0.5066
+      },
+      {
+        "cooperation_rate": 0.35400000000000004,
+        "mean_difficulty": 0.42773194668682607,
+        "mean_reputation": 0.172,
+        "gini": 0.7337209302325578,
+        "easy_task_ratio": 0.5082
+      },
+      {
+        "cooperation_rate": 0.3960000000000001,
+        "mean_difficulty": 0.4286587486906913,
+        "mean_reputation": 0.23,
+        "gini": 0.6659130434782612,
+        "easy_task_ratio": 0.5124
+      },
+      {
+        "cooperation_rate": 0.389,
+        "mean_difficulty": 0.42831216860173776,
+        "mean_reputation": 0.19799999999999993,
+        "gini": 0.6676767676767676,
+        "easy_task_ratio": 0.5074
+      },
+      {
+        "cooperation_rate": 0.33399999999999996,
+        "mean_difficulty": 0.4227622483095669,
+        "mean_reputation": 0.148,
+        "gini": 0.7802702702702702,
+        "easy_task_ratio": 0.5066
+      },
+      {
+        "cooperation_rate": 0.343,
+        "mean_difficulty": 0.42910130641067523,
+        "mean_reputation": 0.143,
+        "gini": 0.7422377622377623,
+        "easy_task_ratio": 0.512
+      }
+    ],
+    "reputation_decay": [
+      {
+        "cooperation_rate": 0.40700000000000014,
+        "mean_difficulty": 0.388686254031389,
+        "mean_reputation": 0.18919999999999998,
+        "gini": 0.7104016913319238,
+        "easy_task_ratio": 0.5882
+      },
+      {
+        "cooperation_rate": 0.359,
+        "mean_difficulty": 0.3860402582818832,
+        "mean_reputation": 0.13359999999999997,
+        "gini": 0.7302395209580839,
+        "easy_task_ratio": 0.5876
+      },
+      {
+        "cooperation_rate": 0.362,
+        "mean_difficulty": 0.38962843810673076,
+        "mean_reputation": 0.1402,
+        "gini": 0.7494721825962909,
+        "easy_task_ratio": 0.5895
+      },
+      {
+        "cooperation_rate": 0.36400000000000005,
+        "mean_difficulty": 0.38629595950154083,
+        "mean_reputation": 0.1612,
+        "gini": 0.74848635235732,
+        "easy_task_ratio": 0.5905
+      },
+      {
+        "cooperation_rate": 0.38100000000000006,
+        "mean_difficulty": 0.39055810214032294,
+        "mean_reputation": 0.19519999999999998,
+        "gini": 0.7091393442622949,
+        "easy_task_ratio": 0.5852
+      },
+      {
+        "cooperation_rate": 0.38700000000000007,
+        "mean_difficulty": 0.3811741795881062,
+        "mean_reputation": 0.1478,
+        "gini": 0.73702300405954,
+        "easy_task_ratio": 0.5936
+      },
+      {
+        "cooperation_rate": 0.396,
+        "mean_difficulty": 0.38763909674325864,
+        "mean_reputation": 0.23380000000000004,
+        "gini": 0.6853207869974334,
+        "easy_task_ratio": 0.5899
+      },
+      {
+        "cooperation_rate": 0.37300000000000005,
+        "mean_difficulty": 0.386376806092107,
+        "mean_reputation": 0.139,
+        "gini": 0.725381294964029,
+        "easy_task_ratio": 0.5872
+      },
+      {
+        "cooperation_rate": 0.33899999999999997,
+        "mean_difficulty": 0.3895916902979807,
+        "mean_reputation": 0.08659999999999998,
+        "gini": 0.8122401847575056,
+        "easy_task_ratio": 0.5934
+      },
+      {
+        "cooperation_rate": 0.386,
+        "mean_difficulty": 0.3858893747417198,
+        "mean_reputation": 0.1718,
+        "gini": 0.7447497089639112,
+        "easy_task_ratio": 0.5857
+      }
+    ],
+    "social_pressure": [
+      {
+        "cooperation_rate": 0.37400000000000005,
+        "mean_difficulty": 0.3616743983051568,
+        "mean_reputation": 0.11399999999999999,
+        "gini": 0.7091228070175437,
+        "easy_task_ratio": 0.6675
+      },
+      {
+        "cooperation_rate": 0.366,
+        "mean_difficulty": 0.3683697797625286,
+        "mean_reputation": 0.15999999999999998,
+        "gini": 0.754,
+        "easy_task_ratio": 0.6715
+      },
+      {
+        "cooperation_rate": 0.4200000000000001,
+        "mean_difficulty": 0.37169013945740736,
+        "mean_reputation": 0.19299999999999998,
+        "gini": 0.649844559585492,
+        "easy_task_ratio": 0.6603
+      },
+      {
+        "cooperation_rate": 0.395,
+        "mean_difficulty": 0.36631050742021865,
+        "mean_reputation": 0.262,
+        "gini": 0.6809160305343509,
+        "easy_task_ratio": 0.6675
+      },
+      {
+        "cooperation_rate": 0.37400000000000005,
+        "mean_difficulty": 0.3774215589371007,
+        "mean_reputation": 0.16699999999999995,
+        "gini": 0.7045508982035926,
+        "easy_task_ratio": 0.6569
+      },
+      {
+        "cooperation_rate": 0.374,
+        "mean_difficulty": 0.36198665191339624,
+        "mean_reputation": 0.267,
+        "gini": 0.6659925093632957,
+        "easy_task_ratio": 0.6679
+      },
+      {
+        "cooperation_rate": 0.41000000000000003,
+        "mean_difficulty": 0.36755872664462685,
+        "mean_reputation": 0.257,
+        "gini": 0.668715953307393,
+        "easy_task_ratio": 0.6651
+      },
+      {
+        "cooperation_rate": 0.369,
+        "mean_difficulty": 0.3644005321953579,
+        "mean_reputation": 0.20299999999999996,
+        "gini": 0.6540886699507389,
+        "easy_task_ratio": 0.6636
+      },
+      {
+        "cooperation_rate": 0.395,
+        "mean_difficulty": 0.36825426229930336,
+        "mean_reputation": 0.214,
+        "gini": 0.6878504672897194,
+        "easy_task_ratio": 0.6695
+      },
+      {
+        "cooperation_rate": 0.37900000000000006,
+        "mean_difficulty": 0.3632549614851348,
+        "mean_reputation": 0.18599999999999997,
+        "gini": 0.682795698924731,
+        "easy_task_ratio": 0.6624
+      }
+    ],
+    "stake_scaling": [
+      {
+        "cooperation_rate": 0.392,
+        "mean_difficulty": 0.45438035375951724,
+        "mean_reputation": 0.19599999999999998,
+        "gini": 0.6777551020408163,
+        "easy_task_ratio": 0.4105
+      },
+      {
+        "cooperation_rate": 0.374,
+        "mean_difficulty": 0.45438933417504224,
+        "mean_reputation": 0.17999999999999997,
+        "gini": 0.7617777777777777,
+        "easy_task_ratio": 0.4213
+      },
+      {
+        "cooperation_rate": 0.36300000000000004,
+        "mean_difficulty": 0.45513772322852797,
+        "mean_reputation": 0.11899999999999998,
+        "gini": 0.6966386554621851,
+        "easy_task_ratio": 0.411
+      },
+      {
+        "cooperation_rate": 0.33699999999999997,
+        "mean_difficulty": 0.4558658222750995,
+        "mean_reputation": 0.14699999999999996,
+        "gini": 0.7217687074829933,
+        "easy_task_ratio": 0.4137
+      },
+      {
+        "cooperation_rate": 0.368,
+        "mean_difficulty": 0.45446169891952765,
+        "mean_reputation": 0.128,
+        "gini": 0.6928124999999996,
+        "easy_task_ratio": 0.4204
+      },
+      {
+        "cooperation_rate": 0.368,
+        "mean_difficulty": 0.4496554562156483,
+        "mean_reputation": 0.16499999999999995,
+        "gini": 0.6820606060606058,
+        "easy_task_ratio": 0.417
+      },
+      {
+        "cooperation_rate": 0.38700000000000007,
+        "mean_difficulty": 0.452944193116501,
+        "mean_reputation": 0.215,
+        "gini": 0.6860465116279069,
+        "easy_task_ratio": 0.4181
+      },
+      {
+        "cooperation_rate": 0.34199999999999997,
+        "mean_difficulty": 0.456214398868673,
+        "mean_reputation": 0.12499999999999999,
+        "gini": 0.7550399999999997,
+        "easy_task_ratio": 0.4141
+      },
+      {
+        "cooperation_rate": 0.37100000000000005,
+        "mean_difficulty": 0.45250961703559006,
+        "mean_reputation": 0.13799999999999998,
+        "gini": 0.7052173913043476,
+        "easy_task_ratio": 0.4199
+      },
+      {
+        "cooperation_rate": 0.352,
+        "mean_difficulty": 0.45128682882315624,
+        "mean_reputation": 0.156,
+        "gini": 0.7446153846153845,
+        "easy_task_ratio": 0.4139
+      }
+    ]
+  },
+  "analysis": {
+    "summary": {
+      "none": {
+        "cooperation_rate": {
+          "mean": 0.38230000000000003,
+          "std": 0.012938701635017332
+        },
+        "mean_difficulty": {
+          "mean": 0.366141437429912,
+          "std": 0.003929363264176738
+        },
+        "easy_task_ratio": {
+          "mean": 0.66701,
+          "std": 0.0060754341408659936
+        },
+        "gini": {
+          "mean": 0.6839285027064668,
+          "std": 0.03470893113555134
+        }
+      },
+      "difficulty_weighted": {
+        "cooperation_rate": {
+          "mean": 0.3374,
+          "std": 0.015932357013323545
+        },
+        "mean_difficulty": {
+          "mean": 0.5698895543530299,
+          "std": 0.0036162585664511354
+        },
+        "easy_task_ratio": {
+          "mean": 0.06917999999999999,
+          "std": 0.0027461973709112745
+        },
+        "gini": {
+          "mean": 0.10077904156015852,
+          "std": 0.017515874598544704
+        }
+      },
+      "portfolio_requirement": {
+        "cooperation_rate": {
+          "mean": 0.36740000000000006,
+          "std": 0.021105449533236686
+        },
+        "mean_difficulty": {
+          "mean": 0.4264022731862771,
+          "std": 0.0022392469853227777
+        },
+        "easy_task_ratio": {
+          "mean": 0.5088899999999998,
+          "std": 0.002025067900096187
+        },
+        "gini": {
+          "mean": 0.716738852988591,
+          "std": 0.037181528097288634
+        }
+      },
+      "reputation_decay": {
+        "cooperation_rate": {
+          "mean": 0.37540000000000007,
+          "std": 0.01900105260242183
+        },
+        "mean_difficulty": {
+          "mean": 0.38718801595250396,
+          "std": 0.00257221409326596
+        },
+        "easy_task_ratio": {
+          "mean": 0.58908,
+          "std": 0.00273744406335545
+        },
+        "gini": {
+          "mean": 0.7352454071248332,
+          "std": 0.032113821308686466
+        }
+      },
+      "social_pressure": {
+        "cooperation_rate": {
+          "mean": 0.38560000000000005,
+          "std": 0.017499714283381904
+        },
+        "mean_difficulty": {
+          "mean": 0.3670921518420231,
+          "std": 0.004572052755366585
+        },
+        "easy_task_ratio": {
+          "mean": 0.6652199999999999,
+          "std": 0.0042350442736764785
+        },
+        "gini": {
+          "mean": 0.6857877594176857,
+          "std": 0.02926854095562623
+        }
+      },
+      "stake_scaling": {
+        "cooperation_rate": {
+          "mean": 0.3654,
+          "std": 0.016829735589129164
+        },
+        "mean_difficulty": {
+          "mean": 0.4536845426417283,
+          "std": 0.0019689052762149827
+        },
+        "easy_task_ratio": {
+          "mean": 0.41599,
+          "std": 0.0036963360236861647
+        },
+        "gini": {
+          "mean": 0.7123732636372015,
+          "std": 0.02980078054332518
+        }
+      }
+    },
+    "comparisons": {
+      "difficulty_weighted": {
+        "cooperation_change": -0.04490000000000005,
+        "cooperation_p": 3.6331718914255184e-06,
+        "gaming_reduced": "True",
+        "gaming_change": -0.59783,
+        "gaming_p": 6.74976197380568e-34,
+        "difficulty_increased": "True",
+        "difficulty_change": 0.2037481169231179,
+        "difficulty_p": 3.196884818715861e-27,
+        "effective": "True"
+      },
+      "portfolio_requirement": {
+        "cooperation_change": -0.014899999999999969,
+        "cooperation_p": 0.08772788758271369,
+        "gaming_reduced": "True",
+        "gaming_change": -0.15812000000000015,
+        "gaming_p": 7.939623343355463e-24,
+        "difficulty_increased": "True",
+        "difficulty_change": 0.060260835756365094,
+        "difficulty_p": 4.924277253317403e-19,
+        "effective": "True"
+      },
+      "reputation_decay": {
+        "cooperation_change": -0.006899999999999962,
+        "cooperation_p": 0.379761223906495,
+        "gaming_reduced": "True",
+        "gaming_change": -0.07792999999999994,
+        "gaming_p": 5.009510738496663e-18,
+        "difficulty_increased": "True",
+        "difficulty_change": 0.021046578522591952,
+        "difficulty_p": 7.933491393343624e-11,
+        "effective": "True"
+      },
+      "social_pressure": {
+        "cooperation_change": 0.003300000000000025,
+        "cooperation_p": 0.6546269085277707,
+        "gaming_reduced": "False",
+        "gaming_change": -0.0017900000000000693,
+        "gaming_p": 0.47771012798315804,
+        "difficulty_increased": "False",
+        "difficulty_change": 0.0009507144121110866,
+        "difficulty_p": 0.6418248067039087,
+        "effective": "False"
+      },
+      "stake_scaling": {
+        "cooperation_change": -0.016900000000000026,
+        "cooperation_p": 0.028093138971383668,
+        "gaming_reduced": "True",
+        "gaming_change": -0.25101999999999997,
+        "gaming_p": 1.2947013050471213e-26,
+        "difficulty_increased": "True",
+        "difficulty_change": 0.0875431052118163,
+        "difficulty_p": 3.7344888331029705e-22,
+        "effective": "True"
+      }
+    },
+    "scores": {
+      "none": 0.08143143742991199,
+      "difficulty_weighted": 0.8381095543530299,
+      "portfolio_requirement": 0.2849122731862773,
+      "reputation_decay": 0.17350801595250398,
+      "social_pressure": 0.08747215184202317,
+      "stake_scaling": 0.40309454264172834
+    },
+    "best_mechanism": "difficulty_weighted"
+  }
+}

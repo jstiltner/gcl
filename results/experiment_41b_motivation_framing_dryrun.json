@@ -1,0 +1,2014 @@
+{
+  "config": {
+    "n_tasks": 120,
+    "dry_run": true,
+    "framings": {
+      "chosen": "You volunteered for this task because you judged yourself well-suited to it.",
+      "neutral": "You have been given a task.",
+      "assigned": "You have been assigned this task by a coordinator. You had no choice in the matter."
+    },
+    "agents": [
+      "claude_reasoning",
+      "gpt_reasoning"
+    ]
+  },
+  "agents": {
+    "claude_reasoning": {
+      "per_task": [
+        {
+          "task_id": "mult_medium_0",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_1",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_2",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_3",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_4",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_5",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_6",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_7",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_8",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_9",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_10",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_11",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_12",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_13",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_14",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_15",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_16",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_17",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_18",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_19",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_20",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_21",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_22",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_23",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_24",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_25",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_26",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_27",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_28",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_29",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_30",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_31",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_32",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_33",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_34",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_35",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_36",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_37",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_38",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_39",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_40",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_41",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_42",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_43",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_44",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_45",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_46",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_47",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_48",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_49",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_50",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_51",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_52",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_53",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_54",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_55",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_56",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_57",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_58",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_59",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_60",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_61",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_62",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_63",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_64",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_65",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_66",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_67",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_68",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_69",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_70",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_71",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_72",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_73",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_74",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_75",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_76",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_77",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_78",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_79",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_80",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_81",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_82",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_83",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_84",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_85",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_86",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_87",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_88",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_89",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_90",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_91",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_92",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_93",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_94",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_95",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_96",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_97",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_98",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_99",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_100",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_101",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_102",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_103",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_104",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_105",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_106",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_107",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_108",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_109",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_110",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_111",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_112",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_113",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_114",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_115",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_116",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_117",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_118",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_119",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        }
+      ],
+      "n": 120,
+      "success_chosen": 0.25,
+      "success_neutral": 0.35,
+      "success_assigned": 0.325,
+      "chosen_vs_assigned": {
+        "effect": -0.07500000000000001,
+        "discordant": [
+          14,
+          23
+        ],
+        "p_mcnemar": 0.18774155899882317
+      },
+      "chosen_vs_neutral": {
+        "effect": -0.09999999999999998,
+        "discordant": [
+          12,
+          24
+        ],
+        "p_mcnemar": 0.06524533522315323
+      },
+      "neutral_vs_assigned": {
+        "effect": 0.024999999999999967,
+        "discordant": [
+          20,
+          17
+        ],
+        "p_mcnemar": 0.7428293587290682
+      }
+    },
+    "gpt_reasoning": {
+      "per_task": [
+        {
+          "task_id": "mult_medium_0",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_1",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_2",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_3",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_4",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_5",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_6",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_7",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_8",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_9",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_10",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_11",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_12",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_13",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_14",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_15",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_16",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_17",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_18",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_19",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_20",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_21",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_22",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_23",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_24",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_25",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_26",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_27",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_28",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_29",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_30",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_31",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_32",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_33",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_34",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_35",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_36",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_37",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_38",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_39",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_40",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_41",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_42",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_43",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_44",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_45",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_46",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_47",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_48",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_49",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_50",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_51",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_52",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_53",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_54",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_55",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_56",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_57",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_58",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_59",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_60",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_61",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_62",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_63",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_64",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_65",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_66",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_67",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_68",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_69",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_70",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_71",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_72",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_73",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_74",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_75",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_76",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_77",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_78",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_79",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_80",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_81",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_82",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_83",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_84",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_85",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_86",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_87",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_88",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_89",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_90",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_91",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_92",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_93",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_94",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_95",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_96",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_97",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_98",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_99",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_100",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": false,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_101",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_102",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_103",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_104",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_105",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_106",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_107",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "modchain_hard_108",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_109",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_110",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_hard_111",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_veryhard_112",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_113",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_114",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "mult_medium_115",
+          "kind": "mult",
+          "difficulty": "medium",
+          "chosen": true,
+          "neutral": true,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_hard_116",
+          "kind": "mult",
+          "difficulty": "hard",
+          "chosen": true,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "mult_veryhard_117",
+          "kind": "mult",
+          "difficulty": "veryhard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": true
+        },
+        {
+          "task_id": "modchain_hard_118",
+          "kind": "modchain",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        },
+        {
+          "task_id": "count_hard_119",
+          "kind": "count",
+          "difficulty": "hard",
+          "chosen": false,
+          "neutral": false,
+          "assigned": false
+        }
+      ],
+      "n": 120,
+      "success_chosen": 0.3333333333333333,
+      "success_neutral": 0.25,
+      "success_assigned": 0.20833333333333334,
+      "chosen_vs_assigned": {
+        "effect": 0.12499999999999997,
+        "discordant": [
+          26,
+          11
+        ],
+        "p_mcnemar": 0.020073851919732988
+      },
+      "chosen_vs_neutral": {
+        "effect": 0.08333333333333331,
+        "discordant": [
+          20,
+          10
+        ],
+        "p_mcnemar": 0.09873714670538902
+      },
+      "neutral_vs_assigned": {
+        "effect": 0.04166666666666666,
+        "discordant": [
+          20,
+          15
+        ],
+        "p_mcnemar": 0.49955983320251107
+      }
+    }
+  },
+  "pooled": {
+    "success_chosen": 0.2916666666666667,
+    "success_neutral": 0.3,
+    "success_assigned": 0.26666666666666666,
+    "chosen_vs_assigned": {
+      "effect": 0.025000000000000022,
+      "discordant": [
+        40,
+        34
+      ],
+      "p_mcnemar": 0.5613807442989819
+    }
+  }
+}

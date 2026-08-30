@@ -1,0 +1,62 @@
+{
+  "config": {
+    "timesteps": 10000,
+    "seed": 42,
+    "eval_episodes": 50
+  },
+  "training": {
+    "time_seconds": 38.193672,
+    "total_timesteps": 10240,
+    "total_episodes": 163,
+    "final_reward": 23.924005548215963
+  },
+  "trained": {
+    "mean_reward": 24.290899098370847,
+    "mean_length": 52.86,
+    "ece": 0.07255013242527432,
+    "by_difficulty": {
+      "easy": {
+        "commits": 660,
+        "successes": 591,
+        "abstains": 0,
+        "total": 660,
+        "commit_rate": 1.0,
+        "success_rate": 0.8954545454545455
+      },
+      "medium": {
+        "commits": 683,
+        "successes": 442,
+        "abstains": 0,
+        "total": 683,
+        "commit_rate": 1.0,
+        "success_rate": 0.6471449487554904
+      },
+      "hard": {
+        "commits": 654,
+        "successes": 229,
+        "abstains": 0,
+        "total": 654,
+        "commit_rate": 1.0,
+        "success_rate": 0.35015290519877673
+      },
+      "impossible": {
+        "commits": 646,
+        "successes": 34,
+        "abstains": 0,
+        "total": 646,
+        "commit_rate": 1.0,
+        "success_rate": 0.05263157894736842
+      }
+    }
+  },
+  "random": {
+    "mean_reward": 15.42675185062919,
+    "mean_length": 73.46,
+    "ece": 0.24232468249585865
+  },
+  "heuristic": {
+    "mean_reward": 36.0481804098107,
+    "mean_length": 100.0,
+    "ece": 0.28145589798087134
+  }
+}

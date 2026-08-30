@@ -1,0 +1,100 @@
+{
+  "share": {
+    "cooperation_rate": {
+      "mean": 0.41999999999999993,
+      "std": 0.08185352771872449
+    },
+    "final_specialization": {
+      "mean": 0.3750280343354916,
+      "std": 0.0880464721354346
+    },
+    "specialized_agents": {
+      "mean": 0.2333333333333334,
+      "std": 0.10540925533894599
+    }
+  },
+  "noshare": {
+    "cooperation_rate": {
+      "mean": 0.31200000000000006,
+      "std": 0.06764613810115105
+    },
+    "final_specialization": {
+      "mean": 0.45700400556911835,
+      "std": 0.06428113031928828
+    },
+    "specialized_agents": {
+      "mean": 0.19333333333333333,
+      "std": 0.08537498983243798
+    }
+  },
+  "share_bonus20": {
+    "cooperation_rate": {
+      "mean": 0.462,
+      "std": 0.09282241108697835
+    },
+    "final_specialization": {
+      "mean": 0.3625611280446205,
+      "std": 0.11343759257100051
+    },
+    "specialized_agents": {
+      "mean": 0.2633333333333333,
+      "std": 0.09938701010583716
+    }
+  },
+  "noshare_bonus20": {
+    "cooperation_rate": {
+      "mean": 0.325,
+      "std": 0.07046275611981126
+    },
+    "final_specialization": {
+      "mean": 0.43575193283467106,
+      "std": 0.06808955178297593
+    },
+    "specialized_agents": {
+      "mean": 0.18000000000000002,
+      "std": 0.061824123303304696
+    }
+  },
+  "share_typediff": {
+    "cooperation_rate": {
+      "mean": 0.449,
+      "std": 0.07368174807915459
+    },
+    "final_specialization": {
+      "mean": 0.33074808634793323,
+      "std": 0.07890800310000809
+    },
+    "specialized_agents": {
+      "mean": 0.22333333333333338,
+      "std": 0.09551032521262935
+    }
+  },
+  "share_affinity": {
+    "cooperation_rate": {
+      "mean": 0.514,
+      "std": 0.0690217357069496
+    },
+    "final_specialization": {
+      "mean": 0.4000749877141854,
+      "std": 0.11062691093468065
+    },
+    "specialized_agents": {
+      "mean": 0.39666666666666667,
+      "std": 0.10796089827134431
+    }
+  },
+  "noshare_bonus20_affinity": {
+    "cooperation_rate": {
+      "mean": 0.42699999999999994,
+      "std": 0.09381364506296512
+    },
+    "final_specialization": {
+      "mean": 0.5106256391058077,
+      "std": 0.12147539792921722
+    },
+    "specialized_agents": {
+      "mean": 0.4533333333333333,
+      "std": 0.14079141387961916
+    }
+  }
+}

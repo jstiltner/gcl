@@ -1,0 +1,165 @@
+{
+  "hart_moore": {
+    "descriptive": {
+      "complete_investment": {
+        "mean": 0.5266388455565482,
+        "std": 0.03775606938709513
+      },
+      "incomplete_investment": {
+        "mean": 0.1967806198092105,
+        "std": 0.049941767452473404
+      },
+      "gcl_investment": {
+        "mean": 0.40933785811151113,
+        "std": 0.0530134768369688
+      },
+      "complete_holdups": {
+        "mean": 0.09988235590358367,
+        "std": 0.01880819194914035
+      },
+      "incomplete_holdups": {
+        "mean": 0.3824244153793754,
+        "std": 0.05733457736425726
+      },
+      "gcl_holdups": {
+        "mean": 0.24157831020299808,
+        "std": 0.045306403147996464
+      }
+    },
+    "tests": [
+      {
+        "name": "Complete > Incomplete Investment",
+        "t": 28.372646858245716,
+        "p": 1.066440885597304e-35,
+        "d": 7.325785917987323,
+        "sig": true
+      },
+      {
+        "name": "GCL > Incomplete Investment",
+        "t": 15.716224157613592,
+        "p": 1.436152352973927e-22,
+        "d": 4.057911628513342,
+        "sig": true
+      },
+      {
+        "name": "Incomplete > Complete Hold-ups",
+        "t": 25.215736401939886,
+        "p": 6.0209344143657995e-33,
+        "d": 6.510675143137954,
+        "sig": true
+      },
+      {
+        "name": "GCL < Incomplete Hold-ups",
+        "t": 10.379496954410715,
+        "p": 7.665595832101464e-15,
+        "d": 2.679974589762887,
+        "sig": true
+      }
+    ],
+    "holdup_reduction_pct": 36.829788975856616,
+    "all_significant": true
+  },
+  "population": {
+    "descriptive": {
+      "protocol_convergence": {
+        "mean": 0.8233333333333335,
+        "std": 0.04229525846816506
+      },
+      "trust_clustering": {
+        "mean": 0.6994117795179183,
+        "std": 0.09404095974570174
+      },
+      "specialization_gini": {
+        "mean": 0.7448489916947368,
+        "std": 0.07990682792395745
+      },
+      "efficiency_improvement": {
+        "mean": 0.26484883075875054,
+        "std": 0.11466915472851451
+      }
+    },
+    "tests": [
+      {
+        "name": "Protocol Convergence > 50%",
+        "t": 41.167812911008255,
+        "p": 1.3968983833746143e-27,
+        "sig": true
+      },
+      {
+        "name": "Trust Clustering > 0.5 (Small-World)",
+        "t": 11.419123114989702,
+        "p": 1.4974164786793225e-12,
+        "sig": true
+      },
+      {
+        "name": "Specialization Gini > 0.5",
+        "t": 16.501120209547707,
+        "p": 1.399652410684134e-16,
+        "sig": true
+      },
+      {
+        "name": "Efficiency Improvement > 0",
+        "t": 12.437997000932652,
+        "p": 1.8868839912956498e-13,
+        "sig": true
+      }
+    ],
+    "all_significant": true
+  },
+  "punishment": {
+    "descriptive": {
+      "0.0": {
+        "mean": 0.7266388455565482,
+        "std": 0.03775606938709512
+      },
+      "0.25": {
+        "mean": 0.5997058897589592,
+        "std": 0.04702047987285087
+      },
+      "0.5": {
+        "mean": 0.49678061980921046,
+        "std": 0.04994176745247341
+      },
+      "0.75": {
+        "mean": 0.38242441537937516,
+        "std": 0.05733457736425725
+      },
+      "1.0": {
+        "mean": 0.289337858111511,
+        "std": 0.053013476836968804
+      }
+    },
+    "correlation": {
+      "r": -0.9512911210708569,
+      "p": 1.6006396822227741e-77,
+      "significant": true
+    },
+    "comparison": {
+      "t": 36.18295815263715,
+      "p": 1.68915668838159e-41,
+      "d": 9.342399622778903,
+      "significant": true
+    },
+    "paradox_confirmed": true
+  },
+  "redemption": {
+    "descriptive": {
+      "no_redemption": {
+        "mean": 0.392622152890477,
+        "std": 0.060409711019352205
+      },
+      "with_redemption": {
+        "mean": 0.5995294236143346,
+        "std": 0.0752327677965614
+      }
+    },
+    "test": {
+      "t": 11.00560474515066,
+      "p": 7.18760117114749e-12,
+      "d": 2.9817453407597285,
+      "significant": true
+    },
+    "improvement_pct": 52.69882740966349,
+    "redemption_helps": true
+  }
+}

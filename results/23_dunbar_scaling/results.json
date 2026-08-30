@@ -1,0 +1,1667 @@
+{
+  "results": {
+    "5": [
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.24,
+        "message_complexity": 11.03,
+        "trust_clustering": 0,
+        "specialization_gini": 0.31666666666666665,
+        "convergence_time": 17,
+        "success_rate": 0.24,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.28,
+        "message_complexity": 10.99,
+        "trust_clustering": 0,
+        "specialization_gini": 0.47142857142857153,
+        "convergence_time": 17,
+        "success_rate": 0.28,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.18,
+        "message_complexity": 11.21,
+        "trust_clustering": 0,
+        "specialization_gini": 0.3333333333333335,
+        "convergence_time": 17,
+        "success_rate": 0.18,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.25,
+        "message_complexity": 10.96,
+        "trust_clustering": 0,
+        "specialization_gini": 0.17599999999999993,
+        "convergence_time": 17,
+        "success_rate": 0.25,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.19,
+        "message_complexity": 11.28,
+        "trust_clustering": 0,
+        "specialization_gini": 0.35789473684210527,
+        "convergence_time": 17,
+        "success_rate": 0.19,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.21,
+        "message_complexity": 10.89,
+        "trust_clustering": 0,
+        "specialization_gini": 0.2666666666666666,
+        "convergence_time": 17,
+        "success_rate": 0.21,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.23,
+        "message_complexity": 10.98,
+        "trust_clustering": 0,
+        "specialization_gini": 0.3826086956521739,
+        "convergence_time": 17,
+        "success_rate": 0.23,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.2,
+        "message_complexity": 11.1,
+        "trust_clustering": 0,
+        "specialization_gini": 0.32000000000000006,
+        "convergence_time": 17,
+        "success_rate": 0.2,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.23,
+        "message_complexity": 11.18,
+        "trust_clustering": 0,
+        "specialization_gini": 0.4521739130434783,
+        "convergence_time": 17,
+        "success_rate": 0.23,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      },
+      {
+        "n_agents": 5,
+        "coordination_efficiency": 0.26,
+        "message_complexity": 11.33,
+        "trust_clustering": 0,
+        "specialization_gini": 0.4615384615384617,
+        "convergence_time": 17,
+        "success_rate": 0.26,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 5,
+          "largest_component_fraction": 0.2
+        }
+      }
+    ],
+    "10": [
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.27,
+        "message_complexity": 13.9,
+        "trust_clustering": 0,
+        "specialization_gini": 0.5074074074074073,
+        "convergence_time": 23,
+        "success_rate": 0.27,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.29,
+        "message_complexity": 13.96,
+        "trust_clustering": 0,
+        "specialization_gini": 0.6379310344827585,
+        "convergence_time": 23,
+        "success_rate": 0.29,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.28,
+        "message_complexity": 14.25,
+        "trust_clustering": 0,
+        "specialization_gini": 0.5999999999999999,
+        "convergence_time": 23,
+        "success_rate": 0.28,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.2,
+        "message_complexity": 13.88,
+        "trust_clustering": 0,
+        "specialization_gini": 0.5699999999999998,
+        "convergence_time": 23,
+        "success_rate": 0.2,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.22,
+        "message_complexity": 14.07,
+        "trust_clustering": 0,
+        "specialization_gini": 0.6545454545454545,
+        "convergence_time": 23,
+        "success_rate": 0.22,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.34,
+        "message_complexity": 13.69,
+        "trust_clustering": 0,
+        "specialization_gini": 0.588235294117647,
+        "convergence_time": 23,
+        "success_rate": 0.34,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.26,
+        "message_complexity": 14.12,
+        "trust_clustering": 0,
+        "specialization_gini": 0.6615384615384614,
+        "convergence_time": 23,
+        "success_rate": 0.26,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.19,
+        "message_complexity": 14.37,
+        "trust_clustering": 0,
+        "specialization_gini": 0.6894736842105262,
+        "convergence_time": 23,
+        "success_rate": 0.19,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.27,
+        "message_complexity": 14.05,
+        "trust_clustering": 0,
+        "specialization_gini": 0.6407407407407406,
+        "convergence_time": 23,
+        "success_rate": 0.27,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 10,
+          "largest_component_fraction": 0.1
+        }
+      },
+      {
+        "n_agents": 10,
+        "coordination_efficiency": 0.33,
+        "message_complexity": 13.77,
+        "trust_clustering": 0.0,
+        "specialization_gini": 0.6575757575757575,
+        "convergence_time": 23,
+        "success_rate": 0.33,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": 1.0,
+          "small_world_coefficient": 0,
+          "mean_degree": 0.9,
+          "degree_std": 0.3,
+          "max_betweenness": 0.0,
+          "n_components": 9,
+          "largest_component_fraction": 0.2
+        }
+      }
+    ],
+    "20": [
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.13,
+        "message_complexity": 17.82,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8576923076923078,
+        "convergence_time": 30,
+        "success_rate": 0.13,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.22,
+        "message_complexity": 17.92,
+        "trust_clustering": 0,
+        "specialization_gini": 0.7954545454545454,
+        "convergence_time": 30,
+        "success_rate": 0.22,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.22,
+        "message_complexity": 17.92,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8045454545454545,
+        "convergence_time": 30,
+        "success_rate": 0.22,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.22,
+        "message_complexity": 17.92,
+        "trust_clustering": 0,
+        "specialization_gini": 0.7727272727272727,
+        "convergence_time": 30,
+        "success_rate": 0.22,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.25,
+        "message_complexity": 18.29,
+        "trust_clustering": 0,
+        "specialization_gini": 0.754,
+        "convergence_time": 30,
+        "success_rate": 0.25,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.25,
+        "message_complexity": 18.23,
+        "trust_clustering": 0,
+        "specialization_gini": 0.6859999999999999,
+        "convergence_time": 30,
+        "success_rate": 0.25,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.19,
+        "message_complexity": 17.88,
+        "trust_clustering": 0,
+        "specialization_gini": 0.7868421052631578,
+        "convergence_time": 30,
+        "success_rate": 0.19,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.2,
+        "message_complexity": 18.07,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8,
+        "convergence_time": 30,
+        "success_rate": 0.2,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.19,
+        "message_complexity": 18.07,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8026315789473684,
+        "convergence_time": 30,
+        "success_rate": 0.19,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      },
+      {
+        "n_agents": 20,
+        "coordination_efficiency": 0.19,
+        "message_complexity": 17.75,
+        "trust_clustering": 0,
+        "specialization_gini": 0.713157894736842,
+        "convergence_time": 30,
+        "success_rate": 0.19,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 20,
+          "largest_component_fraction": 0.05
+        }
+      }
+    ],
+    "50": [
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.13,
+        "message_complexity": 21.88,
+        "trust_clustering": 0,
+        "specialization_gini": 0.866153846153846,
+        "convergence_time": 39,
+        "success_rate": 0.13,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.22,
+        "message_complexity": 21.72,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9199999999999999,
+        "convergence_time": 39,
+        "success_rate": 0.22,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.17,
+        "message_complexity": 22.17,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8999999999999999,
+        "convergence_time": 39,
+        "success_rate": 0.17,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.22,
+        "message_complexity": 21.94,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9127272727272726,
+        "convergence_time": 39,
+        "success_rate": 0.22,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.17,
+        "message_complexity": 22.06,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8835294117647059,
+        "convergence_time": 39,
+        "success_rate": 0.17,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.2,
+        "message_complexity": 21.9,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9119999999999999,
+        "convergence_time": 39,
+        "success_rate": 0.2,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.22,
+        "message_complexity": 21.59,
+        "trust_clustering": 0,
+        "specialization_gini": 0.929090909090909,
+        "convergence_time": 39,
+        "success_rate": 0.22,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.15,
+        "message_complexity": 21.95,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8999999999999999,
+        "convergence_time": 39,
+        "success_rate": 0.15,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.15,
+        "message_complexity": 22.2,
+        "trust_clustering": 0,
+        "specialization_gini": 0.8946666666666667,
+        "convergence_time": 39,
+        "success_rate": 0.15,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      },
+      {
+        "n_agents": 50,
+        "coordination_efficiency": 0.21,
+        "message_complexity": 22.27,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9114285714285715,
+        "convergence_time": 39,
+        "success_rate": 0.21,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 50,
+          "largest_component_fraction": 0.02
+        }
+      }
+    ],
+    "100": [
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.2,
+        "message_complexity": 25.92,
+        "trust_clustering": 0,
+        "specialization_gini": 0.948,
+        "convergence_time": 46,
+        "success_rate": 0.2,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.12,
+        "message_complexity": 25.78,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9650000000000001,
+        "convergence_time": 46,
+        "success_rate": 0.12,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.08,
+        "message_complexity": 25.98,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9575,
+        "convergence_time": 46,
+        "success_rate": 0.08,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.1,
+        "message_complexity": 25.82,
+        "trust_clustering": 0,
+        "specialization_gini": 0.946,
+        "convergence_time": 46,
+        "success_rate": 0.1,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.1,
+        "message_complexity": 26.11,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9179999999999999,
+        "convergence_time": 46,
+        "success_rate": 0.1,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.13,
+        "message_complexity": 26.15,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9423076923076923,
+        "convergence_time": 46,
+        "success_rate": 0.13,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.09,
+        "message_complexity": 25.85,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9722222222222223,
+        "convergence_time": 46,
+        "success_rate": 0.09,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.11,
+        "message_complexity": 26.25,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9518181818181819,
+        "convergence_time": 46,
+        "success_rate": 0.11,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.12,
+        "message_complexity": 26.18,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9616666666666667,
+        "convergence_time": 46,
+        "success_rate": 0.12,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      },
+      {
+        "n_agents": 100,
+        "coordination_efficiency": 0.09,
+        "message_complexity": 26.21,
+        "trust_clustering": 0,
+        "specialization_gini": 0.961111111111111,
+        "convergence_time": 46,
+        "success_rate": 0.09,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 100,
+          "largest_component_fraction": 0.01
+        }
+      }
+    ],
+    "150": [
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.09,
+        "message_complexity": 28.1,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9740740740740741,
+        "convergence_time": 50,
+        "success_rate": 0.09,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.11,
+        "message_complexity": 27.97,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9703030303030304,
+        "convergence_time": 50,
+        "success_rate": 0.11,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.09,
+        "message_complexity": 28.16,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9755555555555557,
+        "convergence_time": 50,
+        "success_rate": 0.09,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.1,
+        "message_complexity": 28.17,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9826666666666668,
+        "convergence_time": 50,
+        "success_rate": 0.1,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.1,
+        "message_complexity": 27.7,
+        "trust_clustering": 0,
+        "specialization_gini": 0.964,
+        "convergence_time": 50,
+        "success_rate": 0.1,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.1,
+        "message_complexity": 27.68,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9746666666666668,
+        "convergence_time": 50,
+        "success_rate": 0.1,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.07,
+        "message_complexity": 28.5,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9742857142857144,
+        "convergence_time": 50,
+        "success_rate": 0.07,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.07,
+        "message_complexity": 28.1,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9723809523809523,
+        "convergence_time": 50,
+        "success_rate": 0.07,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.07,
+        "message_complexity": 27.98,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9742857142857144,
+        "convergence_time": 50,
+        "success_rate": 0.07,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      },
+      {
+        "n_agents": 150,
+        "coordination_efficiency": 0.1,
+        "message_complexity": 28.11,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9693333333333334,
+        "convergence_time": 50,
+        "success_rate": 0.1,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 150,
+          "largest_component_fraction": 0.006666666666666667
+        }
+      }
+    ],
+    "200": [
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.07,
+        "message_complexity": 29.12,
+        "trust_clustering": 0,
+        "specialization_gini": 0.987857142857143,
+        "convergence_time": 53,
+        "success_rate": 0.07,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.11,
+        "message_complexity": 29.2,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9786363636363637,
+        "convergence_time": 53,
+        "success_rate": 0.11,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.14,
+        "message_complexity": 28.83,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9835714285714288,
+        "convergence_time": 53,
+        "success_rate": 0.14,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.06,
+        "message_complexity": 28.91,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9783333333333335,
+        "convergence_time": 53,
+        "success_rate": 0.06,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.08,
+        "message_complexity": 28.63,
+        "trust_clustering": 0,
+        "specialization_gini": 0.97875,
+        "convergence_time": 53,
+        "success_rate": 0.08,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.05,
+        "message_complexity": 29.1,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9870000000000001,
+        "convergence_time": 53,
+        "success_rate": 0.05,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.05,
+        "message_complexity": 28.95,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9750000000000001,
+        "convergence_time": 53,
+        "success_rate": 0.05,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.06,
+        "message_complexity": 29.0,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9833333333333334,
+        "convergence_time": 53,
+        "success_rate": 0.06,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.08,
+        "message_complexity": 28.92,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9750000000000001,
+        "convergence_time": 53,
+        "success_rate": 0.08,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      },
+      {
+        "n_agents": 200,
+        "coordination_efficiency": 0.05,
+        "message_complexity": 28.78,
+        "trust_clustering": 0,
+        "specialization_gini": 0.9750000000000001,
+        "convergence_time": 53,
+        "success_rate": 0.05,
+        "network_metrics": {
+          "clustering_coefficient": 0.0,
+          "avg_path_length": null,
+          "small_world_coefficient": 0.0,
+          "mean_degree": 0.0,
+          "degree_std": 0.0,
+          "max_betweenness": 0.0,
+          "n_components": 200,
+          "largest_component_fraction": 0.005
+        }
+      }
+    ]
+  },
+  "analysis": {
+    "by_size": {
+      "5": {
+        "efficiency": {
+          "mean": 0.22700000000000004,
+          "std": 0.03034798181098704
+        },
+        "messages": {
+          "mean": 11.095,
+          "std": 0.1409432509913119
+        },
+        "clustering": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "specialization": {
+          "mean": 0.3538311045171457,
+          "std": 0.08838181288321115
+        },
+        "network": {
+          "clustering_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "avg_path_length": {
+            "mean": Infinity,
+            "std": 0
+          },
+          "small_world_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_degree": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      },
+      "10": {
+        "efficiency": {
+          "mean": 0.265,
+          "std": 0.04759201613716318
+        },
+        "messages": {
+          "mean": 14.006,
+          "std": 0.19895728184713407
+        },
+        "clustering": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "specialization": {
+          "mean": 0.6207447834618752,
+          "std": 0.05146805253598581
+        },
+        "network": {
+          "clustering_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "avg_path_length": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "small_world_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_degree": {
+            "mean": 0.09,
+            "std": 0.27
+          }
+        }
+      },
+      "20": {
+        "efficiency": {
+          "mean": 0.20600000000000002,
+          "std": 0.0332264954516723
+        },
+        "messages": {
+          "mean": 17.987000000000002,
+          "std": 0.16541160781517095
+        },
+        "clustering": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "specialization": {
+          "mean": 0.7773051159366948,
+          "std": 0.04668678116505455
+        },
+        "network": {
+          "clustering_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "avg_path_length": {
+            "mean": Infinity,
+            "std": 0
+          },
+          "small_world_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_degree": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      },
+      "50": {
+        "efficiency": {
+          "mean": 0.184,
+          "std": 0.032310988842807024
+        },
+        "messages": {
+          "mean": 21.967999999999996,
+          "std": 0.20301724064719254
+        },
+        "clustering": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "specialization": {
+          "mean": 0.902959667783197,
+          "std": 0.017437222328333966
+        },
+        "network": {
+          "clustering_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "avg_path_length": {
+            "mean": Infinity,
+            "std": 0
+          },
+          "small_world_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_degree": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      },
+      "100": {
+        "efficiency": {
+          "mean": 0.11400000000000002,
+          "std": 0.032310988842807024
+        },
+        "messages": {
+          "mean": 26.025,
+          "std": 0.1665683043078719
+        },
+        "clustering": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "specialization": {
+          "mean": 0.9523625874125873,
+          "std": 0.014440582577113515
+        },
+        "network": {
+          "clustering_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "avg_path_length": {
+            "mean": Infinity,
+            "std": 0
+          },
+          "small_world_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_degree": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      },
+      "150": {
+        "efficiency": {
+          "mean": 0.09,
+          "std": 0.014142135623730949
+        },
+        "messages": {
+          "mean": 28.046999999999997,
+          "std": 0.225435134794912
+        },
+        "clustering": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "specialization": {
+          "mean": 0.9731551707551709,
+          "std": 0.004572454202047275
+        },
+        "network": {
+          "clustering_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "avg_path_length": {
+            "mean": Infinity,
+            "std": 0
+          },
+          "small_world_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_degree": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      },
+      "200": {
+        "efficiency": {
+          "mean": 0.075,
+          "std": 0.028017851452243805
+        },
+        "messages": {
+          "mean": 28.944000000000006,
+          "std": 0.16255460620972909
+        },
+        "clustering": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "specialization": {
+          "mean": 0.9802481601731602,
+          "std": 0.004638802153833034
+        },
+        "network": {
+          "clustering_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "avg_path_length": {
+            "mean": Infinity,
+            "std": 0
+          },
+          "small_world_coefficient": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_degree": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      }
+    },
+    "scaling_coefficients": {
+      "efficiency_vs_log_size": {
+        "slope": -0.04872601372449612,
+        "intercept": 0.3449872028137159,
+        "r_squared": 0.8810728697580775,
+        "p_value": 0.0017317337533270377
+      },
+      "messages_vs_size": {
+        "slope": 0.08474182305630026,
+        "intercept": 14.676446380697051,
+        "r_squared": 0.8434391130881758,
+        "p_value": 0.0034959369508149683
+      }
+    },
+    "phase_transitions": {
+      "efficiency_threshold": 0.5,
+      "transition_size": 5.0
+    },
+    "dunbar_estimate": 100.0,
+    "network_topology": {
+      "small_world_emergence": {
+        "mean_coefficient": 0,
+        "std_coefficient": 0,
+        "is_small_world": false,
+        "interpretation": "No small-world structure detected"
+      },
+      "clustering_vs_size": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trend": "stable_or_increasing"
+      },
+      "path_length_vs_size": {
+        "values": [
+          null,
+          1.0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "trend": "stable_or_decreasing"
+      },
+      "degree_distribution": {
+        "mean_degrees": [
+          0.0,
+          0.09,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "trend": "stable_or_decreasing"
+      }
+    }
+  }
+}

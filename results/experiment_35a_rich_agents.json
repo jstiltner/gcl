@@ -1,0 +1,92 @@
+{
+  "conditions": {
+    "reactive": {
+      "cooperation_rate": {
+        "mean": 0.53,
+        "std": 0.08318653737234169
+      },
+      "volunteer_rate": {
+        "mean": 0.961,
+        "std": 0.04825971404805462
+      },
+      "volunteer_success_rate": {
+        "mean": 0.5428098312753541,
+        "std": 0.07344804023486529
+      },
+      "assigned_success_rate": {
+        "mean": 0.08246753246753247,
+        "std": 0.15344610630190011
+      },
+      "mean_trust": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "mean_capability": {
+        "mean": 0.5200328753407117,
+        "std": 0.02926104947165936
+      }
+    },
+    "anticipatory": {
+      "cooperation_rate": {
+        "mean": 0.30599999999999994,
+        "std": 0.05517245689653489
+      },
+      "volunteer_rate": {
+        "mean": 0.08299999999999999,
+        "std": 0.06649060083951716
+      },
+      "volunteer_success_rate": {
+        "mean": 0.3543572874493927,
+        "std": 0.30971866776543794
+      },
+      "assigned_success_rate": {
+        "mean": 0.28254278783748155,
+        "std": 0.04539884489811088
+      },
+      "mean_trust": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "mean_capability": {
+        "mean": 0.5182608155416251,
+        "std": 0.03004723150889235
+      }
+    },
+    "recursive": {
+      "cooperation_rate": {
+        "mean": 0.30599999999999994,
+        "std": 0.05517245689653489
+      },
+      "volunteer_rate": {
+        "mean": 0.08299999999999999,
+        "std": 0.06649060083951716
+      },
+      "volunteer_success_rate": {
+        "mean": 0.3543572874493927,
+        "std": 0.30971866776543794
+      },
+      "assigned_success_rate": {
+        "mean": 0.28254278783748155,
+        "std": 0.04539884489811088
+      },
+      "mean_trust": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "mean_capability": {
+        "mean": 0.5182608155416251,
+        "std": 0.03004723150889235
+      }
+    }
+  },
+  "analysis": {
+    "reactive_cooperation": 0.53,
+    "anticipatory_cooperation": 0.30599999999999994,
+    "recursive_cooperation": 0.30599999999999994,
+    "anticipatory_effect": -0.2240000000000001,
+    "recursive_effect": -0.2240000000000001,
+    "strategic_helps": false,
+    "reactive_volunteer_rate": 0.961,
+    "recursive_volunteer_rate": 0.08299999999999999
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "ranking": [
+    {
+      "name": "Strong redemption (+30%)",
+      "cooperation": 0.649,
+      "std": 0.03693237062523877,
+      "penalties": 11.265039999999999
+    },
+    {
+      "name": "Redemption (+20%)",
+      "cooperation": 0.619,
+      "std": 0.03469870314579498,
+      "penalties": 11.993759999999998
+    },
+    {
+      "name": "No consequences",
+      "cooperation": 0.519,
+      "std": 0.028530685235374234,
+      "penalties": 0.0
+    },
+    {
+      "name": "5 chances",
+      "cooperation": 0.471,
+      "std": 0.02922327839240492,
+      "penalties": 2.0014
+    },
+    {
+      "name": "Very fast decay (3x)",
+      "cooperation": 0.442,
+      "std": 0.03385262175962151,
+      "penalties": 5.918560000000001
+    },
+    {
+      "name": "Fast decay (2x)",
+      "cooperation": 0.42300000000000004,
+      "std": 0.044676615807377355,
+      "penalties": 7.871519999999999
+    },
+    {
+      "name": "Proportional",
+      "cooperation": 0.388,
+      "std": 0.03458323293158118,
+      "penalties": 8.227160000000001
+    },
+    {
+      "name": "2 chances",
+      "cooperation": 0.373,
+      "std": 0.02839013913315677,
+      "penalties": 8.34872
+    },
+    {
+      "name": "Frequent amnesty (every 10)",
+      "cooperation": 0.367,
+      "std": 0.023579652245103194,
+      "penalties": 8.32432
+    },
+    {
+      "name": "Amnesty (every 25 rounds)",
+      "cooperation": 0.33,
+      "std": 0.017888543819998326,
+      "penalties": 13.716279999999998
+    },
+    {
+      "name": "Standard consequences",
+      "cooperation": 0.31900000000000006,
+      "std": 0.02059126028197402,
+      "penalties": 16.7226
+    },
+    {
+      "name": "Cooling off (2/5)",
+      "cooperation": 0.31900000000000006,
+      "std": 0.02059126028197402,
+      "penalties": 16.7226
+    },
+    {
+      "name": "Strict cooling (2/3)",
+      "cooperation": 0.31900000000000006,
+      "std": 0.02059126028197402,
+      "penalties": 16.7226
+    }
+  ],
+  "no_consequences_baseline": 0.519,
+  "standard_consequences": 0.31900000000000006,
+  "best_mechanism": "Strong redemption (+30%)",
+  "best_cooperation": 0.649,
+  "improvement_over_standard": 0.32999999999999996,
+  "gap_to_no_consequences": -0.13
+}

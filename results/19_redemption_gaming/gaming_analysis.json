@@ -1,0 +1,708 @@
+{
+  "gaming_vs_bonus": {
+    "bonus_0.00": {
+      "redemption_bonus": 0.0,
+      "mean_cooperation": 0.24224,
+      "std_cooperation": 0.010253116599356512,
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 90.83970059419657,
+          "mean_alternation": 0.4974020149784556,
+          "mean_gaming_efficiency": 0.5027485971343001
+        },
+        "honest": {
+          "mean_reward": 90.52365789473693,
+          "mean_alternation": 0.49447015780657677,
+          "mean_gaming_efficiency": 0.49621910950166936
+        },
+        "alternating": {
+          "mean_reward": 79.88828571428573,
+          "mean_alternation": 0.8903469729600383,
+          "mean_gaming_efficiency": 0.7985256381050615
+        },
+        "calculated": {
+          "mean_reward": 106.3410000000002,
+          "mean_alternation": 0.5792964824120603,
+          "mean_gaming_efficiency": 0.7065475529751325
+        },
+        "heuristic": {
+          "mean_reward": 79.67900000000002,
+          "mean_alternation": 0.6703306213607721,
+          "mean_gaming_efficiency": 0.5974739682261883
+        }
+      }
+    },
+    "bonus_0.10": {
+      "redemption_bonus": 0.1,
+      "mean_cooperation": 0.24224,
+      "std_cooperation": 0.010253116599356512,
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 95.79095590639007,
+          "mean_alternation": 0.4974020149784556,
+          "mean_gaming_efficiency": 0.5027485971343001
+        },
+        "honest": {
+          "mean_reward": 95.44321929824568,
+          "mean_alternation": 0.49447015780657677,
+          "mean_gaming_efficiency": 0.49621910950166936
+        },
+        "alternating": {
+          "mean_reward": 88.7647619047619,
+          "mean_alternation": 0.8903469729600383,
+          "mean_gaming_efficiency": 0.7985256381050615
+        },
+        "calculated": {
+          "mean_reward": 112.11800000000012,
+          "mean_alternation": 0.5792964824120603,
+          "mean_gaming_efficiency": 0.7065475529751325
+        },
+        "heuristic": {
+          "mean_reward": 86.35524603174602,
+          "mean_alternation": 0.6703306213607721,
+          "mean_gaming_efficiency": 0.5974739682261883
+        }
+      }
+    },
+    "bonus_0.20": {
+      "redemption_bonus": 0.2,
+      "mean_cooperation": 0.24224,
+      "std_cooperation": 0.010253116599356512,
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 100.74221121858355,
+          "mean_alternation": 0.4974020149784556,
+          "mean_gaming_efficiency": 0.5027485971343001
+        },
+        "honest": {
+          "mean_reward": 100.36278070175437,
+          "mean_alternation": 0.49447015780657677,
+          "mean_gaming_efficiency": 0.49621910950166936
+        },
+        "alternating": {
+          "mean_reward": 97.64123809523797,
+          "mean_alternation": 0.8903469729600383,
+          "mean_gaming_efficiency": 0.7985256381050615
+        },
+        "calculated": {
+          "mean_reward": 117.89500000000001,
+          "mean_alternation": 0.5792964824120603,
+          "mean_gaming_efficiency": 0.7065475529751325
+        },
+        "heuristic": {
+          "mean_reward": 93.03149206349198,
+          "mean_alternation": 0.6703306213607721,
+          "mean_gaming_efficiency": 0.5974739682261883
+        }
+      }
+    },
+    "bonus_0.30": {
+      "redemption_bonus": 0.3,
+      "mean_cooperation": 0.23576000000000003,
+      "std_cooperation": 0.010693100579345555,
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 105.59257369767147,
+          "mean_alternation": 0.49968484294698756,
+          "mean_gaming_efficiency": 0.5040677008642829
+        },
+        "honest": {
+          "mean_reward": 107.20850000000016,
+          "mean_alternation": 0.5091840782861676,
+          "mean_gaming_efficiency": 0.5213770494239522
+        },
+        "alternating": {
+          "mean_reward": 106.58400000000015,
+          "mean_alternation": 0.8902464704474754,
+          "mean_gaming_efficiency": 0.7992276608435891
+        },
+        "calculated": {
+          "mean_reward": 97.54400000000014,
+          "mean_alternation": 0.8156281407035175,
+          "mean_gaming_efficiency": 0.6854663329953388
+        },
+        "heuristic": {
+          "mean_reward": 99.56633333333349,
+          "mean_alternation": 0.6144440456249501,
+          "mean_gaming_efficiency": 0.5537644683223204
+        }
+      }
+    },
+    "bonus_0.50": {
+      "redemption_bonus": 0.5,
+      "mean_cooperation": 0.23576000000000003,
+      "std_cooperation": 0.010693100579345555,
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 115.53504893948445,
+          "mean_alternation": 0.49968484294698756,
+          "mean_gaming_efficiency": 0.5040677008642829
+        },
+        "honest": {
+          "mean_reward": 117.3544649122809,
+          "mean_alternation": 0.5091840782861676,
+          "mean_gaming_efficiency": 0.5213770494239522
+        },
+        "alternating": {
+          "mean_reward": 124.34800000000018,
+          "mean_alternation": 0.8902464704474754,
+          "mean_gaming_efficiency": 0.7992276608435891
+        },
+        "calculated": {
+          "mean_reward": 113.80133333333349,
+          "mean_alternation": 0.8156281407035175,
+          "mean_gaming_efficiency": 0.6854663329953388
+        },
+        "heuristic": {
+          "mean_reward": 111.80941269841284,
+          "mean_alternation": 0.6144440456249501,
+          "mean_gaming_efficiency": 0.5537644683223204
+        }
+      }
+    },
+    "bonus_0.70": {
+      "redemption_bonus": 0.7,
+      "mean_cooperation": 0.23576000000000003,
+      "std_cooperation": 0.010693100579345555,
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 125.47752418129724,
+          "mean_alternation": 0.49968484294698756,
+          "mean_gaming_efficiency": 0.5040677008642829
+        },
+        "honest": {
+          "mean_reward": 127.50042982456141,
+          "mean_alternation": 0.5091840782861676,
+          "mean_gaming_efficiency": 0.5213770494239522
+        },
+        "alternating": {
+          "mean_reward": 142.11199999999977,
+          "mean_alternation": 0.8902464704474754,
+          "mean_gaming_efficiency": 0.7992276608435891
+        },
+        "calculated": {
+          "mean_reward": 130.05866666666643,
+          "mean_alternation": 0.8156281407035175,
+          "mean_gaming_efficiency": 0.6854663329953388
+        },
+        "heuristic": {
+          "mean_reward": 124.052492063492,
+          "mean_alternation": 0.6144440456249501,
+          "mean_gaming_efficiency": 0.5537644683223204
+        }
+      }
+    },
+    "bonus_1.00": {
+      "redemption_bonus": 1.0,
+      "mean_cooperation": 0.23576000000000003,
+      "std_cooperation": 0.010693100579345555,
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 140.39123704401692,
+          "mean_alternation": 0.49968484294698756,
+          "mean_gaming_efficiency": 0.5040677008642829
+        },
+        "honest": {
+          "mean_reward": 142.7193771929827,
+          "mean_alternation": 0.5091840782861676,
+          "mean_gaming_efficiency": 0.5213770494239522
+        },
+        "alternating": {
+          "mean_reward": 168.75800000000027,
+          "mean_alternation": 0.8902464704474754,
+          "mean_gaming_efficiency": 0.7992276608435891
+        },
+        "calculated": {
+          "mean_reward": 154.44466666666693,
+          "mean_alternation": 0.8156281407035175,
+          "mean_gaming_efficiency": 0.6854663329953388
+        },
+        "heuristic": {
+          "mean_reward": 142.41711111111132,
+          "mean_alternation": 0.6144440456249501,
+          "mean_gaming_efficiency": 0.5537644683223204
+        }
+      }
+    }
+  },
+  "strategy_competition": {
+    "redemption_bonus": 0.3,
+    "ranking": [
+      [
+        "alternating",
+        265.84457142857036
+      ],
+      [
+        "honest",
+        263.7795742474915
+      ],
+      [
+        "naive",
+        262.36243421052615
+      ],
+      [
+        "heuristic",
+        250.85256275303573
+      ],
+      [
+        "calculated",
+        246.48699378881898
+      ]
+    ],
+    "winner": "alternating",
+    "gaming_profitable": true,
+    "seed_results": [
+      {
+        "by_strategy": {
+          "alternating": {
+            "n_agents": 21,
+            "mean_success_rate": 0.4417142857142858,
+            "mean_alternation_score": 0.8843401087890066,
+            "mean_redemption_bonuses": 220.85714285714286,
+            "mean_intentional_failures": 221.42857142857142,
+            "mean_total_reward": 265.0285714285704,
+            "mean_gaming_efficiency": 0.7913528022496523
+          },
+          "calculated": {
+            "n_agents": 23,
+            "mean_success_rate": 0.41191304347826085,
+            "mean_alternation_score": 0.8242572100723187,
+            "mean_redemption_bonuses": 205.95652173913044,
+            "mean_intentional_failures": 206.34782608695653,
+            "mean_total_reward": 247.14782608695555,
+            "mean_gaming_efficiency": 0.7009504123369669
+          },
+          "heuristic": {
+            "n_agents": 15,
+            "mean_success_rate": 0.4321333333333334,
+            "mean_alternation_score": 0.723179692718771,
+            "mean_redemption_bonuses": 180.53333333333333,
+            "mean_intentional_failures": 147.4,
+            "mean_total_reward": 248.61999999999924,
+            "mean_gaming_efficiency": 0.6325376207623381
+          },
+          "honest": {
+            "n_agents": 16,
+            "mean_success_rate": 0.503125,
+            "mean_alternation_score": 0.4954909819639278,
+            "mean_redemption_bonuses": 123.625,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 263.49374999999975,
+            "mean_gaming_efficiency": 0.49805662648323445
+          },
+          "naive": {
+            "n_agents": 25,
+            "mean_success_rate": 0.50144,
+            "mean_alternation_score": 0.5005210420841684,
+            "mean_redemption_bonuses": 124.84,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 263.0999999999998,
+            "mean_gaming_efficiency": 0.5017029221074868
+          }
+        },
+        "overall_cooperation": 0.2048,
+        "final_cooperation": 0.22
+      },
+      {
+        "by_strategy": {
+          "alternating": {
+            "n_agents": 21,
+            "mean_success_rate": 0.4401904761904762,
+            "mean_alternation_score": 0.881477240194675,
+            "mean_redemption_bonuses": 220.0952380952381,
+            "mean_intentional_failures": 220.76190476190476,
+            "mean_total_reward": 264.1142857142847,
+            "mean_gaming_efficiency": 0.7866163087547959
+          },
+          "calculated": {
+            "n_agents": 20,
+            "mean_success_rate": 0.41290000000000004,
+            "mean_alternation_score": 0.8268537074148294,
+            "mean_redemption_bonuses": 206.45,
+            "mean_intentional_failures": 207.15,
+            "mean_total_reward": 247.73999999999904,
+            "mean_gaming_efficiency": 0.7036016675026954
+          },
+          "naive": {
+            "n_agents": 24,
+            "mean_success_rate": 0.4985833333333333,
+            "mean_alternation_score": 0.4993319973279893,
+            "mean_redemption_bonuses": 124.625,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 261.74999999999983,
+            "mean_gaming_efficiency": 0.4983005178928601
+          },
+          "honest": {
+            "n_agents": 16,
+            "mean_success_rate": 0.5030000000000001,
+            "mean_alternation_score": 0.5048847695390781,
+            "mean_redemption_bonuses": 126.0625,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 264.1687499999998,
+            "mean_gaming_efficiency": 0.5082358359490418
+          },
+          "heuristic": {
+            "n_agents": 19,
+            "mean_success_rate": 0.44621052631578956,
+            "mean_alternation_score": 0.6807298808142602,
+            "mean_redemption_bonuses": 170.0,
+            "mean_intentional_failures": 118.94736842105263,
+            "mean_total_reward": 251.79473684210456,
+            "mean_gaming_efficiency": 0.6093871120300358
+          }
+        },
+        "overall_cooperation": 0.205,
+        "final_cooperation": 0.24
+      },
+      {
+        "by_strategy": {
+          "alternating": {
+            "n_agents": 29,
+            "mean_success_rate": 0.4440000000000001,
+            "mean_alternation_score": 0.889019418146638,
+            "mean_redemption_bonuses": 222.0,
+            "mean_intentional_failures": 222.6206896551724,
+            "mean_total_reward": 266.3999999999989,
+            "mean_gaming_efficiency": 0.7988331638226668
+          },
+          "naive": {
+            "n_agents": 19,
+            "mean_success_rate": 0.4996842105263158,
+            "mean_alternation_score": 0.49825967724923537,
+            "mean_redemption_bonuses": 124.36842105263158,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 262.1684210526314,
+            "mean_gaming_efficiency": 0.49797692744904404
+          },
+          "honest": {
+            "n_agents": 23,
+            "mean_success_rate": 0.4988695652173913,
+            "mean_alternation_score": 0.4969068571926461,
+            "mean_redemption_bonuses": 123.91304347826087,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 261.6652173913042,
+            "mean_gaming_efficiency": 0.4951858059392969
+          },
+          "calculated": {
+            "n_agents": 16,
+            "mean_success_rate": 0.41274999999999995,
+            "mean_alternation_score": 0.8266533066132264,
+            "mean_redemption_bonuses": 206.375,
+            "mean_intentional_failures": 207.125,
+            "mean_total_reward": 247.6499999999991,
+            "mean_gaming_efficiency": 0.703174612633874
+          },
+          "heuristic": {
+            "n_agents": 13,
+            "mean_success_rate": 0.4378461538461539,
+            "mean_alternation_score": 0.7274549098196392,
+            "mean_redemption_bonuses": 181.53846153846155,
+            "mean_intentional_failures": 146.07692307692307,
+            "mean_total_reward": 251.4923076923069,
+            "mean_gaming_efficiency": 0.6420077164134781
+          }
+        },
+        "overall_cooperation": 0.21040000000000003,
+        "final_cooperation": 0.16
+      },
+      {
+        "by_strategy": {
+          "alternating": {
+            "n_agents": 25,
+            "mean_success_rate": 0.4448,
+            "mean_alternation_score": 0.8904208416833668,
+            "mean_redemption_bonuses": 222.4,
+            "mean_intentional_failures": 222.92,
+            "mean_total_reward": 266.87999999999886,
+            "mean_gaming_efficiency": 0.8014410853929311
+          },
+          "calculated": {
+            "n_agents": 21,
+            "mean_success_rate": 0.4080952380952381,
+            "mean_alternation_score": 0.8170626968222161,
+            "mean_redemption_bonuses": 204.04761904761904,
+            "mean_intentional_failures": 204.66666666666666,
+            "mean_total_reward": 244.85714285714198,
+            "mean_gaming_efficiency": 0.6898860376805277
+          },
+          "honest": {
+            "n_agents": 25,
+            "mean_success_rate": 0.49984,
+            "mean_alternation_score": 0.502444889779559,
+            "mean_redemption_bonuses": 125.32,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 262.5239999999998,
+            "mean_gaming_efficiency": 0.5018669493313082
+          },
+          "heuristic": {
+            "n_agents": 13,
+            "mean_success_rate": 0.4512307692307692,
+            "mean_alternation_score": 0.6528441498381378,
+            "mean_redemption_bonuses": 162.92307692307693,
+            "mean_intentional_failures": 106.38461538461539,
+            "mean_total_reward": 251.93076923076862,
+            "mean_gaming_efficiency": 0.5889533503242679
+          },
+          "naive": {
+            "n_agents": 16,
+            "mean_success_rate": 0.49924999999999997,
+            "mean_alternation_score": 0.49824649298597196,
+            "mean_redemption_bonuses": 124.1875,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 261.9187499999998,
+            "mean_gaming_efficiency": 0.4967050169414824
+          }
+        },
+        "overall_cooperation": 0.2086,
+        "final_cooperation": 0.2
+      },
+      {
+        "by_strategy": {
+          "heuristic": {
+            "n_agents": 20,
+            "mean_success_rate": 0.44189999999999996,
+            "mean_alternation_score": 0.6886773547094188,
+            "mean_redemption_bonuses": 171.9,
+            "mean_intentional_failures": 125.95,
+            "mean_total_reward": 250.42499999999933,
+            "mean_gaming_efficiency": 0.6109314416858869
+          },
+          "alternating": {
+            "n_agents": 27,
+            "mean_success_rate": 0.44466666666666677,
+            "mean_alternation_score": 0.8901506717137978,
+            "mean_redemption_bonuses": 222.33333333333334,
+            "mean_intentional_failures": 222.85185185185185,
+            "mean_total_reward": 266.79999999999893,
+            "mean_gaming_efficiency": 0.8010196261384323
+          },
+          "calculated": {
+            "n_agents": 20,
+            "mean_success_rate": 0.40840000000000004,
+            "mean_alternation_score": 0.8176352705410821,
+            "mean_redemption_bonuses": 204.2,
+            "mean_intentional_failures": 204.8,
+            "mean_total_reward": 245.0399999999991,
+            "mean_gaming_efficiency": 0.690644687693941
+          },
+          "honest": {
+            "n_agents": 13,
+            "mean_success_rate": 0.5115384615384616,
+            "mean_alternation_score": 0.4922151996300292,
+            "mean_redemption_bonuses": 122.84615384615384,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 267.0461538461536,
+            "mean_gaming_efficiency": 0.5041575165533947
+          },
+          "naive": {
+            "n_agents": 20,
+            "mean_success_rate": 0.5023,
+            "mean_alternation_score": 0.49238476953907817,
+            "mean_redemption_bonuses": 122.8,
+            "mean_intentional_failures": 0.0,
+            "mean_total_reward": 262.8749999999997,
+            "mean_gaming_efficiency": 0.4945408410685583
+          }
+        },
+        "overall_cooperation": 0.21140000000000003,
+        "final_cooperation": 0.2
+      }
+    ]
+  },
+  "resistant_designs": {
+    "decreasing_bonus": {
+      "mean_cooperation": 0.23576000000000003,
+      "gaming_profitable": "False"
+    },
+    "cooldown": {
+      "mean_cooperation": 0.23576000000000003,
+      "gaming_profitable": "False"
+    },
+    "consistency_bonus": {
+      "mean_cooperation": 0.24224,
+      "gaming_profitable": "False"
+    },
+    "probabilistic": {
+      "mean_cooperation": 0.23216000000000006,
+      "gaming_profitable": "False"
+    }
+  },
+  "effort_cost_validation": {
+    "no_effort_cost": {
+      "config": {
+        "name": "no_effort_cost",
+        "attempt_cost": 0.0,
+        "remediation_cost": 0.0,
+        "gaming_penalty": 0.0,
+        "detection_prob": 0.0,
+        "expected_gaming_profitable": true,
+        "description": "No effort costs - gaming should be profitable"
+      },
+      "mean_cooperation": 0.22092,
+      "std_cooperation": 0.009661552670249235,
+      "gaming_profitable": "False",
+      "expected_gaming_profitable": true,
+      "prediction_correct": "False",
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 172.3662550994758,
+          "mean_alternation": 0.5012669713284508,
+          "mean_gaming_efficiency": 0.5009862456247567
+        },
+        "honest": {
+          "mean_reward": 172.638929719086,
+          "mean_alternation": 0.4989259758910406,
+          "mean_gaming_efficiency": 0.4994633138250907
+        },
+        "alternating": {
+          "mean_reward": 173.13882106782128,
+          "mean_alternation": 0.8895717808761286,
+          "mean_gaming_efficiency": 0.7989349097588827
+        },
+        "calculated": {
+          "mean_reward": 159.91563095238104,
+          "mean_alternation": 0.8212247173116738,
+          "mean_gaming_efficiency": 0.695515128389079
+        },
+        "heuristic": {
+          "mean_reward": 163.4044761904763,
+          "mean_alternation": 0.6548439241917503,
+          "mean_gaming_efficiency": 0.585226704240299
+        }
+      },
+      "n_detected_gamers": 0.0
+    },
+    "low_effort_cost": {
+      "config": {
+        "name": "low_effort_cost",
+        "attempt_cost": 0.02,
+        "remediation_cost": 0.1,
+        "gaming_penalty": 0.1,
+        "detection_prob": 0.2,
+        "expected_gaming_profitable": true,
+        "description": "Low effort costs - gaming may still work"
+      },
+      "mean_cooperation": 0.22092,
+      "std_cooperation": 0.009661552670249235,
+      "gaming_profitable": "False",
+      "expected_gaming_profitable": true,
+      "prediction_correct": "False",
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 158.87173967535742,
+          "mean_alternation": 0.5012669713284508,
+          "mean_gaming_efficiency": 0.5009862456247567
+        },
+        "honest": {
+          "mean_reward": 159.18399794916508,
+          "mean_alternation": 0.4989259758910406,
+          "mean_gaming_efficiency": 0.4994633138250907
+        },
+        "alternating": {
+          "mean_reward": 150.9975898268402,
+          "mean_alternation": 0.8895717808761286,
+          "mean_gaming_efficiency": 0.7989349097588827
+        },
+        "calculated": {
+          "mean_reward": 139.1301904761909,
+          "mean_alternation": 0.8212247173116738,
+          "mean_gaming_efficiency": 0.695515128389079
+        },
+        "heuristic": {
+          "mean_reward": 146.21900000000028,
+          "mean_alternation": 0.6548439241917503,
+          "mean_gaming_efficiency": 0.585226704240299
+        }
+      },
+      "n_detected_gamers": 18.3
+    },
+    "proper_effort_cost": {
+      "config": {
+        "name": "proper_effort_cost",
+        "attempt_cost": 0.05,
+        "remediation_cost": 0.35,
+        "gaming_penalty": 0.2,
+        "detection_prob": 0.3,
+        "expected_gaming_profitable": false,
+        "description": "Proper effort costs - gaming should be unprofitable"
+      },
+      "mean_cooperation": 0.22092,
+      "std_cooperation": 0.009661552670249235,
+      "gaming_profitable": "False",
+      "expected_gaming_profitable": false,
+      "prediction_correct": "True",
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 131.13545111506193,
+          "mean_alternation": 0.5012669713284508,
+          "mean_gaming_efficiency": 0.5009862456247567
+        },
+        "honest": {
+          "mean_reward": 131.54666852436327,
+          "mean_alternation": 0.4989259758910406,
+          "mean_gaming_efficiency": 0.4994633138250907
+        },
+        "alternating": {
+          "mean_reward": 103.1490259740264,
+          "mean_alternation": 0.8895717808761286,
+          "mean_gaming_efficiency": 0.7989349097588827
+        },
+        "calculated": {
+          "mean_reward": 94.41958928571466,
+          "mean_alternation": 0.8212247173116738,
+          "mean_gaming_efficiency": 0.695515128389079
+        },
+        "heuristic": {
+          "mean_reward": 110.1010476190481,
+          "mean_alternation": 0.6548439241917503,
+          "mean_gaming_efficiency": 0.585226704240299
+        }
+      },
+      "n_detected_gamers": 18.4
+    },
+    "high_effort_cost": {
+      "config": {
+        "name": "high_effort_cost",
+        "attempt_cost": 0.1,
+        "remediation_cost": 0.5,
+        "gaming_penalty": 0.5,
+        "detection_prob": 0.5,
+        "expected_gaming_profitable": false,
+        "description": "High effort costs - gaming definitely unprofitable"
+      },
+      "mean_cooperation": 0.22092,
+      "std_cooperation": 0.009661552670249235,
+      "gaming_profitable": "False",
+      "expected_gaming_profitable": false,
+      "prediction_correct": "True",
+      "strategy_performance": {
+        "naive": {
+          "mean_reward": 104.89367797888437,
+          "mean_alternation": 0.5012669713284508,
+          "mean_gaming_efficiency": 0.5009862456247567
+        },
+        "honest": {
+          "mean_reward": 105.3642708694819,
+          "mean_alternation": 0.4989259758910406,
+          "mean_gaming_efficiency": 0.4994633138250907
+        },
+        "alternating": {
+          "mean_reward": 42.62708405483397,
+          "mean_alternation": 0.8895717808761286,
+          "mean_gaming_efficiency": 0.7989349097588827
+        },
+        "calculated": {
+          "mean_reward": 37.24688095238083,
+          "mean_alternation": 0.8212247173116738,
+          "mean_gaming_efficiency": 0.695515128389079
+        },
+        "heuristic": {
+          "mean_reward": 67.89447619047634,
+          "mean_alternation": 0.6548439241917503,
+          "mean_gaming_efficiency": 0.585226704240299
+        }
+      },
+      "n_detected_gamers": 19.0
+    }
+  }
+}

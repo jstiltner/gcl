@@ -1,0 +1,111 @@
+{
+  "conditions": {
+    "baseline": {
+      "cooperation_rate": {
+        "mean": 0.508,
+        "std": 0.049558046773455475
+      },
+      "specialization": {
+        "mean": 0.03511913027263374,
+        "std": 0.030368747857328453
+      },
+      "type_alignment": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "penalty20": {
+      "cooperation_rate": {
+        "mean": 0.402,
+        "std": 0.06384355879804947
+      },
+      "specialization": {
+        "mean": 0.018318185971582794,
+        "std": 0.013719388807648244
+      },
+      "type_alignment": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "penalty40": {
+      "cooperation_rate": {
+        "mean": 0.30100000000000005,
+        "std": 0.051078371156488535
+      },
+      "specialization": {
+        "mean": 0.016773250901095733,
+        "std": 0.01114253860876271
+      },
+      "type_alignment": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "prereq": {
+      "cooperation_rate": {
+        "mean": 0.4758245993714543,
+        "std": 0.09125428900625318
+      },
+      "specialization": {
+        "mean": 0.017669864721450493,
+        "std": 0.011830309761238346
+      },
+      "type_alignment": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "innate": {
+      "cooperation_rate": {
+        "mean": 0.513,
+        "std": 0.06694027188471824
+      },
+      "specialization": {
+        "mean": 0.09728834921260997,
+        "std": 0.01673182162628945
+      },
+      "type_alignment": {
+        "mean": 0.09666666666666666,
+        "std": 0.02333333333333333
+      }
+    },
+    "penalty30_innate": {
+      "cooperation_rate": {
+        "mean": 0.513,
+        "std": 0.06694027188471824
+      },
+      "specialization": {
+        "mean": 0.13333333333333333,
+        "std": 0.03944053188733077
+      },
+      "type_alignment": {
+        "mean": 0.13333333333333333,
+        "std": 0.03944053188733077
+      }
+    },
+    "penalty40_prereq_innate": {
+      "cooperation_rate": {
+        "mean": 0.5185395422835246,
+        "std": 0.047804096757262195
+      },
+      "specialization": {
+        "mean": 0.11333333333333336,
+        "std": 0.030550504633038936
+      },
+      "type_alignment": {
+        "mean": 0.11333333333333336,
+        "std": 0.030550504633038936
+      }
+    }
+  },
+  "analysis": {
+    "baseline_specialization": 0.03511913027263374,
+    "max_specialization": 0.13333333333333333,
+    "max_spec_condition": "penalty30_innate",
+    "specialization_increase": 0.09821420306069958,
+    "pressure_induces_specialization": false,
+    "penalty_effect": -0.016800944301050946,
+    "innate_effect": 0.06216921893997623
+  }
+}

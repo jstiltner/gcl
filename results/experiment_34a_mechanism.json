@@ -1,0 +1,366 @@
+{
+  "conditions": {
+    "info100_effort_learn10_risk0": {
+      "cooperation_rate": {
+        "mean": 0.49300000000000005,
+        "std": 0.05814636704042652
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.49300000000000005,
+        "std": 0.05814636704042652
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.00840596601092918,
+        "std": 0.0037896926246060855
+      }
+    },
+    "info100_effort_learn10_risk50": {
+      "cooperation_rate": {
+        "mean": 0.48600000000000004,
+        "std": 0.06232174580353154
+      },
+      "volunteer_rate": {
+        "mean": 0.9730000000000001,
+        "std": 0.0331813200460741
+      },
+      "volunteer_success_rate": {
+        "mean": 0.4918370083846678,
+        "std": 0.05974664173589762
+      },
+      "assigned_success_rate": {
+        "mean": 0.11428571428571428,
+        "std": 0.16425465544919784
+      },
+      "calibration_error": {
+        "mean": 0.009056405547186062,
+        "std": 0.0037715699107545666
+      }
+    },
+    "info100_effort_learn1_risk0": {
+      "cooperation_rate": {
+        "mean": 0.5120000000000001,
+        "std": 0.05793099343184096
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.5120000000000001,
+        "std": 0.05793099343184096
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.000999208618734691,
+        "std": 0.0002993930389721749
+      }
+    },
+    "info100_effort_learn1_risk50": {
+      "cooperation_rate": {
+        "mean": 0.5120000000000001,
+        "std": 0.05793099343184096
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.5120000000000001,
+        "std": 0.05793099343184096
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.000999208618734691,
+        "std": 0.0002993930389721749
+      }
+    },
+    "info100_noeffort_learn10_risk0": {
+      "cooperation_rate": {
+        "mean": 0.417,
+        "std": 0.04960846701924985
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.417,
+        "std": 0.04960846701924985
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.011876751203683854,
+        "std": 0.004229336813808848
+      }
+    },
+    "info100_noeffort_learn10_risk50": {
+      "cooperation_rate": {
+        "mean": 0.434,
+        "std": 0.0397994974842648
+      },
+      "volunteer_rate": {
+        "mean": 0.97,
+        "std": 0.034058772731852795
+      },
+      "volunteer_success_rate": {
+        "mean": 0.4392617712296004,
+        "std": 0.042937440043144384
+      },
+      "assigned_success_rate": {
+        "mean": 0.11545454545454545,
+        "std": 0.19060798765706982
+      },
+      "calibration_error": {
+        "mean": 0.011616031292962759,
+        "std": 0.0034432400594912836
+      }
+    },
+    "info100_noeffort_learn1_risk0": {
+      "cooperation_rate": {
+        "mean": 0.453,
+        "std": 0.04583666654546336
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.453,
+        "std": 0.04583666654546336
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.0008735896530811407,
+        "std": 0.00037192581057765323
+      }
+    },
+    "info100_noeffort_learn1_risk50": {
+      "cooperation_rate": {
+        "mean": 0.453,
+        "std": 0.04583666654546336
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.453,
+        "std": 0.04583666654546336
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.0008735896530811407,
+        "std": 0.00037192581057765323
+      }
+    },
+    "info50_effort_learn10_risk0": {
+      "cooperation_rate": {
+        "mean": 0.441,
+        "std": 0.09544108130150246
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.441,
+        "std": 0.09544108130150246
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.012331109481822334,
+        "std": 0.007934469320810633
+      }
+    },
+    "info50_effort_learn10_risk50": {
+      "cooperation_rate": {
+        "mean": 0.44699999999999995,
+        "std": 0.08956003573022958
+      },
+      "volunteer_rate": {
+        "mean": 0.967,
+        "std": 0.04360045871318328
+      },
+      "volunteer_success_rate": {
+        "mean": 0.44935117242779,
+        "std": 0.08746079686444823
+      },
+      "assigned_success_rate": {
+        "mean": 0.32301587301587303,
+        "std": 0.3757255515642522
+      },
+      "calibration_error": {
+        "mean": 0.01351335172260969,
+        "std": 0.007492368882462207
+      }
+    },
+    "info50_effort_learn1_risk0": {
+      "cooperation_rate": {
+        "mean": 0.45,
+        "std": 0.09077444574328174
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.45,
+        "std": 0.09077444574328174
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.004760349461357645,
+        "std": 0.002506208950937641
+      }
+    },
+    "info50_effort_learn1_risk50": {
+      "cooperation_rate": {
+        "mean": 0.45,
+        "std": 0.09077444574328174
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.45,
+        "std": 0.09077444574328174
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.004760349461357645,
+        "std": 0.002506208950937641
+      }
+    },
+    "info50_noeffort_learn10_risk0": {
+      "cooperation_rate": {
+        "mean": 0.399,
+        "std": 0.08383913167489272
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.399,
+        "std": 0.08383913167489272
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.01303143252764703,
+        "std": 0.007390619884270698
+      }
+    },
+    "info50_noeffort_learn10_risk50": {
+      "cooperation_rate": {
+        "mean": 0.39999999999999997,
+        "std": 0.0914330356052997
+      },
+      "volunteer_rate": {
+        "mean": 0.944,
+        "std": 0.0551724568965349
+      },
+      "volunteer_success_rate": {
+        "mean": 0.40235798281461016,
+        "std": 0.09257180776216517
+      },
+      "assigned_success_rate": {
+        "mean": 0.20009920634920636,
+        "std": 0.18899996838094174
+      },
+      "calibration_error": {
+        "mean": 0.015292676578956336,
+        "std": 0.008545693974816129
+      }
+    },
+    "info50_noeffort_learn1_risk0": {
+      "cooperation_rate": {
+        "mean": 0.40800000000000003,
+        "std": 0.07440430095095311
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.40800000000000003,
+        "std": 0.07440430095095311
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.0052433789974670394,
+        "std": 0.0028661552848683693
+      }
+    },
+    "info50_noeffort_learn1_risk50": {
+      "cooperation_rate": {
+        "mean": 0.40800000000000003,
+        "std": 0.07440430095095311
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "volunteer_success_rate": {
+        "mean": 0.40800000000000003,
+        "std": 0.07440430095095311
+      },
+      "assigned_success_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "calibration_error": {
+        "mean": 0.0052433789974670394,
+        "std": 0.0028661552848683693
+      }
+    }
+  },
+  "analysis": {
+    "info_effect": 0.04462500000000008,
+    "effort_effect": 0.052375000000000005,
+    "learning_effect": -0.016125000000000056,
+    "risk_effect": 0.0021250000000000435,
+    "best_condition": "info100_effort_learn1_risk0",
+    "worst_condition": "info50_noeffort_learn10_risk0",
+    "best_coop": 0.5120000000000001,
+    "worst_coop": 0.399
+  }
+}

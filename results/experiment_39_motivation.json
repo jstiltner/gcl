@@ -1,0 +1,154 @@
+{
+  "conditions": {
+    "self_select_emergent": {
+      "cooperation_rate": {
+        "mean": 0.60825,
+        "std": 0.02829642203530335
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.9037816542034793,
+        "std": 0.007304499991614114
+      }
+    },
+    "self_select_fixed": {
+      "cooperation_rate": {
+        "mean": 0.53425,
+        "std": 0.02555753313604425
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.8000000000000005,
+        "std": 1.1102230246251565e-16
+      }
+    },
+    "oracle_emergent": {
+      "cooperation_rate": {
+        "mean": 0.28675,
+        "std": 0.02665872277510684
+      },
+      "volunteer_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.7763548593622411,
+        "std": 0.0035460665862886674
+      }
+    },
+    "oracle_fixed": {
+      "cooperation_rate": {
+        "mean": 0.29474999999999996,
+        "std": 0.024468091466234135
+      },
+      "volunteer_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.8000000000000005,
+        "std": 1.1102230246251565e-16
+      }
+    },
+    "hybrid_emergent": {
+      "cooperation_rate": {
+        "mean": 0.60825,
+        "std": 0.02829642203530335
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.9037816542034793,
+        "std": 0.007304499991614114
+      }
+    },
+    "hybrid_fixed": {
+      "cooperation_rate": {
+        "mean": 0.53425,
+        "std": 0.02555753313604425
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.8000000000000005,
+        "std": 1.1102230246251565e-16
+      }
+    },
+    "random_emergent": {
+      "cooperation_rate": {
+        "mean": 0.34424999999999994,
+        "std": 0.03171257636963607
+      },
+      "volunteer_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.7793852744824621,
+        "std": 0.004381435366530477
+      }
+    },
+    "random_fixed": {
+      "cooperation_rate": {
+        "mean": 0.352,
+        "std": 0.029681644159311668
+      },
+      "volunteer_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.8000000000000005,
+        "std": 1.1102230246251565e-16
+      }
+    },
+    "self_select_noisy": {
+      "cooperation_rate": {
+        "mean": 0.53675,
+        "std": 0.058827608314464055
+      },
+      "volunteer_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.8932005266742076,
+        "std": 0.01114300354517544
+      }
+    },
+    "oracle_noisy_agents": {
+      "cooperation_rate": {
+        "mean": 0.28700000000000003,
+        "std": 0.028478061731796282
+      },
+      "volunteer_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "mean_effort": {
+        "mean": 0.7761693257585385,
+        "std": 0.0044936773321622
+      }
+    }
+  },
+  "analysis": {
+    "ss_vs_oracle_fixed": 0.23950000000000005,
+    "info_advantage": 0.23950000000000005,
+    "ss_vs_oracle_emergent": 0.32149999999999995,
+    "emergent_motivation_effect": 0.0819999999999999,
+    "effort_difference": 0.1274267948412382,
+    "motivation_is_real": true,
+    "motivation_fraction": 0.2550544323483668,
+    "information_fraction": 0.7449455676516332
+  }
+}

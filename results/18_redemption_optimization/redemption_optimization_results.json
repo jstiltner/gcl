@@ -1,0 +1,235 @@
+{
+  "sweep": {
+    "redemption_0%": {
+      "redemption_boost": 0.0,
+      "mean_cooperation": 0.366,
+      "std_cooperation": 0.022000000000000006,
+      "mean_penalties": 15.9796
+    },
+    "redemption_10%": {
+      "redemption_boost": 0.1,
+      "mean_cooperation": 0.418,
+      "std_cooperation": 0.03234192325759246,
+      "mean_penalties": 15.171519999999997
+    },
+    "redemption_20%": {
+      "redemption_boost": 0.2,
+      "mean_cooperation": 0.488,
+      "std_cooperation": 0.036138621999185314,
+      "mean_penalties": 14.246559999999999
+    },
+    "redemption_30%": {
+      "redemption_boost": 0.3,
+      "mean_cooperation": 0.55,
+      "std_cooperation": 0.0304959013639538,
+      "mean_penalties": 13.24136
+    },
+    "redemption_40%": {
+      "redemption_boost": 0.4,
+      "mean_cooperation": 0.595,
+      "std_cooperation": 0.03391164991562634,
+      "mean_penalties": 12.402719999999999
+    },
+    "redemption_50%": {
+      "redemption_boost": 0.5,
+      "mean_cooperation": 0.637,
+      "std_cooperation": 0.03709447398198281,
+      "mean_penalties": 11.59772
+    },
+    "redemption_60%": {
+      "redemption_boost": 0.6,
+      "mean_cooperation": 0.666,
+      "std_cooperation": 0.030066592756745798,
+      "mean_penalties": 10.919599999999999
+    },
+    "redemption_70%": {
+      "redemption_boost": 0.7,
+      "mean_cooperation": 0.6839999999999999,
+      "std_cooperation": 0.026153393661244022,
+      "mean_penalties": 10.3438
+    }
+  },
+  "combinations": {
+    "Redemption 30% + Standard penalty": {
+      "redemption_boost": 0.3,
+      "violation_penalty": 0.5,
+      "penalty_duration": 10,
+      "decay_multiplier": 1,
+      "mean_cooperation": 0.55,
+      "std_cooperation": 0.0304959013639538,
+      "mean_penalties": 13.24136
+    },
+    "Redemption 30% + Mild penalty (30%)": {
+      "redemption_boost": 0.3,
+      "violation_penalty": 0.3,
+      "penalty_duration": 10,
+      "decay_multiplier": 1,
+      "mean_cooperation": 0.595,
+      "std_cooperation": 0.03391164991562634,
+      "mean_penalties": 12.402719999999999
+    },
+    "Redemption 30% + Very mild penalty (20%)": {
+      "redemption_boost": 0.3,
+      "violation_penalty": 0.2,
+      "penalty_duration": 10,
+      "decay_multiplier": 1,
+      "mean_cooperation": 0.619,
+      "std_cooperation": 0.03469870314579498,
+      "mean_penalties": 11.993759999999998
+    },
+    "Redemption 30% + Minimal penalty (10%)": {
+      "redemption_boost": 0.3,
+      "violation_penalty": 0.1,
+      "penalty_duration": 10,
+      "decay_multiplier": 1,
+      "mean_cooperation": 0.637,
+      "std_cooperation": 0.03709447398198281,
+      "mean_penalties": 11.59772
+    },
+    "Redemption 30% + Short duration (5)": {
+      "redemption_boost": 0.3,
+      "violation_penalty": 0.5,
+      "penalty_duration": 5,
+      "decay_multiplier": 1,
+      "mean_cooperation": 0.542,
+      "std_cooperation": 0.025806975801127875,
+      "mean_penalties": 6.790639999999999
+    },
+    "Redemption 30% + Fast decay (2x)": {
+      "redemption_boost": 0.3,
+      "violation_penalty": 0.5,
+      "penalty_duration": 10,
+      "decay_multiplier": 2,
+      "mean_cooperation": 0.542,
+      "std_cooperation": 0.025806975801127875,
+      "mean_penalties": 6.790639999999999
+    },
+    "Redemption 30% + Mild + Short + Fast": {
+      "redemption_boost": 0.3,
+      "violation_penalty": 0.3,
+      "penalty_duration": 5,
+      "decay_multiplier": 2,
+      "mean_cooperation": 0.545,
+      "std_cooperation": 0.019235384061671332,
+      "mean_penalties": 3.52436
+    },
+    "Redemption 40% + Mild + Short + Fast": {
+      "redemption_boost": 0.4,
+      "violation_penalty": 0.3,
+      "penalty_duration": 5,
+      "decay_multiplier": 2,
+      "mean_cooperation": 0.56,
+      "std_cooperation": 0.027202941017470863,
+      "mean_penalties": 3.4320800000000005
+    },
+    "Redemption 50% + Very mild + Short + Fast": {
+      "redemption_boost": 0.5,
+      "violation_penalty": 0.2,
+      "penalty_duration": 5,
+      "decay_multiplier": 2,
+      "mean_cooperation": 0.581,
+      "std_cooperation": 0.027820855486487092,
+      "mean_penalties": 3.30844
+    },
+    "No consequences (baseline)": {
+      "redemption_boost": 0.0,
+      "violation_penalty": 0.0,
+      "penalty_duration": 0,
+      "decay_multiplier": 1,
+      "mean_cooperation": 0.519,
+      "std_cooperation": 0.028530685235374234,
+      "mean_penalties": 0.0
+    }
+  },
+  "analysis": {
+    "optimal_redemption_boost": 0.7,
+    "optimal_boost_cooperation": 0.6839999999999999,
+    "best_combination": "Redemption 30% + Minimal penalty (10%)",
+    "best_combination_cooperation": 0.637,
+    "no_consequences_baseline": 0.519,
+    "sweep_ranking": [
+      [
+        "redemption_70%",
+        0.7,
+        0.6839999999999999
+      ],
+      [
+        "redemption_60%",
+        0.6,
+        0.666
+      ],
+      [
+        "redemption_50%",
+        0.5,
+        0.637
+      ],
+      [
+        "redemption_40%",
+        0.4,
+        0.595
+      ],
+      [
+        "redemption_30%",
+        0.3,
+        0.55
+      ],
+      [
+        "redemption_20%",
+        0.2,
+        0.488
+      ],
+      [
+        "redemption_10%",
+        0.1,
+        0.418
+      ],
+      [
+        "redemption_0%",
+        0.0,
+        0.366
+      ]
+    ],
+    "combo_ranking": [
+      [
+        "Redemption 30% + Minimal penalty (10%)",
+        0.637
+      ],
+      [
+        "Redemption 30% + Very mild penalty (20%)",
+        0.619
+      ],
+      [
+        "Redemption 30% + Mild penalty (30%)",
+        0.595
+      ],
+      [
+        "Redemption 50% + Very mild + Short + Fast",
+        0.581
+      ],
+      [
+        "Redemption 40% + Mild + Short + Fast",
+        0.56
+      ],
+      [
+        "Redemption 30% + Standard penalty",
+        0.55
+      ],
+      [
+        "Redemption 30% + Mild + Short + Fast",
+        0.545
+      ],
+      [
+        "Redemption 30% + Short duration (5)",
+        0.542
+      ],
+      [
+        "Redemption 30% + Fast decay (2x)",
+        0.542
+      ],
+      [
+        "No consequences (baseline)",
+        0.519
+      ]
+    ]
+  }
+}

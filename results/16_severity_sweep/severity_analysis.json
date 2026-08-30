@@ -1,0 +1,67 @@
+{
+  "data_points": [
+    {
+      "penalty": 0.0,
+      "duration": 0,
+      "cooperation": 0.519,
+      "std": 0.028530685235374234,
+      "penalties": 0.0
+    },
+    {
+      "penalty": 0.05,
+      "duration": 3,
+      "cooperation": 0.51,
+      "std": 0.030822070014844893,
+      "penalties": 3.7135599999999998
+    },
+    {
+      "penalty": 0.1,
+      "duration": 5,
+      "cooperation": 0.48100000000000004,
+      "std": 0.04140048308896891,
+      "penalties": 7.2452
+    },
+    {
+      "penalty": 0.2,
+      "duration": 7,
+      "cooperation": 0.433,
+      "std": 0.04007492981902775,
+      "penalties": 10.964
+    },
+    {
+      "penalty": 0.3,
+      "duration": 10,
+      "cooperation": 0.346,
+      "std": 0.027092434368288135,
+      "penalties": 16.26492
+    },
+    {
+      "penalty": 0.5,
+      "duration": 10,
+      "cooperation": 0.31900000000000006,
+      "std": 0.02059126028197402,
+      "penalties": 16.7226
+    },
+    {
+      "penalty": 0.7,
+      "duration": 15,
+      "cooperation": 0.233,
+      "std": 0.029427877939124325,
+      "penalties": 23.59136
+    },
+    {
+      "penalty": 1.0,
+      "duration": 20,
+      "cooperation": 0.173,
+      "std": 0.02942787793912432,
+      "penalties": 28.343600000000002
+    }
+  ],
+  "optimal_penalty": 0.0,
+  "max_cooperation": 0.519,
+  "zero_penalty_cooperation": 0.519,
+  "is_monotonic_decreasing": true,
+  "has_inverted_u": false,
+  "slope": -0.36224864864864903,
+  "interpretation": "\nANY CONSEQUENCES HURT COOPERATION.\n\nThe relationship is monotonically decreasing: more severe consequences \nalways lead to less cooperation. The optimal consequence level is zero.\n\nThis strongly supports removing punishment mechanisms entirely, or\nimplementing very different accountability approaches (e.g., positive\nreinforcement for cooperation rather than punishment for defection).\n\nThe mechanism appears to be RETALIATION CYCLES:\n1. Agent A defects \u2192 Agent B penalizes A\n2. A's cooperation probability toward B drops\n3. A more likely to defect against B \u2192 B penalizes again\n4. Cycle continues, spreading through the population\n\nWithout penalties, defection doesn't trigger retaliation, so\ncooperation can recover naturally through reputation and memory.\n"
+}

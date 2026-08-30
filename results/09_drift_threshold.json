@@ -1,0 +1,138 @@
+{
+  "config": {
+    "drift_rates": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5
+    ],
+    "episodes_per_rate": 50,
+    "steps_per_episode": 100,
+    "n_agents": 4,
+    "seed": 42
+  },
+  "results": [
+    {
+      "drift_rate": 0.0,
+      "gcl_success_rate": 0.9399999999999997,
+      "gcl_std": 2.220446049250313e-16,
+      "baseline_success_rate": 1.0,
+      "baseline_std": 0.0,
+      "gcl_advantage": -0.060000000000000275,
+      "p_value": 0.0,
+      "gcl_superior": false
+    },
+    {
+      "drift_rate": 0.05,
+      "gcl_success_rate": 0.45394999999999996,
+      "gcl_std": 0.07848740344794189,
+      "baseline_success_rate": 0.45880000000000004,
+      "baseline_std": 0.08630359204575438,
+      "gcl_advantage": -0.0048500000000000765,
+      "p_value": 0.7716511895039746,
+      "gcl_superior": false
+    },
+    {
+      "drift_rate": 0.1,
+      "gcl_success_rate": 0.3811,
+      "gcl_std": 0.05098323253776677,
+      "baseline_success_rate": 0.3678999999999999,
+      "baseline_std": 0.06562461428458075,
+      "gcl_advantage": 0.0132000000000001,
+      "p_value": 0.26907079853206944,
+      "gcl_superior": false
+    },
+    {
+      "drift_rate": 0.15,
+      "gcl_success_rate": 0.3483500000000001,
+      "gcl_std": 0.03880918061490091,
+      "baseline_success_rate": 0.3218,
+      "baseline_std": 0.048306417793084186,
+      "gcl_advantage": 0.02655000000000013,
+      "p_value": 0.0034665621615363905,
+      "gcl_superior": true
+    },
+    {
+      "drift_rate": 0.2,
+      "gcl_success_rate": 0.3263999999999999,
+      "gcl_std": 0.033690354702792906,
+      "baseline_success_rate": 0.2902,
+      "baseline_std": 0.04713501882889196,
+      "gcl_advantage": 0.0361999999999999,
+      "p_value": 3.318108351149307e-05,
+      "gcl_superior": true
+    },
+    {
+      "drift_rate": 0.25,
+      "gcl_success_rate": 0.3135,
+      "gcl_std": 0.04199702370406741,
+      "baseline_success_rate": 0.28009999999999996,
+      "baseline_std": 0.0403731346318316,
+      "gcl_advantage": 0.03340000000000004,
+      "p_value": 0.00011729193294347693,
+      "gcl_superior": true
+    },
+    {
+      "drift_rate": 0.3,
+      "gcl_success_rate": 0.2984,
+      "gcl_std": 0.028786976221895896,
+      "baseline_success_rate": 0.2723,
+      "baseline_std": 0.040307691573693474,
+      "gcl_advantage": 0.026100000000000012,
+      "p_value": 0.00038844080465195703,
+      "gcl_superior": true
+    },
+    {
+      "drift_rate": 0.35,
+      "gcl_success_rate": 0.29105000000000003,
+      "gcl_std": 0.0304880714378591,
+      "baseline_success_rate": 0.26720000000000005,
+      "baseline_std": 0.029468797057226482,
+      "gcl_advantage": 0.023849999999999982,
+      "p_value": 0.00015435110108415144,
+      "gcl_superior": true
+    },
+    {
+      "drift_rate": 0.4,
+      "gcl_success_rate": 0.28335,
+      "gcl_std": 0.024411114271986844,
+      "baseline_success_rate": 0.2624,
+      "baseline_std": 0.03367105581950171,
+      "gcl_advantage": 0.02094999999999997,
+      "p_value": 0.0006676129962801336,
+      "gcl_superior": true
+    },
+    {
+      "drift_rate": 0.45,
+      "gcl_success_rate": 0.27835,
+      "gcl_std": 0.032033615156582,
+      "baseline_success_rate": 0.26624999999999993,
+      "baseline_std": 0.024936168510819777,
+      "gcl_advantage": 0.012100000000000055,
+      "p_value": 0.03969108268733333,
+      "gcl_superior": true
+    },
+    {
+      "drift_rate": 0.5,
+      "gcl_success_rate": 0.2796,
+      "gcl_std": 0.02568735097280371,
+      "baseline_success_rate": 0.2621,
+      "baseline_std": 0.026829834140374407,
+      "gcl_advantage": 0.017500000000000016,
+      "p_value": 0.0013585923584230393,
+      "gcl_superior": true
+    }
+  ],
+  "crossover": {
+    "rate": 0.05056179775280874,
+    "confidence_interval": 0.024999999999999994
+  },
+  "hypothesis_confirmed": false
+}

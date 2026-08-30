@@ -1,0 +1,626 @@
+{
+  "results": {
+    "blind": [
+      {
+        "cooperation_rate": 0.24099999999999996,
+        "commitment_rate": 0.78,
+        "refusal_rate": 0.22000000000000003,
+        "mean_reputation": 0.017,
+        "std_reputation": 0.03407345007480164,
+        "gini": 0.8105882352941176,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 7775
+      },
+      {
+        "cooperation_rate": 0.29500000000000004,
+        "commitment_rate": 0.8160000000000001,
+        "refusal_rate": 0.18400000000000002,
+        "mean_reputation": 0.030999999999999996,
+        "std_reputation": 0.0631585306985525,
+        "gini": 0.7554838709677418,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 8187
+      },
+      {
+        "cooperation_rate": 0.261,
+        "commitment_rate": 0.793,
+        "refusal_rate": 0.20700000000000002,
+        "mean_reputation": 0.047,
+        "std_reputation": 0.09132907532653553,
+        "gini": 0.7876595744680852,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 7933
+      },
+      {
+        "cooperation_rate": 0.259,
+        "commitment_rate": 0.781,
+        "refusal_rate": 0.219,
+        "mean_reputation": 0.023,
+        "std_reputation": 0.04382921400162225,
+        "gini": 0.7608695652173916,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 7907
+      },
+      {
+        "cooperation_rate": 0.26799999999999996,
+        "commitment_rate": 0.8219999999999998,
+        "refusal_rate": 0.17800000000000002,
+        "mean_reputation": 0.018000000000000002,
+        "std_reputation": 0.037094473981982824,
+        "gini": 0.8244444444444445,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 8212
+      },
+      {
+        "cooperation_rate": 0.25,
+        "commitment_rate": 0.779,
+        "refusal_rate": 0.221,
+        "mean_reputation": 0.013000000000000001,
+        "std_reputation": 0.02609597670139978,
+        "gini": 0.8076923076923077,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 7843
+      },
+      {
+        "cooperation_rate": 0.269,
+        "commitment_rate": 0.7939999999999999,
+        "refusal_rate": 0.20600000000000002,
+        "mean_reputation": 0.025,
+        "std_reputation": 0.061032778078668484,
+        "gini": 0.7847999999999999,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 8039
+      },
+      {
+        "cooperation_rate": 0.29200000000000004,
+        "commitment_rate": 0.8130000000000001,
+        "refusal_rate": 0.18700000000000003,
+        "mean_reputation": 0.033,
+        "std_reputation": 0.05158488150611573,
+        "gini": 0.715757575757576,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 8273
+      },
+      {
+        "cooperation_rate": 0.28400000000000003,
+        "commitment_rate": 0.804,
+        "refusal_rate": 0.19600000000000004,
+        "mean_reputation": 0.024,
+        "std_reputation": 0.03773592452822642,
+        "gini": 0.7283333333333335,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 8120
+      },
+      {
+        "cooperation_rate": 0.288,
+        "commitment_rate": 0.8160000000000001,
+        "refusal_rate": 0.18400000000000002,
+        "mean_reputation": 0.034,
+        "std_reputation": 0.054258639865002144,
+        "gini": 0.7294117647058822,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 0,
+        "total_attempted": 8123
+      }
+    ],
+    "self": [
+      {
+        "cooperation_rate": 0.189,
+        "commitment_rate": 0.51,
+        "refusal_rate": 0.49000000000000005,
+        "mean_reputation": 0.0432,
+        "std_reputation": 0.0678067843213347,
+        "gini": 0.7185185185185188,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4852,
+        "total_attempted": 5148
+      },
+      {
+        "cooperation_rate": 0.17800000000000002,
+        "commitment_rate": 0.51,
+        "refusal_rate": 0.4900000000000001,
+        "mean_reputation": 0.026400000000000007,
+        "std_reputation": 0.052221068545176295,
+        "gini": 0.8054545454545454,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4858,
+        "total_attempted": 5142
+      },
+      {
+        "cooperation_rate": 0.18600000000000003,
+        "commitment_rate": 0.4979999999999999,
+        "refusal_rate": 0.5020000000000001,
+        "mean_reputation": 0.04680000000000001,
+        "std_reputation": 0.06469744971789848,
+        "gini": 0.6128205128205131,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4780,
+        "total_attempted": 5220
+      },
+      {
+        "cooperation_rate": 0.163,
+        "commitment_rate": 0.48600000000000004,
+        "refusal_rate": 0.514,
+        "mean_reputation": 0.032,
+        "std_reputation": 0.046647615158762416,
+        "gini": 0.7080000000000002,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4870,
+        "total_attempted": 5130
+      },
+      {
+        "cooperation_rate": 0.20099999999999998,
+        "commitment_rate": 0.48599999999999993,
+        "refusal_rate": 0.514,
+        "mean_reputation": 0.05080000000000004,
+        "std_reputation": 0.09416666076696158,
+        "gini": 0.7571653543307089,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4769,
+        "total_attempted": 5231
+      },
+      {
+        "cooperation_rate": 0.16400000000000003,
+        "commitment_rate": 0.4950000000000001,
+        "refusal_rate": 0.5049999999999999,
+        "mean_reputation": 0.026400000000000007,
+        "std_reputation": 0.037189245757342275,
+        "gini": 0.6842424242424241,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4814,
+        "total_attempted": 5186
+      },
+      {
+        "cooperation_rate": 0.21199999999999997,
+        "commitment_rate": 0.5330000000000001,
+        "refusal_rate": 0.46699999999999997,
+        "mean_reputation": 0.030000000000000006,
+        "std_reputation": 0.0563205113613149,
+        "gini": 0.7821333333333333,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4721,
+        "total_attempted": 5279
+      },
+      {
+        "cooperation_rate": 0.17800000000000005,
+        "commitment_rate": 0.508,
+        "refusal_rate": 0.492,
+        "mean_reputation": 0.024800000000000003,
+        "std_reputation": 0.04725420616199155,
+        "gini": 0.7916129032258064,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4934,
+        "total_attempted": 5066
+      },
+      {
+        "cooperation_rate": 0.19800000000000004,
+        "commitment_rate": 0.506,
+        "refusal_rate": 0.4940000000000001,
+        "mean_reputation": 0.03120000000000001,
+        "std_reputation": 0.05616546981909794,
+        "gini": 0.7707692307692309,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4838,
+        "total_attempted": 5162
+      },
+      {
+        "cooperation_rate": 0.16600000000000004,
+        "commitment_rate": 0.48900000000000005,
+        "refusal_rate": 0.5109999999999999,
+        "mean_reputation": 0.031200000000000006,
+        "std_reputation": 0.06202064172515471,
+        "gini": 0.7423076923076923,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4796,
+        "total_attempted": 5204
+      }
+    ],
+    "social": [
+      {
+        "cooperation_rate": 0.18900000000000003,
+        "commitment_rate": 0.5240000000000001,
+        "refusal_rate": 0.4760000000000001,
+        "mean_reputation": 0.013600000000000003,
+        "std_reputation": 0.02056793621149191,
+        "gini": 0.6811764705882353,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4897,
+        "total_attempted": 5103
+      },
+      {
+        "cooperation_rate": 0.18100000000000005,
+        "commitment_rate": 0.49499999999999994,
+        "refusal_rate": 0.505,
+        "mean_reputation": 0.014400000000000003,
+        "std_reputation": 0.022641554716935856,
+        "gini": 0.7088888888888887,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4914,
+        "total_attempted": 5086
+      },
+      {
+        "cooperation_rate": 0.166,
+        "commitment_rate": 0.515,
+        "refusal_rate": 0.485,
+        "mean_reputation": 0.008400000000000001,
+        "std_reputation": 0.016044936896105266,
+        "gini": 0.7876190476190477,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4872,
+        "total_attempted": 5128
+      },
+      {
+        "cooperation_rate": 0.199,
+        "commitment_rate": 0.532,
+        "refusal_rate": 0.46799999999999997,
+        "mean_reputation": 0.015600000000000003,
+        "std_reputation": 0.0223749860335152,
+        "gini": 0.6907692307692308,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4772,
+        "total_attempted": 5228
+      },
+      {
+        "cooperation_rate": 0.18700000000000006,
+        "commitment_rate": 0.49400000000000005,
+        "refusal_rate": 0.506,
+        "mean_reputation": 0.015200000000000002,
+        "std_reputation": 0.026701310829245824,
+        "gini": 0.7642105263157895,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4847,
+        "total_attempted": 5153
+      },
+      {
+        "cooperation_rate": 0.16500000000000004,
+        "commitment_rate": 0.491,
+        "refusal_rate": 0.509,
+        "mean_reputation": 0.01880000000000004,
+        "std_reputation": 0.04289009209596097,
+        "gini": 0.7582978723404257,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4808,
+        "total_attempted": 5192
+      },
+      {
+        "cooperation_rate": 0.18900000000000003,
+        "commitment_rate": 0.518,
+        "refusal_rate": 0.48200000000000004,
+        "mean_reputation": 0.016800000000000002,
+        "std_reputation": 0.02541180827882975,
+        "gini": 0.7066666666666666,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4781,
+        "total_attempted": 5219
+      },
+      {
+        "cooperation_rate": 0.17800000000000002,
+        "commitment_rate": 0.502,
+        "refusal_rate": 0.49800000000000005,
+        "mean_reputation": 0.019200000000000002,
+        "std_reputation": 0.02652093512680125,
+        "gini": 0.6641666666666668,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4840,
+        "total_attempted": 5160
+      },
+      {
+        "cooperation_rate": 0.154,
+        "commitment_rate": 0.4750000000000001,
+        "refusal_rate": 0.525,
+        "mean_reputation": 0.014800000000000002,
+        "std_reputation": 0.028512453419514784,
+        "gini": 0.7270270270270267,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4927,
+        "total_attempted": 5073
+      },
+      {
+        "cooperation_rate": 0.168,
+        "commitment_rate": 0.47300000000000003,
+        "refusal_rate": 0.5269999999999999,
+        "mean_reputation": 0.014800000000000004,
+        "std_reputation": 0.024595934623429138,
+        "gini": 0.7324324324324325,
+        "easy_task_ratio": 0,
+        "redemption_attempts": 0,
+        "total_refusals": 4800,
+        "total_attempted": 5200
+      }
+    ],
+    "strategic": [
+      {
+        "cooperation_rate": 0.156,
+        "commitment_rate": 0.49400000000000005,
+        "refusal_rate": 0.506,
+        "mean_reputation": 0.020400000000000005,
+        "std_reputation": 0.029459124223235156,
+        "gini": 0.6862745098039214,
+        "easy_task_ratio": 0.9666566536497446,
+        "redemption_attempts": 3292,
+        "total_refusals": 4840,
+        "total_attempted": 5160
+      },
+      {
+        "cooperation_rate": 0.16700000000000004,
+        "commitment_rate": 0.519,
+        "refusal_rate": 0.48100000000000004,
+        "mean_reputation": 0.017600000000000005,
+        "std_reputation": 0.024864432428672093,
+        "gini": 0.6954545454545453,
+        "easy_task_ratio": 0.9731343283582089,
+        "redemption_attempts": 3305,
+        "total_refusals": 4833,
+        "total_attempted": 5167
+      },
+      {
+        "cooperation_rate": 0.164,
+        "commitment_rate": 0.504,
+        "refusal_rate": 0.4960000000000001,
+        "mean_reputation": 0.023950000000000013,
+        "std_reputation": 0.041587528178529724,
+        "gini": 0.722463465553236,
+        "easy_task_ratio": 0.9666265784726398,
+        "redemption_attempts": 3214,
+        "total_refusals": 4823,
+        "total_attempted": 5177
+      },
+      {
+        "cooperation_rate": 0.18400000000000002,
+        "commitment_rate": 0.529,
+        "refusal_rate": 0.471,
+        "mean_reputation": 0.024100000000000014,
+        "std_reputation": 0.04638631263638019,
+        "gini": 0.7224066390041495,
+        "easy_task_ratio": 0.971063829787234,
+        "redemption_attempts": 3370,
+        "total_refusals": 4674,
+        "total_attempted": 5326
+      },
+      {
+        "cooperation_rate": 0.194,
+        "commitment_rate": 0.49800000000000005,
+        "refusal_rate": 0.502,
+        "mean_reputation": 0.026100000000000012,
+        "std_reputation": 0.04932838939191106,
+        "gini": 0.770344827586207,
+        "easy_task_ratio": 0.9584543869843114,
+        "redemption_attempts": 3133,
+        "total_refusals": 4757,
+        "total_attempted": 5243
+      },
+      {
+        "cooperation_rate": 0.185,
+        "commitment_rate": 0.5,
+        "refusal_rate": 0.5,
+        "mean_reputation": 0.03,
+        "std_reputation": 0.03741657386773942,
+        "gini": 0.6181333333333332,
+        "easy_task_ratio": 0.9646556977452773,
+        "redemption_attempts": 3260,
+        "total_refusals": 4886,
+        "total_attempted": 5114
+      },
+      {
+        "cooperation_rate": 0.176,
+        "commitment_rate": 0.49899999999999994,
+        "refusal_rate": 0.5010000000000001,
+        "mean_reputation": 0.02390000000000002,
+        "std_reputation": 0.035486476297316445,
+        "gini": 0.707531380753138,
+        "easy_task_ratio": 0.9658854939187185,
+        "redemption_attempts": 3297,
+        "total_refusals": 4800,
+        "total_attempted": 5200
+      },
+      {
+        "cooperation_rate": 0.18200000000000002,
+        "commitment_rate": 0.492,
+        "refusal_rate": 0.508,
+        "mean_reputation": 0.024700000000000007,
+        "std_reputation": 0.03143898853334823,
+        "gini": 0.645748987854251,
+        "easy_task_ratio": 0.9620069605568445,
+        "redemption_attempts": 3139,
+        "total_refusals": 4794,
+        "total_attempted": 5206
+      },
+      {
+        "cooperation_rate": 0.18400000000000002,
+        "commitment_rate": 0.503,
+        "refusal_rate": 0.497,
+        "mean_reputation": 0.022000000000000006,
+        "std_reputation": 0.03243454948045372,
+        "gini": 0.7054545454545453,
+        "easy_task_ratio": 0.9633523580654851,
+        "redemption_attempts": 3247,
+        "total_refusals": 4877,
+        "total_attempted": 5123
+      },
+      {
+        "cooperation_rate": 0.18000000000000002,
+        "commitment_rate": 0.477,
+        "refusal_rate": 0.523,
+        "mean_reputation": 0.021000000000000005,
+        "std_reputation": 0.03511409973215889,
+        "gini": 0.7335238095238097,
+        "easy_task_ratio": 0.9721080446271286,
+        "redemption_attempts": 3199,
+        "total_refusals": 4823,
+        "total_attempted": 5177
+      }
+    ]
+  },
+  "analysis": {
+    "summary": {
+      "blind": {
+        "cooperation_rate": {
+          "mean": 0.27070000000000005,
+          "std": 0.017527407110009188
+        },
+        "gini": {
+          "mean": 0.7705040671880881,
+          "std": 0.03630497424860227
+        },
+        "easy_task_ratio": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.20020000000000002,
+          "std": 0.015708596372687147
+        },
+        "redemption_attempts": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "self": {
+        "cooperation_rate": {
+          "mean": 0.1835,
+          "std": 0.01591383046283953
+        },
+        "gini": {
+          "mean": 0.7373024515002774,
+          "std": 0.05537720023096696
+        },
+        "easy_task_ratio": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.4979,
+          "std": 0.013736447866897745
+        },
+        "redemption_attempts": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "social": {
+        "cooperation_rate": {
+          "mean": 0.1776,
+          "std": 0.013268006632497597
+        },
+        "gini": {
+          "mean": 0.722125482931441,
+          "std": 0.03732653340019371
+        },
+        "easy_task_ratio": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.4981000000000001,
+          "std": 0.019007630046904832
+        },
+        "redemption_attempts": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "strategic": {
+        "cooperation_rate": {
+          "mean": 0.17719999999999997,
+          "std": 0.010934349546269317
+        },
+        "gini": {
+          "mean": 0.7007336044321135,
+          "std": 0.04124847997790781
+        },
+        "easy_task_ratio": {
+          "mean": 0.9663944332165594,
+          "std": 0.004413934176716868
+        },
+        "refusal_rate": {
+          "mean": 0.49850000000000005,
+          "std": 0.013559129765585995
+        },
+        "redemption_attempts": {
+          "mean": 3245.6,
+          "std": 71.56842879370762
+        }
+      }
+    },
+    "hypotheses": {
+      "H1_awareness_increases_cooperation": {
+        "passed": "False",
+        "blind_mean": 0.27070000000000005,
+        "self_mean": 0.1835,
+        "social_mean": 0.1776,
+        "strategic_mean": 0.17719999999999997,
+        "self_vs_blind_p": 1.8809420985321566e-09,
+        "description": "Awareness increases cooperation (agents protect reputation)"
+      },
+      "H2_awareness_increases_inequality": {
+        "passed": "False",
+        "blind_mean": 0.7705040671880881,
+        "self_mean": 0.7373024515002774,
+        "social_mean": 0.722125482931441,
+        "strategic_mean": 0.7007336044321135,
+        "strategic_vs_blind_p": 0.001284968639888385,
+        "description": "Awareness increases inequality (rich get richer)"
+      },
+      "H3_strategic_increases_gaming": {
+        "passed": "True",
+        "blind_easy_ratio": 0.0,
+        "strategic_easy_ratio": 0.9663944332165594,
+        "p_value": 7.10355687247811e-41,
+        "description": "Strategic awareness increases gaming (metric optimization)"
+      },
+      "H4_self_awareness_optimal": {
+        "passed": false,
+        "best_level": "blind",
+        "description": "Self-awareness without social visibility is optimal",
+        "scores": {
+          "blind": -0.11455203359404398,
+          "self": -0.1851512257501387,
+          "social": -0.18346274146572047,
+          "strategic": -0.4630851321810246
+        }
+      }
+    },
+    "summary_stats": {
+      "hypotheses_passed": 1,
+      "hypotheses_total": 4
+    }
+  }
+}

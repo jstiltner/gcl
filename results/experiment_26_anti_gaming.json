@@ -1,0 +1,724 @@
+{
+  "results": {
+    "none": [
+      {
+        "cooperation_rate": 0.18100000000000002,
+        "commitment_rate": 0.5160000000000001,
+        "refusal_rate": 0.484,
+        "mean_reputation": 0.067,
+        "gini": 0.5937313432835822,
+        "easy_task_ratio": 0.9264178033022255,
+        "total_refusals": 4428
+      },
+      {
+        "cooperation_rate": 0.196,
+        "commitment_rate": 0.523,
+        "refusal_rate": 0.477,
+        "mean_reputation": 0.12200000000000001,
+        "gini": 0.660655737704918,
+        "easy_task_ratio": 0.8990222521915037,
+        "total_refusals": 4068
+      },
+      {
+        "cooperation_rate": 0.189,
+        "commitment_rate": 0.538,
+        "refusal_rate": 0.462,
+        "mean_reputation": 0.079,
+        "gini": 0.8037974683544302,
+        "easy_task_ratio": 0.8922813036020584,
+        "total_refusals": 4170
+      },
+      {
+        "cooperation_rate": 0.192,
+        "commitment_rate": 0.518,
+        "refusal_rate": 0.48200000000000004,
+        "mean_reputation": 0.10200000000000001,
+        "gini": 0.6541176470588235,
+        "easy_task_ratio": 0.9118679775280899,
+        "total_refusals": 4304
+      },
+      {
+        "cooperation_rate": 0.19000000000000003,
+        "commitment_rate": 0.553,
+        "refusal_rate": 0.44699999999999995,
+        "mean_reputation": 0.09,
+        "gini": 0.7124444444444444,
+        "easy_task_ratio": 0.922739244951712,
+        "total_refusals": 4305
+      },
+      {
+        "cooperation_rate": 0.18500000000000003,
+        "commitment_rate": 0.5370000000000001,
+        "refusal_rate": 0.4629999999999999,
+        "mean_reputation": 0.079,
+        "gini": 0.7131645569620253,
+        "easy_task_ratio": 0.9189379286091085,
+        "total_refusals": 4313
+      },
+      {
+        "cooperation_rate": 0.21799999999999997,
+        "commitment_rate": 0.5810000000000001,
+        "refusal_rate": 0.41900000000000004,
+        "mean_reputation": 0.1,
+        "gini": 0.6763999999999999,
+        "easy_task_ratio": 0.8973206856382093,
+        "total_refusals": 3991
+      },
+      {
+        "cooperation_rate": 0.19200000000000003,
+        "commitment_rate": 0.562,
+        "refusal_rate": 0.438,
+        "mean_reputation": 0.09699999999999999,
+        "gini": 0.7325773195876291,
+        "easy_task_ratio": 0.9151058988272361,
+        "total_refusals": 4287
+      },
+      {
+        "cooperation_rate": 0.193,
+        "commitment_rate": 0.5290000000000001,
+        "refusal_rate": 0.471,
+        "mean_reputation": 0.10099999999999998,
+        "gini": 0.6873267326732673,
+        "easy_task_ratio": 0.9044016506189821,
+        "total_refusals": 4184
+      },
+      {
+        "cooperation_rate": 0.18200000000000002,
+        "commitment_rate": 0.506,
+        "refusal_rate": 0.49400000000000005,
+        "mean_reputation": 0.077,
+        "gini": 0.6984415584415584,
+        "easy_task_ratio": 0.92,
+        "total_refusals": 4375
+      }
+    ],
+    "difficulty_weighted": [
+      {
+        "cooperation_rate": 0.31000000000000005,
+        "commitment_rate": 0.9420000000000002,
+        "refusal_rate": 0.05800000000000001,
+        "mean_reputation": 0.7751258191426064,
+        "gini": 0.182284683132806,
+        "easy_task_ratio": 0.6960427807486631,
+        "total_refusals": 650
+      },
+      {
+        "cooperation_rate": 0.28300000000000003,
+        "commitment_rate": 0.8870000000000001,
+        "refusal_rate": 0.11300000000000002,
+        "mean_reputation": 0.7078530067423532,
+        "gini": 0.2679162583692791,
+        "easy_task_ratio": 0.6835775202274218,
+        "total_refusals": 854
+      },
+      {
+        "cooperation_rate": 0.255,
+        "commitment_rate": 0.899,
+        "refusal_rate": 0.10100000000000002,
+        "mean_reputation": 0.715084946482511,
+        "gini": 0.24286475649600736,
+        "easy_task_ratio": 0.69178901576944,
+        "total_refusals": 805
+      },
+      {
+        "cooperation_rate": 0.337,
+        "commitment_rate": 0.915,
+        "refusal_rate": 0.085,
+        "mean_reputation": 0.7944926844838058,
+        "gini": 0.17565240601845522,
+        "easy_task_ratio": 0.6872246696035242,
+        "total_refusals": 693
+      },
+      {
+        "cooperation_rate": 0.30900000000000005,
+        "commitment_rate": 0.9560000000000001,
+        "refusal_rate": 0.044000000000000004,
+        "mean_reputation": 0.8129226018681222,
+        "gini": 0.15281410390590877,
+        "easy_task_ratio": 0.6871060784104263,
+        "total_refusals": 639
+      },
+      {
+        "cooperation_rate": 0.263,
+        "commitment_rate": 0.9069999999999998,
+        "refusal_rate": 0.09300000000000001,
+        "mean_reputation": 0.7354101726147693,
+        "gini": 0.22419540120873616,
+        "easy_task_ratio": 0.6958746054207031,
+        "total_refusals": 813
+      },
+      {
+        "cooperation_rate": 0.26400000000000007,
+        "commitment_rate": 0.9039999999999999,
+        "refusal_rate": 0.09600000000000002,
+        "mean_reputation": 0.7186650970033271,
+        "gini": 0.24722877842235613,
+        "easy_task_ratio": 0.7048399601284749,
+        "total_refusals": 971
+      },
+      {
+        "cooperation_rate": 0.302,
+        "commitment_rate": 0.931,
+        "refusal_rate": 0.06900000000000002,
+        "mean_reputation": 0.7951986316461475,
+        "gini": 0.17355736100029606,
+        "easy_task_ratio": 0.6856475087644747,
+        "total_refusals": 587
+      },
+      {
+        "cooperation_rate": 0.258,
+        "commitment_rate": 0.8949999999999999,
+        "refusal_rate": 0.10500000000000001,
+        "mean_reputation": 0.7517994722702815,
+        "gini": 0.219430090366723,
+        "easy_task_ratio": 0.6925985953538628,
+        "total_refusals": 745
+      },
+      {
+        "cooperation_rate": 0.29600000000000004,
+        "commitment_rate": 0.8869999999999999,
+        "refusal_rate": 0.11300000000000002,
+        "mean_reputation": 0.717472725087463,
+        "gini": 0.24287017285565704,
+        "easy_task_ratio": 0.702881488956161,
+        "total_refusals": 1081
+      }
+    ],
+    "refusal_penalty": [
+      {
+        "cooperation_rate": 0.292,
+        "commitment_rate": 0.845,
+        "refusal_rate": 0.15500000000000003,
+        "mean_reputation": 0.054799999999999995,
+        "gini": 0.7200000000000002,
+        "easy_task_ratio": 0,
+        "total_refusals": 1531
+      },
+      {
+        "cooperation_rate": 0.325,
+        "commitment_rate": 0.826,
+        "refusal_rate": 0.17400000000000002,
+        "mean_reputation": 0.09699999999999999,
+        "gini": 0.7191340206185566,
+        "easy_task_ratio": 0,
+        "total_refusals": 1380
+      },
+      {
+        "cooperation_rate": 0.2740000000000001,
+        "commitment_rate": 0.86,
+        "refusal_rate": 0.14000000000000004,
+        "mean_reputation": 0.0638,
+        "gini": 0.6684012539184951,
+        "easy_task_ratio": 0,
+        "total_refusals": 1471
+      },
+      {
+        "cooperation_rate": 0.269,
+        "commitment_rate": 0.842,
+        "refusal_rate": 0.15800000000000003,
+        "mean_reputation": 0.06219999999999999,
+        "gini": 0.7667524115755626,
+        "easy_task_ratio": 0,
+        "total_refusals": 1439
+      },
+      {
+        "cooperation_rate": 0.2750000000000001,
+        "commitment_rate": 0.842,
+        "refusal_rate": 0.15800000000000003,
+        "mean_reputation": 0.0664,
+        "gini": 0.7381927710843375,
+        "easy_task_ratio": 0,
+        "total_refusals": 1432
+      },
+      {
+        "cooperation_rate": 0.26200000000000007,
+        "commitment_rate": 0.8380000000000001,
+        "refusal_rate": 0.162,
+        "mean_reputation": 0.0684,
+        "gini": 0.7673684210526315,
+        "easy_task_ratio": 0,
+        "total_refusals": 1429
+      },
+      {
+        "cooperation_rate": 0.29200000000000004,
+        "commitment_rate": 0.8370000000000001,
+        "refusal_rate": 0.16300000000000003,
+        "mean_reputation": 0.060200000000000004,
+        "gini": 0.6990697674418607,
+        "easy_task_ratio": 0,
+        "total_refusals": 1503
+      },
+      {
+        "cooperation_rate": 0.24899999999999997,
+        "commitment_rate": 0.8440000000000001,
+        "refusal_rate": 0.15600000000000003,
+        "mean_reputation": 0.0388,
+        "gini": 0.7886597938144326,
+        "easy_task_ratio": 0,
+        "total_refusals": 1500
+      },
+      {
+        "cooperation_rate": 0.304,
+        "commitment_rate": 0.8540000000000001,
+        "refusal_rate": 0.14600000000000005,
+        "mean_reputation": 0.08159999999999998,
+        "gini": 0.7637254901960784,
+        "easy_task_ratio": 0,
+        "total_refusals": 1401
+      },
+      {
+        "cooperation_rate": 0.279,
+        "commitment_rate": 0.8450000000000001,
+        "refusal_rate": 0.15500000000000003,
+        "mean_reputation": 0.057400000000000014,
+        "gini": 0.7241114982578396,
+        "easy_task_ratio": 0,
+        "total_refusals": 1417
+      }
+    ],
+    "min_challenge": [
+      {
+        "cooperation_rate": 0.18900000000000003,
+        "commitment_rate": 0.61,
+        "refusal_rate": 0.39,
+        "mean_reputation": 0.08800000000000001,
+        "gini": 0.7872727272727269,
+        "easy_task_ratio": 0.82055833467807,
+        "total_refusals": 3803
+      },
+      {
+        "cooperation_rate": 0.19200000000000003,
+        "commitment_rate": 0.601,
+        "refusal_rate": 0.399,
+        "mean_reputation": 0.063,
+        "gini": 0.7768253968253964,
+        "easy_task_ratio": 0.8330122029543995,
+        "total_refusals": 3772
+      },
+      {
+        "cooperation_rate": 0.188,
+        "commitment_rate": 0.5949999999999999,
+        "refusal_rate": 0.40499999999999997,
+        "mean_reputation": 0.065,
+        "gini": 0.7135384615384615,
+        "easy_task_ratio": 0.8181960538678359,
+        "total_refusals": 3614
+      },
+      {
+        "cooperation_rate": 0.21000000000000005,
+        "commitment_rate": 0.624,
+        "refusal_rate": 0.376,
+        "mean_reputation": 0.107,
+        "gini": 0.7134579439252335,
+        "easy_task_ratio": 0.8126371903417999,
+        "total_refusals": 3622
+      },
+      {
+        "cooperation_rate": 0.188,
+        "commitment_rate": 0.569,
+        "refusal_rate": 0.43100000000000005,
+        "mean_reputation": 0.05100000000000002,
+        "gini": 0.6584313725490196,
+        "easy_task_ratio": 0.8274704189318836,
+        "total_refusals": 3746
+      },
+      {
+        "cooperation_rate": 0.23600000000000004,
+        "commitment_rate": 0.621,
+        "refusal_rate": 0.37900000000000006,
+        "mean_reputation": 0.10500000000000002,
+        "gini": 0.6980952380952381,
+        "easy_task_ratio": 0.8122887864823348,
+        "total_refusals": 3490
+      },
+      {
+        "cooperation_rate": 0.185,
+        "commitment_rate": 0.593,
+        "refusal_rate": 0.40700000000000003,
+        "mean_reputation": 0.074,
+        "gini": 0.7378378378378379,
+        "easy_task_ratio": 0.8204113924050633,
+        "total_refusals": 3680
+      },
+      {
+        "cooperation_rate": 0.15900000000000003,
+        "commitment_rate": 0.6,
+        "refusal_rate": 0.4000000000000001,
+        "mean_reputation": 0.044,
+        "gini": 0.8118181818181818,
+        "easy_task_ratio": 0.8283617801882278,
+        "total_refusals": 3731
+      },
+      {
+        "cooperation_rate": 0.195,
+        "commitment_rate": 0.5950000000000001,
+        "refusal_rate": 0.4050000000000001,
+        "mean_reputation": 0.079,
+        "gini": 0.6873417721518986,
+        "easy_task_ratio": 0.8171146122953352,
+        "total_refusals": 3526
+      },
+      {
+        "cooperation_rate": 0.20700000000000002,
+        "commitment_rate": 0.5870000000000001,
+        "refusal_rate": 0.413,
+        "mean_reputation": 0.105,
+        "gini": 0.7297142857142858,
+        "easy_task_ratio": 0.8134788799240626,
+        "total_refusals": 3679
+      }
+    ],
+    "decay": [
+      {
+        "cooperation_rate": 0.227,
+        "commitment_rate": 0.6480000000000001,
+        "refusal_rate": 0.3520000000000001,
+        "mean_reputation": 0.06500000000000002,
+        "gini": 0.7801230769230769,
+        "easy_task_ratio": 0.7788101303761427,
+        "total_refusals": 3327
+      },
+      {
+        "cooperation_rate": 0.17500000000000004,
+        "commitment_rate": 0.616,
+        "refusal_rate": 0.38400000000000006,
+        "mean_reputation": 0.022399999999999996,
+        "gini": 0.6924999999999999,
+        "easy_task_ratio": 0.7871878393051032,
+        "total_refusals": 3553
+      },
+      {
+        "cooperation_rate": 0.19000000000000003,
+        "commitment_rate": 0.591,
+        "refusal_rate": 0.409,
+        "mean_reputation": 0.0348,
+        "gini": 0.6337931034482758,
+        "easy_task_ratio": 0.7809538137505642,
+        "total_refusals": 3353
+      },
+      {
+        "cooperation_rate": 0.21999999999999997,
+        "commitment_rate": 0.639,
+        "refusal_rate": 0.361,
+        "mean_reputation": 0.0332,
+        "gini": 0.7549397590361444,
+        "easy_task_ratio": 0.7831758884390463,
+        "total_refusals": 3331
+      },
+      {
+        "cooperation_rate": 0.223,
+        "commitment_rate": 0.631,
+        "refusal_rate": 0.36900000000000005,
+        "mean_reputation": 0.043800000000000006,
+        "gini": 0.7259360730593607,
+        "easy_task_ratio": 0.7764401097226455,
+        "total_refusals": 3438
+      },
+      {
+        "cooperation_rate": 0.219,
+        "commitment_rate": 0.625,
+        "refusal_rate": 0.37500000000000006,
+        "mean_reputation": 0.045599999999999995,
+        "gini": 0.6982456140350874,
+        "easy_task_ratio": 0.777161696388431,
+        "total_refusals": 3327
+      },
+      {
+        "cooperation_rate": 0.24100000000000002,
+        "commitment_rate": 0.643,
+        "refusal_rate": 0.357,
+        "mean_reputation": 0.07240000000000002,
+        "gini": 0.6960220994475139,
+        "easy_task_ratio": 0.7754509324365637,
+        "total_refusals": 3458
+      },
+      {
+        "cooperation_rate": 0.221,
+        "commitment_rate": 0.619,
+        "refusal_rate": 0.381,
+        "mean_reputation": 0.0434,
+        "gini": 0.7025806451612902,
+        "easy_task_ratio": 0.7818766263584876,
+        "total_refusals": 3467
+      },
+      {
+        "cooperation_rate": 0.21800000000000003,
+        "commitment_rate": 0.6319999999999999,
+        "refusal_rate": 0.368,
+        "mean_reputation": 0.040600000000000004,
+        "gini": 0.6566502463054185,
+        "easy_task_ratio": 0.7794903097817794,
+        "total_refusals": 3447
+      },
+      {
+        "cooperation_rate": 0.21800000000000005,
+        "commitment_rate": 0.643,
+        "refusal_rate": 0.35700000000000004,
+        "mean_reputation": 0.04420000000000001,
+        "gini": 0.6657918552036199,
+        "easy_task_ratio": 0.7824497257769653,
+        "total_refusals": 3436
+      }
+    ],
+    "peer_assignment": [
+      {
+        "cooperation_rate": 0.29700000000000004,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.051,
+        "gini": 0.7839215686274508,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.304,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.06000000000000001,
+        "gini": 0.7866666666666664,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.343,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.10300000000000001,
+        "gini": 0.7229126213592232,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.287,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.046,
+        "gini": 0.7504347826086957,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.31100000000000005,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.11299999999999999,
+        "gini": 0.7661946902654868,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.29499999999999993,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.06299999999999999,
+        "gini": 0.7901587301587303,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.30100000000000005,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.065,
+        "gini": 0.6193846153846156,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.271,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.077,
+        "gini": 0.7924675324675325,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.316,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.051,
+        "gini": 0.6929411764705884,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      },
+      {
+        "cooperation_rate": 0.26800000000000007,
+        "commitment_rate": 1.0,
+        "refusal_rate": 0.0,
+        "mean_reputation": 0.03699999999999999,
+        "gini": 0.7410810810810808,
+        "easy_task_ratio": 0,
+        "total_refusals": 0
+      }
+    ]
+  },
+  "analysis": {
+    "summary": {
+      "none": {
+        "cooperation_rate": {
+          "mean": 0.19180000000000003,
+          "std": 0.009877246579892583
+        },
+        "gini": {
+          "mean": 0.6932656808510679,
+          "std": 0.05232212202686799
+        },
+        "easy_task_ratio": {
+          "mean": 0.9108094745269126,
+          "std": 0.011230743186808488
+        },
+        "refusal_rate": {
+          "mean": 0.46369999999999995,
+          "std": 0.02199113457737004
+        }
+      },
+      "difficulty_weighted": {
+        "cooperation_rate": {
+          "mean": 0.28770000000000007,
+          "std": 0.026077001361352884
+        },
+        "gini": {
+          "mean": 0.21288140117762247,
+          "std": 0.03695188134922914
+        },
+        "easy_task_ratio": {
+          "mean": 0.6927582223383151,
+          "std": 0.006836142189050113
+        },
+        "refusal_rate": {
+          "mean": 0.08770000000000001,
+          "std": 0.02236537502480117
+        }
+      },
+      "refusal_penalty": {
+        "cooperation_rate": {
+          "mean": 0.2821,
+          "std": 0.020767522721788455
+        },
+        "gini": {
+          "mean": 0.7355415427959795,
+          "std": 0.034769788676302205
+        },
+        "easy_task_ratio": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.15670000000000003,
+          "std": 0.00877553417177552
+        }
+      },
+      "min_challenge": {
+        "cooperation_rate": {
+          "mean": 0.19490000000000002,
+          "std": 0.018944392310127033
+        },
+        "gini": {
+          "mean": 0.731433321772828,
+          "std": 0.045510763246713916
+        },
+        "easy_task_ratio": {
+          "mean": 0.8203529652069014,
+          "std": 0.006797481596062596
+        },
+        "refusal_rate": {
+          "mean": 0.4005000000000001,
+          "std": 0.015311760186209814
+        }
+      },
+      "decay": {
+        "cooperation_rate": {
+          "mean": 0.2152,
+          "std": 0.017898603297464292
+        },
+        "gini": {
+          "mean": 0.7006582472619789,
+          "std": 0.04197736810342203
+        },
+        "easy_task_ratio": {
+          "mean": 0.780299707233573,
+          "std": 0.003382071499132496
+        },
+        "refusal_rate": {
+          "mean": 0.3713000000000001,
+          "std": 0.016106209982488108
+        }
+      },
+      "peer_assignment": {
+        "cooperation_rate": {
+          "mean": 0.2993,
+          "std": 0.020751144546747292
+        },
+        "gini": {
+          "mean": 0.7446163465090071,
+          "std": 0.05197433328204546
+        },
+        "easy_task_ratio": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "refusal_rate": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      }
+    },
+    "comparisons": {
+      "difficulty_weighted": {
+        "cooperation_improved": "True",
+        "cooperation_change": 0.09590000000000004,
+        "cooperation_p": 5.509794182777408e-09,
+        "gaming_reduced": "True",
+        "gaming_change": -0.21805125218859756,
+        "gaming_p": 9.905885057628776e-21,
+        "effective": "True"
+      },
+      "refusal_penalty": {
+        "cooperation_improved": "True",
+        "cooperation_change": 0.09029999999999999,
+        "cooperation_p": 6.794359668038369e-10,
+        "gaming_reduced": "True",
+        "gaming_change": -0.9108094745269126,
+        "gaming_p": 4.112190822972718e-33,
+        "effective": "True"
+      },
+      "min_challenge": {
+        "cooperation_improved": "False",
+        "cooperation_change": 0.0030999999999999917,
+        "cooperation_p": 0.6685210583263635,
+        "gaming_reduced": "True",
+        "gaming_change": -0.09045650932001126,
+        "gaming_p": 5.442191360710294e-14,
+        "effective": "True"
+      },
+      "decay": {
+        "cooperation_improved": "True",
+        "cooperation_change": 0.023399999999999976,
+        "cooperation_p": 0.0029604143166566577,
+        "gaming_reduced": "True",
+        "gaming_change": -0.13050976729333963,
+        "gaming_p": 1.2109435804494653e-17,
+        "effective": "True"
+      },
+      "peer_assignment": {
+        "cooperation_improved": "True",
+        "cooperation_change": 0.10749999999999998,
+        "cooperation_p": 3.911097679195331e-11,
+        "gaming_reduced": "True",
+        "gaming_change": -0.9108094745269126,
+        "gaming_p": 4.112190822972718e-33,
+        "effective": "True"
+      }
+    },
+    "scores": {
+      "none": -0.4027147372634563,
+      "difficulty_weighted": -0.08498911116915747,
+      "refusal_penalty": 0.23509000000000002,
+      "min_challenge": -0.3354264826034507,
+      "decay": -0.2863398536167865,
+      "peer_assignment": 0.2993
+    },
+    "best_mechanism": "peer_assignment"
+  }
+}

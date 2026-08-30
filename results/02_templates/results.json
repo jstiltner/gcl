@@ -1,0 +1,37 @@
+{
+  "config": {
+    "seed": 42,
+    "timestamp": "2025-12-23T00:15:40.783846"
+  },
+  "closure": {
+    "operators": [
+      "sequential",
+      "parallel",
+      "conditional",
+      "repeat",
+      "fallback",
+      "nested"
+    ],
+    "all_closed": true,
+    "all_valid": true
+  },
+  "induction": {
+    "num_experiences": 100,
+    "templates_induced": 4,
+    "induction_success_rate": 1.0,
+    "avg_template_confidence": 0.6799999999999999
+  },
+  "transfer": {
+    "theorem_5_satisfaction_rate": 0.79,
+    "correlation": 0.4788895463219933,
+    "avg_predicted": 0.6332499999999999,
+    "avg_actual": 0.62
+  },
+  "library": {
+    "match_found_rate": 1.0,
+    "avg_similarity": 1.0,
+    "avg_retrieval_ms": 1.7021632194519043
+  },
+  "theorem_4_validated": true,
+  "theorem_5_validated": true
+}

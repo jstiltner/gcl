@@ -1,0 +1,87 @@
+{
+  "config": {
+    "n_tasks": 60,
+    "dry_run": true,
+    "agents": [
+      "claude_reasoning",
+      "claude_direct",
+      "gpt_reasoning",
+      "gpt_direct"
+    ]
+  },
+  "part1_calibration": {
+    "claude_reasoning": {
+      "n": 60,
+      "accuracy": 0.5333333333333333,
+      "brier_self": 0.3381366666666667,
+      "brier_external": 0.28202,
+      "corr_self": 0.07097843245540314,
+      "corr_external": 0.04632639593866752
+    },
+    "claude_direct": {
+      "n": 60,
+      "accuracy": 0.26666666666666666,
+      "brier_self": 0.22600499999999998,
+      "brier_external": 0.4154083333333333,
+      "corr_self": 0.10723134481205346,
+      "corr_external": -0.18422753306654233
+    },
+    "gpt_reasoning": {
+      "n": 60,
+      "accuracy": 0.4666666666666667,
+      "brier_self": 0.3511416666666667,
+      "brier_external": 0.29155666666666663,
+      "corr_self": 0.1389145484449426,
+      "corr_external": 0.18400292181763533
+    },
+    "gpt_direct": {
+      "n": 60,
+      "accuracy": 0.18333333333333332,
+      "brier_self": 0.2019383333333333,
+      "brier_external": 0.39697166666666667,
+      "corr_self": 0.04877954248359017,
+      "corr_external": 0.11370275222235784
+    }
+  },
+  "part2_selection": {
+    "self_selection": {
+      "success_rate": 0.4,
+      "n": 60,
+      "picks": {
+        "claude_reasoning": 45,
+        "gpt_reasoning": 15
+      }
+    },
+    "external_assignment": {
+      "success_rate": 0.43333333333333335,
+      "n": 60,
+      "picks": {
+        "gpt_direct": 10,
+        "claude_reasoning": 20,
+        "gpt_reasoning": 17,
+        "claude_direct": 13
+      }
+    },
+    "random": {
+      "success_rate": 0.38333333333333336,
+      "n": 60,
+      "picks": {
+        "gpt_direct": 14,
+        "gpt_reasoning": 12,
+        "claude_direct": 16,
+        "claude_reasoning": 18
+      }
+    }
+  },
+  "part3_framing": {
+    "chosen": {
+      "success_rate": 0.5,
+      "n": 30
+    },
+    "assigned": {
+      "success_rate": 0.5333333333333333,
+      "n": 30
+    },
+    "framing_effect": -0.033333333333333326
+  }
+}

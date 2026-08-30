@@ -1,0 +1,71 @@
+{
+  "results": {
+    "complete": {
+      "mean_investment": 0.49992172185433886,
+      "std_investment": 0.0009279136490665375,
+      "mean_hold_ups": 0.0,
+      "std_hold_ups": 0.0,
+      "mean_renegotiations": 0.0,
+      "std_renegotiations": 0.0,
+      "mean_payoff": 149.99217218543387,
+      "std_payoff": 0.09279136490666137
+    },
+    "incomplete_low": {
+      "mean_investment": 0.3501558941374453,
+      "std_investment": 0.0006440186467937315,
+      "mean_hold_ups": 71.5,
+      "std_hold_ups": 6.946221994724902,
+      "mean_renegotiations": 603.3,
+      "std_renegotiations": 14.785465836421928,
+      "mean_payoff": 133.64966684434205,
+      "std_payoff": 0.09259751165996508
+    },
+    "incomplete_high": {
+      "mean_investment": 0.20005992922320193,
+      "std_investment": 0.000248932492325393,
+      "mean_hold_ups": 88.3,
+      "std_hold_ups": 8.911228871485683,
+      "mean_renegotiations": 1394.9,
+      "std_renegotiations": 11.928537211242627,
+      "mean_payoff": 114.79894652525616,
+      "std_payoff": 0.08236849904792128
+    },
+    "gcl": {
+      "mean_investment": 0.425197150283644,
+      "std_investment": 0.000615052761782335,
+      "mean_hold_ups": 52.3,
+      "std_hold_ups": 5.848931526355904,
+      "mean_renegotiations": 1202.7,
+      "std_renegotiations": 29.816270725897294,
+      "mean_payoff": 138.4895874731752,
+      "std_payoff": 0.08453144458074607
+    }
+  },
+  "predictions": {
+    "investment_decreases_with_incompleteness": {
+      "passed": "True",
+      "complete": 0.49992172185433886,
+      "incomplete_low": 0.3501558941374453,
+      "incomplete_high": 0.20005992922320193,
+      "expected_order": "complete > incomplete_low > incomplete_high"
+    },
+    "hold_ups_increase_with_incompleteness": {
+      "passed": "True",
+      "complete": 0.0,
+      "incomplete_low": 71.5,
+      "incomplete_high": 88.3,
+      "expected_order": "complete < incomplete_low < incomplete_high"
+    },
+    "gcl_mitigates_incompleteness": {
+      "passed": "True",
+      "gcl_investment": 0.425197150283644,
+      "expected": "0.350 < GCL < 0.500"
+    },
+    "gcl_reduces_hold_ups": {
+      "passed": "True",
+      "gcl_hold_ups": 52.3,
+      "incomplete_high_hold_ups": 88.3,
+      "expected": "GCL (52.3) < incomplete_high (88.3)"
+    }
+  }
+}

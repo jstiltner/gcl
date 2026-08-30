@@ -1,0 +1,273 @@
+{
+  "conditions": {
+    "baseline": {
+      "cooperation_rate": {
+        "mean": 0.5579999999999999,
+        "std": 0.04214261501141094,
+        "min": 0.49,
+        "max": 0.63
+      },
+      "gini": {
+        "mean": 0.0495890586333456,
+        "std": 0.01777338675123365,
+        "min": 0.012783671941094976,
+        "max": 0.07916033449342841
+      },
+      "mean_capability": {
+        "mean": 0.5519895748302971,
+        "std": 0.029520338466586225,
+        "min": 0.4946250929859659,
+        "max": 0.6092284060244069
+      },
+      "knowledge_diffusion": {
+        "mean": 0.12369708994708994,
+        "std": 0.015846153692289942,
+        "min": 0.1,
+        "max": 0.15
+      },
+      "underclass_size": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "recovery_rate": {
+        "mean": 0.05,
+        "std": 0.15000000000000002,
+        "min": 0.0,
+        "max": 0.5
+      },
+      "total_output": {
+        "mean": 10.0,
+        "std": 0.0,
+        "min": 10.0,
+        "max": 10.0
+      },
+      "total_templates": {
+        "mean": 25.7,
+        "std": 6.723838189605696,
+        "min": 12.0,
+        "max": 36.0
+      },
+      "unique_templates": {
+        "mean": 6.9,
+        "std": 1.57797338380595,
+        "min": 4.0,
+        "max": 9.0
+      }
+    },
+    "k_pool": {
+      "cooperation_rate": {
+        "mean": 0.5679999999999998,
+        "std": 0.04445222154178573,
+        "min": 0.5,
+        "max": 0.65
+      },
+      "gini": {
+        "mean": 0.06364336372474515,
+        "std": 0.02114612040373706,
+        "min": 0.012783671941094976,
+        "max": 0.08522803635134069
+      },
+      "mean_capability": {
+        "mean": 0.9633424359207178,
+        "std": 0.04811498749874088,
+        "min": 0.8421139226544688,
+        "max": 1.0
+      },
+      "knowledge_diffusion": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "underclass_size": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "recovery_rate": {
+        "mean": 0.05,
+        "std": 0.15000000000000002,
+        "min": 0.0,
+        "max": 0.5
+      },
+      "total_output": {
+        "mean": 10.0,
+        "std": 0.0,
+        "min": 10.0,
+        "max": 10.0
+      },
+      "total_templates": {
+        "mean": 204.0,
+        "std": 62.6418390534633,
+        "min": 120.0,
+        "max": 330.0
+      },
+      "unique_templates": {
+        "mean": 6.8,
+        "std": 2.0880613017821097,
+        "min": 4.0,
+        "max": 11.0
+      }
+    },
+    "r_pool": {
+      "cooperation_rate": {
+        "mean": 0.554,
+        "std": 0.04882622246293481,
+        "min": 0.5,
+        "max": 0.65
+      },
+      "gini": {
+        "mean": -1.3322676295501878e-16,
+        "std": 1.0877919644084146e-16,
+        "min": -2.220446049250313e-16,
+        "max": 0.0
+      },
+      "mean_capability": {
+        "mean": 0.5494857287583803,
+        "std": 0.03442993301655584,
+        "min": 0.4829139903831578,
+        "max": 0.6026179176969195
+      },
+      "knowledge_diffusion": {
+        "mean": 0.12292171717171718,
+        "std": 0.024504314699329736,
+        "min": 0.09166666666666666,
+        "max": 0.175
+      },
+      "underclass_size": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "recovery_rate": {
+        "mean": 0.23333333333333334,
+        "std": 0.3265986323710904,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "total_output": {
+        "mean": 10.0,
+        "std": 0.0,
+        "min": 10.0,
+        "max": 10.0
+      },
+      "total_templates": {
+        "mean": 24.1,
+        "std": 13.471822445385778,
+        "min": 6.0,
+        "max": 53.0
+      },
+      "unique_templates": {
+        "mean": 6.2,
+        "std": 2.4819347291981715,
+        "min": 2.0,
+        "max": 11.0
+      }
+    },
+    "full_pool": {
+      "cooperation_rate": {
+        "mean": 0.564,
+        "std": 0.06311893535223799,
+        "min": 0.48,
+        "max": 0.7
+      },
+      "gini": {
+        "mean": -8.881784197001253e-17,
+        "std": 1.0877919644084146e-16,
+        "min": -2.220446049250313e-16,
+        "max": 0.0
+      },
+      "mean_capability": {
+        "mean": 0.9317306048625644,
+        "std": 0.09842439873315378,
+        "min": 0.6790039239494681,
+        "max": 1.0
+      },
+      "knowledge_diffusion": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "underclass_size": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "recovery_rate": {
+        "mean": 0.19166666666666665,
+        "std": 0.20429417786885437,
+        "min": 0.0,
+        "max": 0.5
+      },
+      "total_output": {
+        "mean": 10.0,
+        "std": 0.0,
+        "min": 10.0,
+        "max": 10.0
+      },
+      "total_templates": {
+        "mean": 192.0,
+        "std": 76.13146524269712,
+        "min": 60.0,
+        "max": 300.0
+      },
+      "unique_templates": {
+        "mean": 6.4,
+        "std": 2.537715508089904,
+        "min": 2.0,
+        "max": 10.0
+      }
+    }
+  },
+  "effects": {
+    "main_effect_knowledge": 0.009999999999999787,
+    "main_effect_reputation": -0.0040000000000000036,
+    "interaction_effect": 0.0,
+    "ubuntu_advantage": 0.006000000000000005,
+    "knowledge_contribution": 0.009999999999999898,
+    "reputation_contribution": -0.0039999999999998925,
+    "residual": 0.0,
+    "pct_knowledge": 166.6666666666648,
+    "pct_reputation": -66.66666666666482,
+    "pct_interaction": 0.0,
+    "pct_residual": 0.0
+  },
+  "statistical_tests": {
+    "k_pool_vs_baseline": {
+      "t_statistic": 0.4897673613362495,
+      "p_value": 0.6302141967803784,
+      "effect_size_d": 0.22935538512984138,
+      "significant": 0
+    },
+    "r_pool_vs_baseline": {
+      "t_statistic": -0.1860521018838077,
+      "p_value": 0.8544845614596024,
+      "effect_size_d": -0.08762159086766234,
+      "significant": 0
+    },
+    "full_pool_vs_baseline": {
+      "t_statistic": 0.2371708245126287,
+      "p_value": 0.8152026240489476,
+      "effect_size_d": 0.11162911443718965,
+      "significant": 0
+    },
+    "interaction_test": {
+      "t_statistic": 0.0,
+      "p_value": 1.0,
+      "significant": 0,
+      "interpretation": "subadditive"
+    }
+  },
+  "hypotheses": {
+    "H1_knowledge_primary": true,
+    "H2_reputation_reduces_gini": true,
+    "H3_superadditive_interaction": false,
+    "H4_residual_small": true
+  }
+}

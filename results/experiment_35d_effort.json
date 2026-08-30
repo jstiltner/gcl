@@ -1,0 +1,242 @@
+{
+  "conditions": {
+    "bonus0_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.454,
+        "std": 0.044317039612320676
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus0_random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus5_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.48600000000000004,
+        "std": 0.04317406628984581
+      },
+      "mean_effort": {
+        "mean": 0.8499999999999993,
+        "std": 0.0
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus5_random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus10_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.5130000000000001,
+        "std": 0.05831809324729334
+      },
+      "mean_effort": {
+        "mean": 0.9000000000000007,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus10_random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus15_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.544,
+        "std": 0.056426943918663534
+      },
+      "mean_effort": {
+        "mean": 0.9500000000000016,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus15_random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus20_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.5780000000000001,
+        "std": 0.05455272678794343
+      },
+      "mean_effort": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "bonus20_random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "cost0_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.5130000000000001,
+        "std": 0.05831809324729334
+      },
+      "mean_effort": {
+        "mean": 0.9000000000000007,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "cost0_random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "cost10_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.461,
+        "std": 0.04968903299521939
+      },
+      "mean_effort": {
+        "mean": 0.9000000000000007,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 8.99999999999999,
+        "std": 1.7763568394002505e-15
+      }
+    },
+    "cost10_random": {
+      "cooperation_rate": {
+        "mean": 0.29900000000000004,
+        "std": 0.05048762224545735
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 8.000000000000004,
+        "std": 1.7763568394002505e-15
+      }
+    },
+    "cost20_self_selection": {
+      "cooperation_rate": {
+        "mean": 0.391,
+        "std": 0.04369210454990695
+      },
+      "mean_effort": {
+        "mean": 0.9000000000000007,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 17.99999999999998,
+        "std": 3.552713678800501e-15
+      }
+    },
+    "cost20_random": {
+      "cooperation_rate": {
+        "mean": 0.30599999999999994,
+        "std": 0.049030602688525056
+      },
+      "mean_effort": {
+        "mean": 0.7999999999999986,
+        "std": 1.1102230246251565e-16
+      },
+      "total_cost": {
+        "mean": 16.000000000000007,
+        "std": 3.552713678800501e-15
+      }
+    }
+  },
+  "analysis": {
+    "advantage_bonus0": 0.15499999999999997,
+    "advantage_bonus5": 0.187,
+    "advantage_bonus10": 0.21400000000000008,
+    "advantage_bonus15": 0.245,
+    "advantage_bonus20": 0.279,
+    "bonus_advantage_correlation": 0.9993385184224266,
+    "advantage_cost0": 0.21400000000000008,
+    "advantage_cost10": 0.16199999999999998,
+    "advantage_cost20": 0.08500000000000008,
+    "min_advantage": 0.15499999999999997,
+    "max_advantage": 0.279,
+    "effort_robust": true
+  }
+}
