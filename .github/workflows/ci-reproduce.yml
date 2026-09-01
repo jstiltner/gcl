@@ -1,0 +1,54 @@
+name: CI-Reproduce headline stats
+
+# Re-derives the Punishment Paradox and Hart-Moore headline numbers from the real
+# agent-based simulations on every push to main, publishes them as shields.io endpoint
+# badges (ci_results/badge-*.json, committed back to the repo), and is what
+# jasonstiltner.com's build pulls live numbers from (scripts/fetch-ci-results.ts).
+#
+# This is a reduced-scale run (n=5 seeds vs. the published n=30) — it will not match the
+# published numbers exactly, by design; see ci_results/latest.json's "scale" field and
+# README.md. The full-scale reproduction is the Colab notebook in notebooks/.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Weekly, so the badge timestamp never goes stale even if nothing changes —
+    # a "last verified: 6 months ago" badge is a worse signal than a fresh weekly one.
+    - cron: "17 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-reproduce-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install numpy scipy matplotlib
+
+      - name: Run real-simulation reproduction (CI scale)
+        run: python experiments/derive_real_headline_stats.py --ci
+
+      - name: Commit ci_results if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ci_results/
+          if git diff --cached --quiet; then
+            echo "No change in ci_results/ — nothing to commit."
+          else
+            git commit -m "ci: refresh CI-reproduced headline stats [skip ci]"
+            git push
+          fi
