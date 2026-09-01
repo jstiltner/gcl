@@ -20,9 +20,9 @@ Last updated: August 2026 (post-Experiment 41).
 | 9 | GCL achieves ~97% of MARL performance | 36 | 0.534 vs 0.552 | — | **Validated** |
 | 10 | GCL is 25–50× more sample efficient than MARL | 36 | 2 vs 52–102 episodes | — | **Validated** |
 | 11 | GCL advantage under drift is significant for ε ≥ 0.15 | 09 | +0.027 to +0.036 | significant at ε ∈ {0.15, 0.20, 0.25} | **Validated** — note GCL slightly *underperforms* at ε = 0 (−0.060) and shows no significant advantage at ε ∈ {0.05, 0.10} |
-| 12 | Punishment paradox: harsher consequences decrease cooperation | 15–16 | r = −0.951 | — | Validated |
-| 13 | Redemption mechanism improves cooperation | 17–18 | +52.7% | p < 0.001 | Validated |
-| 14 | Failure-first specification reduces hold-up vs incomplete contracts | 21 | −36.8% | p < 0.001 | Validated |
+| 12 | Punishment paradox: harsher consequences decrease cooperation | 15–16 | r = −0.972 | p < 0.001 | **Validated (corrected 2026-09-01)** — original r=−0.951 traced to a synthetic-data generator in Exp 22 (`test_punishment_paradox`), not Exp 15/16's real simulation; see CHANGELOG |
+| 13 | Redemption mechanism improves cooperation | 17–18 | +52.7% | p < 0.001 | Validated — **not yet re-verified against Exp 22's synthetic-data pattern (`test_redemption_mechanism`); see CHANGELOG open item** |
+| 14 | Failure-first specification reduces hold-up vs incomplete contracts | 21 | −40.4% | [−43.5%, −37.2%], p < 0.001 | **Validated (corrected 2026-09-01)** — original −36.8% traced to the same Exp 22 issue (`test_hart_moore`); see CHANGELOG |
 | 15 | Population predictions: protocol convergence, small-world trust, template fitness, specialization Gini | 07 | α=0.16 R²=0.78; clustering=0.75; r=−0.30 p<0.001; Gini=0.78 | 100 agents, 5000 steps | Validated |
 | 16 | Dunbar-like coordination limit near ~100 agents | 23 | — | — | Validated (single model; not stress-tested) |
 | 17 | 6 theorems (closure, convergence, Nash equilibrium, ...) | tests + sims | — | — | **Empirically validated propositions** — NOT formal mathematical proofs |
