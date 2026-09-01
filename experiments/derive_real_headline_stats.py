@@ -31,7 +31,9 @@ Usage:
 import argparse
 import importlib.util
 import json
+import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
@@ -39,6 +41,75 @@ from scipy import stats
 
 EXPERIMENTS_DIR = Path(__file__).parent
 RESULTS_DIR = Path("results/real_headline_stats")
+CI_RESULTS_DIR = Path("ci_results")
+
+
+def _badge_color(value: float, good_threshold: float, ok_threshold: float) -> str:
+    """Green/yellow/red shields.io color based on how the value compares to thresholds."""
+    if value >= good_threshold:
+        return "brightgreen"
+    if value >= ok_threshold:
+        return "yellow"
+    return "orange"
+
+
+def write_ci_results(punishment: dict, hart_moore: dict, scale: str) -> None:
+    """Write ci_results/latest.json plus one shields.io endpoint badge per headline metric.
+
+    Read by scripts/fetch-ci-results.ts in the jasonstiltner2026 site repo and by
+    shields.io's dynamic /endpoint badge (raw GitHub URL to these JSON files).
+    """
+    CI_RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    commit_sha = os.environ.get("GITHUB_SHA", "local")
+    server = os.environ.get("GITHUB_SERVER_URL")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    run_id = os.environ.get("GITHUB_RUN_ID")
+    workflow_run_url = (
+        f"{server}/{repo}/actions/runs/{run_id}" if server and repo and run_id else None
+    )
+
+    latest = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "commit_sha": commit_sha,
+        "workflow_run_url": workflow_run_url,
+        "scale": scale,
+        "source": "experiments/derive_real_headline_stats.py",
+        "punishment_paradox": {
+            "correlation_r": punishment["correlation"]["r"],
+            "correlation_p": punishment["correlation"]["p"],
+            "no_vs_full_t": punishment["no_vs_full_consequences"]["t"],
+            "no_vs_full_d": punishment["no_vs_full_consequences"]["d"],
+            "n_seeds": punishment["n_seeds"],
+        },
+        "hart_moore": {
+            "holdup_reduction_pct": hart_moore["holdup_reduction_pct"],
+            "prediction_4_t": hart_moore["tests"]["prediction_4_gcl_reduces_holdups"]["t"],
+            "prediction_4_d": hart_moore["tests"]["prediction_4_gcl_reduces_holdups"]["d"],
+            "n_seeds": hart_moore["n_seeds"],
+        },
+    }
+    (CI_RESULTS_DIR / "latest.json").write_text(json.dumps(latest, indent=2))
+
+    r = punishment["correlation"]["r"]
+    badge_pp = {
+        "schemaVersion": 1,
+        "label": f"punishment paradox r ({scale})",
+        "message": f"{r:.3f}",
+        "color": _badge_color(-r, 0.8, 0.5),  # more negative r = stronger paradox = "better"
+    }
+    (CI_RESULTS_DIR / "badge-punishment-paradox.json").write_text(json.dumps(badge_pp))
+
+    reduction = hart_moore["holdup_reduction_pct"]
+    badge_hm = {
+        "schemaVersion": 1,
+        "label": f"hart-moore holdup reduction ({scale})",
+        "message": f"{reduction:.1f}%",
+        "color": _badge_color(reduction, 25, 10),
+    }
+    (CI_RESULTS_DIR / "badge-hart-moore.json").write_text(json.dumps(badge_hm))
+
+    print(f"\nWrote {CI_RESULTS_DIR}/latest.json, badge-punishment-paradox.json, badge-hart-moore.json")
 
 
 def _load_module(filename: str):
@@ -221,6 +292,9 @@ def main():
     out_path = RESULTS_DIR / f"real_headline_stats_{scale}.json"
     out_path.write_text(json.dumps(output, indent=2))
     print(f"\nSaved to {out_path}")
+
+    if args.ci:
+        write_ci_results(punishment, hart_moore, scale)
 
 
 if __name__ == "__main__":

@@ -6,6 +6,12 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
+**CI-reproduced, on every push to `main`** — [![Punishment Paradox](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjstiltner%2Fgcl%2Fmain%2Fci_results%2Fbadge-punishment-paradox.json)](.github/workflows/ci-reproduce.yml) [![Hart-Moore](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjstiltner%2Fgcl%2Fmain%2Fci_results%2Fbadge-hart-moore.json)](.github/workflows/ci-reproduce.yml)
+— reduced-scale (n=5 seeds) run of the real simulation, not a copy of the published numbers;
+see [`ci_results/latest.json`](ci_results/latest.json) and
+[`experiments/derive_real_headline_stats.py`](experiments/derive_real_headline_stats.py).
+Full-scale (n=30) reproduction: [open the Colab notebook](notebooks/reproduce_headline_stats.ipynb).
+
 > **All quantitative claims in this repository are indexed in
 > [`docs/CLAIMS.md`](docs/CLAIMS.md)**, including effect sizes, confidence
 > intervals, and two retractions from our own revision process.
