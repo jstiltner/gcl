@@ -36,7 +36,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install numpy scipy matplotlib
+        run: |
+          pip install scipy matplotlib
+          # Full install, not --no-deps: gcl/__init__.py and gcl/population/__init__.py
+          # eagerly import the whole package surface (pydantic, torch, ...) even though
+          # 16_*.py/21_*.py's actual simulation code only needs numpy — tried --no-deps
+          # first, confirmed it doesn't work (ModuleNotFoundError cascades through
+          # __init__.py chains that have nothing to do with these two experiments). No
+          # API keys or model calls either way — this only costs install time, not money.
+          pip install -e .
 
       - name: Run real-simulation reproduction (CI scale)
         run: python experiments/derive_real_headline_stats.py --ci
