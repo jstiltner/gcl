@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-09T16:21:10.786889+00:00",
-  "commit_sha": "09429e58ed2fd31430227bc2f53247d0592ffb79",
-  "workflow_run_url": "https://github.com/jstiltner/gcl/actions/runs/34376010569",
+  "generated_at": "2026-09-09T22:48:32.544345+00:00",
+  "commit_sha": "f5061e2ece8d13125c98d852592286a1513c0c97",
+  "workflow_run_url": "https://github.com/jstiltner/gcl/actions/runs/34413887612",
   "scale": "ci-small",
   "source": "experiments/derive_real_headline_stats.py",
   "punishment_paradox": {
@@ -12,9 +12,9 @@
     "n_seeds": 5
   },
   "hart_moore": {
-    "holdup_reduction_pct": 36.81318681318681,
-    "prediction_4_t": 2.529653076994967,
-    "prediction_4_d": 1.5998930826714772,
+    "holdup_reduction_pct": 27.710843373493983,
+    "prediction_4_t": 2.875000000000001,
+    "prediction_4_d": 1.8183096545968187,
     "n_seeds": 5
   }
 }
