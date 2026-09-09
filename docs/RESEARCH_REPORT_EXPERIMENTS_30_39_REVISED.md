@@ -14,6 +14,19 @@
 > `docs/EXPERIMENT_40_FINDINGS.md` and `docs/CLAIMS.md`. The remainder of this
 > report is preserved unedited as part of the revision trail.
 
+> **FURTHER RETRACTION (2026-09-09).** Two more headline claims in this report are withdrawn, and
+> one framing figure is misleading. See `docs/CLAIMS.md` rows 9/10 and `CHANGELOG.md`.
+>
+> - **"GCL achieves 97% of MARL performance"** — arithmetically right, structurally false. Exp 36
+>   records `gcl_rank: 3`, `gcl_is_best: false`; GCL is third of five, behind IQL and QMIX.
+> - **"25-50x better sample efficiency"** — the range across 2 of 4 baselines. `vs_mappo: 1.00` and
+>   `vs_random: 1.20` were dropped, and the retained arms have standard deviations roughly four
+>   times their means.
+> - **"Total Seeds: 1200+ independent runs"** (line below) covers this 30-39 program only. It was
+>   later quoted on jasonstiltner.com as the sample size behind the **Experiment 07** population
+>   results, which ran at `n_agents: 100, n_timesteps: 5000, seed: 42` — a **single seed**. Do not
+>   reuse this figure outside this report.
+
 **Date**: January 2026
 **Experiments**: 30-39 (10 experiments, 60+ conditions)
 **Total Seeds**: 1200+ independent runs

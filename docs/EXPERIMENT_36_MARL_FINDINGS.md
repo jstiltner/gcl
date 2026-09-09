@@ -1,8 +1,34 @@
 # Experiment 36: MARL Comparison - Findings
 
+> ## ⚠️ HEADLINE RETRACTED — annotated 2026-09-09
+>
+> **Both headline figures in this document are withdrawn.** Neither was miscalculated; both were
+> *selected comparisons* drawn from a subset of the baselines this same experiment ran. See
+> `docs/CLAIMS.md` rows 9/9a and 10/10a and `CHANGELOG.md` (2026-09-09).
+>
+> - **"97% of MARL performance"** — arithmetically correct (0.5335 / 0.5525 = 96.6%) and still
+>   false. This experiment's own `analysis` block records **`gcl_rank: 3`** and
+>   **`gcl_is_best: false`**. The full ranking is IQL 0.5525 > QMIX 0.542 > **GCL 0.5335** > MAPPO
+>   0.522 > random 0.4745. Comparing only against the best baseline restates "third of five" as
+>   "97% of MARL".
+> - **"25-50x better sample efficiency"** — the range across **2 of 4** baselines.
+>   `sample_efficiency_vs_mappo: 1.00` and `sample_efficiency_vs_random: 1.20` were omitted, and
+>   MAPPO is itself a MARL method reaching the threshold in the same 2.05 episodes. Both retained
+>   arms are outlier-driven: `episodes_to_50` is QMIX **102.4 ± 435.4** and IQL **51.75 ± 214.6**,
+>   each with a CI lower bound of 0.8 — in most seeds the baselines also cross immediately.
+> - The threshold itself is 50% cooperation, which the **random** baseline reaches at 0.475
+>   unaided. It barely discriminates and should not carry a headline.
+>
+> **What survives:** GCL reaches mid-field performance with **no training at all**, which is a real
+> and interesting property. It is not a claim of superiority over MARL.
+
 ## Executive Summary
 
-Experiment 36 compares GCL self-selection against state-of-the-art Multi-Agent Reinforcement Learning (MARL) methods. The key finding is that **GCL achieves competitive asymptotic performance with 25-50x better sample efficiency**.
+Experiment 36 compares GCL self-selection against state-of-the-art Multi-Agent Reinforcement Learning (MARL) methods. ~~The key finding is that **GCL achieves competitive asymptotic performance with 25-50x better sample efficiency**.~~
+
+**RETRACTED 2026-09-09** (see banner above). Corrected finding: GCL reaches **third of five** on
+final cooperation (0.5335, behind IQL 0.5525 and QMIX 0.542) **without any training**. The "25-50x"
+range omitted the two baselines where the ratio was 1.00× and 1.20×.
 
 ## Methods Compared
 
@@ -130,10 +156,15 @@ The results suggest a hybrid approach:
 
 ## Conclusion
 
-GCL self-selection is **competitive with MARL** in asymptotic performance while offering **25-50x better sample efficiency**. This positions GCL as the preferred method for:
+~~GCL self-selection is **competitive with MARL** in asymptotic performance while offering **25-50x better sample efficiency**.~~ **RETRACTED 2026-09-09.**
+
+Corrected: GCL is **third of five** on final cooperation (`gcl_rank: 3`, `gcl_is_best: false`) and
+its sample-efficiency advantage holds against only 2 of 4 baselines. What survives is that GCL
+reaches mid-field coordination with **zero training episodes**, which still supports:
 - Cold-start coordination
 - Time-critical applications
-- Non-stationary environments
+- ~~Non-stationary environments~~ — **not supported.** Experiment 37 tested this directly and every
+  GCL−baseline delta falls inside noise; see `docs/CLAIMS.md` row 17b
 
 MARL methods are preferred when:
 - Training time is abundant

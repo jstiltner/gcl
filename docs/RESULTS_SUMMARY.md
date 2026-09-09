@@ -1,5 +1,29 @@
 # GCL Experimental Results Summary
 
+> ## ⚠️ SUPERSEDED IN PART — annotated 2026-09-09
+>
+> **Many figures below came from `experiments/22_statistical_significance.py`, which generates its
+> own data.** It draws from hand-picked Gaussians and runs genuine `scipy.stats` tests on the
+> invented samples. The p-values are real; the samples are not. The tell is that each "result"
+> equals its generator's mean.
+>
+> **This document also missed the 2026-09-01 correction entirely** — it still reports the superseded
+> Punishment Paradox value. `docs/CLAIMS.md` is the source of truth; prefer it over this file.
+>
+> | Figure in this document | Status | What the real experiment says |
+> |---|---|---|
+> | Punishment Paradox **r = −0.951** | **SUPERSEDED 2026-09-01** — never updated here | **r = −0.972**, p = 1.8e-94 (Exp 15–16, CI-reproduced) |
+> | Hart-Moore "4/4 predictions" | **SUPERSEDED 2026-09-01** | See `CHANGELOG.md`; hold-up reduction is **40.4%** [37.2%, 43.5%] |
+> | Redemption **+52.7%** (t = 11.01, d = 2.98) | **RETRACTED** — generator `0.35 + N(0,0.08)` vs `0.60 + N(0,0.08)` | Exp 17: 0.319 → **0.619, +94.0%** (n = 5 seeds). Stronger than the retracted figure |
+> | Protocol convergence **82.3% ± 4.2%**, p = 1.40e-27 | **RETRACTED** — synthetic | Exp 07: α = 0.165, **R² = 0.782** over 5,000 timesteps |
+> | Small-world clustering **0.699 ± 0.094**, p = 1.50e-12 | **RETRACTED** — synthetic | Exp 07: 0.7475, on a **dense** network (density 0.429, 4,248 edges) — and flatly contradicted by Exp 23, which reports **0.0 across all 70 runs**. See `CLAIMS.md` row 16a |
+> | Specialization Gini **0.745 ± 0.080**, p = 1.40e-16 | **RETRACTED** — synthetic | Exp 07 `specialization`: 0.223 → **0.755** |
+> | Efficiency improvement **26.5%** | **RETRACTED** — synthetic | Exp 07: task success 0.304 → 0.477 (**+17.2 pp**) |
+> | "All **4** emergence predictions validated" | **FALSE** | Exp 07's own `summary` is `passed: 3, total: 4`. **Prediction 3 (Template Replicator Dynamics) failed** all three sub-checks (r = −0.299, wrong sign) |
+> | "23–56% fewer messages than baselines" | **Correct but incomplete** | Exp 08 `key_findings`: 23.3% vs CNP, 52.2% vs auction, 55.8% vs FIPA-ACL. It omits **MARL-IQL, which sends zero messages** at higher efficiency (0.755) than GCL (0.645) — GCL is last of six on efficiency and not on the Pareto frontier |
+>
+> See `CHANGELOG.md` (2026-09-09) for the full account.
+
 ## Executive Summary
 
 This document summarizes all experimental results from the Grounded Commitment Learning (GCL) project, providing publication-ready evidence for the paper.

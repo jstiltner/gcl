@@ -1,7 +1,26 @@
 # GCL Research Report: Experiments 30-38
+
+> ## ⚠️ ARCHIVED AND SUPERSEDED — do not cite. Banner added 2026-09-09.
+>
+> This document sat in `docs/archive/` carrying **no supersession notice**, despite having been
+> superseded twice. It is preserved as part of the revision trail. `docs/CLAIMS.md` is the source of
+> truth for every figure below.
+>
+> - **Superseded by Experiment 40 (Aug 2026):** "self-selection beats optimal external matching by
+>   81%" and "information asymmetry accounts for ~75% of the advantage" are **RETRACTED** — Exp 39's
+>   oracle was not optimal. Against a true argmax oracle the informational advantage is +0.000. The
+>   emergent motivation effect survives (+0.065, d = 1.68).
+> - **Retracted 2026-09-09:** "GCL achieves 97% of MARL performance" (Exp 36 records `gcl_rank: 3`,
+>   `gcl_is_best: false` — GCL is third of five) and "25-50x better sample efficiency" (the range
+>   across 2 of 4 baselines; `vs_mappo: 1.00`, `vs_random: 1.20` omitted).
+> - **"Total Seeds: 1000+"** below refers to this 30-38 program only and must not be quoted as the
+>   sample size for any individual experiment.
+>
+> See `CHANGELOG.md` for the full account.
+
 ## Comprehensive Findings for Presentation Under Scrutiny
 
-**Date**: January 2026  
+**Date**: January 2026
 **Experiments**: 30-38 (9 experiments, 50+ conditions)  
 **Total Seeds**: 1000+ independent runs  
 **Statistical Methods**: Bootstrap CIs, Cohen's d, Power Analysis
