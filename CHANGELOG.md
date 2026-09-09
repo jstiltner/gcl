@@ -1,5 +1,137 @@
 # Changelog
 
+## 2026-09-09 — Exp 23's network metrics are measuring an empty graph
+
+Follow-up to the entry below, which left the Exp 07 / Exp 23 clustering disagreement open on the
+grounds that deciding between two experiments is a research call. It was not a disagreement between
+two measurements. **Exp 23 never measured anything.**
+
+`experiments/23_dunbar_scaling.py:280` initialises the trust matrix as `np.eye(n_agents) * 0.5`, so
+every off-diagonal entry starts at exactly 0. Trust rises +0.1 per success, applied to the selected
+agent's column, and the graph is binarised at `> 0.5` — so an off-diagonal edge requires **more than
+five net successes by a single agent**. An instrumented run at n = 100 over 100 rounds reaches a
+maximum off-diagonal trust of **0.1000**, with 14 distinct agents ever selected and a maximum of
+**3** successes by any one of them. Edges above threshold: **0**.
+
+With no edges, `compute_network_metrics` returns early at line 66 down a branch that **hardcodes**
+`clustering_coefficient=0.0`, `small_world_coefficient=0.0`, `mean_degree=0.0` and
+`n_components=n`. The results file confirms this held in **69 of 70 runs** (7 sizes × 10 seeds); the
+single exception is one n = 10 run with `mean_degree` 0.9, too sparse to close a triangle. Both
+clustering columns are affected — the legacy `trust_clustering` at line 340 uses the same threshold
+and falls to the same zero branch.
+
+Consequences:
+
+- **`clustering_coefficient: 0.0` is withdrawn as a result.** It is a constant returned by an error
+  path. The zero variance across all 70 runs, which is what prompted the investigation, is fully
+  explained by it.
+- **"No small-world structure detected" is withdrawn.** `is_small_world` comes from the `else False`
+  default at line 492, reached because `valid_sw = arr[arr > 0]` is empty. σ was never compared
+  against 1.
+- **The whole `network_topology` block is downstream of nothing.** `mean_degrees` is
+  `[0.0, 0.09, 0.0, 0.0, 0.0, 0.0, 0.0]`; `path_length_vs_size` is six `null`s and a single 1.0 and
+  still carries `"trend": "stable_or_decreasing"`; `clustering_vs_size` is seven zeros and carries
+  `"trend": "stable_or_increasing"` because `0.0 < 0.0` is false. Each label is an else-branch.
+- **Exp 07's 0.7475 stands** (100 agents, density 0.429, 4,248 edges) as the only real measurement of
+  trust-network clustering in the repo. It is single-seed and should be replicated before it carries
+  any weight, but it is not contradicted.
+
+Two further defects found in the same file, independent of the trust bug:
+
+- **`dunbar_estimate: 100` is grid resolution, not a limit.** It is the first tested size whose mean
+  efficiency falls below half of the maximum (`23_dunbar_scaling.py:471-481`). Half-max is 0.1325,
+  anchored on the peak at n = **10**. The crossing is bracketed by n = 50 (0.184) and n = 100
+  (0.114), so the limit lies somewhere in (50, 100]; 100 is simply the next point on the grid
+  {5,10,20,50,100,150,200}. The monotone decline in efficiency with population is real. The
+  convergence on ~100 is an artifact of where the grid points were placed, and should not be
+  presented as the experiment recovering Dunbar's number.
+- **`transition_size: 5.0` is not a phase transition.** The loop at lines 460-466 breaks at the first
+  size with efficiency below 0.5, and every size tested is below 0.5 — the sweep's maximum efficiency
+  is 0.265. It reports the smallest population tested. This is the same failure as the retracted
+  claim 10, whose 50%-cooperation threshold was cleared by the random baseline: a cutoff that
+  separates nothing.
+
+The generalisable lesson, now editorial rule 4 in `docs/CLAIMS.md`: **a metric that is exactly
+constant across a parameter sweep is a defect until proven otherwise.** Real measurements of a
+stochastic process vary. The tell here was never a suspicious value — 0.0 clustering is perfectly
+plausible — it was `std: 0.0` repeated seven times.
+
+See `docs/CLAIMS.md` rows 16, 16a and 16b.
+
+## 2026-09-09 — Closed the 2026-09-01 open items; retracted six further figures
+
+**Both open items from the 2026-09-01 entry were contaminated.** They stayed live for a week while
+the correction above them read as complete. That is the main lesson of this entry: a partial
+correction, presented honestly, still lends credibility to the uncorrected material beside it. Open
+items need a deadline, not just a flag.
+
+**Open item 1 — `test_redemption_mechanism()` (Claim #13).** Confirmed synthetic. It draws
+`no_redemption = 0.35 + N(0, 0.08)` and `with_redemption = 0.60 + N(0, 0.08)`, and the published
++52.7% matches `results/22_statistical_significance/results.json` to ten decimal places
+(0.392622152890477 / 0.5995294236143346 / 52.69882740966349). The real experiment exists and is
+**stronger**: `results/17_forgiveness/forgiveness_analysis.json` (n = 5 seeds) gives standard
+consequences 0.319 → Redemption(+20%) **0.619 (+94.0%)**, Strong redemption(+30%) 0.649 (+103.4%),
+against a no-consequences baseline of 0.519. **The claim survives; the number did not.**
+
+**Open item 2 — `test_population_dynamics()` (Claim #15).** Row 15 was *independently sourced* and
+its numbers are correct — it cites Exp 07 directly, as the 2026-09-01 entry hoped. The contamination
+was downstream: the published write-ups and jasonstiltner.com carried exp22's numbers (82.3%
+convergence, clustering 0.699, Gini 0.745, 26.5% efficiency, "all p < 0.001", "1200+ runs") rather
+than this table's. **The site did not match its own claims table**, and nothing checked that it did.
+
+Row 15 needed annotating for a separate reason: Exp 07's own `summary` is `passed: 3, total: 4`.
+**Prediction 3 (Template Replicator Dynamics) failed** all three sub-checks (r = −0.299, wrong sign).
+"Four properties emerge consistently" was never true. The trust network is also **dense** (density
+0.429, 4,248 edges), not sparse as described.
+
+### Three further problems the Exp 22 issue had masked
+
+**Selected comparison (Claims 9 and 10, both retracted).** Neither number was miscalculated.
+`0.5335 / 0.5525 = 96.6%`, so "~97% of MARL" is arithmetically right — while the same `analysis`
+block records `gcl_rank: 3` and `gcl_is_best: false`. Comparing GCL only against the best baseline
+restates "third of five" as "97% of MARL". Likewise "25–50×" is the range across 2 of 4 baselines;
+`sample_efficiency_vs_mappo: 1.00` and `sample_efficiency_vs_random: 1.20` were dropped, MAPPO is
+MARL, and the discarded *random* baseline shows the threshold barely discriminates. Both arms are
+outlier-driven (`episodes_to_50`: QMIX 102.4 ± 435.4, IQL 51.75 ± 214.6, CI lower bound 0.8 on
+each). **A verified number inside a selected comparison is still a false claim.**
+
+**Two experiments had no row in `docs/CLAIMS.md` at all** — Exp 08 and Exp 37 — in direct violation
+of that file's stated rule that every published claim must match an entry. Both then contradicted
+what was being said about them:
+
+- **Exp 08**: GCL is **last of six** on efficiency (0.645; CNP 0.824, FIPA-ACL 0.818, MARL-IQL
+  0.755, Auction 0.661). It is lowest on messages (84.0) but **strictly dominated by MARL-IQL**,
+  which is non-communicating and sends **zero** messages at 0.755 efficiency — so GCL is not on the
+  Pareto frontier. `success_rate` is 1.0 for all six and does not discriminate.
+- **Exp 37**: sweeps **five** change frequencies, not four. Every GCL−baseline delta (0.17–2.57 pp)
+  sits inside per-arm std of 1.0–2.5 pp at n = 10, no significance test was run, `crossover_iql` and
+  `crossover_qmix` are both `null`, and the two baselines **disagree on the sign of the trend** —
+  `change_frequency` is episodes *between* shifts, so the QMIX series rises toward the most *stable*
+  end, the opposite of the stated "MARL must relearn, GCL adapts" mechanism.
+
+**The absence of a row was itself the signal.** Rule #1 of `docs/CLAIMS.md` was doing useful work
+precisely where it was being ignored.
+
+### New: an unresolved contradiction, recorded rather than resolved
+
+Exp 07 (100 agents, 1 seed) reports trust clustering **0.7475**. Exp 23 (7 population sizes 5→200 ×
+10 seeds = 70 runs) reports `clustering_coefficient: 0.0` in **every single run, zero variance**, and
+correctly concludes "small-world: not detected". Both cannot be right, and neither write-up mentions
+the other. Recorded as **open** in `docs/CLAIMS.md` row 16a. No claim depending on trust-network
+topology should be published until it is settled.
+
+### What held up
+
+Punishment Paradox (r = −0.972) and Hart-Moore (40.4%, CI [37.2%, 43.5%]) — the 2026-09-01
+corrections, now CI-reproduced on every push against a real `commit_sha` and `workflow_run_url`.
+The self-selection work (Claims 1–3, Exp 40/41) is the model for the rest of this repo: it carries
+its own retraction of the earlier "+81% / 75% from information asymmetry" result and volunteers a
+null (Exp 41b, McNemar p = 0.52). Note that `src/gcl/population/` sits at **0% test coverage**, and
+it is the subsystem behind the section where the fabricated figures lived.
+
+`22_statistical_significance.py` stays in the tree, unchanged, for the reason given on 2026-09-01:
+the fix is to correct the record, not to remove the evidence.
+
 ## 2026-09-01 — Corrected Punishment Paradox and Hart-Moore headline stats
 
 **What was wrong:** `experiments/22_statistical_significance.py`'s `test_punishment_paradox()`

@@ -1,5 +1,29 @@
 # GCL Experimental Results Summary
 
+> ## ⚠️ SUPERSEDED IN PART — annotated 2026-09-09
+>
+> **Many figures below came from `experiments/22_statistical_significance.py`, which generates its
+> own data.** It draws from hand-picked Gaussians and runs genuine `scipy.stats` tests on the
+> invented samples. The p-values are real; the samples are not. The tell is that each "result"
+> equals its generator's mean.
+>
+> **This document also missed the 2026-09-01 correction entirely** — it still reports the superseded
+> Punishment Paradox value. `docs/CLAIMS.md` is the source of truth; prefer it over this file.
+>
+> | Figure in this document | Status | What the real experiment says |
+> |---|---|---|
+> | Punishment Paradox **r = −0.951** | **SUPERSEDED 2026-09-01** — never updated here | **r = −0.972**, p = 1.8e-94 (Exp 15–16, CI-reproduced) |
+> | Hart-Moore "4/4 predictions" | **SUPERSEDED 2026-09-01** | See `CHANGELOG.md`; hold-up reduction is **40.4%** [37.2%, 43.5%] |
+> | Redemption **+52.7%** (t = 11.01, d = 2.98) | **RETRACTED** — generator `0.35 + N(0,0.08)` vs `0.60 + N(0,0.08)` | Exp 17: 0.319 → **0.619, +94.0%** (n = 5 seeds). Stronger than the retracted figure |
+> | Protocol convergence **82.3% ± 4.2%**, p = 1.40e-27 | **RETRACTED** — synthetic | Exp 07: α = 0.165, **R² = 0.782** over 5,000 timesteps |
+> | Small-world clustering **0.699 ± 0.094**, p = 1.50e-12 | **RETRACTED** — synthetic | Exp 07: 0.7475, on a **dense** network (density 0.429, 4,248 edges). ~~Flatly contradicted by Exp 23, which reports 0.0 across all 70 runs.~~ **Resolved 2026-09-09 in Exp 07's favour** — Exp 23's 0.0 is a hardcoded empty-graph default, not a measurement; its trust graph has zero edges in 69 of 70 runs. Exp 07's figure stands but is **single-seed** and unreplicated. See `CLAIMS.md` row 16a |
+> | Specialization Gini **0.745 ± 0.080**, p = 1.40e-16 | **RETRACTED** — synthetic | Exp 07 `specialization`: 0.223 → **0.755** |
+> | Efficiency improvement **26.5%** | **RETRACTED** — synthetic | Exp 07: task success 0.304 → 0.477 (**+17.2 pp**) |
+> | "All **4** emergence predictions validated" | **FALSE** | Exp 07's own `summary` is `passed: 3, total: 4`. **Prediction 3 (Template Replicator Dynamics) failed** all three sub-checks (r = −0.299, wrong sign) |
+> | "23–56% fewer messages than baselines" | **Correct but incomplete** | Exp 08 `key_findings`: 23.3% vs CNP, 52.2% vs auction, 55.8% vs FIPA-ACL. It omits **MARL-IQL, which sends zero messages** at higher efficiency (0.755) than GCL (0.645) — GCL is last of six on efficiency and not on the Pareto frontier |
+>
+> See `CHANGELOG.md` (2026-09-09) for the full account.
+
 ## Executive Summary
 
 This document summarizes all experimental results from the Grounded Commitment Learning (GCL) project, providing publication-ready evidence for the paper.
@@ -133,12 +157,25 @@ The punishment paradox is resolved by adding a redemption pathway:
 | 200 | 0.075 ± 0.028 | 28.9 | 0.980 |
 
 **Key Findings:**
-- **Dunbar-like Limit**: ~100 agents (where efficiency drops to 50% of maximum)
-- **Scaling Relationship**: Efficiency decreases logarithmically (R² = 0.88, p = 0.002)
+- **~~Dunbar-like Limit~~ Efficiency half-life**: the crossing lies somewhere in **(50, 100]** — not
+  "~100". *(annotated 2026-09-09)* The reported 100 is the first **grid point** below half of the
+  maximum, and the grid is {5,10,20,50,100,150,200}; the crossing is bracketed by n = 50 (0.184) and
+  n = 100 (0.114). Half-max is 0.1325, anchored on the peak at n = **10**. A denser sweep returns a
+  different number, so this should not be read as the experiment recovering Dunbar's ~150.
+- **Scaling Relationship**: Efficiency decreases logarithmically (R² = 0.88, p = 0.002) — verified
+  against `results/23_dunbar_scaling/results.json`
 - **Message Complexity**: Grows at 0.08 messages per agent
 - **Specialization**: Increases with population (Gini 0.35 → 0.98)
+- **Network topology / small-world**: **no result.** Exp 23's trust graph has zero edges in 69 of 70
+  runs, so every clustering, path-length and small-world figure it reports is a hardcoded
+  empty-graph default. See `docs/CLAIMS.md` row 16a. The `phase_transitions.transition_size: 5.0`
+  in the same results file is likewise not a transition — every population tested was already below
+  the 0.5 threshold (row 16b).
 
-**Interpretation**: GCL exhibits Dunbar-like scaling limits. Beyond ~100 agents, coordination overhead dominates. This suggests hierarchical or federated GCL for larger populations.
+**Interpretation**: Coordination efficiency declines monotonically with population and the decline is
+well fit by log(n). Calling the drop-off point "Dunbar-like" overstates what the sweep resolves, and
+nothing here speaks to network structure. This still motivates hierarchical or federated GCL for
+larger populations.
 
 ---
 
@@ -226,10 +263,16 @@ All key findings show **large effect sizes** (Cohen's d > 0.8):
 **Evidence**: +52.7% cooperation improvement (p < 0.001).
 
 ### Claim 5: GCL is Communication-Efficient
-**Evidence**: 23-56% fewer messages than established MAS protocols.
+**Evidence**: 23-56% fewer messages than established MAS protocols. **Selected comparison** *(flagged
+2026-09-09)* — the range covers CNP and FIPA-ACL only. Exp 08's fourth baseline, MARL-IQL, sends
+**0.0** messages and scores higher on efficiency (0.755 vs GCL's 0.645), so it dominates GCL on both
+axes. See `CLAIMS.md` row 17a.
 
 ### Claim 6: Population Dynamics Emerge
-**Evidence**: 4/4 predictions validated (protocol convergence, small-world networks, specialization, efficiency improvement).
+**Evidence**: ~~4/4 predictions validated~~ **3/4** *(corrected 2026-09-09)* — protocol convergence,
+specialization and efficiency improvement hold. The **small-world network** prediction has no
+supporting measurement: Exp 07's clustering is single-seed and Exp 23's is a hardcoded default over
+an edgeless graph. See `CLAIMS.md` row 16a.
 
 ---
 
@@ -237,8 +280,17 @@ All key findings show **large effect sizes** (Cohen's d > 0.8):
 
 1. **Simulated Agents**: Most experiments use simulated agents, not real LLMs
 2. **Task Complexity**: Tasks are simplified compared to real-world scenarios
-3. **Dunbar Scaling**: Phase transition at n=10, not n=150 (reframed as "minimal viable group")
-4. **Efficiency Gap**: GCL efficiency (0.645) lower than CNP (0.824)
+3. ~~**Dunbar Scaling**: Phase transition at n=10, not n=150 (reframed as "minimal viable group")~~
+   **RETRACTED 2026-09-09.** There is no phase transition and the number was not 10. The results file
+   gives `transition_size: 5.0`, produced by a loop that returns the first population whose
+   efficiency is below 0.5 — and **every** population tested is below 0.5, the sweep's maximum being
+   0.265. It reports the smallest size tested. Reframing that as a "minimal viable group" gave a name
+   to an artifact. See `CLAIMS.md` row 16b.
+4. **Efficiency Gap**: GCL efficiency (0.645) lower than CNP (0.824) — and lower than all five other
+   protocols in Exp 08; GCL places **last of six**. See `CLAIMS.md` row 17a.
+5. **No measured network topology** *(added 2026-09-09)*. Exp 23's trust network never forms an edge,
+   so the repo has no replicated measurement of clustering, path length or small-world structure.
+   Any such claim needs a re-run with a working trust update before it can be made.
 
 ---
 

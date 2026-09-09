@@ -123,8 +123,8 @@ Level 1: Grounded Commitments (Minimal Calculus)
 - **Observability phase boundary**: self-selection wins iff the coordinator's view of agent capability is noisier than agents' self-knowledge (Experiment 40, Part B)
 - **Real LLMs sit on the central-assignment side of that boundary**: for all 4 LLM agents tested, an external assessor predicted their success better than their own stated confidence; confidence-based self-selection rewards overconfidence, implying selection should be grounded in verified track records (as GCL's reputation mechanism does), not self-reports (Experiment 41)
 - **Drift threshold**: GCL advantage significant for ε ≥ 0.15 (Experiment 09)
-- **Sample efficiency**: ~97% of MARL performance with 25–50× fewer episodes (Experiment 36)
-- **Population dynamics**: Protocol convergence at 50-500 agents (Experiment 07)
+- **vs. MARL baselines**: GCL is **third of five** on final cooperation (IQL 0.553 > QMIX 0.542 > GCL 0.534 > MAPPO 0.522 > random 0.475) and needs no training to get there (Experiment 36). *An earlier version of this line read "~97% of MARL performance with 25–50× fewer episodes"; both figures were retracted on 2026-09-09 — see [`docs/CLAIMS.md`](docs/CLAIMS.md) rows 9 and 10.*
+- **Population dynamics**: Protocol convergence at 50-500 agents; note Experiment 07 passes **3 of 4** predictions — Template Replicator Dynamics fails all three sub-checks (Experiment 07)
 
 ### Practical Demonstrations
 - CI/CD pipeline coordination
