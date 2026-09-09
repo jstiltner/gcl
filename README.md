@@ -119,12 +119,39 @@ Level 1: Grounded Commitments (Minimal Calculus)
 - Nash-equilibrium-consistent behavior in multi-agent settings
 
 ### Empirical Findings
-- **Emergent motivation**: self-selection with emergent effort beats a truly optimal assignment oracle by +0.065 (d = 1.68); with effort held fixed the advantage is exactly zero — choice creates commitment, not information (Experiment 40)
-- **Observability phase boundary**: self-selection wins iff the coordinator's view of agent capability is noisier than agents' self-knowledge (Experiment 40, Part B)
+- **Emergent motivation**: self-selection with emergent effort beats a truly optimal assignment oracle by +0.065 (d = 1.68) — choice creates commitment, not information (Experiment 40). Of the three Experiment 40 results this is the only *measured* one: it is a feedback dynamic, and it could have come out at zero.
+- **The fixed-effort information advantage is +0.000 — and that null is analytic, not measured** (Experiment 40). Under zero noise, `self_selection` reduces to argmax over perceived capability (the `difficulty * 0.4` penalty is the same for every agent) and `argmax_oracle` is argmax over the same quantity. They are the *same function*, and pick the same agent in 2,000 of 2,000 draws. The reported ±0.013 interval is not a residual effect; it is the two runs' random streams drifting apart on the branch where nobody volunteers and selection falls through to `random.choice`. Being analytic makes the null **stronger** than a measured one — but no number of seeds could have returned anything else, and the confidence interval and `d = 0.00` imply a test that could have come out differently. It could not.
+- **Observability phase boundary**: self-selection wins iff the coordinator's view of agent capability is noisier than agents' self-knowledge (Experiment 40, Part B). Both selectors are argmax over a noisy estimate of the same scalar, so "whoever sees more clearly wins" follows from how the model is built, and the exact symmetry of the bounds (+0.127 against −0.127) is imposed by that construction rather than discovered in it. The sweep quantifies the effect; it does not establish the boundary.
 - **Real LLMs sit on the central-assignment side of that boundary**: for all 4 LLM agents tested, an external assessor predicted their success better than their own stated confidence; confidence-based self-selection rewards overconfidence, implying selection should be grounded in verified track records (as GCL's reputation mechanism does), not self-reports (Experiment 41)
 - **Drift threshold**: GCL advantage significant for ε ≥ 0.15 (Experiment 09)
 - **vs. MARL baselines**: GCL is **third of five** on final cooperation (IQL 0.553 > QMIX 0.542 > GCL 0.534 > MAPPO 0.522 > random 0.475) and needs no training to get there (Experiment 36). *An earlier version of this line read "~97% of MARL performance with 25–50× fewer episodes"; both figures were retracted on 2026-09-09 — see [`docs/CLAIMS.md`](docs/CLAIMS.md) rows 9 and 10.*
 - **Population dynamics**: Protocol convergence at 50-500 agents; note Experiment 07 passes **3 of 4** predictions — Template Replicator Dynamics fails all three sub-checks (Experiment 07)
+
+### Which of these actually run `src/gcl/`
+
+Not all of them, and the findings above do not say so on their own. Of the **51** experiment
+scripts under `experiments/`:
+
+| Provenance | Count | What it means |
+|---|---|---|
+| Imports `src/gcl/` | 18 | Exercises the implementation this README documents |
+| Imports only `experiments/social_structures/` | 16 | Runs the shared agent harness — which itself imports **nothing** from `src/gcl/`. Its `Agent` docstring calls it a "GCL-COMPATIBLE DESIGN" (`agents/agent.py:66`): a reimplementation of GCL's tenets, not GCL |
+| Neither | 17 | Standalone NumPy models that share the vocabulary and none of the code |
+
+Mapped onto the findings above:
+
+- **Experiment 07** (population dynamics) imports `gcl.population` — real.
+- **Experiment 09** (drift threshold) imports `src.gcl.core.calculus` — real.
+- **Experiments 41 / 41b** (LLM calibration and framing) import `gcl.llm.api_clients` and nothing
+  else from the package. That is appropriate — they measure LLM calibration, not GCL — but the
+  result is a fact about current models, not about this implementation.
+- **Experiment 36** (MARL comparison) runs the harness. The row labelled "GCL" in that table is the
+  harness's agent model.
+- **Experiment 40** (self-selection) imports nothing from `src/gcl/`. It calls
+  `sys.path.insert` on line 35 and then never uses it. It is a standalone simulation.
+
+A finding can be arithmetically correct, correctly transcribed, and still describe a different
+system than the heading says. Read the imports before the numbers.
 
 ### Practical Demonstrations
 - CI/CD pipeline coordination
@@ -224,6 +251,16 @@ than erased:
    re-test (Exp 41b) found no significant "chosen vs assigned" framing effect
    — the simulated motivation mechanism does not measurably transfer to
    prompted LLMs.
+4. **Exp 40, re-examined (2026-09-09)**: nothing above is withdrawn, but two of
+   its three results turn out to be properties of the model rather than
+   measurements. The +0.000 information null is an identity — the two selection
+   rules reduce to the same function under zero noise — and the phase boundary's
+   symmetric ±0.127 bounds are imposed by the construction. Only the +0.065
+   motivation effect is a dynamic that could have come out otherwise. Reported
+   because a confidence interval and a `d = 0.00` advertise a test that could
+   have failed, and this one could not. The same pass added the provenance table
+   under [Key Results](#which-of-these-actually-run-srcgcl): **33 of 51
+   experiment scripts never import `src/gcl/`**.
 
 The full audit trail lives in [`docs/CLAIMS.md`](docs/CLAIMS.md),
 [`docs/EXPERIMENT_40_FINDINGS.md`](docs/EXPERIMENT_40_FINDINGS.md), and
