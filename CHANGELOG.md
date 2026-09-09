@@ -1,5 +1,63 @@
 # Changelog
 
+## 2026-09-09 — Exp 23's network metrics are measuring an empty graph
+
+Follow-up to the entry below, which left the Exp 07 / Exp 23 clustering disagreement open on the
+grounds that deciding between two experiments is a research call. It was not a disagreement between
+two measurements. **Exp 23 never measured anything.**
+
+`experiments/23_dunbar_scaling.py:280` initialises the trust matrix as `np.eye(n_agents) * 0.5`, so
+every off-diagonal entry starts at exactly 0. Trust rises +0.1 per success, applied to the selected
+agent's column, and the graph is binarised at `> 0.5` — so an off-diagonal edge requires **more than
+five net successes by a single agent**. An instrumented run at n = 100 over 100 rounds reaches a
+maximum off-diagonal trust of **0.1000**, with 14 distinct agents ever selected and a maximum of
+**3** successes by any one of them. Edges above threshold: **0**.
+
+With no edges, `compute_network_metrics` returns early at line 66 down a branch that **hardcodes**
+`clustering_coefficient=0.0`, `small_world_coefficient=0.0`, `mean_degree=0.0` and
+`n_components=n`. The results file confirms this held in **69 of 70 runs** (7 sizes × 10 seeds); the
+single exception is one n = 10 run with `mean_degree` 0.9, too sparse to close a triangle. Both
+clustering columns are affected — the legacy `trust_clustering` at line 340 uses the same threshold
+and falls to the same zero branch.
+
+Consequences:
+
+- **`clustering_coefficient: 0.0` is withdrawn as a result.** It is a constant returned by an error
+  path. The zero variance across all 70 runs, which is what prompted the investigation, is fully
+  explained by it.
+- **"No small-world structure detected" is withdrawn.** `is_small_world` comes from the `else False`
+  default at line 492, reached because `valid_sw = arr[arr > 0]` is empty. σ was never compared
+  against 1.
+- **The whole `network_topology` block is downstream of nothing.** `mean_degrees` is
+  `[0.0, 0.09, 0.0, 0.0, 0.0, 0.0, 0.0]`; `path_length_vs_size` is six `null`s and a single 1.0 and
+  still carries `"trend": "stable_or_decreasing"`; `clustering_vs_size` is seven zeros and carries
+  `"trend": "stable_or_increasing"` because `0.0 < 0.0` is false. Each label is an else-branch.
+- **Exp 07's 0.7475 stands** (100 agents, density 0.429, 4,248 edges) as the only real measurement of
+  trust-network clustering in the repo. It is single-seed and should be replicated before it carries
+  any weight, but it is not contradicted.
+
+Two further defects found in the same file, independent of the trust bug:
+
+- **`dunbar_estimate: 100` is grid resolution, not a limit.** It is the first tested size whose mean
+  efficiency falls below half of the maximum (`23_dunbar_scaling.py:471-481`). Half-max is 0.1325,
+  anchored on the peak at n = **10**. The crossing is bracketed by n = 50 (0.184) and n = 100
+  (0.114), so the limit lies somewhere in (50, 100]; 100 is simply the next point on the grid
+  {5,10,20,50,100,150,200}. The monotone decline in efficiency with population is real. The
+  convergence on ~100 is an artifact of where the grid points were placed, and should not be
+  presented as the experiment recovering Dunbar's number.
+- **`transition_size: 5.0` is not a phase transition.** The loop at lines 460-466 breaks at the first
+  size with efficiency below 0.5, and every size tested is below 0.5 — the sweep's maximum efficiency
+  is 0.265. It reports the smallest population tested. This is the same failure as the retracted
+  claim 10, whose 50%-cooperation threshold was cleared by the random baseline: a cutoff that
+  separates nothing.
+
+The generalisable lesson, now editorial rule 4 in `docs/CLAIMS.md`: **a metric that is exactly
+constant across a parameter sweep is a defect until proven otherwise.** Real measurements of a
+stochastic process vary. The tell here was never a suspicious value — 0.0 clustering is perfectly
+plausible — it was `std: 0.0` repeated seven times.
+
+See `docs/CLAIMS.md` rows 16, 16a and 16b.
+
 ## 2026-09-09 — Closed the 2026-09-01 open items; retracted six further figures
 
 **Both open items from the 2026-09-01 entry were contaminated.** They stayed live for a week while

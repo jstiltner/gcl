@@ -2,13 +2,25 @@
 
 This document tracks all updates made to align the paper claims with experimental implementation.
 
+> ## ⚠️ GAP 2'S RESULTS BLOCK IS NOT A RESULT — annotated 2026-09-09
+>
+> The "Experimental Results After Fix" listing under **Gap 2** does not match
+> `results/23_dunbar_scaling/results.json`, and the `NetworkMetrics` dataclass reproduced above it
+> does not match `experiments/23_dunbar_scaling.py:38-49`. Four of the six figures in that block
+> have no counterpart in any results file; the two that are real (R² 0.88, p = 0.0017) surround
+> them and lend them credibility. See the annotations in that section, `docs/CLAIMS.md` rows
+> 16/16a/16b, and `CHANGELOG.md` (2026-09-09).
+>
+> The sentence "**verified through re-running experiments**" below is therefore not true of Gap 2.
+> Gaps 1 and 3 have not been re-audited and carry no verdict either way.
+
 ---
 
 ## Update Date: December 24, 2024
 
 ### Overview
 
-Three critical gaps were identified between paper claims and experimental implementation. All gaps have been addressed with code fixes and verified through re-running experiments.
+Three critical gaps were identified between paper claims and experimental implementation. All gaps have been addressed with code fixes and ~~verified through re-running experiments~~ **— see the banner above; this is not true of Gap 2**.
 
 ---
 
@@ -47,6 +59,14 @@ Experiment 23 had only a rough clustering approximation, missing proper network 
 ### Implementation Added
 
 #### New `NetworkMetrics` Dataclass
+
+> **This is not the dataclass that was written.** Compare `experiments/23_dunbar_scaling.py:38-49`:
+> the real one has `avg_path_length`, `mean_degree`, `degree_std`, `max_betweenness`,
+> `n_components` and `largest_component_fraction`, and `degree_distribution` is a `List[int]`, not a
+> `Dict[int, int]`. There is no `betweenness_centrality` mapping and no `connected_components` field.
+> Every field in the real dataclass also carries a default, including `n_components: int = 1` and
+> `largest_component_fraction: float = 1.0` — defaults that assert a fully connected graph.
+
 ```python
 @dataclass
 class NetworkMetrics:
@@ -70,7 +90,29 @@ Implements:
 5. **Betweenness Centrality**: Identifies bridge nodes
 6. **Connected Components**: Network fragmentation measure
 
-### Experimental Results After Fix
+### ~~Experimental Results After Fix~~ — RETRACTED 2026-09-09
+
+> **Four of these six figures appear in no results file, and the population grid is wrong.**
+> Checked against `results/23_dunbar_scaling/results.json` (7 sizes × 10 seeds = 70 runs):
+>
+> | Line below | Actual value in the results file |
+> |---|---|
+> | `Population sizes tested: [10, 25, 50, 75, 100, 150, 200]` | `[5, 10, 20, 50, 100, 150, 200]` — 25 and 75 were never run; 5 and 20 were |
+> | `Clustering coefficient: 0.12` | **0.0** — and 0.0 in all 70 runs, at every size |
+> | `Average path length: 2.3` | **null** (serialised `Infinity`) at N=100 |
+> | `Small-world coefficient: 0.8` | **0.0** |
+> | `Connected components: 1` | **100** — one component per agent. This looks like the dataclass default `n_components: int = 1`, not a measurement |
+> | `R² 0.88`, `p-value 0.0017` | **real** (`r_squared: 0.8811`, `p_value: 0.0017317`) |
+>
+> The parenthetical "(not small-world, **sparse** network)" is the tell. The network is not sparse,
+> it is **empty**: the trust matrix is initialised to `np.eye(n) * 0.5` and never crosses the `> 0.5`
+> binarisation threshold off-diagonal, so `compute_network_metrics` returns its hardcoded
+> empty-graph branch. There was nothing to compute a clustering coefficient or a path length from.
+>
+> Note the structure: the two figures that are genuine sit above the four that are not, and
+> "statistically significant" is attached to them. A real number can authenticate an invented one
+> placed next to it.
+
 ```
 Dunbar Scaling Analysis Results:
 ================================

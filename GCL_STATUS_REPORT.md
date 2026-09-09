@@ -102,11 +102,14 @@
    - Drift robustness testing
    - Experiment 03 shows coordination under drift
 
-5. **Population Dynamics**
-   - 50-500 agent simulations
-   - 4/4 predictions passing:
+5. **Population Dynamics** *(annotated 2026-09-09 — see `docs/CLAIMS.md` rows 16a, 11)*
+   - ~~50-500 agent simulations~~ **one configuration**: `n_agents: 100, n_timesteps: 5000, seed: 42`.
+     Section "Experiment 07" below states this correctly; this line does not.
+   - ~~4/4 predictions passing~~ **3/4**:
      - ✅ Protocol Convergence (α=0.16, R²=0.78)
-     - ✅ Small-World Trust Network (clustering=0.75)
+     - ⚠️ Small-World Trust Network (clustering=0.75) — **unsupported.** Single seed, never replicated,
+       and the experiment built to replicate it (Exp 23) measures an edgeless graph and returns a
+       hardcoded 0.0. No verdict either way is currently earned.
      - ✅ Template Fitness Dynamics (correlation=-0.30, p<0.001)
      - ✅ Specialization Emergence (Gini=0.78)
 
@@ -195,11 +198,15 @@
 
 **Configuration**: 100 agents, 5000 timesteps, seed=42
 
-**Predictions Validated**:
+**Predictions Validated** — **3/4**, *annotated 2026-09-09*:
 1. Protocol Convergence: α=0.16, R²=0.78 ✅
-2. Small-World Network: clustering=0.75 ✅
+2. Small-World Network: clustering=0.75 ⚠️ **unsupported** — single seed (this configuration), and
+   Exp 23's attempt to replicate it returns a hardcoded empty-graph 0.0. See `docs/CLAIMS.md` row 16a.
 3. Template Fitness: correlation=-0.30, p<0.001 ✅
 4. Specialization: Gini=0.78 ✅
+
+Every figure above rests on **one seed**. `seed=42` is stated in the configuration line and should be
+carried with the numbers wherever they are quoted.
 
 **Visualizations**: `results/07_population/*.png`
 
