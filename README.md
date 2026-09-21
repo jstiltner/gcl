@@ -2,7 +2,7 @@
 
 **A formal framework for AI coordination under semantic drift.**
 
-[![Tests](https://img.shields.io/badge/tests-382%20passing-brightgreen)]()
+[![Tests](https://img.shields.io/badge/tests-386%20passing-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
@@ -14,7 +14,10 @@ Full-scale (n=30) reproduction: [open the Colab notebook](notebooks/reproduce_he
 
 > **All quantitative claims in this repository are indexed in
 > [`docs/CLAIMS.md`](docs/CLAIMS.md)**, including effect sizes, confidence
-> intervals, and two retractions from our own revision process.
+> intervals, and every correction this project has made against itself.
+> As of 2026-09-21 that is **14 of 31 claim rows** retracted, downgraded, or
+> marked unsupported — including two of the six theorems, both of which turned
+> out to have been "validated" by procedures that could not return failure.
 
 ## The Core Insight
 
