@@ -193,16 +193,18 @@ class CommitmentParser:
         (r'I commit to\s+(.+?)(?:\.|$)', CommitmentStrength.STRONG),
         (r'I am committed to\s+(.+?)(?:\.|$)', CommitmentStrength.STRONG),
         
-        # Moderate commitments
-        (r'I will\s+(.+?)(?:\.|$)', CommitmentStrength.MODERATE),
-        (r'I shall\s+(.+?)(?:\.|$)', CommitmentStrength.MODERATE),
-        (r'I am going to\s+(.+?)(?:\.|$)', CommitmentStrength.MODERATE),
-        
-        # Weak commitments
+        # Weak commitments. These precede the moderate ones because `I will try to` is a
+        # refinement of `I will`: whichever runs first claims the span (see parse()), so
+        # the more specific reading must get the first look or it can never win.
         (r'I will try to\s+(.+?)(?:\.|$)', CommitmentStrength.WEAK),
         (r'I should\s+(.+?)(?:\.|$)', CommitmentStrength.WEAK),
         (r'I might\s+(.+?)(?:\.|$)', CommitmentStrength.WEAK),
         (r'I could\s+(.+?)(?:\.|$)', CommitmentStrength.WEAK),
+
+        # Moderate commitments
+        (r'I will\s+(.+?)(?:\.|$)', CommitmentStrength.MODERATE),
+        (r'I shall\s+(.+?)(?:\.|$)', CommitmentStrength.MODERATE),
+        (r'I am going to\s+(.+?)(?:\.|$)', CommitmentStrength.MODERATE),
     ]
     
     # Condition patterns
@@ -266,19 +268,41 @@ class CommitmentParser:
         """
         commitments = []
         warnings = []
-        
+
+        # Spans of `text` already accounted for by an earlier, higher-priority pattern.
+        # Without this, every pattern scans the full text independently and a single
+        # commitment can be extracted more than once. The concrete failure: in
+        # "[COMMITMENT: I will not harm the data] [COMMITMENT: I will keep it safe]" the
+        # explicit-marker pattern correctly yields two commitments, and then the generic
+        # `I will\s+(.+?)(?:\.|$)` pattern matches *inside* the first marker and, having
+        # no period to stop at, runs to the end of the string -- yielding a third,
+        # spurious commitment whose action is the rest of the response concatenated.
+        # `_deduplicate` never caught it because it compares action strings for equality
+        # and the run-on action is not equal to anything. Downstream that third
+        # commitment becomes a third predicate and therefore a third vote in
+        # `GroundingEngine.verify_output`'s majority. See experiments/44 and CHANGELOG
+        # 2026-09-20 (parser).
+        claimed: list[tuple[int, int]] = []
+
+        def overlaps(start: int, end: int) -> bool:
+            return any(start < c_end and end > c_start for c_start, c_end in claimed)
+
         # Try each commitment pattern
         for pattern, base_strength in self.COMMITMENT_PATTERNS:
             matches = re.finditer(pattern, text, re.IGNORECASE | re.MULTILINE)
-            
+
             for match in matches:
                 raw_text = match.group(0).strip()
                 action = match.group(1).strip()
-                
+
                 # Skip if too short
                 if len(action) < 5:
                     continue
-                
+
+                if overlaps(match.start(), match.end()):
+                    continue
+                claimed.append((match.start(), match.end()))
+
                 # Adjust strength based on modifiers
                 strength = self._adjust_strength(raw_text, base_strength)
                 

@@ -307,10 +307,65 @@ class TestCommitmentParser:
         if result.has_commitments():
             assert result.commitments[0].strength == CommitmentStrength.WEAK
     
+    def test_no_over_extraction_from_bracketed_commitments(self):
+        """
+        n bracketed commitments must yield exactly n, not n+1.
+
+        Regression for the 2026-09-20 parser bug: patterns were each scanned over the
+        whole text with no record of consumed spans, so the generic `I will (.+?)(\\.|$)`
+        pattern matched *inside* the first [COMMITMENT: ...] marker and, with no period
+        to stop at, ran to the end of the response. That produced one spurious extra
+        commitment per response whose action was every later commitment concatenated.
+        Downstream it became an extra predicate and therefore an extra vote in
+        GroundingEngine.verify_output's majority.
+        """
+        parser = CommitmentParser()
+        actions = [
+            "I will not harm the user's data",
+            "I will keep the operation safe",
+            "I will add tests for the new branch",
+            "I will verify the migration output",
+        ]
+        for n in range(1, len(actions) + 1):
+            text = " ".join(f"[COMMITMENT: {a}]" for a in actions[:n])
+            result = parser.parse(text)
+            assert len(result.commitments) == n, (
+                f"{n} commitments parsed as {len(result.commitments)}: "
+                f"{[c.action for c in result.commitments]}"
+            )
+            assert [c.action for c in result.commitments] == actions[:n]
+            # No action may contain a marker fragment -- that is the run-on signature.
+            for c in result.commitments:
+                assert "]" not in c.action and "COMMITMENT" not in c.action
+
+    def test_specific_pattern_wins_over_general(self):
+        """`I will try to X` is WEAK, not also MODERATE `try to X`."""
+        parser = CommitmentParser()
+        result = parser.parse("I will try to fix the scheduler bug.")
+
+        assert len(result.commitments) == 1
+        assert result.commitments[0].action == "fix the scheduler bug"
+        assert result.commitments[0].strength == CommitmentStrength.WEAK
+
+    def test_nested_commitment_phrase_extracted_once(self):
+        """`I promise that I will X` is one commitment, not two."""
+        parser = CommitmentParser()
+        result = parser.parse("I promise that I will review the patch.")
+
+        assert len(result.commitments) == 1
+        assert result.commitments[0].strength == CommitmentStrength.ABSOLUTE
+
+    def test_separate_sentences_still_both_parsed(self):
+        """Span-claiming must not suppress genuinely distinct commitments."""
+        parser = CommitmentParser()
+        result = parser.parse("I will add tests. I will write docs.")
+
+        assert [c.action for c in result.commitments] == ["add tests", "write docs"]
+
     def test_parse_with_conditions(self):
         """Test parsing commitments with conditions."""
         parser = CommitmentParser()
-        
+
         text = "If you provide the requirements, I will implement the feature."
         result = parser.parse(text)
         

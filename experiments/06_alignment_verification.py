@@ -622,18 +622,36 @@ def main() -> None:
     # Summary
     print("\n--- Theorem 6 Verification Summary ---")
     
-    theorem_6_validated = (
-        slope < 3 and  # Polynomial scaling
-        success / total > 0.5 and  # Reasonable grounding success
-        avg_alignment > 0.3 and  # Reasonable alignment
-        preservation_rate > 0.5  # Semantic preservation
-    )
-    
-    print(f"1. Polynomial scaling: {'✓' if slope < 3 else '✗'} (exponent={slope:.2f})")
-    print(f"2. Grounding success: {'✓' if success/total > 0.5 else '✗'} ({success/total:.1%})")
-    print(f"3. Alignment score: {'✓' if avg_alignment > 0.3 else '✗'} ({avg_alignment:.2f})")
-    print(f"4. Semantic preservation: {'✓' if preservation_rate > 0.5 else '✗'} ({preservation_rate:.1%})")
+    # Criterion 5 added 2026-09-20. The previous gate validated a theorem about
+    # *verifiability* without ever reading the verification outcome: it passed with
+    # verification_rate at 0.000. Each component is recorded in the artifact so the
+    # bare boolean cannot be quoted on its own.
+    verification_rate = float(np.mean(alignment_results["verification_results"]))
+
+    criteria = {
+        "polynomial_scaling": bool(slope < 3),
+        "grounding_success_above_0.5": bool(success / total > 0.5),
+        "alignment_above_0.3": bool(avg_alignment > 0.3),
+        "semantic_preservation_above_0.5": bool(preservation_rate > 0.5),
+        "verification_rate_above_0.5": bool(verification_rate > 0.5),
+    }
+    criteria_values = {
+        "scaling_exponent": float(slope),
+        "grounding_success_rate": float(success / total),
+        "avg_alignment": float(avg_alignment),
+        "preservation_rate": float(preservation_rate),
+        "verification_rate": verification_rate,
+    }
+    theorem_6_validated = all(criteria.values())
+
+    print(f"1. Polynomial scaling: {'✓' if criteria['polynomial_scaling'] else '✗'} (exponent={slope:.2f})")
+    print(f"2. Grounding success: {'✓' if criteria['grounding_success_above_0.5'] else '✗'} ({success/total:.1%})")
+    print(f"3. Alignment score: {'✓' if criteria['alignment_above_0.3'] else '✗'} ({avg_alignment:.2f})")
+    print(f"4. Semantic preservation: {'✓' if criteria['semantic_preservation_above_0.5'] else '✗'} ({preservation_rate:.1%})")
+    print(f"5. Verification rate: {'✓' if criteria['verification_rate_above_0.5'] else '✗'} ({verification_rate:.1%})")
     print(f"\n{'✓ THEOREM 6 VALIDATED' if theorem_6_validated else '✗ THEOREM 6 NOT VALIDATED'}")
+    print("\nSee experiments/43_theorem6_verification_discrimination.py: these rates are "
+          "pass rates, not discrimination, and a pass rate cannot validate a verifier.")
     
     # Save results
     all_results = {
@@ -665,6 +683,13 @@ def main() -> None:
             "avg_key_term_preservation": avg_preservation,
         },
         "theorem_6_validated": theorem_6_validated,
+        "theorem_6_criteria": criteria,
+        "theorem_6_criteria_values": criteria_values,
+        "theorem_6_caveat": (
+            "These are pass rates against MockLLM, not discrimination. A verifier that "
+            "always returns 'satisfied' scores 1.000 here. See "
+            "experiments/43_theorem6_verification_discrimination.py and CHANGELOG 2026-09-20."
+        ),
     }
     
     with open(output_path / "results.json", "w") as f:

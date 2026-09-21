@@ -243,16 +243,20 @@ class GroundingEngine:
         parser: CommitmentParser | None = None,
         predicate_registry: PredicateRegistry | None = None,
         grounding_rules: dict[str, str] | None = None,
-        auto_create_predicates: bool = True,
+        auto_create_predicates: bool = False,
     ):
         """
         Initialize the grounding engine.
-        
+
         Args:
             parser: Commitment parser to use
             predicate_registry: Registry for predicates
             grounding_rules: Custom grounding rules
-            auto_create_predicates: Whether to auto-create predicates
+            auto_create_predicates: Whether to invent a predicate for commitments that
+                match no grounding rule. Defaults to False: with it enabled, grounding
+                cannot fail, so any "grounding success rate" measured under it reports
+                the parser's detection rate rather than groundability. See CHANGELOG
+                2026-09-20 and experiments/43_theorem6_verification_discrimination.py.
         """
         self.parser = parser or CommitmentParser()
         self.registry = predicate_registry or PredicateRegistry()
@@ -275,10 +279,36 @@ class GroundingEngine:
             ("tests_added", lambda ctx: ctx.get("tests_exist", False)),
             ("explanation_provided", lambda ctx: len(ctx.get("explanation", "")) > 0),
             ("answer_provided", lambda ctx: ctx.get("answer") is not None),
-            ("no_harm", lambda ctx: not ctx.get("harm_detected", False)),
-            ("safety_maintained", lambda ctx: ctx.get("is_safe", True)),
             ("accuracy_maintained", lambda ctx: ctx.get("accuracy", 0) > 0.9),
             ("verification_performed", lambda ctx: ctx.get("verified", False)),
+            # Previously missing. Every name appearing in self.grounding_rules must be
+            # registered here. A rule that names an unregistered predicate does NOT take
+            # the no-match path below (which invents a `completed_*` predicate that is
+            # effectively constant false); it matches, then raises KeyError on lookup and
+            # takes the second auto-create branch, which registers `lambda ctx: True` --
+            # satisfied in every possible world. Constant true is the dangerous one, and
+            # it is reachable only through a registry gap, never through an unknown verb.
+            ("clarification_provided", lambda ctx: len(ctx.get("clarification", "")) > 0),
+            ("correctness_verified", lambda ctx: ctx.get("correct", False)),
+            ("completeness_achieved", lambda ctx: ctx.get("complete", False)),
+            ("check_performed", lambda ctx: ctx.get("checked", False)),
+            ("validation_complete", lambda ctx: ctx.get("validated", False)),
+            # Safety predicates require affirmative evidence. An unasked question is not
+            # a passed check, so these are False on an empty context rather than True.
+            (
+                "no_harm",
+                lambda ctx: ctx.get("harm_assessed", False)
+                and not ctx.get("harm_detected", False),
+            ),
+            (
+                "safety_maintained",
+                lambda ctx: ctx.get("safety_assessed", False) and ctx.get("is_safe", False),
+            ),
+            (
+                "danger_avoided",
+                lambda ctx: ctx.get("danger_assessed", False)
+                and not ctx.get("danger_detected", False),
+            ),
         ]
         
         for name, func in default_predicates:
@@ -410,7 +440,11 @@ class GroundingEngine:
             if self.auto_create_predicates:
                 predicate = Predicate(
                     name=matched_predicate_name,
-                    evaluate_fn=lambda ctx: True,  # Default to true
+                    # Reached only when a grounding rule names a predicate that was
+                    # never registered. Constant true: it verifies as satisfied in
+                    # every possible world, so the commitment cannot fail. Keeping
+                    # the registry complete is what prevents this from being reached.
+                    evaluate_fn=lambda ctx: True,
                     description=f"Auto-generated predicate",
                 )
                 self.registry.register(predicate)

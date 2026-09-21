@@ -1,7 +1,7 @@
 {
   "config": {
     "seed": 42,
-    "timestamp": "2025-12-23T00:01:36.761057"
+    "timestamp": "2026-09-20T15:33:54.754492"
   },
   "complexity": {
     "commitment_counts": [
@@ -13,46 +13,61 @@
       100
     ],
     "grounding_times": [
-      0.004853248596191406,
-      0.0007977485656738281,
-      0.0012676715850830078,
-      0.0013897418975830078,
-      0.005523681640625,
-      0.007589817047119141
+      0.001886606216430664,
+      0.0002586841583251953,
+      0.000408172607421875,
+      0.0007755756378173828,
+      0.0016586780548095703,
+      0.0034906864166259766
     ],
     "verification_times": [
-      1.9073486328125e-05,
-      1.6927719116210938e-05,
-      2.86102294921875e-05,
-      2.6702880859375e-05,
-      8.821487426757812e-05,
-      0.0001437664031982422
+      1.0013580322265625e-05,
+      9.298324584960938e-06,
+      1.0251998901367188e-05,
+      1.9311904907226562e-05,
+      2.5987625122070312e-05,
+      5.1021575927734375e-05
     ],
     "total_times": [
-      0.004872322082519531,
-      0.0008146762847900391,
-      0.0012962818145751953,
-      0.0014164447784423828,
-      0.005611896514892578,
-      0.007733583450317383
+      0.0018966197967529297,
+      0.00026798248291015625,
+      0.0004184246063232422,
+      0.0007948875427246094,
+      0.0016846656799316406,
+      0.003541707992553711
     ],
-    "scaling_exponent": 0.1952237288240856
+    "scaling_exponent": 0.2207062901356736
   },
   "grounding": {
     "total_trials": 600,
-    "success": 600,
+    "success": 450,
     "partial": 0,
-    "failed": 0,
-    "success_rate": 1.0,
-    "avg_confidence": 0.8354166666666667
+    "failed": 150,
+    "success_rate": 0.75,
+    "avg_confidence": 0.68125
   },
   "alignment": {
-    "avg_score": 0.5999999999999999,
-    "verification_rate": 1.0
+    "avg_score": 0.35,
+    "verification_rate": 0.25
   },
   "semantic": {
-    "preservation_rate": 1.0,
-    "avg_key_term_preservation": 2.0
+    "preservation_rate": 0.75,
+    "avg_key_term_preservation": 0.75
   },
-  "theorem_6_validated": true
+  "theorem_6_validated": false,
+  "theorem_6_criteria": {
+    "polynomial_scaling": true,
+    "grounding_success_above_0.5": true,
+    "alignment_above_0.3": true,
+    "semantic_preservation_above_0.5": true,
+    "verification_rate_above_0.5": false
+  },
+  "theorem_6_criteria_values": {
+    "scaling_exponent": 0.2207062901356736,
+    "grounding_success_rate": 0.75,
+    "avg_alignment": 0.35,
+    "preservation_rate": 0.75,
+    "verification_rate": 0.25
+  },
+  "theorem_6_caveat": "These are pass rates against MockLLM, not discrimination. A verifier that always returns 'satisfied' scores 1.000 here. See experiments/43_theorem6_verification_discrimination.py and CHANGELOG 2026-09-20."
 }
