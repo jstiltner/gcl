@@ -27,14 +27,32 @@ pinned. The seeded generator therefore drew identical *indices* on every run, an
 indices landed on *different contingencies*.
 
 The workflow is named `ci-reproduce` and exists to demonstrate reproducibility. It was
-republishing a different number on essentially every run, which is what the repeated
-`ci: refresh CI-reproduced headline stats` commits in the history actually record.
+republishing a different number on essentially every run: the badge held
+**26.7 / 27.7 / 28.5 / 32.2 / 36.8 / 38.3 / 39.8%** across successive runs, a different
+value on **9 of 10** refreshes.
+
+> **Corrected 2026-09-21, same day.** This entry originally said the repeated
+> `ci: refresh CI-reproduced headline stats` commits "are the bug's signature". That is
+> wrong as stated. `ci_results/latest.json` embeds `generated_at`, `commit_sha` and
+> `workflow_run_url`, so the job commits on **every** run whether or not a statistic
+> moved — the commit count proves nothing. The badge *values* above are the evidence.
+> Caught by running a `workflow_dispatch` re-run after the merge specifically to confirm
+> the job would go quiet, finding that it committed anyway, and diffing it rather than
+> assuming the fix had failed. Asserting a cause without verifying it is the exact
+> failure this changelog entry criticises elsewhere; recording it here rather than
+> quietly amending the sentence.
 
 ### The fix
 
 A canonical `self.contingency_order = sorted(self.all_contingencies)` is drawn from
 instead. Stable at **42.9%** (ci-small) across hash seeds 0–3 and unpinned. The workflow
 also pins `PYTHONHASHSEED: "0"` as a guard, not as the fix.
+
+**Verified in CI after merge, not just locally.** A `workflow_dispatch` re-run on an
+unchanged `main` produced a diff touching only `generated_at`, `commit_sha` and
+`workflow_run_url`; `badge-hart-moore.json` was byte-identical and `latest.json`'s
+`hart_moore` block was unchanged. That is the first time this workflow has reproduced its
+own numbers.
 
 **Swept for the same pattern and cleared three false positives**, verified rather than
 assumed: `population/environment.py:274` iterates a set of **ints** (`hash(int) == int`,

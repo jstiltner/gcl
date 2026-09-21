@@ -50,10 +50,16 @@ jobs:
         # PYTHONHASHSEED is pinned as a belt-and-braces guard, not as the fix. The real
         # fix is in 21_incomplete_contract_theory.py, which now draws from a sorted
         # contingency list instead of a hash-ordered one. Before that, this job published
-        # a different hold-up reduction on essentially every run at identical seeds --
-        # which is why the history is full of "ci: refresh" commits. If this job ever
-        # starts churning the badge again at a fixed input, suspect a new hash-ordered
-        # container before suspecting the simulation.
+        # a different hold-up reduction on essentially every run at identical seeds:
+        # 26.7 / 27.7 / 28.5 / 32.2 / 36.8 / 38.3 / 39.8%, a new value on 9 of 10
+        # refreshes.
+        #
+        # Note when judging whether this job is behaving: the commit count is NOT a
+        # signal. latest.json embeds generated_at, commit_sha and workflow_run_url, so
+        # the step below commits on every run regardless. Diff badge-*.json, or
+        # latest.json's statistic blocks, not the commit log. If a *statistic* starts
+        # moving again at fixed input, suspect a new hash-ordered container before
+        # suspecting the simulation.
         env:
           PYTHONHASHSEED: "0"
         run: python experiments/derive_real_headline_stats.py --ci
