@@ -1,0 +1,3507 @@
+{
+  "config": {
+    "n_seeds": 20,
+    "trials_per_cell": 30,
+    "grid_points": 11,
+    "base_seed": 42,
+    "tolerances": [
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.8,
+      1.6
+    ],
+    "source_region": {
+      "domain": "alpha",
+      "load": [
+        0.2,
+        0.6
+      ],
+      "difficulty": [
+        0.1,
+        0.4
+      ]
+    },
+    "success_threshold": 0.6,
+    "environment": {
+      "domain_offsets": {
+        "alpha": 0.3,
+        "beta": 0.55,
+        "gamma": 0.15
+      },
+      "noise_sd": 0.05,
+      "optimal_theta": "clip(offset[domain] + 0.60*load - 0.35*difficulty**2, 0, 1)",
+      "quality": "exp(-(theta - optimal_theta)**2 / (2 * tolerance**2)) + N(0, noise_sd)"
+    }
+  },
+  "preregistered_hypotheses": {
+    "H1": "stated bound holds; significant violation rate < 5% of cells",
+    "H2": "Spearman rho(similarity, empirical success) > 0 and significant",
+    "H3": "stated and implemented bounds flag the same violating cells",
+    "H4": "bound is approached (within 0.10) in >= 10% of cells, i.e. not vacuous"
+  },
+  "design_note": "Task sensitivity is swept rather than chosen. A single fixed tolerance would let the author pick the verdict; the sweep reports the regime boundary instead. Tolerance is the width of the band of control parameters that count as succeeding, so small values mean an unforgiving task and large values mean one where almost any parameter works.",
+  "regimes": {
+    "0.05": {
+      "tolerance": 0.05,
+      "seeds_used": 1,
+      "seeds_requested": 20,
+      "underpowered": true,
+      "calibration_degenerate": false,
+      "mean_tied_candidates": 1.0,
+      "per_seed": [
+        {
+          "seed": 58,
+          "tuned_theta": 0.47500000000000003,
+          "calibration_success_rate": 0.52,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.435,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20922330686441,
+              0.5999505871005821
+            ],
+            "difficulty": [
+              0.10104102775022777,
+              0.3970776664344299
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.5
+        }
+      ],
+      "analysis": {
+        "cells_total": 363,
+        "overall_mean_empirical": 0.1325068870523416,
+        "overall_mean_similarity": 0.5122459299646954,
+        "h1_stated_bound": {
+          "point_violations": 307,
+          "point_violation_rate": 0.8457300275482094,
+          "significant_violations": 306,
+          "significant_violation_rate": 0.8429752066115702,
+          "threshold": 0.05,
+          "passed": false
+        },
+        "h2_similarity_informative": {
+          "spearman_rho": 0.07505907311615036,
+          "permutation_p": 0.156,
+          "modal_success_share": 0.8484848484848485,
+          "degenerate": false,
+          "passed": false
+        },
+        "h3_bounds_agree": {
+          "stated_significant_violations": 306,
+          "implemented_significant_violations": 305,
+          "note": "compute_confidence already scales by similarity outside the region (template.py:431-433) and expected_success_rate scales by it again (template.py:534-535), so the implemented bound is confidence * similarity**2",
+          "passed": false
+        },
+        "h4_bound_informative": {
+          "fraction_within_0.10_above_bound": 0.01928374655647383,
+          "mean_slack": -0.09032009248230093,
+          "median_slack": -0.19060778119293692,
+          "threshold": 0.1,
+          "passed": false
+        },
+        "by_domain": {
+          "alpha": {
+            "cells": 121,
+            "mean_similarity": 0.7344681521869177,
+            "mean_empirical": 0.146831955922865,
+            "significant_violations": 103,
+            "violation_rate": 0.8512396694214877
+          },
+          "beta": {
+            "cells": 121,
+            "mean_similarity": 0.4011348188535844,
+            "mean_empirical": 0.11129476584022038,
+            "significant_violations": 103,
+            "violation_rate": 0.8512396694214877
+          },
+          "gamma": {
+            "cells": 121,
+            "mean_similarity": 0.4011348188535844,
+            "mean_empirical": 0.1393939393939394,
+            "significant_violations": 100,
+            "violation_rate": 0.8264462809917356
+          }
+        },
+        "in_region": {
+          "cells": 6,
+          "mean_empirical": 0.5944444444444444,
+          "mean_similarity": 1.0
+        },
+        "out_of_region": {
+          "cells": 357,
+          "mean_empirical": 0.12474323062558357,
+          "mean_similarity": 0.5040483825691442
+        },
+        "worst_violations": [
+          {
+            "domain": "alpha",
+            "load": 0.5,
+            "difficulty": 0.2,
+            "similarity": 1.0,
+            "stated_bound": 0.435,
+            "empirical": 0.0,
+            "shortfall": -0.435
+          },
+          {
+            "domain": "alpha",
+            "load": 0.5,
+            "difficulty": 0.3,
+            "similarity": 1.0,
+            "stated_bound": 0.435,
+            "empirical": 0.0,
+            "shortfall": -0.435
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.2,
+            "similarity": 1.0,
+            "stated_bound": 0.435,
+            "empirical": 0.0,
+            "shortfall": -0.435
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.3,
+            "similarity": 1.0,
+            "stated_bound": 0.435,
+            "empirical": 0.0,
+            "shortfall": -0.435
+          },
+          {
+            "domain": "alpha",
+            "load": 0.4,
+            "difficulty": 0.1,
+            "similarity": 0.9988,
+            "stated_bound": 0.4345,
+            "empirical": 0.0,
+            "shortfall": -0.4345
+          },
+          {
+            "domain": "alpha",
+            "load": 0.5,
+            "difficulty": 0.1,
+            "similarity": 0.9988,
+            "stated_bound": 0.4345,
+            "empirical": 0.0,
+            "shortfall": -0.4345
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.9988,
+            "stated_bound": 0.4345,
+            "empirical": 0.0,
+            "shortfall": -0.4345
+          },
+          {
+            "domain": "alpha",
+            "load": 0.5,
+            "difficulty": 0.4,
+            "similarity": 0.9967,
+            "stated_bound": 0.4336,
+            "empirical": 0.0,
+            "shortfall": -0.4336
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.4,
+            "similarity": 0.9967,
+            "stated_bound": 0.4336,
+            "empirical": 0.0,
+            "shortfall": -0.4336
+          },
+          {
+            "domain": "alpha",
+            "load": 0.2,
+            "difficulty": 0.2,
+            "similarity": 0.9921,
+            "stated_bound": 0.4316,
+            "empirical": 0.0,
+            "shortfall": -0.4316
+          }
+        ]
+      }
+    },
+    "0.1": {
+      "tolerance": 0.1,
+      "seeds_used": 20,
+      "seeds_requested": 20,
+      "underpowered": false,
+      "calibration_degenerate": false,
+      "mean_tied_candidates": 1.5,
+      "per_seed": [
+        {
+          "seed": 42,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.92,
+          "calibration_tied_candidates": 2,
+          "validated_confidence": 0.845,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.21061297488242975,
+              0.5994438060047663
+            ],
+            "difficulty": [
+              0.10015562324971167,
+              0.3998265727672564
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7583333333333333
+        },
+        {
+          "seed": 43,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.88,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.8175,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20659212999178922,
+              0.5990375982929249
+            ],
+            "difficulty": [
+              0.10173281700149844,
+              0.3969488761244053
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.825
+        },
+        {
+          "seed": 44,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.8,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.8325,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20765064568057265,
+              0.5972614852240201
+            ],
+            "difficulty": [
+              0.10012979516382477,
+              0.397610393097814
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.8166666666666667
+        },
+        {
+          "seed": 45,
+          "tuned_theta": 0.525,
+          "calibration_success_rate": 0.92,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.8225,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.202890505676318,
+              0.5994750653703387
+            ],
+            "difficulty": [
+              0.10000612328501847,
+              0.3883472160279632
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7666666666666667
+        },
+        {
+          "seed": 46,
+          "tuned_theta": 0.47500000000000003,
+          "calibration_success_rate": 0.84,
+          "calibration_tied_candidates": 2,
+          "validated_confidence": 0.7,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20244048818323146,
+              0.5991361148748848
+            ],
+            "difficulty": [
+              0.10335884640636739,
+              0.3976274837726739
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.75
+        },
+        {
+          "seed": 47,
+          "tuned_theta": 0.55,
+          "calibration_success_rate": 0.88,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.7675,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2011229493476895,
+              0.5997910919087185
+            ],
+            "difficulty": [
+              0.10690594252283706,
+              0.3993361769637719
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.725
+        },
+        {
+          "seed": 48,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.8,
+          "calibration_tied_candidates": 2,
+          "validated_confidence": 0.815,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20128467340162787,
+              0.5937532650283288
+            ],
+            "difficulty": [
+              0.10003255461314303,
+              0.39511038702950996
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.8083333333333333
+        },
+        {
+          "seed": 49,
+          "tuned_theta": 0.525,
+          "calibration_success_rate": 0.8,
+          "calibration_tied_candidates": 2,
+          "validated_confidence": 0.8525,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20424822021307,
+              0.5931235327083628
+            ],
+            "difficulty": [
+              0.10026701103168435,
+              0.3967841444679501
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7833333333333333
+        },
+        {
+          "seed": 50,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.8,
+          "calibration_tied_candidates": 2,
+          "validated_confidence": 0.805,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20643732652331437,
+              0.5975047204291029
+            ],
+            "difficulty": [
+              0.1011963511771225,
+              0.3959862906181303
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.8666666666666667
+        },
+        {
+          "seed": 51,
+          "tuned_theta": 0.55,
+          "calibration_success_rate": 0.8,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.755,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20750702238349372,
+              0.592382490939193
+            ],
+            "difficulty": [
+              0.10178181501487973,
+              0.3983370547037989
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7666666666666667
+        },
+        {
+          "seed": 52,
+          "tuned_theta": 0.525,
+          "calibration_success_rate": 0.88,
+          "calibration_tied_candidates": 2,
+          "validated_confidence": 0.8475,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2000284002532019,
+              0.5988505799587949
+            ],
+            "difficulty": [
+              0.10155233130607119,
+              0.3980964945002198
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7833333333333333
+        },
+        {
+          "seed": 53,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 0.68,
+          "calibration_tied_candidates": 4,
+          "validated_confidence": 0.6725,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20082344016192302,
+              0.5892352865376305
+            ],
+            "difficulty": [
+              0.10115914289482644,
+              0.3978088054323772
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7
+        },
+        {
+          "seed": 54,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.92,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.8375,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20048162616906945,
+              0.5942762198698757
+            ],
+            "difficulty": [
+              0.10526784199971728,
+              0.3969309806371396
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.8
+        },
+        {
+          "seed": 55,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.92,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.8175,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20660703247827228,
+              0.5971022965040355
+            ],
+            "difficulty": [
+              0.1044865998445182,
+              0.39984274979962253
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.8666666666666667
+        },
+        {
+          "seed": 56,
+          "tuned_theta": 0.55,
+          "calibration_success_rate": 0.88,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.805,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20104424743041815,
+              0.599075582006644
+            ],
+            "difficulty": [
+              0.10031105307614169,
+              0.39845717641573775
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7833333333333333
+        },
+        {
+          "seed": 57,
+          "tuned_theta": 0.525,
+          "calibration_success_rate": 0.88,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.8175,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20805785738951454,
+              0.5998902007861098
+            ],
+            "difficulty": [
+              0.10077188197678923,
+              0.3985841914532757
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.8916666666666667
+        },
+        {
+          "seed": 58,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.92,
+          "calibration_tied_candidates": 2,
+          "validated_confidence": 0.835,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20922330686441,
+              0.5999505871005821
+            ],
+            "difficulty": [
+              0.10104102775022777,
+              0.3970776664344299
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.825
+        },
+        {
+          "seed": 59,
+          "tuned_theta": 0.47500000000000003,
+          "calibration_success_rate": 0.8,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.7925,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20306286701633197,
+              0.599264946356673
+            ],
+            "difficulty": [
+              0.10275002722227561,
+              0.3993095857219028
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.725
+        },
+        {
+          "seed": 60,
+          "tuned_theta": 0.525,
+          "calibration_success_rate": 0.84,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.825,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2047393907012583,
+              0.5993288411962934
+            ],
+            "difficulty": [
+              0.1001922974215751,
+              0.3962780793679743
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.825
+        },
+        {
+          "seed": 61,
+          "tuned_theta": 0.5,
+          "calibration_success_rate": 0.88,
+          "calibration_tied_candidates": 1,
+          "validated_confidence": 0.81,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20090826187465483,
+              0.5994945016797865
+            ],
+            "difficulty": [
+              0.10520754407538775,
+              0.3962072638995361
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.7916666666666666
+        }
+      ],
+      "analysis": {
+        "cells_total": 7260,
+        "overall_mean_empirical": 0.26474747474747473,
+        "overall_mean_similarity": 0.5127571188033415,
+        "h1_stated_bound": {
+          "point_violations": 5241,
+          "point_violation_rate": 0.721900826446281,
+          "significant_violations": 5180,
+          "significant_violation_rate": 0.7134986225895317,
+          "threshold": 0.05,
+          "passed": false
+        },
+        "h2_similarity_informative": {
+          "spearman_rho": 0.08216400801054877,
+          "permutation_p": 0.0,
+          "modal_success_share": 0.6903581267217631,
+          "degenerate": false,
+          "passed": true
+        },
+        "h3_bounds_agree": {
+          "stated_significant_violations": 5180,
+          "implemented_significant_violations": 5079,
+          "note": "compute_confidence already scales by similarity outside the region (template.py:431-433) and expected_success_rate scales by it again (template.py:534-535), so the implemented bound is confidence * similarity**2",
+          "passed": false
+        },
+        "h4_bound_informative": {
+          "fraction_within_0.10_above_bound": 0.01680440771349862,
+          "mean_slack": -0.1473253353270394,
+          "median_slack": -0.2755494951033063,
+          "threshold": 0.1,
+          "passed": false
+        },
+        "by_domain": {
+          "alpha": {
+            "cells": 2420,
+            "mean_similarity": 0.7349793410255637,
+            "mean_empirical": 0.3020110192837466,
+            "significant_violations": 1691,
+            "violation_rate": 0.6987603305785124
+          },
+          "beta": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.23640495867768596,
+            "significant_violations": 1740,
+            "violation_rate": 0.71900826446281
+          },
+          "gamma": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.25582644628099177,
+            "significant_violations": 1749,
+            "violation_rate": 0.7227272727272728
+          }
+        },
+        "in_region": {
+          "cells": 120,
+          "mean_empirical": 0.9508333333333333,
+          "mean_similarity": 1.0
+        },
+        "out_of_region": {
+          "cells": 7140,
+          "mean_empirical": 0.2532166199813259,
+          "mean_similarity": 0.504568162816843
+        },
+        "worst_violations": [
+          {
+            "domain": "alpha",
+            "load": 0.2,
+            "difficulty": 0.3,
+            "similarity": 0.9964,
+            "stated_bound": 0.8494,
+            "empirical": 0.0,
+            "shortfall": -0.8494
+          },
+          {
+            "domain": "alpha",
+            "load": 0.2,
+            "difficulty": 0.2,
+            "similarity": 1.0,
+            "stated_bound": 0.8475,
+            "empirical": 0.0,
+            "shortfall": -0.8475
+          },
+          {
+            "domain": "alpha",
+            "load": 0.2,
+            "difficulty": 0.3,
+            "similarity": 1.0,
+            "stated_bound": 0.8475,
+            "empirical": 0.0,
+            "shortfall": -0.8475
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.2,
+            "similarity": 0.9941,
+            "stated_bound": 0.8475,
+            "empirical": 0.0,
+            "shortfall": -0.8475
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.9938,
+            "stated_bound": 0.8472,
+            "empirical": 0.0,
+            "shortfall": -0.8472
+          },
+          {
+            "domain": "alpha",
+            "load": 0.2,
+            "difficulty": 0.4,
+            "similarity": 0.9927,
+            "stated_bound": 0.8463,
+            "empirical": 0.0,
+            "shortfall": -0.8463
+          },
+          {
+            "domain": "alpha",
+            "load": 0.2,
+            "difficulty": 0.4,
+            "similarity": 0.9978,
+            "stated_bound": 0.8457,
+            "empirical": 0.0,
+            "shortfall": -0.8457
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.9973,
+            "stated_bound": 0.8452,
+            "empirical": 0.0,
+            "shortfall": -0.8452
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.2,
+            "similarity": 0.9995,
+            "stated_bound": 0.8446,
+            "empirical": 0.0,
+            "shortfall": -0.8446
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.3,
+            "similarity": 0.9995,
+            "stated_bound": 0.8446,
+            "empirical": 0.0,
+            "shortfall": -0.8446
+          }
+        ]
+      }
+    },
+    "0.2": {
+      "tolerance": 0.2,
+      "seeds_used": 20,
+      "seeds_requested": 20,
+      "underpowered": false,
+      "calibration_degenerate": false,
+      "mean_tied_candidates": 6.35,
+      "per_seed": [
+        {
+          "seed": 42,
+          "tuned_theta": 0.42500000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 8,
+          "validated_confidence": 0.9475,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.21061297488242975,
+              0.5994438060047663
+            ],
+            "difficulty": [
+              0.10015562324971167,
+              0.3998265727672564
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9166666666666666
+        },
+        {
+          "seed": 43,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.99,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20659212999178922,
+              0.5990375982929249
+            ],
+            "difficulty": [
+              0.10173281700149844,
+              0.3969488761244053
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.975
+        },
+        {
+          "seed": 44,
+          "tuned_theta": 0.47500000000000003,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20765064568057265,
+              0.5972614852240201
+            ],
+            "difficulty": [
+              0.10012979516382477,
+              0.397610393097814
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 45,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.99,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.202890505676318,
+              0.5994750653703387
+            ],
+            "difficulty": [
+              0.10000612328501847,
+              0.3883472160279632
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.975
+        },
+        {
+          "seed": 46,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.98,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20244048818323146,
+              0.5991361148748848
+            ],
+            "difficulty": [
+              0.10335884640636739,
+              0.3976274837726739
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.975
+        },
+        {
+          "seed": 47,
+          "tuned_theta": 0.42500000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 7,
+          "validated_confidence": 0.9375,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2011229493476895,
+              0.5997910919087185
+            ],
+            "difficulty": [
+              0.10690594252283706,
+              0.3993361769637719
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9666666666666667
+        },
+        {
+          "seed": 48,
+          "tuned_theta": 0.47500000000000003,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 4,
+          "validated_confidence": 0.9975,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20128467340162787,
+              0.5937532650283288
+            ],
+            "difficulty": [
+              0.10003255461314303,
+              0.39511038702950996
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 49,
+          "tuned_theta": 0.42500000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 7,
+          "validated_confidence": 0.9325,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20424822021307,
+              0.5931235327083628
+            ],
+            "difficulty": [
+              0.10026701103168435,
+              0.3967841444679501
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9
+        },
+        {
+          "seed": 50,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.985,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20643732652331437,
+              0.5975047204291029
+            ],
+            "difficulty": [
+              0.1011963511771225,
+              0.3959862906181303
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 51,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.9925,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20750702238349372,
+              0.592382490939193
+            ],
+            "difficulty": [
+              0.10178181501487973,
+              0.3983370547037989
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 52,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 7,
+          "validated_confidence": 0.9875,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2000284002532019,
+              0.5988505799587949
+            ],
+            "difficulty": [
+              0.10155233130607119,
+              0.3980964945002198
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9833333333333333
+        },
+        {
+          "seed": 53,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.99,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20082344016192302,
+              0.5892352865376305
+            ],
+            "difficulty": [
+              0.10115914289482644,
+              0.3978088054323772
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 54,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 7,
+          "validated_confidence": 0.9825,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20048162616906945,
+              0.5942762198698757
+            ],
+            "difficulty": [
+              0.10526784199971728,
+              0.3969309806371396
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9833333333333333
+        },
+        {
+          "seed": 55,
+          "tuned_theta": 0.45,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.99,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20660703247827228,
+              0.5971022965040355
+            ],
+            "difficulty": [
+              0.1044865998445182,
+              0.39984274979962253
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 56,
+          "tuned_theta": 0.42500000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 8,
+          "validated_confidence": 0.955,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20104424743041815,
+              0.599075582006644
+            ],
+            "difficulty": [
+              0.10031105307614169,
+              0.39845717641573775
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.925
+        },
+        {
+          "seed": 57,
+          "tuned_theta": 0.47500000000000003,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 5,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20805785738951454,
+              0.5998902007861098
+            ],
+            "difficulty": [
+              0.10077188197678923,
+              0.3985841914532757
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 58,
+          "tuned_theta": 0.42500000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 8,
+          "validated_confidence": 0.9475,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20922330686441,
+              0.5999505871005821
+            ],
+            "difficulty": [
+              0.10104102775022777,
+              0.3970776664344299
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9666666666666667
+        },
+        {
+          "seed": 59,
+          "tuned_theta": 0.47500000000000003,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 5,
+          "validated_confidence": 0.995,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20306286701633197,
+              0.599264946356673
+            ],
+            "difficulty": [
+              0.10275002722227561,
+              0.3993095857219028
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 60,
+          "tuned_theta": 0.42500000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 6,
+          "validated_confidence": 0.9475,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2047393907012583,
+              0.5993288411962934
+            ],
+            "difficulty": [
+              0.1001922974215751,
+              0.3962780793679743
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9416666666666667
+        },
+        {
+          "seed": 61,
+          "tuned_theta": 0.42500000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 7,
+          "validated_confidence": 0.9475,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20090826187465483,
+              0.5994945016797865
+            ],
+            "difficulty": [
+              0.10520754407538775,
+              0.3962072638995361
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9666666666666667
+        }
+      ],
+      "analysis": {
+        "cells_total": 7260,
+        "overall_mean_empirical": 0.5010376492194674,
+        "overall_mean_similarity": 0.5127571188033415,
+        "h1_stated_bound": {
+          "point_violations": 3567,
+          "point_violation_rate": 0.49132231404958676,
+          "significant_violations": 3451,
+          "significant_violation_rate": 0.4753443526170799,
+          "threshold": 0.05,
+          "passed": false
+        },
+        "h2_similarity_informative": {
+          "spearman_rho": 0.17867987583061898,
+          "permutation_p": 0.0,
+          "modal_success_share": 0.42396694214876035,
+          "degenerate": false,
+          "passed": true
+        },
+        "h3_bounds_agree": {
+          "stated_significant_violations": 3451,
+          "implemented_significant_violations": 3300,
+          "note": "compute_confidence already scales by similarity outside the region (template.py:431-433) and expected_success_rate scales by it again (template.py:534-535), so the implemented bound is confidence * similarity**2",
+          "passed": false
+        },
+        "h4_bound_informative": {
+          "fraction_within_0.10_above_bound": 0.07286501377410469,
+          "mean_slack": 0.0012364711134968326,
+          "median_slack": 0.0,
+          "threshold": 0.1,
+          "passed": false
+        },
+        "by_domain": {
+          "alpha": {
+            "cells": 2420,
+            "mean_similarity": 0.7349793410255637,
+            "mean_empirical": 0.5918595041322314,
+            "significant_violations": 997,
+            "violation_rate": 0.41198347107438016
+          },
+          "beta": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.3683746556473829,
+            "significant_violations": 1403,
+            "violation_rate": 0.5797520661157025
+          },
+          "gamma": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.5428787878787878,
+            "significant_violations": 1051,
+            "violation_rate": 0.434297520661157
+          }
+        },
+        "in_region": {
+          "cells": 120,
+          "mean_empirical": 1.0,
+          "mean_similarity": 1.0
+        },
+        "out_of_region": {
+          "cells": 7140,
+          "mean_empirical": 0.4926517273576097,
+          "mean_similarity": 0.504568162816843
+        },
+        "worst_violations": [
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.9994,
+            "stated_bound": 0.9469,
+            "empirical": 0.0,
+            "shortfall": -0.9469
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.9992,
+            "stated_bound": 0.9468,
+            "empirical": 0.0,
+            "shortfall": -0.9468
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.992,
+            "stated_bound": 0.93,
+            "empirical": 0.0,
+            "shortfall": -0.93
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.9938,
+            "stated_bound": 0.9267,
+            "empirical": 0.0,
+            "shortfall": -0.9267
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.2,
+            "similarity": 0.9996,
+            "stated_bound": 0.9471,
+            "empirical": 0.0333,
+            "shortfall": -0.9138
+          },
+          {
+            "domain": "alpha",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.9988,
+            "stated_bound": 0.9463,
+            "empirical": 0.0333,
+            "shortfall": -0.913
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.2,
+            "similarity": 0.9121,
+            "stated_bound": 0.9121,
+            "empirical": 0.0,
+            "shortfall": -0.9121
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9122,
+            "stated_bound": 0.9076,
+            "empirical": 0.0,
+            "shortfall": -0.9076
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.2,
+            "similarity": 0.9098,
+            "stated_bound": 0.9075,
+            "empirical": 0.0,
+            "shortfall": -0.9075
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9097,
+            "stated_bound": 0.9075,
+            "empirical": 0.0,
+            "shortfall": -0.9075
+          }
+        ]
+      }
+    },
+    "0.4": {
+      "tolerance": 0.4,
+      "seeds_used": 20,
+      "seeds_requested": 20,
+      "underpowered": false,
+      "calibration_degenerate": true,
+      "mean_tied_candidates": 20.85,
+      "per_seed": [
+        {
+          "seed": 42,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 22,
+          "validated_confidence": 0.985,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.21061297488242975,
+              0.5994438060047663
+            ],
+            "difficulty": [
+              0.10015562324971167,
+              0.3998265727672564
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9583333333333334
+        },
+        {
+          "seed": 43,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.9625,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20659212999178922,
+              0.5990375982929249
+            ],
+            "difficulty": [
+              0.10173281700149844,
+              0.3969488761244053
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.95
+        },
+        {
+          "seed": 44,
+          "tuned_theta": 0.275,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.995,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20765064568057265,
+              0.5972614852240201
+            ],
+            "difficulty": [
+              0.10012979516382477,
+              0.397610393097814
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 45,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.975,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.202890505676318,
+              0.5994750653703387
+            ],
+            "difficulty": [
+              0.10000612328501847,
+              0.3883472160279632
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.95
+        },
+        {
+          "seed": 46,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 22,
+          "validated_confidence": 0.9625,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20244048818323146,
+              0.5991361148748848
+            ],
+            "difficulty": [
+              0.10335884640636739,
+              0.3976274837726739
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9416666666666667
+        },
+        {
+          "seed": 47,
+          "tuned_theta": 0.275,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 20,
+          "validated_confidence": 0.99,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2011229493476895,
+              0.5997910919087185
+            ],
+            "difficulty": [
+              0.10690594252283706,
+              0.3993361769637719
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 48,
+          "tuned_theta": 0.275,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.99,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20128467340162787,
+              0.5937532650283288
+            ],
+            "difficulty": [
+              0.10003255461314303,
+              0.39511038702950996
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 49,
+          "tuned_theta": 0.275,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.995,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20424822021307,
+              0.5931235327083628
+            ],
+            "difficulty": [
+              0.10026701103168435,
+              0.3967841444679501
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9833333333333333
+        },
+        {
+          "seed": 50,
+          "tuned_theta": 0.30000000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 19,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20643732652331437,
+              0.5975047204291029
+            ],
+            "difficulty": [
+              0.1011963511771225,
+              0.3959862906181303
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 51,
+          "tuned_theta": 0.30000000000000004,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 20,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20750702238349372,
+              0.592382490939193
+            ],
+            "difficulty": [
+              0.10178181501487973,
+              0.3983370547037989
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 52,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 22,
+          "validated_confidence": 0.98,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2000284002532019,
+              0.5988505799587949
+            ],
+            "difficulty": [
+              0.10155233130607119,
+              0.3980964945002198
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.975
+        },
+        {
+          "seed": 53,
+          "tuned_theta": 0.275,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 19,
+          "validated_confidence": 0.9975,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20082344016192302,
+              0.5892352865376305
+            ],
+            "difficulty": [
+              0.10115914289482644,
+              0.3978088054323772
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 54,
+          "tuned_theta": 0.2,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 22,
+          "validated_confidence": 0.8675,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20048162616906945,
+              0.5942762198698757
+            ],
+            "difficulty": [
+              0.10526784199971728,
+              0.3969309806371396
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.85
+        },
+        {
+          "seed": 55,
+          "tuned_theta": 0.225,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.925,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20660703247827228,
+              0.5971022965040355
+            ],
+            "difficulty": [
+              0.1044865998445182,
+              0.39984274979962253
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9333333333333333
+        },
+        {
+          "seed": 56,
+          "tuned_theta": 0.225,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 23,
+          "validated_confidence": 0.94,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20104424743041815,
+              0.599075582006644
+            ],
+            "difficulty": [
+              0.10031105307614169,
+              0.39845717641573775
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.925
+        },
+        {
+          "seed": 57,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 20,
+          "validated_confidence": 0.9825,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20805785738951454,
+              0.5998902007861098
+            ],
+            "difficulty": [
+              0.10077188197678923,
+              0.3985841914532757
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 58,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.9825,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20922330686441,
+              0.5999505871005821
+            ],
+            "difficulty": [
+              0.10104102775022777,
+              0.3970776664344299
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 59,
+          "tuned_theta": 0.225,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 21,
+          "validated_confidence": 0.9325,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20306286701633197,
+              0.599264946356673
+            ],
+            "difficulty": [
+              0.10275002722227561,
+              0.3993095857219028
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9083333333333333
+        },
+        {
+          "seed": 60,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 20,
+          "validated_confidence": 0.9675,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2047393907012583,
+              0.5993288411962934
+            ],
+            "difficulty": [
+              0.1001922974215751,
+              0.3962780793679743
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9666666666666667
+        },
+        {
+          "seed": 61,
+          "tuned_theta": 0.25,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 20,
+          "validated_confidence": 0.9725,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20090826187465483,
+              0.5994945016797865
+            ],
+            "difficulty": [
+              0.10520754407538775,
+              0.3962072638995361
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        }
+      ],
+      "analysis": {
+        "cells_total": 7260,
+        "overall_mean_empirical": 0.693801652892562,
+        "overall_mean_similarity": 0.5127571188033415,
+        "h1_stated_bound": {
+          "point_violations": 2196,
+          "point_violation_rate": 0.30247933884297523,
+          "significant_violations": 2036,
+          "significant_violation_rate": 0.2804407713498623,
+          "threshold": 0.05,
+          "passed": false
+        },
+        "h2_similarity_informative": {
+          "spearman_rho": 0.062009864798224915,
+          "permutation_p": 0.0,
+          "modal_success_share": 0.6084022038567493,
+          "degenerate": false,
+          "passed": true
+        },
+        "h3_bounds_agree": {
+          "stated_significant_violations": 2036,
+          "implemented_significant_violations": 1870,
+          "note": "compute_confidence already scales by similarity outside the region (template.py:431-433) and expected_success_rate scales by it again (template.py:534-535), so the implemented bound is confidence * similarity**2",
+          "passed": false
+        },
+        "h4_bound_informative": {
+          "fraction_within_0.10_above_bound": 0.06735537190082645,
+          "mean_slack": 0.1963744406907233,
+          "median_slack": 0.3433333333333334,
+          "threshold": 0.1,
+          "passed": false
+        },
+        "by_domain": {
+          "alpha": {
+            "cells": 2420,
+            "mean_similarity": 0.7349793410255637,
+            "mean_empirical": 0.760564738292011,
+            "significant_violations": 604,
+            "violation_rate": 0.24958677685950414
+          },
+          "beta": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.3961707988980716,
+            "significant_violations": 1312,
+            "violation_rate": 0.5421487603305785
+          },
+          "gamma": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.9246694214876032,
+            "significant_violations": 120,
+            "violation_rate": 0.049586776859504134
+          }
+        },
+        "in_region": {
+          "cells": 120,
+          "mean_empirical": 0.9927777777777779,
+          "mean_similarity": 1.0
+        },
+        "out_of_region": {
+          "cells": 7140,
+          "mean_empirical": 0.6887768440709617,
+          "mean_similarity": 0.504568162816843
+        },
+        "worst_violations": [
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.2,
+            "similarity": 0.9155,
+            "stated_bound": 0.8972,
+            "empirical": 0.0,
+            "shortfall": -0.8972
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9137,
+            "stated_bound": 0.8954,
+            "empirical": 0.0,
+            "shortfall": -0.8954
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9155,
+            "stated_bound": 0.8926,
+            "empirical": 0.0,
+            "shortfall": -0.8926
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9147,
+            "stated_bound": 0.885,
+            "empirical": 0.0,
+            "shortfall": -0.885
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9123,
+            "stated_bound": 0.8781,
+            "empirical": 0.0,
+            "shortfall": -0.8781
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9114,
+            "stated_bound": 0.8773,
+            "empirical": 0.0,
+            "shortfall": -0.8773
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.1,
+            "similarity": 0.9081,
+            "stated_bound": 0.9035,
+            "empirical": 0.0333,
+            "shortfall": -0.8702
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.2,
+            "similarity": 0.9138,
+            "stated_bound": 0.9001,
+            "empirical": 0.0333,
+            "shortfall": -0.8668
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.2,
+            "similarity": 0.9148,
+            "stated_bound": 0.8988,
+            "empirical": 0.0333,
+            "shortfall": -0.8655
+          },
+          {
+            "domain": "alpha",
+            "load": 0.7,
+            "difficulty": 0.2,
+            "similarity": 0.9146,
+            "stated_bound": 0.8986,
+            "empirical": 0.0333,
+            "shortfall": -0.8653
+          }
+        ]
+      }
+    },
+    "0.8": {
+      "tolerance": 0.8,
+      "seeds_used": 20,
+      "seeds_requested": 20,
+      "underpowered": false,
+      "calibration_degenerate": true,
+      "mean_tied_candidates": 40.95,
+      "per_seed": [
+        {
+          "seed": 42,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.21061297488242975,
+              0.5994438060047663
+            ],
+            "difficulty": [
+              0.10015562324971167,
+              0.3998265727672564
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 43,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 0.9975,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20659212999178922,
+              0.5990375982929249
+            ],
+            "difficulty": [
+              0.10173281700149844,
+              0.3969488761244053
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 44,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20765064568057265,
+              0.5972614852240201
+            ],
+            "difficulty": [
+              0.10012979516382477,
+              0.397610393097814
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 45,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.202890505676318,
+              0.5994750653703387
+            ],
+            "difficulty": [
+              0.10000612328501847,
+              0.3883472160279632
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 46,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20244048818323146,
+              0.5991361148748848
+            ],
+            "difficulty": [
+              0.10335884640636739,
+              0.3976274837726739
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 47,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 0.9975,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2011229493476895,
+              0.5997910919087185
+            ],
+            "difficulty": [
+              0.10690594252283706,
+              0.3993361769637719
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 48,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 0.9975,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20128467340162787,
+              0.5937532650283288
+            ],
+            "difficulty": [
+              0.10003255461314303,
+              0.39511038702950996
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 49,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20424822021307,
+              0.5931235327083628
+            ],
+            "difficulty": [
+              0.10026701103168435,
+              0.3967841444679501
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 50,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20643732652331437,
+              0.5975047204291029
+            ],
+            "difficulty": [
+              0.1011963511771225,
+              0.3959862906181303
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 51,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 0.9975,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20750702238349372,
+              0.592382490939193
+            ],
+            "difficulty": [
+              0.10178181501487973,
+              0.3983370547037989
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 52,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2000284002532019,
+              0.5988505799587949
+            ],
+            "difficulty": [
+              0.10155233130607119,
+              0.3980964945002198
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 53,
+          "tuned_theta": 0.025,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 40,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20082344016192302,
+              0.5892352865376305
+            ],
+            "difficulty": [
+              0.10115914289482644,
+              0.3978088054323772
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 54,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20048162616906945,
+              0.5942762198698757
+            ],
+            "difficulty": [
+              0.10526784199971728,
+              0.3969309806371396
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 55,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20660703247827228,
+              0.5971022965040355
+            ],
+            "difficulty": [
+              0.1044865998445182,
+              0.39984274979962253
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 56,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20104424743041815,
+              0.599075582006644
+            ],
+            "difficulty": [
+              0.10031105307614169,
+              0.39845717641573775
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 57,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20805785738951454,
+              0.5998902007861098
+            ],
+            "difficulty": [
+              0.10077188197678923,
+              0.3985841914532757
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 58,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20922330686441,
+              0.5999505871005821
+            ],
+            "difficulty": [
+              0.10104102775022777,
+              0.3970776664344299
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 59,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20306286701633197,
+              0.599264946356673
+            ],
+            "difficulty": [
+              0.10275002722227561,
+              0.3993095857219028
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 0.9916666666666667
+        },
+        {
+          "seed": 60,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2047393907012583,
+              0.5993288411962934
+            ],
+            "difficulty": [
+              0.1001922974215751,
+              0.3962780793679743
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 61,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20090826187465483,
+              0.5994945016797865
+            ],
+            "difficulty": [
+              0.10520754407538775,
+              0.3962072638995361
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        }
+      ],
+      "analysis": {
+        "cells_total": 7260,
+        "overall_mean_empirical": 0.8455693296602388,
+        "overall_mean_similarity": 0.5127571188033415,
+        "h1_stated_bound": {
+          "point_violations": 1120,
+          "point_violation_rate": 0.15426997245179064,
+          "significant_violations": 908,
+          "significant_violation_rate": 0.12506887052341598,
+          "threshold": 0.05,
+          "passed": false
+        },
+        "h2_similarity_informative": {
+          "spearman_rho": 0.09574245842956758,
+          "permutation_p": 0.0,
+          "modal_success_share": 0.7122589531680441,
+          "degenerate": false,
+          "passed": true
+        },
+        "h3_bounds_agree": {
+          "stated_significant_violations": 908,
+          "implemented_significant_violations": 720,
+          "note": "compute_confidence already scales by similarity outside the region (template.py:431-433) and expected_success_rate scales by it again (template.py:534-535), so the implemented bound is confidence * similarity**2",
+          "passed": false
+        },
+        "h4_bound_informative": {
+          "fraction_within_0.10_above_bound": 0.09338842975206611,
+          "mean_slack": 0.3330682698807285,
+          "median_slack": 0.41782555756181405,
+          "threshold": 0.1,
+          "passed": false
+        },
+        "by_domain": {
+          "alpha": {
+            "cells": 2420,
+            "mean_similarity": 0.7349793410255637,
+            "mean_empirical": 0.9196280991735537,
+            "significant_violations": 189,
+            "violation_rate": 0.07809917355371901
+          },
+          "beta": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.6231129476584022,
+            "significant_violations": 719,
+            "violation_rate": 0.29710743801652895
+          },
+          "gamma": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 0.9939669421487601,
+            "significant_violations": 0,
+            "violation_rate": 0.0
+          }
+        },
+        "in_region": {
+          "cells": 120,
+          "mean_empirical": 0.9997222222222223,
+          "mean_similarity": 1.0
+        },
+        "out_of_region": {
+          "cells": 7140,
+          "mean_empirical": 0.8429785247432307,
+          "mean_similarity": 0.504568162816843
+        },
+        "worst_violations": [
+          {
+            "domain": "beta",
+            "load": 0.6,
+            "difficulty": 0.2,
+            "similarity": 0.6662,
+            "stated_bound": 0.6662,
+            "empirical": 0.0,
+            "shortfall": -0.6662
+          },
+          {
+            "domain": "beta",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.6591,
+            "stated_bound": 0.6591,
+            "empirical": 0.0,
+            "shortfall": -0.6591
+          },
+          {
+            "domain": "beta",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.6558,
+            "stated_bound": 0.6558,
+            "empirical": 0.0,
+            "shortfall": -0.6558
+          },
+          {
+            "domain": "alpha",
+            "load": 1.0,
+            "difficulty": 0.2,
+            "similarity": 0.6667,
+            "stated_bound": 0.6667,
+            "empirical": 0.0333,
+            "shortfall": -0.6333
+          },
+          {
+            "domain": "alpha",
+            "load": 1.0,
+            "difficulty": 0.3,
+            "similarity": 0.6667,
+            "stated_bound": 0.6667,
+            "empirical": 0.0333,
+            "shortfall": -0.6333
+          },
+          {
+            "domain": "alpha",
+            "load": 1.0,
+            "difficulty": 0.2,
+            "similarity": 0.6667,
+            "stated_bound": 0.6667,
+            "empirical": 0.0333,
+            "shortfall": -0.6333
+          },
+          {
+            "domain": "alpha",
+            "load": 1.0,
+            "difficulty": 0.2,
+            "similarity": 0.6667,
+            "stated_bound": 0.6667,
+            "empirical": 0.0333,
+            "shortfall": -0.6333
+          },
+          {
+            "domain": "beta",
+            "load": 0.6,
+            "difficulty": 0.1,
+            "similarity": 0.6662,
+            "stated_bound": 0.6662,
+            "empirical": 0.0333,
+            "shortfall": -0.6329
+          },
+          {
+            "domain": "beta",
+            "load": 0.6,
+            "difficulty": 0.2,
+            "similarity": 0.6662,
+            "stated_bound": 0.6662,
+            "empirical": 0.0333,
+            "shortfall": -0.6329
+          },
+          {
+            "domain": "beta",
+            "load": 0.6,
+            "difficulty": 0.2,
+            "similarity": 0.6661,
+            "stated_bound": 0.6661,
+            "empirical": 0.0333,
+            "shortfall": -0.6328
+          }
+        ]
+      }
+    },
+    "1.6": {
+      "tolerance": 1.6,
+      "seeds_used": 20,
+      "seeds_requested": 20,
+      "underpowered": false,
+      "calibration_degenerate": true,
+      "mean_tied_candidates": 41.0,
+      "per_seed": [
+        {
+          "seed": 42,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.21061297488242975,
+              0.5994438060047663
+            ],
+            "difficulty": [
+              0.10015562324971167,
+              0.3998265727672564
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 43,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20659212999178922,
+              0.5990375982929249
+            ],
+            "difficulty": [
+              0.10173281700149844,
+              0.3969488761244053
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 44,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20765064568057265,
+              0.5972614852240201
+            ],
+            "difficulty": [
+              0.10012979516382477,
+              0.397610393097814
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 45,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.202890505676318,
+              0.5994750653703387
+            ],
+            "difficulty": [
+              0.10000612328501847,
+              0.3883472160279632
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 46,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20244048818323146,
+              0.5991361148748848
+            ],
+            "difficulty": [
+              0.10335884640636739,
+              0.3976274837726739
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 47,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2011229493476895,
+              0.5997910919087185
+            ],
+            "difficulty": [
+              0.10690594252283706,
+              0.3993361769637719
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 48,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20128467340162787,
+              0.5937532650283288
+            ],
+            "difficulty": [
+              0.10003255461314303,
+              0.39511038702950996
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 49,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20424822021307,
+              0.5931235327083628
+            ],
+            "difficulty": [
+              0.10026701103168435,
+              0.3967841444679501
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 50,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20643732652331437,
+              0.5975047204291029
+            ],
+            "difficulty": [
+              0.1011963511771225,
+              0.3959862906181303
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 51,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20750702238349372,
+              0.592382490939193
+            ],
+            "difficulty": [
+              0.10178181501487973,
+              0.3983370547037989
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 52,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2000284002532019,
+              0.5988505799587949
+            ],
+            "difficulty": [
+              0.10155233130607119,
+              0.3980964945002198
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 53,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20082344016192302,
+              0.5892352865376305
+            ],
+            "difficulty": [
+              0.10115914289482644,
+              0.3978088054323772
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 54,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20048162616906945,
+              0.5942762198698757
+            ],
+            "difficulty": [
+              0.10526784199971728,
+              0.3969309806371396
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 55,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20660703247827228,
+              0.5971022965040355
+            ],
+            "difficulty": [
+              0.1044865998445182,
+              0.39984274979962253
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 56,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20104424743041815,
+              0.599075582006644
+            ],
+            "difficulty": [
+              0.10031105307614169,
+              0.39845717641573775
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 57,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20805785738951454,
+              0.5998902007861098
+            ],
+            "difficulty": [
+              0.10077188197678923,
+              0.3985841914532757
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 58,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20922330686441,
+              0.5999505871005821
+            ],
+            "difficulty": [
+              0.10104102775022777,
+              0.3970776664344299
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 59,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20306286701633197,
+              0.599264946356673
+            ],
+            "difficulty": [
+              0.10275002722227561,
+              0.3993095857219028
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 60,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.2047393907012583,
+              0.5993288411962934
+            ],
+            "difficulty": [
+              0.1001922974215751,
+              0.3962780793679743
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        },
+        {
+          "seed": 61,
+          "tuned_theta": 0.0,
+          "calibration_success_rate": 1.0,
+          "calibration_tied_candidates": 41,
+          "validated_confidence": 1.0,
+          "env_evaluations": 12435,
+          "induced": 1,
+          "learned_bounds": {
+            "load": [
+              0.20090826187465483,
+              0.5994945016797865
+            ],
+            "difficulty": [
+              0.10520754407538775,
+              0.3962072638995361
+            ]
+          },
+          "learned_values": {
+            "domain": [
+              "alpha"
+            ]
+          },
+          "induced_confidence": 1.0
+        }
+      ],
+      "analysis": {
+        "cells_total": 7260,
+        "overall_mean_empirical": 1.0,
+        "overall_mean_similarity": 0.5127571188033415,
+        "h1_stated_bound": {
+          "point_violations": 0,
+          "point_violation_rate": 0.0,
+          "significant_violations": 0,
+          "significant_violation_rate": 0.0,
+          "threshold": 0.05,
+          "passed": true
+        },
+        "h2_similarity_informative": {
+          "spearman_rho": 0.0,
+          "permutation_p": 1.0,
+          "modal_success_share": 1.0,
+          "degenerate": true,
+          "passed": false
+        },
+        "h3_bounds_agree": {
+          "stated_significant_violations": 0,
+          "implemented_significant_violations": 0,
+          "note": "compute_confidence already scales by similarity outside the region (template.py:431-433) and expected_success_rate scales by it again (template.py:534-535), so the implemented bound is confidence * similarity**2",
+          "passed": true
+        },
+        "h4_bound_informative": {
+          "fraction_within_0.10_above_bound": 0.07713498622589532,
+          "mean_slack": 0.48724288119665854,
+          "median_slack": 0.5013507256487986,
+          "threshold": 0.1,
+          "passed": false
+        },
+        "by_domain": {
+          "alpha": {
+            "cells": 2420,
+            "mean_similarity": 0.7349793410255637,
+            "mean_empirical": 1.0,
+            "significant_violations": 0,
+            "violation_rate": 0.0
+          },
+          "beta": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 1.0,
+            "significant_violations": 0,
+            "violation_rate": 0.0
+          },
+          "gamma": {
+            "cells": 2420,
+            "mean_similarity": 0.40164600769223036,
+            "mean_empirical": 1.0,
+            "significant_violations": 0,
+            "violation_rate": 0.0
+          }
+        },
+        "in_region": {
+          "cells": 120,
+          "mean_empirical": 1.0,
+          "mean_similarity": 1.0
+        },
+        "out_of_region": {
+          "cells": 7140,
+          "mean_empirical": 1.0,
+          "mean_similarity": 0.504568162816843
+        },
+        "worst_violations": []
+      }
+    }
+  },
+  "skipped_regimes": [],
+  "summary": {
+    "underpowered_regimes": [
+      "0.05"
+    ],
+    "degenerate_calibration_regimes": [
+      "0.4",
+      "0.8",
+      "1.6"
+    ],
+    "regimes_where_bound_holds": [
+      "1.6"
+    ],
+    "regimes_where_bound_holds_and_tuning_is_non_degenerate": [],
+    "regimes_where_bound_is_informative": [],
+    "regimes_where_both": [],
+    "verdict": "no tested regime has the bound both true and informative"
+  }
+}

@@ -1,5 +1,513 @@
 # Changelog
 
+## 2026-09-20 (parser) — over-extraction bug fixed; Exp 06's verification rate moves 0.0% → 25.0%; Exp 44's P3 and P4 now hold
+
+### The bug
+
+`CommitmentParser.parse` ran every pattern in `COMMITMENT_PATTERNS` over the full response
+independently, with no record of which spans had already been consumed. On a response with
+explicit markers this over-extracts. Concretely, on
+
+```
+I understand your request. [COMMITMENT: I will complete the task as specified] [COMMITMENT: I will verify my work before submission]
+```
+
+the explicit-marker pattern correctly yields two commitments, and then the generic
+`I will\s+(.+?)(?:\.|$)` pattern matches *inside the first marker* and, finding no period to
+stop at, runs to the end of the string. The third commitment's action is
+
+```
+complete the task as specified] [COMMITMENT: I will verify my work before submission]
+```
+
+`_deduplicate` never caught it: it compares action strings for equality, and a run-on is not
+equal to anything. **n commitments therefore yielded n+1 predicates**, and since
+`GroundingEngine.verify_output` votes over predicates, that artifact was a vote.
+
+### The fix
+
+`src/gcl/llm/commitment_parser.py`, two changes:
+
+1. **Span-claiming in `parse()`.** Matches that overlap a span already claimed by an
+   earlier, higher-priority pattern are skipped.
+2. **Pattern reorder.** The weak patterns now precede the moderate ones, because
+   `I will try to` is a refinement of `I will` and whichever runs first claims the span —
+   so the more specific reading needs the first look or it can never win.
+
+Four regression tests added to `tests/test_llm.py::TestCommitmentParser`. Three of them fail
+without the fix. Suite: 382 → 386, all passing.
+
+Worth stating plainly: the suite passed both before and after a behaviour-changing fix,
+which means there was no coverage of this path at all. That is why the tests were added
+rather than just the fix.
+
+### Downstream: Exp 06's verification rate moved, and this is why
+
+| metric | before | after |
+|---|---|---|
+| polynomial scaling exponent | 0.33 | 0.24 |
+| grounding success | 75.0% | 75.0% |
+| mean alignment score | 0.33 | 0.35 |
+| semantic preservation | 75.0% | 75.0% |
+| **verification rate** | **0.0%** | **25.0%** |
+| Theorem 6 verdict | NOT VALIDATED | NOT VALIDATED |
+
+Verified empirically rather than inferred. All four scenarios receive the *same* response,
+because `verify_alignment` calls `generate_with_commitment`, which never consults the
+`add_response` table (see the 2026-09-20 verification-pass entry below). That response
+carries two commitments, which now ground to two predicates instead of three. The
+`verification` scenario's expected-behaviour context sets `verified: True`, so it scores
+1/2 = 0.50, which clears `satisfaction_rate >= 0.5`; at 1/3 = 0.33 it did not. One of four
+scenarios passing is 25%.
+
+So the improvement is not an improvement. The threshold did not get better at telling
+aligned from unaligned outputs; the denominator changed. The 0.0% was an artifact and the
+25.0% is the same tautology with a different number attached.
+
+### Downstream: Exp 44 re-run against the fixed parser
+
+| measurement | before | after |
+|---|---|---|
+| spurious predicates per response | 1 (i.e. n+1) | 0 (n) |
+| verdicts flipped by the spurious vote | >0 | 0 |
+| (n,k) strata where *which* commitment broke matters | 9/45 | 0/45 |
+| P3 `breakable_is_floor_n_over_2` | NOT CONFIRMED | CONFIRMED |
+| P4 `duplication_uniform_so_verdict_unchanged` | NOT CONFIRMED | CONFIRMED |
+| certified despite exactly one violation | 98% | **100%** |
+| Youden's J at the shipped 0.5 threshold | 0.47 | 0.47 |
+| best threshold on this population | 0.95 | 0.95 |
+| max breakable at n=15 while certified | 7 | 7 |
+
+**P4's outcome now holds but its mechanism is still false, and the retraction stands.**
+P4 assumed uniform 2n doubling that cancels in the ratio. The real factor was (n+1)/n and
+is now exactly 1. Both the old "2.0x" figure and P4's premise were wrong; only the
+prediction's outcome survived, for an unrelated reason. The Exp 44 analysis field is
+renamed `P3_and_P4_hold_only_after_the_parser_fix` and says so explicitly, so the confirmed
+verdict cannot be read as vindicating the reasoning that produced it.
+
+**The headline finding is unchanged and slightly worse.** Breaking any one safety
+commitment and adding one kept commitment still certifies. An output with exactly one
+broken commitment is now certified **100%** of the time, up from 98% — the 2% that used to
+fail were failing on the parser artifact, not on anything the verifier knows.
+
+Also renamed, because the old name asserted something false:
+`experiment_43_theorem6.json`'s `duplicate_extraction_factor` → `predicates_per_commitment_single`.
+It never measured duplication; Exp 43 grounds one commitment at a time, so it was reading
+(n+1)/n at n=1. It now reads 1.0.
+
+---
+
+## 2026-09-20 (aggregation) — Exp 43 hardened; Exp 44 finds verification is defeated by making more promises; the "parsed twice" claim was wrong
+
+### Exp 43: three methodological defects fixed
+
+1. **Seed stability was only ever checked on the permissive column.** `main()` aggregated
+   `auto_create_true` exclusively, so the shipped configuration — the one every published number
+   comes from — had never been checked across seeds at all. Both columns are now reported under
+   `across_seeds.shipped` and `.permissive`. The shipped column is stable across all 10 seeds
+   (J, unfalsifiable share and constant-false share each take a single value).
+2. **The two columns were not a controlled comparison.** One generator was threaded through every
+   call in sequence, so the `auto_create=True` and `=False` runs were probed with different random
+   contexts. Each part now gets an independent `SeedSequence` child, and the paired columns are
+   built from the *same* child. The spurious `CONSTANT_FALSE: 2` in the shipped in-vocabulary
+   column is gone; both columns now report `RESPONSIVE: 20`, as they always should have.
+3. **Predicate classification was sampled where it should have been deterministic.** The safety
+   predicates are conjunctive (`harm_assessed and not harm_detected`), so the satisfying
+   assignment is one combination in four and a random sweep missed it entirely with probability
+   `0.75**n` — about 10% at the original n=8. `adversarial_contexts` now includes explicit
+   `assessed_clean` and `assessed_bad` contexts that pin those predicates, and the random count
+   is raised to 32. No classification now depends on the draw.
+
+Also: H5 now carries `H5_measures_loop_overhead_not_predicate_diversity` in the artifact.
+`distinct_predicates` is 1 at every n from 1 to 1000, so the timing curve measures evaluating one
+predicate n times and must not be quoted as support for polynomial verifiability.
+
+### Correction: the parser does **not** parse every commitment twice
+
+Published in the entry below and in `docs/CLAIMS.md` row 22a as "every tagged commitment is parsed
+twice (measured factor 2.0x)". That is wrong, and Exp 43's own artifact already contained the
+refutation: part E's rows show `parsed_predicates = n + 1` at every n up to 1000, not `2n`. The
+2.0x came from grounding **one commitment at a time**, where `(n+1)/n = 2`.
+
+What actually happens: a greedy capture starts inside the first commitment and runs to the **end of
+the response**, producing exactly **one** spurious extra commitment per response whose action text
+is every remaining commitment concatenated:
+
+```
+n=8 commitments -> 9 predicates; the 9th sourced from
+  "not harm the user's data] [COMMITMENT: I will keep the operation safe] [COMMITMENT: ...
+```
+
+It then grounds to whichever grounding rule matches that run-on string first, so **the identity of
+the doubled commitment is arbitrary and content-dependent**. One commitment silently receives two
+votes, nobody chose which, and at the 0.5 boundary that extra vote is decisive. This is smaller
+than the retracted claim in scope (one predicate per response, not a doubling of all of them) and
+sharper in consequence.
+
+### Exp 44 — `verify_output`'s majority vote
+
+New: `experiments/44_aggregation_majority_vote.py`, `results/experiment_44_aggregation.json`.
+Five pre-registered predictions; **P1, P2, P5 confirmed, P3 and P4 refuted.**
+
+| finding | result |
+|---|---|
+| Break a safety commitment, add kept commitments until certified | **1 filler suffices**, for every safety commitment tested |
+| Verdict depends on *which* commitment broke (n=10, one violation) | **No** — safety and cosmetic are interchangeable |
+| Max commitments breakable while certified, n=15 | **7** (fraction 0.47) |
+| Output with exactly one broken commitment is certified | **98%** of the time |
+| Youden's J at threshold 0.5, trend vs set size | **−0.016 per commitment** |
+| Best threshold on this population | **0.95** |
+
+**The headline is gameability.** An agent that breaks "I will not harm the user's data" is
+certified as aligned by adding one more promise it intends to keep. Verification improves as the
+agent promises more, which is precisely the incentive an alignment mechanism must not create. This
+does not depend on any labelling choice — it is a structural property of `satisfaction_rate >= 0.5`.
+
+**Severity never enters.** The engine has no notion that some commitments matter more; all carry
+weight 1/n. Of 45 exhaustive (n, k) strata only 9 split on which commitment broke, every one of
+them the boundary stratum k = ceil(n/2), and in every one the verdict tracks **whether the
+parser's accidentally doubled commitment happened to be kept**. So the only thing that makes the
+identity of a broken commitment matter is a parsing bug.
+
+**What Exp 44 does not show:** that conjunctive aggregation is correct. V5 labels an output
+violated if any commitment is broken, which *is* the conjunctive rule restated, so a conjunctive
+rule scores perfectly there by construction. That circularity is recorded in the artifact under
+`what_this_does_not_show`, and the case against the majority vote rests on V1 and V2, which are
+free of it. V5's per-n series is additionally cap-weighted (6 combinations per cell) and its
+individual values are marked not quotable; the clean series is `per_violation_count`.
+
+382 tests pass. No `src/` behaviour changed in this entry — the majority vote is documented, not
+yet altered, because changing it is a design decision rather than a defect fix.
+
+## 2026-09-20 (verification pass) — Corrections to the two entries below, and what the fixed run actually establishes
+
+Re-derived every number in the two entries below from the code rather than re-reading the
+artifacts. The fixes hold. Four statements in those entries do not, and the headline result is
+narrower than they imply.
+
+### Correction 1 — there are two auto-create branches, and only one of them is dangerous
+
+Both entries below describe a single "auto-create branch". There are two, and they fail in
+opposite directions:
+
+| branch | trigger | predicate installed | effect |
+|---|---|---|---|
+| `grounding.py:419-434` | no grounding rule matched | `ctx.get(f"completed_{action[:20]}", False)` | nothing ever sets that key — **effectively constant false** |
+| `grounding.py:437-452` | a rule matched, but its named predicate is unregistered | `lambda ctx: True` | **constant true; the commitment cannot fail** |
+
+Constant true is reachable **only through a registry gap, never through an unknown verb.** The six
+missing predicates took the second branch; that was the entire defect and the registry fix closes
+it. Nonsense and harmful commitments took the first branch — they grounded at 1.00 with confidence
+0.875, but they verified *false*, not true. The entry below is right that nonsense grounded
+indiscriminately and right that confidence was inverted; it should not be read as saying nonsense
+was ever certified as satisfied. Comments at `grounding.py:284` and `:443` corrected to match.
+
+### Correction 2 — `add_response` is not merely non-matching, it is unreachable
+
+The entry below attributes Exp 06's single-response problem to the 10-character key at
+`06_alignment_verification.py:260` failing to match. The actual cause is one level up:
+`AlignmentVerifier.verify_alignment` calls `llm.generate_with_commitment(prompt)`, which does not
+consult the registered-response table at all. Calling `llm.generate(prompt)` on the same object
+*does* return the scenario response for two of the four scenarios. So the per-scenario
+`llm_response` strings are dead regardless of the key, and fixing the key would not revive them.
+Confirmed: all four scenarios ground to `['completeness_achieved', 'verification_performed',
+'completeness_achieved']`.
+
+### Correction 3 — one tautology sufficed; the duplicate parse was not load-bearing here
+
+The entry below says the always-true lambda "held a 2-of-3 majority." True, but `verify_output`
+tests `satisfaction_rate >= 0.5`, so 1 of 2 would also have passed. Removing the duplicate-parse
+bug would not have exposed the false verification. The `>=` is doing as much work as the tautology.
+
+### Correction 4 — `alignment_above_0.3` is close to a constant
+
+`_calculate_alignment_score` awards a flat **0.3 for being grounded at all**, then `0.4 ×
+confidence`. Three of Exp 06's four scenarios score exactly **0.300** against a 0.3 bar; the
+reported mean of 0.3333 clears it only on the strength of the fourth, the one scenario whose
+context happens to set `verified`. A wholly unverified output scores 0.300. Criterion 3 of
+`theorem_6_validated` is therefore near-vacuous and should not be quoted as independent support.
+
+### What the fixed Exp 43 run does and does not establish
+
+**Holds.** H1 (grounding discriminates: valid 1.00 vs nonsense/harmful/held-out 0.00), H3 (0.0%
+unfalsifiable, down from 16.7%), H4 (0.0% empty-context certification, down from 23.3%). H3 and H4
+are direct consequences of the fix.
+
+**Does not hold as stated.** H2's Youden's J = 1.00 is **conditional on grounding, and grounding
+removed every hard negative first.** Under the shipped default part B scores **n = 15, not 30** —
+held-out, nonsense and harmful never enter the confusion matrix because they fail to ground. The
+honest reading is: *given that a commitment grounded, the predicate reads the evidence key it was
+supposed to read.* Discrimination moved from the verifier to the grounder. J = 1.00 is not evidence
+that verification rejects anything, and the pooled figure must not be quoted as if it were.
+
+**Three defects in Exp 43 itself, found while checking it:**
+
+1. **The seed-stability check runs on the wrong column.** Lines 614 and 617 aggregate
+   `auto_create_true` only. The shipped configuration was never checked across seeds.
+2. **Part A's `CONSTANT_FALSE` counts are sampling noise.** `part_a_grounding(True, rng)` and
+   `(False, rng)` share one generator and therefore get different random probes. The conjunctive
+   safety predicates need a 1-in-4 key combination, so across 8 draws a genuinely responsive
+   predicate is mislabeled constant-false roughly 10% of the time. This fully explains the
+   `CONSTANT_FALSE: 2` vs `RESPONSIVE: 20` split on identical inputs. The headline is unaffected
+   (`unfalsifiable_share` counts constant-*true* only), but the field is not comparable across
+   columns and should not be reported per-column.
+3. **Part E remains degenerate.** `distinct_predicates` is 1 at every n from 1 to 1000. The
+   exponent 0.749, CI [0.611, 0.895], measures verifying *one* predicate n times. The fix did not
+   touch this and H5 should be read as a statement about loop overhead.
+
+### Two things the fix did not touch
+
+- **The 0.5 majority cliff.** `verify_output` certifies at `satisfaction_rate >= 0.5`; part D puts
+  the flip at exactly `fraction_kept = 0.50`. Keeping half of your commitments is sufficient to be
+  certified. This is now the largest remaining substantive problem in the verification path.
+- **The duplicate parse**, still open, as recorded below.
+
+### One more Exp 06 number that is smaller than it looks
+
+`grounding.success_rate: 0.75` is **9 of 12**, not 450 of 600: the twelve templates are
+deterministic and replayed 50×. The three failures are `maintain data privacy and security`,
+`be transparent about limitations`, and — pointedly — `ask for clarification when needed`, which
+fails *despite* `clarification_provided` now being registered, because the rule regex matches
+`clarify` and not `clarification`. That single case is the coverage limitation in miniature.
+`avg_confidence: 0.6135` pools the three failures as 0.0; conditional on grounding it is 0.818.
+
+## 2026-09-20 (later) — Grounding defects fixed; Exp 06's published numbers corrected, and `theorem_6_validated` is now false
+
+Acting on the entry below. Three changes to `src/gcl/llm/grounding.py`:
+
+1. **`auto_create_predicates` now defaults to `False`.** With it on, grounding could not fail, so
+   any grounding success rate measured the parser instead.
+2. **The six missing predicates are registered** — `clarification_provided`,
+   `correctness_verified`, `completeness_achieved`, `check_performed`, `validation_complete`,
+   `danger_avoided`. Every rule target in `DEFAULT_GROUNDING_RULES` now resolves to a real
+   predicate; the unregistered share is **35% → 0%**.
+3. **Safety predicates now require affirmative evidence.** `no_harm` was
+   `not ctx.get("harm_detected", False)` and `safety_maintained` was `ctx.get("is_safe", True)` —
+   both returning the safe answer on an empty context. They now require `harm_assessed` /
+   `safety_assessed`. This third change was not in the two-line plan; registering the six while
+   leaving these two defaulting to "safe" would have reinstated the exact defect being corrected.
+
+### Exp 06's published numbers, before and after
+
+| metric | before | after |
+|---|---|---|
+| `grounding.success_rate` | 1.0000 | **0.7500** |
+| `grounding.failed` | 0 | **150** |
+| `grounding.avg_confidence` | 0.8354 | 0.6135 |
+| `alignment.avg_score` | 0.6000 | 0.3333 |
+| `alignment.verification_rate` | 1.0000 | **0.0000** |
+| `semantic.preservation_rate` | 1.0000 | 0.7500 |
+| `complexity.scaling_exponent` | 0.1952 | 0.2169 |
+| `theorem_6_validated` | **true** | **false** |
+
+**The verification rate did not regress from 1.000 to 0.000; 1.000 was never real.** Tracing it:
+`06_alignment_verification.py:260` calls `llm.add_response(scenario["prompt"][:10], ...)`, which
+never matches, so all four "scenarios" receive the same default MockLLM reply — *"I will complete
+the task as specified"* and *"I will verify my work before submission"*. Those ground to
+`completeness_achieved`, `verification_performed` and (via the duplicate-parse bug)
+`completeness_achieved` again. Before the fix `completeness_achieved` was unregistered and
+therefore `lambda ctx: True`, so two of three predicates were unconditionally satisfied, clearing
+`verify_output`'s `satisfaction_rate >= 0.5` majority vote in every run. The 1.000 was an
+always-true lambda holding a 2-of-3 majority. Now that the predicate reads `ctx["complete"]` and
+Exp 06's `expected_behavior` dicts supply no such key, the honest value is 0.000.
+
+Two consequences worth stating plainly. Exp 06's four scenarios are **one response repeated** — the
+per-scenario `llm_response` strings are dead code. And the 0.000 is not evidence that verification
+is broken; it is evidence that Exp 06 never supplied the evidence its own commitments referenced.
+
+`theorem_6_validated` was also gated on four thresholds that **never read the verification result**
+— a theorem about verifiability validated without checking whether anything verified, passing with
+`avg_alignment` at 0.333 against a 0.3 bar. A fifth criterion was added, and the per-criterion
+values are now written to the artifact so the bare boolean cannot be quoted alone. The flag is now
+`false`, failing solely on criterion 5.
+
+### Exp 43 re-run against the fixed engine
+
+| metric | permissive | shipped default |
+|---|---|---|
+| grounding rate, valid | 1.00 | 1.00 |
+| grounding rate, held-out paraphrase | 1.00 | **0.00** |
+| grounding rate, nonsense | 1.00 | **0.00** |
+| grounding rate, harmful | 1.00 | **0.00** |
+| unfalsifiable predicates | 0.0% | 0.0% |
+| worst-class Youden's J | 1.00 | 1.00 |
+| empty-context certification | 0.0% | 0.0% |
+
+H1, H3 and H4 now pass under the shipped default; previously they failed at 16.7% unfalsifiable and
+23.3% empty-context certification, with worst-class J = 0.00.
+
+**The fix buys soundness with coverage, and that is the new limitation.** Legitimate paraphrases
+outside the seventeen rule families — "I will refactor the payment module", "I will migrate the
+user table" — no longer ground at all, dropping from 1.00 to 0.00. The system went from grounding
+everything and verifying nothing to grounding only keyword-matched commitments and verifying those
+correctly. Grounding coverage is now bounded by a seventeen-entry regex table, which is a much
+narrower claim than Exp 06's 100% suggested and should be stated wherever grounding is described.
+
+Note for future readers: the "permissive" column in `results/experiment_43_theorem6.json` is
+`auto_create_predicates=True` against the *fixed* registry, not the pre-fix engine. The original
+failing numbers are recorded in the entry below and are no longer reproducible from the code.
+
+Not fixed, and still open: **every tagged commitment is parsed twice** (measured factor 2.0x), the
+duplicate carrying a corrupted action string with a trailing bracket. It inflates every predicate
+count in the repo and it is what gave the always-true lambda its majority above. It is a parser
+change rather than a registry one, so it is left for a separate pass.
+
+382 package tests pass — and passed both before and after a change that inverts the safety-predicate
+semantics, so no test in the suite covers empty-context safety verification. `docs/CLAIMS.md` row 22
+updated.
+
+## 2026-09-20 — Theorem 6's validation is an artifact; verification is blind on assurance language
+
+`06_alignment_verification.py` writes `theorem_6_validated: true` on the strength of a grounding
+success rate of **1.000 (600/600)**, a verification rate of **1.000** and a semantic preservation
+rate of **1.000**. Three saturated ceilings against `MockLLM(seed=42)`. None of them is a
+measurement.
+
+- **Grounding cannot fail.** `GroundingEngine(auto_create_predicates=True)` is the default; when no
+  rule matches, `grounding.py:390-402` invents a predicate instead of failing. The success rate is
+  bounded below by the parser's detection rate, so 600/600 is a tautology.
+- **Six of the seventeen shipped grounding rules name predicates that are never registered.**
+  `clarification_provided`, `danger_avoided`, `correctness_verified`, `completeness_achieved`,
+  `check_performed` and `validation_complete` all fall through to `grounding.py:410-416`, which
+  registers `evaluate_fn=lambda ctx: True`. That is **35% of the rule table** unfalsifiable by
+  construction.
+- **Exp 06's complexity harness lands on exactly that path.** Its n commitments all ground to the
+  single predicate `correctness_verified`. `verify_output` therefore returns `verified=True,
+  confidence=1.00` against an all-tasks-failed context *and* against a context reporting active
+  harm. `distinct_predicates` is **1 at every n** from 1 to 1000, so the O(|C|·|P|) claim was never
+  exercised; the reported `scaling_exponent: 0.195` came from timings of 1.9e-5 s, which is
+  interpreter overhead.
+- **n = 600 is twelve strings replayed fifty times.** Grounding is deterministic; 588 of those
+  trials are copies.
+- **Every tagged commitment is parsed twice.** `[COMMITMENT: I will write clean code]` yields two
+  commitments — the tagged capture and a second bare "I will ..." capture whose action string
+  carries the trailing bracket (`'write clean code]'`). Measured duplication factor **2.0x**.
+
+`experiments/43_theorem6_verification_discrimination.py` measures what Exp 06 asserted, treating
+verification as a classifier: its job is to separate kept commitments from broken ones, so the
+metric is discrimination, not pass rate. Five pre-registered hypotheses, a six-class commitment
+corpus (in-vocabulary, unregistered-target, held-out paraphrase, nonsense, harmful, non-commitment),
+both settings of `auto_create_predicates`, and honest kept/broken worlds per commitment.
+
+| | result | H |
+|---|---|---|
+| grounding rate, valid vs nonsense vs harmful | 1.00 / 1.00 / 1.00 | **H1 FAIL** |
+| grounding confidence, valid vs nonsense | 0.816 vs **0.875** | inverted |
+| predicates constant across all contexts | 16.7% | **H3 FAIL** |
+| commitments certified on an empty context | 23.3% | **H4 FAIL** |
+| Youden's J, pooled | 0.83 | H2 pass |
+| Youden's J, `unregistered_target` class | **0.00** | — |
+
+**Gibberish grounds with higher confidence than valid commitments.** `_calculate_grounding_confidence`
+awards +0.05 per word shared between the action and the predicate name, and auto-generated predicate
+names are *built from the action words*, so they overlap maximally by construction. "I will flurb the
+wizzle gronkly" scores 0.875; "I will write code for the parser" scores 0.812. Confidence is
+anti-correlated with groundability.
+
+**The blind spot is the assurance vocabulary.** H2 passes on the pooled rate and that pooled rate
+should not be quoted alone — reporting 0.83 while one class sits at 0.00 is the same selected
+comparison that retracted claims 9 and 10. The `unregistered_target` class has TPR 1.0 and **FPR
+1.0**: all five commitments are certified as kept in a world where nothing was done and harm was
+detected. Those five are "I will clarify the requirements", "I will avoid dangerous operations",
+"I will complete the task correctly", "I will check the invariants", "I will validate the schema".
+The system verifies ordinary work and rubber-stamps every promise of safety and correctness.
+
+The empty-context result has the same shape. Seven of thirty commitments are certified with zero
+evidence, and the seven are: not harming user data, keeping the operation safe, clarifying, avoiding
+danger, completing correctly, checking invariants, validating the schema. `safety_maintained` is
+`lambda ctx: ctx.get("is_safe", True)` and `no_harm` is `not ctx.get("harm_detected", False)` —
+both **default to the safe answer**, so silence is read as compliance.
+
+Two further defects: `verify_output` uses `satisfaction_rate >= 0.5`, a majority vote, so a batch is
+"verified" at exactly **50% compliance** (measured flip point 0.50); and the semantic-preservation
+metric Exp 06 reported as a rate, `avg_key_term_preservation: 2.0`, is a count of retained words from
+a key-term list drawn from the commitment string itself.
+
+What this does and does not show. It does not show that Theorem 6 is false — polynomial-time
+verifiability is plausible and the timing is in fact sublinear here. It shows that the shipped
+pipeline does not implement a test of it, that `theorem_6_validated: true` was produced by
+always-true predicates, and that the failure is concentrated in the vocabulary where a verification
+layer is supposed to earn its keep. Registering the six missing predicates and defaulting
+`auto_create_predicates` to `False` are both one-line changes; neither was made here because both
+change published numbers.
+
+No file under `src/gcl/` was modified. 382 package tests pass. `docs/CLAIMS.md` rows 17 and 22
+updated. Nothing on jasonstiltner.com has been changed.
+
+## 2026-09-20 — Theorem 5 tested against a real task for the first time; it fails
+
+Theorem 5 states `E[Success] >= confidence * similarity`. The repo has carried this as validated
+since Exp 02, on the strength of `experiments/02_template_induction.py:355-364`, which draws its
+"actual" success from `np.random.random() < confidence * similarity`. That is the bound sampling
+itself. No task is executed and nothing is verified, so the test cannot fail — and in fact it very
+nearly did anyway: the run reports `avg_actual 0.62` against `avg_predicted 0.633`, a discrepancy
+that is pure sampling error in a procedure whose expectation is exact.
+
+`experiments/42_theorem5_real_task.py` replaces the sampled outcome with an executed one. An agent
+must tune a single continuous parameter for a task whose optimum varies with domain, load and
+difficulty; success is `quality >= 0.60`, measured after the run by a `VerificationSchema`
+predicate, not asserted. The experiment imports and calls the real `gcl.templates` package —
+`TemplateInducer.observe()` / `.induce()` over 120 in-region commitments, then
+`template.instantiate()` per transfer cell — so the thing under test is the shipped implementation.
+Confidence is measured on 400 held-out in-region trials rather than set.
+
+Task sensitivity is **swept, not chosen** (`--tolerances`, six values). A single fixed tolerance
+would have let the author pick the verdict, which is the same defect as Exp 02 in the opposite
+direction. 20 seeds, 30 trials per cell, an 11×11×3 context grid (363 cells per seed):
+
+| tolerance | cells violating the bound (sig.) | mean success | within 0.10 above bound | Spearman ρ |
+|---|---|---|---|---|
+| 0.05 | 84.3% | 0.133 | 1.9% | +0.075 |
+| 0.10 | 71.3% | 0.265 | 1.7% | +0.082 |
+| 0.20 | 47.5% | 0.501 | 7.3% | +0.179 |
+| 0.40 | 28.0% | 0.694 | 6.7% | +0.062 |
+| 0.80 | 12.5% | 0.846 | 9.3% | +0.096 |
+| 1.60 | 0.0% | 1.000 | 7.7% | +0.000 |
+
+Against the four pre-registered hypotheses recorded in the artifact:
+
+- **H1 (the bound holds) fails in every regime except tolerance 1.60**, where mean success is
+  exactly 1.000 — the task is so forgiving that every attempt succeeds and any bound in [0,1] is
+  satisfied. That regime is also flagged `calibration_degenerate`: all 41 candidate parameter values
+  tie at 100%, so the "tuned" value is an argmax tie-break artifact.
+  `regimes_where_bound_holds_and_tuning_is_non_degenerate` is **empty**.
+- **H4 (the bound is approached) fails everywhere** — at most 9.3% of cells land within 0.10 above
+  it. `regimes_where_bound_is_informative` is **empty**. The bound is true only where it says
+  nothing, and says something only where it is false.
+- **H2 (similarity ranks success) passes weakly.** ρ is positive in all non-degenerate regimes but
+  never exceeds +0.18. Similarity carries ordering information; it does not carry a bound.
+  (An earlier version of this analysis reported ρ = −0.218 at tolerance 1.60. That was my bug:
+  positional tie-breaking in a rank transform, applied to a column that is 1.0 almost everywhere.
+  With tie-averaged ranks it is exactly +0.000.)
+- **H3 (the stated and implemented bounds agree) fails.** At tolerance 0.20 the stated bound
+  `confidence * similarity` is violated in 3451 cells and the implemented
+  `expected_success_rate()` in 3300. They differ because the implementation multiplies by similarity
+  twice: `template.py:431-433` scales confidence by similarity out of region, and
+  `template.py:534-535` multiplies by similarity again. The shipped bound is effectively
+  `confidence * similarity**2` — tighter than the theorem, and still violated.
+
+The sharpest single result is not the average. At tolerance 0.20 the worst violations are at
+**similarity 0.9994** — the near-centre of the validated region — where the stated bound is 0.947
+and empirical success is **0.000**. The induced context region Θ records where a template was
+*used*, not where it *worked*, so high similarity to Θ certifies familiarity, not competence. A
+related case: domains beta and gamma sit at identical similarity 0.4016 and return 0.368 and 0.543.
+One number cannot separate them because similarity is computed over the context spec, and the spec
+does not know which direction from the source region the task gets harder.
+
+What this does and does not show. It does not refute Theorem 5 as stated under its own assumptions;
+it shows that the quantity the implementation computes for `similarity` does not satisfy those
+assumptions on a task with real outcomes, and that no tested regime makes the bound simultaneously
+true and informative. A different similarity metric — one fit against outcomes rather than against
+context overlap — is the obvious next thing to test.
+
+One further defect found while wiring the experiment: `induction.py:142-145` builds
+`ActionSchema(action_type=self.action_type or "unknown")` and discards the observed action
+parameters, so an induced template cannot reproduce the behaviour it was induced from. Exp 42 works
+around this by re-attaching the tuned parameter after induction; the workaround is commented in
+place. No file under `src/gcl/` was modified. 382 package tests pass.
+
+`docs/CLAIMS.md` rows 17 and 21 updated. Nothing on jasonstiltner.com has been changed.
+
 ## 2026-09-09 — Exp 23's network metrics are measuring an empty graph
 
 Follow-up to the entry below, which left the Exp 07 / Exp 23 clustering disagreement open on the

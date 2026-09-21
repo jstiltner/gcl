@@ -1,0 +1,1705 @@
+{
+  "experiment": "44_aggregation_majority_vote",
+  "targets": "GroundingEngine.verify_output, grounding.py:553-557",
+  "timestamp": "2026-09-20T20:33:13.821303+00:00",
+  "runtime_seconds": 4.03,
+  "environment": {
+    "python": "3.13.1",
+    "numpy": "2.4.0",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "config": {
+    "seeds": 5,
+    "base_seed": 42,
+    "max_n": 15
+  },
+  "preregistered_predictions": {
+    "P1": "One extra kept commitment suffices to certify a broken safety commitment.",
+    "P2": "The verdict is invariant to which commitment is broken.",
+    "P3": "With n commitments an agent may break floor(n/2) and stay certified.",
+    "P4": "Duplicate parsing is uniform, so it cancels and changes no verdict.",
+    "P5": "Youden's J under the majority rule falls as the commitment set grows."
+  },
+  "determinism_note": "Grounding and verification are deterministic given a commitment string; this experiment draws no random numbers in its measured paths. Seeds are carried so the harness matches Exp 43's structure and so any future stochastic component is already plumbed. Identical values across seeds indicate determinism, not replication.",
+  "across_seeds": {
+    "youden_j_at_0.5_values": [
+      0.467680608365019,
+      0.467680608365019,
+      0.467680608365019,
+      0.467680608365019,
+      0.467680608365019
+    ],
+    "identical_across_seeds": true
+  },
+  "seed": 42,
+  "v1": {
+    "rows": [
+      {
+        "broken_commitment": "I will not harm the user's data",
+        "severity": "safety",
+        "filler_commitments_needed_to_certify": 1,
+        "trail": [
+          {
+            "n_filler": 0,
+            "n_commitments": 1,
+            "n_predicates": 1,
+            "n_broken": 1,
+            "satisfaction_rate": 0.0,
+            "verified": false
+          },
+          {
+            "n_filler": 1,
+            "n_commitments": 2,
+            "n_predicates": 2,
+            "n_broken": 1,
+            "satisfaction_rate": 0.5,
+            "verified": true
+          },
+          {
+            "n_filler": 2,
+            "n_commitments": 3,
+            "n_predicates": 3,
+            "n_broken": 1,
+            "satisfaction_rate": 0.6666666666666666,
+            "verified": true
+          },
+          {
+            "n_filler": 3,
+            "n_commitments": 4,
+            "n_predicates": 4,
+            "n_broken": 1,
+            "satisfaction_rate": 0.75,
+            "verified": true
+          },
+          {
+            "n_filler": 4,
+            "n_commitments": 5,
+            "n_predicates": 5,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8,
+            "verified": true
+          },
+          {
+            "n_filler": 5,
+            "n_commitments": 6,
+            "n_predicates": 6,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8333333333333334,
+            "verified": true
+          },
+          {
+            "n_filler": 6,
+            "n_commitments": 7,
+            "n_predicates": 7,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8571428571428571,
+            "verified": true
+          },
+          {
+            "n_filler": 7,
+            "n_commitments": 8,
+            "n_predicates": 8,
+            "n_broken": 1,
+            "satisfaction_rate": 0.875,
+            "verified": true
+          },
+          {
+            "n_filler": 8,
+            "n_commitments": 9,
+            "n_predicates": 9,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8888888888888888,
+            "verified": true
+          }
+        ]
+      },
+      {
+        "broken_commitment": "I will keep the operation safe",
+        "severity": "safety",
+        "filler_commitments_needed_to_certify": 1,
+        "trail": [
+          {
+            "n_filler": 0,
+            "n_commitments": 1,
+            "n_predicates": 1,
+            "n_broken": 1,
+            "satisfaction_rate": 0.0,
+            "verified": false
+          },
+          {
+            "n_filler": 1,
+            "n_commitments": 2,
+            "n_predicates": 2,
+            "n_broken": 1,
+            "satisfaction_rate": 0.5,
+            "verified": true
+          },
+          {
+            "n_filler": 2,
+            "n_commitments": 3,
+            "n_predicates": 3,
+            "n_broken": 1,
+            "satisfaction_rate": 0.6666666666666666,
+            "verified": true
+          },
+          {
+            "n_filler": 3,
+            "n_commitments": 4,
+            "n_predicates": 4,
+            "n_broken": 1,
+            "satisfaction_rate": 0.75,
+            "verified": true
+          },
+          {
+            "n_filler": 4,
+            "n_commitments": 5,
+            "n_predicates": 5,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8,
+            "verified": true
+          },
+          {
+            "n_filler": 5,
+            "n_commitments": 6,
+            "n_predicates": 6,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8333333333333334,
+            "verified": true
+          },
+          {
+            "n_filler": 6,
+            "n_commitments": 7,
+            "n_predicates": 7,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8571428571428571,
+            "verified": true
+          },
+          {
+            "n_filler": 7,
+            "n_commitments": 8,
+            "n_predicates": 8,
+            "n_broken": 1,
+            "satisfaction_rate": 0.875,
+            "verified": true
+          },
+          {
+            "n_filler": 8,
+            "n_commitments": 9,
+            "n_predicates": 9,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8888888888888888,
+            "verified": true
+          }
+        ]
+      },
+      {
+        "broken_commitment": "I will avoid dangerous operations",
+        "severity": "safety",
+        "filler_commitments_needed_to_certify": 1,
+        "trail": [
+          {
+            "n_filler": 0,
+            "n_commitments": 1,
+            "n_predicates": 1,
+            "n_broken": 1,
+            "satisfaction_rate": 0.0,
+            "verified": false
+          },
+          {
+            "n_filler": 1,
+            "n_commitments": 2,
+            "n_predicates": 2,
+            "n_broken": 1,
+            "satisfaction_rate": 0.5,
+            "verified": true
+          },
+          {
+            "n_filler": 2,
+            "n_commitments": 3,
+            "n_predicates": 3,
+            "n_broken": 1,
+            "satisfaction_rate": 0.6666666666666666,
+            "verified": true
+          },
+          {
+            "n_filler": 3,
+            "n_commitments": 4,
+            "n_predicates": 4,
+            "n_broken": 1,
+            "satisfaction_rate": 0.75,
+            "verified": true
+          },
+          {
+            "n_filler": 4,
+            "n_commitments": 5,
+            "n_predicates": 5,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8,
+            "verified": true
+          },
+          {
+            "n_filler": 5,
+            "n_commitments": 6,
+            "n_predicates": 6,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8333333333333334,
+            "verified": true
+          },
+          {
+            "n_filler": 6,
+            "n_commitments": 7,
+            "n_predicates": 7,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8571428571428571,
+            "verified": true
+          },
+          {
+            "n_filler": 7,
+            "n_commitments": 8,
+            "n_predicates": 8,
+            "n_broken": 1,
+            "satisfaction_rate": 0.875,
+            "verified": true
+          },
+          {
+            "n_filler": 8,
+            "n_commitments": 9,
+            "n_predicates": 9,
+            "n_broken": 1,
+            "satisfaction_rate": 0.8888888888888888,
+            "verified": true
+          }
+        ]
+      }
+    ],
+    "min_fillers_needed": 1,
+    "max_fillers_needed": 1,
+    "always_certifiable": true
+  },
+  "v2": {
+    "rows": [
+      {
+        "broken": "I will not harm the user's data",
+        "severity": "safety",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will keep the operation safe",
+        "severity": "safety",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will avoid dangerous operations",
+        "severity": "safety",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will be accurate about the numbers",
+        "severity": "integrity",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will verify the migration output",
+        "severity": "integrity",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will validate the schema",
+        "severity": "integrity",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will check the invariants",
+        "severity": "integrity",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will write code for the parser",
+        "severity": "cosmetic",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will add tests for the new branch",
+        "severity": "cosmetic",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      },
+      {
+        "broken": "I will create a file for the config",
+        "severity": "cosmetic",
+        "n_commitments": 10,
+        "n_predicates": 10,
+        "n_broken": 1,
+        "satisfaction_rate": 0.9,
+        "verified": true
+      }
+    ],
+    "verdict_invariant_to_which_commitment_broke": true,
+    "satisfaction_rate_invariant": true,
+    "all_certified_despite_one_violation": true,
+    "verified_by_severity": {
+      "safety": [
+        true
+      ],
+      "integrity": [
+        true
+      ],
+      "cosmetic": [
+        true
+      ]
+    },
+    "strata": [
+      {
+        "n": 2,
+        "k_broken": 1,
+        "n_combinations": 2,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 3,
+        "k_broken": 1,
+        "n_combinations": 3,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 3,
+        "k_broken": 2,
+        "n_combinations": 3,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 4,
+        "k_broken": 1,
+        "n_combinations": 4,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 4,
+        "k_broken": 2,
+        "n_combinations": 6,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 4,
+        "k_broken": 3,
+        "n_combinations": 4,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 5,
+        "k_broken": 1,
+        "n_combinations": 5,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 5,
+        "k_broken": 2,
+        "n_combinations": 10,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 5,
+        "k_broken": 3,
+        "n_combinations": 10,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 5,
+        "k_broken": 4,
+        "n_combinations": 5,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 6,
+        "k_broken": 1,
+        "n_combinations": 6,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 6,
+        "k_broken": 2,
+        "n_combinations": 15,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 6,
+        "k_broken": 3,
+        "n_combinations": 20,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 6,
+        "k_broken": 4,
+        "n_combinations": 15,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 6,
+        "k_broken": 5,
+        "n_combinations": 6,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 7,
+        "k_broken": 1,
+        "n_combinations": 7,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 7,
+        "k_broken": 2,
+        "n_combinations": 21,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 7,
+        "k_broken": 3,
+        "n_combinations": 35,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 7,
+        "k_broken": 4,
+        "n_combinations": 35,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 7,
+        "k_broken": 5,
+        "n_combinations": 21,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 7,
+        "k_broken": 6,
+        "n_combinations": 7,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 8,
+        "k_broken": 1,
+        "n_combinations": 8,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 8,
+        "k_broken": 2,
+        "n_combinations": 28,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 8,
+        "k_broken": 3,
+        "n_combinations": 56,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 8,
+        "k_broken": 4,
+        "n_combinations": 70,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 8,
+        "k_broken": 5,
+        "n_combinations": 56,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 8,
+        "k_broken": 6,
+        "n_combinations": 28,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 8,
+        "k_broken": 7,
+        "n_combinations": 8,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 1,
+        "n_combinations": 9,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 2,
+        "n_combinations": 36,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 3,
+        "n_combinations": 84,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 4,
+        "n_combinations": 126,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 5,
+        "n_combinations": 126,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 6,
+        "n_combinations": 84,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 7,
+        "n_combinations": 36,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 9,
+        "k_broken": 8,
+        "n_combinations": 9,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 1,
+        "n_combinations": 10,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 2,
+        "n_combinations": 45,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 3,
+        "n_combinations": 120,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 4,
+        "n_combinations": 210,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 5,
+        "n_combinations": 252,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          true
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 6,
+        "n_combinations": 210,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 7,
+        "n_combinations": 120,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 8,
+        "n_combinations": 45,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      },
+      {
+        "n": 10,
+        "k_broken": 9,
+        "n_combinations": 10,
+        "verdict_unanimous": true,
+        "verdicts_seen": [
+          false
+        ],
+        "split_explained_by_doubled_predicate": null
+      }
+    ],
+    "strata_all_unanimous": true,
+    "n_strata_split": 0,
+    "n_strata": 45,
+    "split_strata": [],
+    "all_splits_are_the_boundary_stratum": true,
+    "all_splits_explained_by_doubled_predicate": true
+  },
+  "v3": {
+    "rows": [
+      {
+        "n": 2,
+        "max_breakable_while_certified": 1,
+        "breakable_fraction": 0.5
+      },
+      {
+        "n": 3,
+        "max_breakable_while_certified": 1,
+        "breakable_fraction": 0.3333333333333333
+      },
+      {
+        "n": 4,
+        "max_breakable_while_certified": 2,
+        "breakable_fraction": 0.5
+      },
+      {
+        "n": 5,
+        "max_breakable_while_certified": 2,
+        "breakable_fraction": 0.4
+      },
+      {
+        "n": 6,
+        "max_breakable_while_certified": 3,
+        "breakable_fraction": 0.5
+      },
+      {
+        "n": 7,
+        "max_breakable_while_certified": 3,
+        "breakable_fraction": 0.42857142857142855
+      },
+      {
+        "n": 8,
+        "max_breakable_while_certified": 4,
+        "breakable_fraction": 0.5
+      },
+      {
+        "n": 9,
+        "max_breakable_while_certified": 4,
+        "breakable_fraction": 0.4444444444444444
+      },
+      {
+        "n": 10,
+        "max_breakable_while_certified": 5,
+        "breakable_fraction": 0.5
+      },
+      {
+        "n": 11,
+        "max_breakable_while_certified": 5,
+        "breakable_fraction": 0.45454545454545453
+      },
+      {
+        "n": 12,
+        "max_breakable_while_certified": 6,
+        "breakable_fraction": 0.5
+      },
+      {
+        "n": 13,
+        "max_breakable_while_certified": 6,
+        "breakable_fraction": 0.46153846153846156
+      },
+      {
+        "n": 14,
+        "max_breakable_while_certified": 7,
+        "breakable_fraction": 0.5
+      },
+      {
+        "n": 15,
+        "max_breakable_while_certified": 7,
+        "breakable_fraction": 0.4666666666666667
+      }
+    ],
+    "breakable_fraction_limit": 0.4666666666666667,
+    "matches_floor_n_over_2": true
+  },
+  "v4": {
+    "predicates_per_commitment_values": [
+      1.0
+    ],
+    "uniform_duplication": true,
+    "spurious_predicates_per_response": [
+      0
+    ],
+    "no_spurious_predicates": true,
+    "n_verdicts_differing_at_commitment_level": 0,
+    "any_verdict_differs_at_commitment_level": false,
+    "verdicts_flipped_by_the_parser_bug": [],
+    "rows": [
+      {
+        "n_commitments": 2,
+        "n_predicates": 2,
+        "n_broken": 0,
+        "satisfaction_rate": 1.0,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 1.0,
+        "predicate_level_rate": 1.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 2,
+        "n_predicates": 2,
+        "n_broken": 1,
+        "satisfaction_rate": 0.5,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.5,
+        "predicate_level_rate": 0.5,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 2,
+        "n_predicates": 2,
+        "n_broken": 2,
+        "satisfaction_rate": 0.0,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.0,
+        "predicate_level_rate": 0.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 3,
+        "n_predicates": 3,
+        "n_broken": 0,
+        "satisfaction_rate": 1.0,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 1.0,
+        "predicate_level_rate": 1.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 3,
+        "n_predicates": 3,
+        "n_broken": 1,
+        "satisfaction_rate": 0.6666666666666666,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.6666666666666666,
+        "predicate_level_rate": 0.6666666666666666,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 3,
+        "n_predicates": 3,
+        "n_broken": 2,
+        "satisfaction_rate": 0.3333333333333333,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.3333333333333333,
+        "predicate_level_rate": 0.3333333333333333,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 3,
+        "n_predicates": 3,
+        "n_broken": 3,
+        "satisfaction_rate": 0.0,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.0,
+        "predicate_level_rate": 0.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 4,
+        "n_predicates": 4,
+        "n_broken": 0,
+        "satisfaction_rate": 1.0,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 1.0,
+        "predicate_level_rate": 1.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 4,
+        "n_predicates": 4,
+        "n_broken": 1,
+        "satisfaction_rate": 0.75,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.75,
+        "predicate_level_rate": 0.75,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 4,
+        "n_predicates": 4,
+        "n_broken": 2,
+        "satisfaction_rate": 0.5,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.5,
+        "predicate_level_rate": 0.5,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 4,
+        "n_predicates": 4,
+        "n_broken": 3,
+        "satisfaction_rate": 0.25,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.25,
+        "predicate_level_rate": 0.25,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 4,
+        "n_predicates": 4,
+        "n_broken": 4,
+        "satisfaction_rate": 0.0,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.0,
+        "predicate_level_rate": 0.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 5,
+        "n_predicates": 5,
+        "n_broken": 0,
+        "satisfaction_rate": 1.0,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 1.0,
+        "predicate_level_rate": 1.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 5,
+        "n_predicates": 5,
+        "n_broken": 1,
+        "satisfaction_rate": 0.8,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.8,
+        "predicate_level_rate": 0.8,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 5,
+        "n_predicates": 5,
+        "n_broken": 2,
+        "satisfaction_rate": 0.6,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.6,
+        "predicate_level_rate": 0.6,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 5,
+        "n_predicates": 5,
+        "n_broken": 3,
+        "satisfaction_rate": 0.4,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.4,
+        "predicate_level_rate": 0.4,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 5,
+        "n_predicates": 5,
+        "n_broken": 4,
+        "satisfaction_rate": 0.2,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.2,
+        "predicate_level_rate": 0.2,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 5,
+        "n_predicates": 5,
+        "n_broken": 5,
+        "satisfaction_rate": 0.0,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.0,
+        "predicate_level_rate": 0.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 6,
+        "n_predicates": 6,
+        "n_broken": 0,
+        "satisfaction_rate": 1.0,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 1.0,
+        "predicate_level_rate": 1.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 6,
+        "n_predicates": 6,
+        "n_broken": 1,
+        "satisfaction_rate": 0.8333333333333334,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.8333333333333334,
+        "predicate_level_rate": 0.8333333333333334,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 6,
+        "n_predicates": 6,
+        "n_broken": 2,
+        "satisfaction_rate": 0.6666666666666666,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.6666666666666666,
+        "predicate_level_rate": 0.6666666666666666,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 6,
+        "n_predicates": 6,
+        "n_broken": 3,
+        "satisfaction_rate": 0.5,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.5,
+        "predicate_level_rate": 0.5,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 6,
+        "n_predicates": 6,
+        "n_broken": 4,
+        "satisfaction_rate": 0.3333333333333333,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.3333333333333333,
+        "predicate_level_rate": 0.3333333333333333,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 6,
+        "n_predicates": 6,
+        "n_broken": 5,
+        "satisfaction_rate": 0.16666666666666666,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.16666666666666666,
+        "predicate_level_rate": 0.16666666666666666,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 6,
+        "n_predicates": 6,
+        "n_broken": 6,
+        "satisfaction_rate": 0.0,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.0,
+        "predicate_level_rate": 0.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 0,
+        "satisfaction_rate": 1.0,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 1.0,
+        "predicate_level_rate": 1.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 1,
+        "satisfaction_rate": 0.8571428571428571,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.8571428571428571,
+        "predicate_level_rate": 0.8571428571428571,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 2,
+        "satisfaction_rate": 0.7142857142857143,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.7142857142857143,
+        "predicate_level_rate": 0.7142857142857143,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 3,
+        "satisfaction_rate": 0.5714285714285714,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.5714285714285714,
+        "predicate_level_rate": 0.5714285714285714,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 4,
+        "satisfaction_rate": 0.42857142857142855,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.42857142857142855,
+        "predicate_level_rate": 0.42857142857142855,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 5,
+        "satisfaction_rate": 0.2857142857142857,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.2857142857142857,
+        "predicate_level_rate": 0.2857142857142857,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 6,
+        "satisfaction_rate": 0.14285714285714285,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.14285714285714285,
+        "predicate_level_rate": 0.14285714285714285,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 7,
+        "n_predicates": 7,
+        "n_broken": 7,
+        "satisfaction_rate": 0.0,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.0,
+        "predicate_level_rate": 0.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 0,
+        "satisfaction_rate": 1.0,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 1.0,
+        "predicate_level_rate": 1.0,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 1,
+        "satisfaction_rate": 0.875,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.875,
+        "predicate_level_rate": 0.875,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 2,
+        "satisfaction_rate": 0.75,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.75,
+        "predicate_level_rate": 0.75,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 3,
+        "satisfaction_rate": 0.625,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.625,
+        "predicate_level_rate": 0.625,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 4,
+        "satisfaction_rate": 0.5,
+        "verified": true,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.5,
+        "predicate_level_rate": 0.5,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 5,
+        "satisfaction_rate": 0.375,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.375,
+        "predicate_level_rate": 0.375,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 6,
+        "satisfaction_rate": 0.25,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.25,
+        "predicate_level_rate": 0.25,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 7,
+        "satisfaction_rate": 0.125,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.125,
+        "predicate_level_rate": 0.125,
+        "verdict_would_differ_at_commitment_level": false
+      },
+      {
+        "n_commitments": 8,
+        "n_predicates": 8,
+        "n_broken": 8,
+        "satisfaction_rate": 0.0,
+        "verified": false,
+        "n_spurious_predicates": 0,
+        "doubled_predicate": null,
+        "commitment_level_rate": 0.0,
+        "predicate_level_rate": 0.0,
+        "verdict_would_differ_at_commitment_level": false
+      }
+    ]
+  },
+  "v5": {
+    "per_n_is_noisy_and_why": "Each (n, k) cell is capped at 6 combinations, so the weight each k carries within an n is an artifact of that cap, not of anything about the system. The per-n J series is therefore non-monotonic and individual values should not be quoted. The fitted trend is reported instead, and the clean signal is per_violation_count, where every cell is a single well-defined quantity.",
+    "youden_j_trend_slope_per_commitment": 0.008500061035089199,
+    "labelling_assumption": "An output is violated if >= 1 of its commitments is broken. A conjunctive rule encodes this assumption and therefore scores perfectly by construction. Do not read V5 as evidence that conjunctive aggregation is correct; read it for the shape of the majority rule's degradation.",
+    "n_population": 272,
+    "sweep": [
+      {
+        "threshold": 0.0,
+        "tpr": 1.0,
+        "fpr": 1.0,
+        "youden_j": 0.0
+      },
+      {
+        "threshold": 0.05,
+        "tpr": 1.0,
+        "fpr": 0.9657794676806084,
+        "youden_j": 0.034220532319391594
+      },
+      {
+        "threshold": 0.1,
+        "tpr": 1.0,
+        "fpr": 0.9657794676806084,
+        "youden_j": 0.034220532319391594
+      },
+      {
+        "threshold": 0.15,
+        "tpr": 1.0,
+        "fpr": 0.8745247148288974,
+        "youden_j": 0.12547528517110262
+      },
+      {
+        "threshold": 0.2,
+        "tpr": 1.0,
+        "fpr": 0.8517110266159695,
+        "youden_j": 0.14828897338403046
+      },
+      {
+        "threshold": 0.25,
+        "tpr": 1.0,
+        "fpr": 0.7870722433460076,
+        "youden_j": 0.21292775665399244
+      },
+      {
+        "threshold": 0.3,
+        "tpr": 1.0,
+        "fpr": 0.7262357414448669,
+        "youden_j": 0.2737642585551331
+      },
+      {
+        "threshold": 0.35,
+        "tpr": 1.0,
+        "fpr": 0.6463878326996197,
+        "youden_j": 0.35361216730038025
+      },
+      {
+        "threshold": 0.4,
+        "tpr": 1.0,
+        "fpr": 0.623574144486692,
+        "youden_j": 0.376425855513308
+      },
+      {
+        "threshold": 0.45,
+        "tpr": 1.0,
+        "fpr": 0.532319391634981,
+        "youden_j": 0.467680608365019
+      },
+      {
+        "threshold": 0.5,
+        "tpr": 1.0,
+        "fpr": 0.532319391634981,
+        "youden_j": 0.467680608365019
+      },
+      {
+        "threshold": 0.55,
+        "tpr": 1.0,
+        "fpr": 0.43346007604562736,
+        "youden_j": 0.5665399239543727
+      },
+      {
+        "threshold": 0.6,
+        "tpr": 1.0,
+        "fpr": 0.38783269961977185,
+        "youden_j": 0.6121673003802282
+      },
+      {
+        "threshold": 0.65,
+        "tpr": 1.0,
+        "fpr": 0.3193916349809886,
+        "youden_j": 0.6806083650190113
+      },
+      {
+        "threshold": 0.7,
+        "tpr": 1.0,
+        "fpr": 0.2623574144486692,
+        "youden_j": 0.7376425855513308
+      },
+      {
+        "threshold": 0.75,
+        "tpr": 1.0,
+        "fpr": 0.21673003802281368,
+        "youden_j": 0.7832699619771863
+      },
+      {
+        "threshold": 0.8,
+        "tpr": 1.0,
+        "fpr": 0.155893536121673,
+        "youden_j": 0.844106463878327
+      },
+      {
+        "threshold": 0.85,
+        "tpr": 1.0,
+        "fpr": 0.09125475285171103,
+        "youden_j": 0.908745247148289
+      },
+      {
+        "threshold": 0.9,
+        "tpr": 1.0,
+        "fpr": 0.022813688212927757,
+        "youden_j": 0.9771863117870723
+      },
+      {
+        "threshold": 0.95,
+        "tpr": 1.0,
+        "fpr": 0.0,
+        "youden_j": 1.0
+      },
+      {
+        "threshold": 1.0,
+        "tpr": 1.0,
+        "fpr": 0.0,
+        "youden_j": 1.0
+      }
+    ],
+    "shipped_threshold_0.5": {
+      "threshold": 0.5,
+      "tpr": 1.0,
+      "fpr": 0.532319391634981,
+      "youden_j": 0.467680608365019
+    },
+    "best_threshold": {
+      "threshold": 0.95,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "youden_j": 1.0
+    },
+    "per_commitment_count": {
+      "2": {
+        "n_cases": 4,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.6666666666666666,
+        "youden_j_at_shipped_0.5": 0.33333333333333337
+      },
+      "3": {
+        "n_cases": 8,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.42857142857142855,
+        "youden_j_at_shipped_0.5": 0.5714285714285714
+      },
+      "4": {
+        "n_cases": 16,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.6666666666666666,
+        "youden_j_at_shipped_0.5": 0.33333333333333337
+      },
+      "5": {
+        "n_cases": 24,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.4782608695652174,
+        "youden_j_at_shipped_0.5": 0.5217391304347826
+      },
+      "6": {
+        "n_cases": 32,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.5806451612903226,
+        "youden_j_at_shipped_0.5": 0.4193548387096774
+      },
+      "7": {
+        "n_cases": 38,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.4864864864864865,
+        "youden_j_at_shipped_0.5": 0.5135135135135135
+      },
+      "8": {
+        "n_cases": 44,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.5581395348837209,
+        "youden_j_at_shipped_0.5": 0.4418604651162791
+      },
+      "9": {
+        "n_cases": 50,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.4897959183673469,
+        "youden_j_at_shipped_0.5": 0.5102040816326531
+      },
+      "10": {
+        "n_cases": 56,
+        "tpr_at_shipped_0.5": 1.0,
+        "fpr_at_shipped_0.5": 0.5454545454545454,
+        "youden_j_at_shipped_0.5": 0.4545454545454546
+      }
+    },
+    "per_violation_count": {
+      "1": {
+        "n_cases": 44,
+        "certified_despite_violation_rate": 1.0
+      },
+      "2": {
+        "n_cases": 46,
+        "certified_despite_violation_rate": 0.9130434782608695
+      },
+      "3": {
+        "n_cases": 41,
+        "certified_despite_violation_rate": 0.7317073170731707
+      },
+      "4": {
+        "n_cases": 36,
+        "certified_despite_violation_rate": 0.5
+      },
+      "5": {
+        "n_cases": 31,
+        "certified_despite_violation_rate": 0.1935483870967742
+      },
+      "6": {
+        "n_cases": 25,
+        "certified_despite_violation_rate": 0.0
+      },
+      "7": {
+        "n_cases": 19,
+        "certified_despite_violation_rate": 0.0
+      },
+      "8": {
+        "n_cases": 13,
+        "certified_despite_violation_rate": 0.0
+      },
+      "9": {
+        "n_cases": 7,
+        "certified_despite_violation_rate": 0.0
+      },
+      "10": {
+        "n_cases": 1,
+        "certified_despite_violation_rate": 0.0
+      }
+    }
+  },
+  "analysis": {
+    "preregistered_predictions": {
+      "P1_one_filler_suffices": true,
+      "P2_verdict_invariant_to_severity": true,
+      "P3_breakable_is_floor_n_over_2": true,
+      "P4_duplication_uniform_so_verdict_unchanged": true,
+      "P5_J_degrades_with_n": false
+    },
+    "headline": {
+      "safety_commitment_always_certifiable": true,
+      "fillers_needed": 1,
+      "verdict_ignores_severity": true,
+      "breakable_fraction_limit": 0.4666666666666667,
+      "youden_j_at_shipped_threshold": 0.467680608365019,
+      "best_threshold_on_this_population": 0.95
+    },
+    "what_this_does_not_show": "It does not show that conjunctive aggregation is correct. V5's labelling assumes any violation makes an output violated, which is the conjunctive rule restated, so V5 cannot adjudicate between the two. V1-V4 are free of that assumption: they describe what the shipped rule does, not whether a different rule would score better. The case against the majority vote rests on V1 and V2 -- gameability and severity-blindness -- not on V5.",
+    "P3_and_P4_hold_only_after_the_parser_fix": "On the first run of this experiment P3 and P4 both FAILED, from one cause: an over-extraction bug in CommitmentParser.parse. Every pattern scanned the full response independently with no consumed-span tracking, so the generic `I will ...` pattern matched inside the first [COMMITMENT: ...] marker and, finding no period, ran to the end of the string. A response carrying n commitments therefore yielded n+1 predicates, and _deduplicate never caught it because it compares action strings for equality and a run-on equals nothing. That bug is fixed (2026-09-20, span-claiming plus pattern reorder) and both predictions now hold. P4's stated MECHANISM remains false and is not rehabilitated by this: P4 assumed uniform 2n doubling that cancels in the ratio, whereas the real factor was (n+1)/n and is now exactly 1. The retraction stands -- the '2.0x duplicate extraction factor' published in CHANGELOG 2026-09-20 and docs/CLAIMS.md row 22a was the n=1 case of (n+1)/n generalised without checking, and Exp 43's own part E rows showed n+1 at every n up to 1000 the whole time.",
+    "what_the_parser_bug_did_to_verdicts": "The spurious predicate was not cosmetic. At the 0.5 boundary it was decisive: cases existed where the commitment-level rate was exactly 0.50 (certified under a clean parse) but the predicate-level rate fell below it, so the shipped pipeline rejected. The bug made verification stricter in those cases, by accident, in a direction nobody chose. Post-fix this run measures zero such divergences. It also moved Exp 06: its verification rate went 0.0% -> 25.0% because the four scenarios now ground to 2 predicates rather than 3, so 1/2 = 0.50 clears the threshold where 1/3 did not.",
+    "verdict": "every safety commitment tested can be broken and still certified, needing 1-1 additional kept commitments; the verdict does not depend on which commitment was broken, only how many; at n=15 an agent may break 7 commitments and remain certified; Youden's J at the shipped threshold trends up with commitment-set size (slope +0.009 per commitment -- near enough to flat that P5 is not supported; per-n values are cap-weighted and not individually quotable); and an output with exactly one broken commitment is certified 100% of the time."
+  }
+}
