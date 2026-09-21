@@ -1,5 +1,113 @@
 # Changelog
 
+## 2026-09-21 (reproducibility) — the CI badge was never reproducible; claim 14 downgraded from Validated to not-evidence
+
+### How this was found
+
+The `ci-reproduce` workflow published a Hart-Moore hold-up reduction of **26.7%**, then
+**38.3%** forty-two minutes later, with no code change between the two runs. Ruled out the
+2026-09-20 parser fix as the cause first: `derive_real_headline_stats.py` never imports
+`gcl`, and neither does Exp 21.
+
+Two local runs at identical seeds and scale gave **33.3%** and **40.4%**. Pinning hash
+randomization made it deterministic:
+
+| `PYTHONHASHSEED` | hold-up reduction |
+|---|---|
+| 0 | 23.6% |
+| 1 | 30.7% |
+| 2 | 42.1% |
+
+### The bug
+
+`21_incomplete_contract_theory.py` drew from `list(self.all_contingencies)` at `:164`,
+`:169` and `:348`. `all_contingencies` is a **set of strings**, and `list()` over one is
+hash-ordered — CPython randomises string hashes per process unless `PYTHONHASHSEED` is
+pinned. The seeded generator therefore drew identical *indices* on every run, and those
+indices landed on *different contingencies*.
+
+The workflow is named `ci-reproduce` and exists to demonstrate reproducibility. It was
+republishing a different number on essentially every run, which is what the repeated
+`ci: refresh CI-reproduced headline stats` commits in the history actually record.
+
+### The fix
+
+A canonical `self.contingency_order = sorted(self.all_contingencies)` is drawn from
+instead. Stable at **42.9%** (ci-small) across hash seeds 0–3 and unpinned. The workflow
+also pins `PYTHONHASHSEED: "0"` as a guard, not as the fix.
+
+**Swept for the same pattern and cleared three false positives**, verified rather than
+assumed: `population/environment.py:274` iterates a set of **ints** (`hash(int) == int`,
+order-stable); `09_drift_threshold.py:254` iterates **dict keys** (insertion-ordered);
+`list(TaskType)` in Exps 33/33b/34c/34d/35c is **enum** iteration (definition-ordered).
+Only sets of strings are affected. No `src/` change was needed.
+
+### Re-derived at full scale, and then downgraded anyway
+
+| | value |
+|---|---|
+| hold-up reduction, n=30 | **37.5%** (was published as 40.4%) |
+| prediction 4 | t = 14.29, d = 3.69 |
+
+And then, reading the code to confirm the number meant what it claimed, a second and worse
+problem. Two hardcoded sets 80 lines apart are character-for-character identical:
+
+```
+:174  create_commitment, GCL arm
+      failure_contingencies = {"quality_low", "delay", "cost_increase", "partner_defects"}
+
+:255  check_hold_up
+      negative_contingencies = {"quality_low", "delay", "cost_increase", "partner_defects"}
+```
+
+`check_hold_up` returns False when the realized contingency is specified (`:257`), and
+otherwise fires at `0.6 * vulnerability` for a negative contingency versus `0.1` for a
+positive one (`:276-281`). **The GCL arm is hardcoded to specify exactly the set the
+scoring rule is hardcoded to punish**, so it can only ever be held up on the
+low-probability branch.
+
+### Exp 45 — added to separate the two explanations
+
+Holds the specification *count* fixed at 4 for every arm and varies only *which* four:
+
+| arm | specified set | mean hold-ups |
+|---|---|---|
+| shipped | the 4 negatives | **54.6** |
+| control | 4 random | 164.1 |
+| control | 4 positives | 236.1 |
+
+**4.3x spread at identical coverage.** Swap the four strings and the advantage inverts.
+Harness validity: the shipped arm reproduces `derive_real_headline_stats --scale full`
+exactly (54.6), so the arms differ in one respect only.
+
+Claim 14 is therefore **downgraded from Validated to not-evidence**, and the published
+confidence interval is withdrawn. The p-value describes sampling noise around a conclusion
+fixed before any agent acted.
+
+Two limits stated so this is not read as more than it is: encoding "negative contingencies
+cause hold-ups" is a defensible modelling assumption from the literature, and Exp 45 does
+not refute the Hart-Moore mechanism. The finding is that claim 14's number is *entailed by*
+that assumption rather than evidence for it. Separately, the arms all carry the GCL
+vulnerability multiplier, so they are not comparable to the shipped `incomplete_high`
+figure of 87.3 — a second confound in the original comparison, flagged but not measured.
+
+Sibling predictions 1 and 2 are worse and were not separately rowed: investment is
+literally `0.5 × {1.0, 0.7, 0.4, 0.85}` per condition (`:211-226`), which is why their
+effect sizes are **d = 499** and **d = 371**. An effect size of 499 is not a strong result;
+it is a constant with noise added.
+
+### The judgment call
+
+The refreshed number and the downgrade ship together, on purpose. Publishing −37.5% under
+a Validated banner would have been a correction that reinstates the defect it corrects — a
+more precise figure for a quantity that was never evidence. Precision is not validity.
+
+Same failure mode as retracted claim 5 (hardcoded, not emergent) and as Theorems 5 and 6:
+**the outcome is generated from the predictor rather than measured.** That is four now,
+found by the same question.
+
+---
+
 ## 2026-09-20 (parser) — over-extraction bug fixed; Exp 06's verification rate moves 0.0% → 25.0%; Exp 44's P3 and P4 now hold
 
 ### The bug

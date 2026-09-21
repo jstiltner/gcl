@@ -101,11 +101,18 @@ def write_ci_results(punishment: dict, hart_moore: dict, scale: str) -> None:
     (CI_RESULTS_DIR / "badge-punishment-paradox.json").write_text(json.dumps(badge_pp))
 
     reduction = hart_moore["holdup_reduction_pct"]
+    # Deliberately not colour-scaled. Claim 14 was downgraded to not-evidence on
+    # 2026-09-21: Exp 21's GCL arm is hardcoded to specify exactly the contingency set
+    # check_hold_up is hardcoded to punish, so this number is entailed by the model's
+    # assumptions rather than measured (see docs/CLAIMS.md row 14, Exp 45). A green badge
+    # scaled on magnitude would advertise it as a result. What this badge is still good
+    # for -- and all it is good for -- is showing the figure is now REPRODUCIBLE, which
+    # it was not before the hash-ordering fix of the same date.
     badge_hm = {
         "schemaVersion": 1,
-        "label": f"hart-moore holdup reduction ({scale})",
-        "message": f"{reduction:.1f}%",
-        "color": _badge_color(reduction, 25, 10),
+        "label": f"hart-moore holdup, not evidence ({scale})",
+        "message": f"{reduction:.1f}% — see claim 14",
+        "color": "lightgrey",
     }
     (CI_RESULTS_DIR / "badge-hart-moore.json").write_text(json.dumps(badge_hm))
 

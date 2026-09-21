@@ -47,6 +47,15 @@ jobs:
           pip install -e .
 
       - name: Run real-simulation reproduction (CI scale)
+        # PYTHONHASHSEED is pinned as a belt-and-braces guard, not as the fix. The real
+        # fix is in 21_incomplete_contract_theory.py, which now draws from a sorted
+        # contingency list instead of a hash-ordered one. Before that, this job published
+        # a different hold-up reduction on essentially every run at identical seeds --
+        # which is why the history is full of "ci: refresh" commits. If this job ever
+        # starts churning the badge again at a fixed input, suspect a new hash-ordered
+        # container before suspecting the simulation.
+        env:
+          PYTHONHASHSEED: "0"
         run: python experiments/derive_real_headline_stats.py --ci
 
       - name: Commit ci_results if changed
