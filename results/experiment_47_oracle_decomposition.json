@@ -1,0 +1,402 @@
+{
+  "experiment": "47_oracle_decomposition",
+  "targets": "claims 1, 2, 3; experiments/40_corrected_oracle.py:75 (ownership_bonus), :60-68 (label-gated commitment), :108-117 vs :137-143 (same argmax), Part B grid (no signal-matched control)",
+  "timestamp": "2026-09-21T16:13:20.494094+00:00",
+  "runtime_seconds": 3.55,
+  "environment": {
+    "python": "3.13.1",
+    "numpy": "2.4.0",
+    "pythonhashseed": "42"
+  },
+  "config": {
+    "n_seeds": 20,
+    "n_rounds": 200,
+    "n_agents": 30,
+    "ownership_bonuses": [
+      0.0,
+      0.05
+    ],
+    "noise_levels": [
+      0.0,
+      0.1,
+      0.3
+    ]
+  },
+  "part_label_decomposition": {
+    "shipped_claim1_ss_vs_oracle_emergent": {
+      "diff": 0.07124999999999992,
+      "ci95": [
+        0.05399374999999984,
+        0.08875
+      ],
+      "cohens_d": 2.5114891107546757,
+      "significant": true,
+      "arrays_bit_identical": false,
+      "max_abs_per_seed_difference": 0.10999999999999999
+    },
+    "shipped_claim2_ss_vs_oracle_fixed": {
+      "diff": 0.0,
+      "ci95": [
+        -0.015500000000000073,
+        0.016749999999999824
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "relabelled_ss_vs_oracle_labelled_volunteer": {
+      "diff": 0.0,
+      "ci95": [
+        -0.01750000000000007,
+        0.01749999999999996
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "relabelled_ss_unlabelled_vs_oracle": {
+      "diff": 0.0,
+      "ci95": [
+        -0.016506250000000063,
+        0.01774999999999983
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "mean_cooperation": {
+      "self_selection_emergent": 0.60825,
+      "argmax_oracle_emergent": 0.537,
+      "argmax_oracle_emergent_relabelled_volunteer": 0.60825,
+      "self_selection_fixed": 0.53425,
+      "argmax_oracle_fixed": 0.53425
+    }
+  },
+  "part_ownership_bonus_sweep": {
+    "sweep": [
+      {
+        "ownership_bonus": 0.0,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": false,
+        "diff": 0.03249999999999986,
+        "ci95": [
+          0.015250000000000093,
+          0.050000000000000044
+        ],
+        "cohens_d": 1.1440728376083094,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.06499999999999995
+      },
+      {
+        "ownership_bonus": 0.05,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": true,
+        "diff": 0.07124999999999992,
+        "ci95": [
+          0.05399374999999984,
+          0.08875
+        ],
+        "cohens_d": 2.5114891107546757,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.10999999999999999
+      },
+      {
+        "ownership_bonus": 0.0,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.0,
+        "ci95": [
+          -0.01799999999999991,
+          0.017749999999999932
+        ],
+        "cohens_d": 0.0,
+        "significant": false,
+        "arrays_bit_identical": true,
+        "max_abs_per_seed_difference": 0.0
+      },
+      {
+        "ownership_bonus": 0.05,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.03875000000000006,
+        "ci95": [
+          0.02074375000000005,
+          0.05699999999999994
+        ],
+        "cohens_d": 1.333066472561315,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.06000000000000005
+      }
+    ]
+  },
+  "part_signal_grid": {
+    "noise_levels": [
+      0.0,
+      0.1,
+      0.3
+    ],
+    "grid": [
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.0,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0,
+          "ci95": [
+            -0.015500000000000073,
+            0.016749999999999824
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.015500000000000073,
+            0.016749999999999824
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.1,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0422499999999999,
+          "ci95": [
+            0.013250000000000258,
+            0.07100000000000006
+          ],
+          "cohens_d": 0.8956518647197008,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.14500000000000002
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.02199999999999991,
+            0.022756249999999954
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.3,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.15599999999999997,
+          "ci95": [
+            0.11525000000000019,
+            0.19675625
+          ],
+          "cohens_d": 2.297532906753991,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.4099999999999999
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.02199999999999991,
+            0.022756249999999954
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.0,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.0422499999999999,
+          "ci95": [
+            -0.07024999999999998,
+            -0.012250000000000094
+          ],
+          "cohens_d": -0.8956518647197008,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.14500000000000002
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.03325625000000005,
+            0.03450000000000003
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.1,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0027500000000000857,
+          "ci95": [
+            -0.03199999999999997,
+            0.040000000000000036
+          ],
+          "cohens_d": 0.04594957188374862,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.12
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.02999999999999997,
+            0.03025
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.3,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.08099999999999996,
+          "ci95": [
+            0.03375,
+            0.13074999999999998
+          ],
+          "cohens_d": 1.030040821957394,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.40499999999999997
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.02999999999999997,
+            0.03025
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.0,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.15599999999999997,
+          "ci95": [
+            -0.1962500000000001,
+            -0.11350000000000005
+          ],
+          "cohens_d": -2.297532906753991,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.4099999999999999
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.05249999999999999,
+            0.05674999999999997
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.1,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.09749999999999986,
+          "ci95": [
+            -0.14725624999999998,
+            -0.04674375
+          ],
+          "cohens_d": -1.193227741999835,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.41999999999999993
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.05624999999999997,
+            0.05875624999999999
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.3,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.01924999999999999,
+          "ci95": [
+            -0.07600000000000001,
+            0.040500000000000036
+          ],
+          "cohens_d": -0.19984129127861053,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.41999999999999993
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.05624999999999997,
+            0.05875624999999999
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      }
+    ]
+  },
+  "analysis": {
+    "preregistered_predictions": {
+      "P1_shipped_claim1_reproduces": true,
+      "P2_claim1_effect_is_the_volunteered_boolean": true,
+      "P3_phase_boundary_is_signal_quality_not_centralization": true,
+      "P4_effect_size_is_a_readout_of_the_ownership_bonus_constant": true,
+      "P5_claim2_holding_survives_at_matched_nonzero_noise": true
+    },
+    "phase_boundary_direction_holds_where_significant": true,
+    "shipped_ownership_bonus": 0.05,
+    "verdict": "CLAIM 1 RETRACT. The +0.065 / d = 1.68 advantage is the `volunteered` boolean. Relabel the oracle's pick -- same agent, same round, same seed -- and the per-seed arrays become bit-identical, difference exactly 0.0000. The magnitude is set by the hardcoded `ownership_bonus = 0.05` at 40_corrected_oracle.py:75 and traces it monotonically; zero the bonus and ungate the commitment update and the two arms are the same computation. The premise 'agents who choose a task try harder' is a legitimate modelling assumption, but it is an INPUT here, and claim 1 reports it as an output with a CI and an effect size attached. CLAIM 2 HOLDING SURVIVES, EVIDENCE DOES NOT. At sigma = 0 the two arms are one computation run twice, so the published '+0.000, CI [-0.013, +0.013]' is a bootstrap of an array against itself and cannot be evidence of anything. Tested where it can fail -- equal but independently drawn noise on the diagonal of the grid -- the null does hold. Strike the number, keep the conclusion, and restate it against the diagonal cells. CLAIM 3 RESTATE. A central oracle reading the agents' own `perceived` signal is bit-identical to self-selection at every grid cell, so the boundary is about WHICH SIGNAL IS LESS NOISY and says nothing about self-selection or decentralisation. The finding is real but it is 'argmax on the better estimate wins', which is not what the row claims."
+  }
+}

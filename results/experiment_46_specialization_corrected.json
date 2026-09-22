@@ -1,0 +1,437 @@
+{
+  "experiment": "46_specialization_corrected",
+  "targets": "claim 6; experiments/33_specialization_dynamics.py:129-140 (floor), :454-459 (denominator), :266-322 + structures/base.py:138-140 (monopoly)",
+  "timestamp": "2026-09-21T16:03:04.320164+00:00",
+  "runtime_seconds": 1.55,
+  "environment": {
+    "python": "3.13.1",
+    "numpy": "2.4.0",
+    "pythonhashseed": "7"
+  },
+  "config": {
+    "n_seeds": 10,
+    "n_rounds": 100,
+    "n_agents": 30,
+    "n_permutations": 100,
+    "cooldowns": [
+      1,
+      3,
+      10
+    ],
+    "task_diversity": 3
+  },
+  "arms": {
+    "cooldown_0_shipped": {
+      "mean_hhi_observed_active_agents": 0.3377,
+      "mean_hhi_matched_permutation_null": 0.3377,
+      "delta_observed_minus_null": -1.1102230246251566e-17,
+      "delta_ci95": [
+        -6.106226635438361e-17,
+        3.3306690738754695e-17
+      ],
+      "delta_ci_excludes_zero": false,
+      "delta_ci_above_zero": false,
+      "mean_n_active_agents": 1.0,
+      "per_seed_n_active": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "mean_tasks_per_active_agent": 100.0,
+      "per_seed_observed": [
+        0.3346,
+        0.3394,
+        0.33540000000000003,
+        0.34219999999999995,
+        0.33540000000000003,
+        0.3378,
+        0.3406,
+        0.3416,
+        0.3346,
+        0.33540000000000003
+      ],
+      "per_seed_null": [
+        0.33460000000000006,
+        0.3393999999999999,
+        0.3354,
+        0.3421999999999999,
+        0.3354,
+        0.3378000000000001,
+        0.3406000000000002,
+        0.3416,
+        0.33460000000000006,
+        0.3354
+      ]
+    },
+    "cooldown_1": {
+      "mean_hhi_observed_active_agents": 0.3476,
+      "mean_hhi_matched_permutation_null": 0.34438440000000003,
+      "delta_observed_minus_null": 0.0032155999999999795,
+      "delta_ci95": [
+        -0.0012756000000000156,
+        0.009420949999999994
+      ],
+      "delta_ci_excludes_zero": false,
+      "delta_ci_above_zero": false,
+      "mean_n_active_agents": 2.0,
+      "per_seed_n_active": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "mean_tasks_per_active_agent": 50.0,
+      "per_seed_observed": [
+        0.34440000000000004,
+        0.34199999999999997,
+        0.3512,
+        0.352,
+        0.34440000000000004,
+        0.34040000000000004,
+        0.3448,
+        0.34920000000000007,
+        0.3396,
+        0.368
+      ],
+      "per_seed_null": [
+        0.341124,
+        0.34688,
+        0.340992,
+        0.349264,
+        0.34174,
+        0.3437960000000001,
+        0.346828,
+        0.3498400000000001,
+        0.3416120000000001,
+        0.341768
+      ]
+    },
+    "cooldown_3": {
+      "mean_hhi_observed_active_agents": 0.4146665438869611,
+      "mean_hhi_matched_permutation_null": 0.3640757217460244,
+      "delta_observed_minus_null": 0.050590822140936645,
+      "delta_ci95": [
+        0.0073773955185012915,
+        0.10269164469446007
+      ],
+      "delta_ci_excludes_zero": true,
+      "delta_ci_above_zero": true,
+      "mean_n_active_agents": 4.4,
+      "per_seed_n_active": [
+        4,
+        4,
+        6,
+        4,
+        4,
+        5,
+        4,
+        4,
+        5,
+        4
+      ],
+      "mean_tasks_per_active_agent": 23.166666666666668,
+      "per_seed_observed": [
+        0.38880000000000003,
+        0.3592000000000001,
+        0.6106022982348741,
+        0.3536,
+        0.3432,
+        0.5031353628569593,
+        0.35760000000000003,
+        0.36400000000000005,
+        0.4953277777777778,
+        0.37120000000000003
+      ],
+      "per_seed_null": [
+        0.35282399999999997,
+        0.35888800000000004,
+        0.37858129239988003,
+        0.36116800000000004,
+        0.360144,
+        0.375252947282587,
+        0.35943200000000003,
+        0.363448,
+        0.37480297777777777,
+        0.35621600000000003
+      ]
+    },
+    "cooldown_10": {
+      "mean_hhi_observed_active_agents": 0.4884055536064465,
+      "mean_hhi_matched_permutation_null": 0.4515922472684576,
+      "delta_observed_minus_null": 0.036813306337988905,
+      "delta_ci95": [
+        0.0068420413211678355,
+        0.06738472731354936
+      ],
+      "delta_ci_excludes_zero": true,
+      "delta_ci_above_zero": true,
+      "mean_n_active_agents": 12.6,
+      "per_seed_n_active": [
+        11,
+        11,
+        15,
+        12,
+        11,
+        13,
+        12,
+        13,
+        14,
+        14
+      ],
+      "mean_tasks_per_active_agent": 8.027639027639028,
+      "per_seed_observed": [
+        0.393692480359147,
+        0.3745679012345679,
+        0.630857373813723,
+        0.4639917695473251,
+        0.4053423120089787,
+        0.48786208500494216,
+        0.4781365740740741,
+        0.5741927825261158,
+        0.5456624779541446,
+        0.5297497795414462
+      ],
+      "per_seed_null": [
+        0.40033490460157123,
+        0.40521593714927046,
+        0.5032187421264801,
+        0.42128761574074075,
+        0.4065117845117844,
+        0.49919847665561945,
+        0.46389257973251036,
+        0.47575676638176634,
+        0.4690214395943562,
+        0.4714842261904762
+      ]
+    },
+    "cooldown_1_typeblind": {
+      "mean_hhi_observed_active_agents": 0.608338785435609,
+      "mean_hhi_matched_permutation_null": 0.6035153406981932,
+      "delta_observed_minus_null": 0.004823444737415789,
+      "delta_ci95": [
+        -0.009675854279377775,
+        0.021328372763721463
+      ],
+      "delta_ci_excludes_zero": false,
+      "delta_ci_above_zero": false,
+      "mean_n_active_agents": 7.0,
+      "per_seed_n_active": [
+        5,
+        8,
+        14,
+        10,
+        2,
+        3,
+        11,
+        5,
+        5,
+        7
+      ],
+      "mean_tasks_per_active_agent": 19.635281385281385,
+      "per_seed_observed": [
+        0.5165397049746016,
+        0.7730597633136095,
+        0.7163753249486203,
+        0.8183678106508875,
+        0.34440000000000004,
+        0.3436074074074074,
+        0.6568278376165281,
+        0.615014657823914,
+        0.4807186061801446,
+        0.8184767414403779
+      ],
+      "per_seed_null": [
+        0.5474787995710052,
+        0.766476479947403,
+        0.669144511637843,
+        0.8183096395792242,
+        0.34174,
+        0.35291881481481474,
+        0.6605689538525849,
+        0.6165478601980008,
+        0.49764469921104537,
+        0.7643236481700117
+      ]
+    },
+    "cooldown_3_typeblind": {
+      "mean_hhi_observed_active_agents": 0.6232199348874109,
+      "mean_hhi_matched_permutation_null": 0.6333015424580519,
+      "delta_observed_minus_null": -0.010081607570640999,
+      "delta_ci95": [
+        -0.01974491812952358,
+        -0.0002467636900950025
+      ],
+      "delta_ci_excludes_zero": true,
+      "delta_ci_above_zero": false,
+      "mean_n_active_agents": 10.6,
+      "per_seed_n_active": [
+        8,
+        9,
+        20,
+        13,
+        5,
+        9,
+        10,
+        7,
+        11,
+        14
+      ],
+      "mean_tasks_per_active_agent": 10.793401043401044,
+      "per_seed_observed": [
+        0.5369305413832199,
+        0.7110600155186511,
+        0.7260590474817378,
+        0.629581111295184,
+        0.47504111111111114,
+        0.5801227217108628,
+        0.639017230883313,
+        0.6339253968253968,
+        0.621516567789828,
+        0.6789456048748043
+      ],
+      "per_seed_null": [
+        0.5531475228174603,
+        0.7161321630812334,
+        0.7445227461457132,
+        0.6098474586299515,
+        0.48845848888888893,
+        0.5875111848473226,
+        0.6755221358923271,
+        0.635582492063492,
+        0.6147353081443045,
+        0.7075559240698251
+      ]
+    },
+    "cooldown_10_typeblind": {
+      "mean_hhi_observed_active_agents": 0.6639203695224282,
+      "mean_hhi_matched_permutation_null": 0.6635214881933551,
+      "delta_observed_minus_null": 0.0003988813290730753,
+      "delta_ci95": [
+        -0.007891314301312199,
+        0.009803983620182977
+      ],
+      "delta_ci_excludes_zero": false,
+      "delta_ci_above_zero": false,
+      "mean_n_active_agents": 21.8,
+      "per_seed_n_active": [
+        14,
+        22,
+        30,
+        22,
+        17,
+        24,
+        18,
+        22,
+        25,
+        24
+      ],
+      "mean_tasks_per_active_agent": 4.788379594261947,
+      "per_seed_observed": [
+        0.5299385190584169,
+        0.6845679441810394,
+        0.7267015621063241,
+        0.6764148858196477,
+        0.6225540586605013,
+        0.6944818436633913,
+        0.6519230809607793,
+        0.7274375415149223,
+        0.659158024691358,
+        0.6660262345679012
+      ],
+      "per_seed_null": [
+        0.5308883192959724,
+        0.6904606736297212,
+        0.7174627315864619,
+        0.691162027875123,
+        0.6186563819972435,
+        0.7161072563670531,
+        0.6449974040130455,
+        0.6940108212224283,
+        0.667547648148148,
+        0.6639216177983539
+      ]
+    },
+    "forced_positive_control": {
+      "mean_hhi_observed_active_agents": 1.0,
+      "mean_hhi_matched_permutation_null": 0.5872012375843476,
+      "delta_observed_minus_null": 0.4127987624156524,
+      "delta_ci95": [
+        0.3946028407616171,
+        0.43119647270335054
+      ],
+      "delta_ci_excludes_zero": true,
+      "delta_ci_above_zero": true,
+      "mean_n_active_agents": 23.9,
+      "per_seed_n_active": [
+        21,
+        21,
+        28,
+        24,
+        21,
+        28,
+        21,
+        24,
+        25,
+        26
+      ],
+      "mean_tasks_per_active_agent": 4.236996336996337,
+      "per_seed_observed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "per_seed_null": [
+        0.5382413395781595,
+        0.6029653221694322,
+        0.6097047052154195,
+        0.5944110591458805,
+        0.5751764644746789,
+        0.6449555970602526,
+        0.5541977103804484,
+        0.5573390979308389,
+        0.59079039569161,
+        0.6042306841967556
+      ]
+    }
+  },
+  "analysis": {
+    "preregistered_predictions": {
+      "P1_shipped_number_is_the_sentinel_not_a_measurement": true,
+      "P2_no_specialization_above_matched_null": false,
+      "P3_positive_control_detects_real_specialization": true,
+      "P4_effect_vanishes_when_selection_is_type_blind": true
+    },
+    "hhi_floor_for_active_agent": 0.3333333333333333,
+    "published_bound": 0.02,
+    "fraction_of_headroom_to_full_specialization": {
+      "cooldown_1": 0.004904703304802356,
+      "cooldown_3": 0.07955478957312535,
+      "cooldown_10": 0.06712761837269253,
+      "cooldown_1_typeblind": 0.01216552677198073,
+      "cooldown_3_typeblind": -0.02749290967357757,
+      "cooldown_10_typeblind": 0.0011854585510717242,
+      "forced_positive_control": 1.0
+    },
+    "verdict": "HOLDING FAILS. With the monopoly broken and the metric computed over active agents, HHI exceeds the matched-permutation null, and the excess disappears when the selection rule is made type-blind -- so it is the model's own specialisation feedback loop (template match + per-type success history), not the capacity constraint added here. Specialisation DOES emerge, weakly. Claim 6 is contradicted by its own simulation once the measurement is corrected, and must be retracted rather than restated. Report the effect WITH its magnitude: it covers only a single-digit to low-double-digit percentage of the distance from the null to full specialisation, against 100% for the forced control."
+  }
+}

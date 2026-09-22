@@ -1,0 +1,185 @@
+{
+  "experiment": "48_strategic_and_baseline_decomposition",
+  "targets": "claim 7; experiments/35a_rich_agents.py:118 (>=1 swallows level 2), :136-147 (unreachable), :76 (reputation never written), :157/159 (+/-0.1 effort). claim 8; experiments/35b_statistical_validation.py:101/108 (0.9 vs 0.8), :95-100 (self-selection is argmax, no central control arm)",
+  "timestamp": "2026-09-21T16:59:37.811246+00:00",
+  "runtime_seconds": 2.47,
+  "environment": {
+    "python": "3.13.1",
+    "numpy": "2.4.0",
+    "pythonhashseed": "42"
+  },
+  "config": {
+    "seeds_35a": 10,
+    "seeds_35b": 30,
+    "rounds": 100,
+    "agents": 30,
+    "thresholds": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7
+    ]
+  },
+  "claim_7_35a": {
+    "mean_cooperation_by_level_shipped": {
+      "level_0": 0.53,
+      "level_1": 0.30599999999999994,
+      "level_2": 0.30599999999999994
+    },
+    "level1_vs_level2_shipped": {
+      "diff": 0.0,
+      "ci95": [
+        -0.049000000000000044,
+        0.04800000000000004
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "reputation_never_written_in_shipped_code": true,
+    "mean_cooperation_by_level_repaired": {
+      "level_0": 0.53,
+      "level_1": 0.30599999999999994,
+      "level_2": 0.44899999999999995
+    },
+    "level1_vs_level2_repaired": {
+      "diff": -0.14300000000000002,
+      "ci95": [
+        -0.20099999999999996,
+        -0.08400000000000002
+      ],
+      "cohens_d": -2.01417329972876,
+      "significant": true,
+      "arrays_bit_identical": false,
+      "max_abs_per_seed_difference": 0.30000000000000004
+    },
+    "reputation_writes_after_repair": 3000,
+    "level0_vs_level1_shipped": {
+      "diff": 0.2240000000000001,
+      "ci95": [
+        0.16199999999999998,
+        0.28502499999999975
+      ],
+      "cohens_d": 3.0106995070045306,
+      "significant": true,
+      "arrays_bit_identical": false,
+      "max_abs_per_seed_difference": 0.39
+    },
+    "level0_vs_level1_effort_equalised": {
+      "diff": 0.15199999999999997,
+      "ci95": [
+        0.09900000000000009,
+        0.20400000000000001
+      ],
+      "cohens_d": 2.375773489680171,
+      "significant": true,
+      "arrays_bit_identical": false,
+      "max_abs_per_seed_difference": 0.32
+    },
+    "share_of_gap_that_is_the_effort_constant": 0.32142857142857184,
+    "fixed_threshold_sweep": [
+      {
+        "threshold": 0.3,
+        "mean_cooperation": 0.556,
+        "std": 0.07229568912920513
+      },
+      {
+        "threshold": 0.35,
+        "mean_cooperation": 0.556,
+        "std": 0.07229568912920513
+      },
+      {
+        "threshold": 0.4,
+        "mean_cooperation": 0.5469999999999999,
+        "std": 0.06733828364641056
+      },
+      {
+        "threshold": 0.45,
+        "mean_cooperation": 0.527,
+        "std": 0.09603818684946802
+      },
+      {
+        "threshold": 0.5,
+        "mean_cooperation": 0.42400000000000004,
+        "std": 0.1386602562620835
+      },
+      {
+        "threshold": 0.55,
+        "mean_cooperation": 0.35700000000000004,
+        "std": 0.07196449741983119
+      },
+      {
+        "threshold": 0.6,
+        "mean_cooperation": 0.30599999999999994,
+        "std": 0.05815687596683837
+      },
+      {
+        "threshold": 0.65,
+        "mean_cooperation": 0.28099999999999997,
+        "std": 0.04012480529547775
+      },
+      {
+        "threshold": 0.7,
+        "mean_cooperation": 0.278,
+        "std": 0.03489667287547306
+      }
+    ]
+  },
+  "claim_8_35b": {
+    "shipped_self_selection_vs_random": {
+      "diff": 0.23533333333333328,
+      "ci95": [
+        0.21099166666666658,
+        0.2593333333333334
+      ],
+      "cohens_d": 4.848039415976502,
+      "significant": true,
+      "arrays_bit_identical": false,
+      "max_abs_per_seed_difference": 0.39
+    },
+    "effort_equalised_self_selection_vs_random": {
+      "diff": 0.17266666666666663,
+      "ci95": [
+        0.15133333333333332,
+        0.19466666666666665
+      ],
+      "cohens_d": 3.890798592100655,
+      "significant": true,
+      "arrays_bit_identical": false,
+      "max_abs_per_seed_difference": 0.29000000000000004
+    },
+    "share_of_d_that_is_the_effort_constant": 0.19744905965931336,
+    "self_selection_vs_central_argmax_same_info": {
+      "diff": 0.0,
+      "ci95": [
+        -0.02499999999999991,
+        0.02567499999999982
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "mean_cooperation": {
+      "self_selection": 0.5273333333333333,
+      "random": 0.29200000000000004,
+      "central_argmax": 0.5273333333333333
+    }
+  },
+  "analysis": {
+    "preregistered_predictions": {
+      "P1_shipped_numbers_reproduce": true,
+      "P2_level2_is_dead_code_and_reputation_is_inert": true,
+      "P3_level_ordering_is_a_threshold_effect": true,
+      "P4_effort_constants_carry_a_material_share_of_both_effects": true,
+      "P5_claim8_self_selection_arm_is_a_central_argmax": true
+    },
+    "verdict": "CLAIM 7 DOWNGRADE. Its three-level comparison has two levels: the level-2 branch at 35a:136 is unreachable because :118 guards level 1 with `>= 1` and returns at :133, so levels 1 and 2 are bit-identical per seed (max difference 0.0000). The branch also reads `reputation`, which is never written anywhere in the file -- confirmed at runtime, not just by reading -- so the 'recursive theory-of-mind' arm would resolve to a constant 0.5 threshold even if it were reachable. And the surviving level-0-vs-level-1 difference is a threshold effect: swapping the whole strategic rule for a bare fixed threshold and sweeping it reproduces the published range monotonically, with the two levels landing on that curve at their effective thresholds of ~0.40 and ~0.60. 'Strategic reasoners do worse' means 'a higher volunteer threshold does worse', which is a statement about the threshold, not about reasoning. In both experiments a hardcoded effort literal carries part of the headline: 32% of claim 7's level-0/level-1 gap is the +/-0.1 swing in `calculate_effort` (35a:157/159), and 20% of claim 8's d = 4.05 is the 0.9-vs-0.8 difference at 35b:101/108. Both effects survive equalisation at reduced size; the corrected figures are +0.1520 and d = 3.89. CLAIM 8 RESTATE. Its self-selection arm is bit-identical per seed to a CENTRAL oracle taking argmax on the same capability signal at the same effort, because the volunteer filter never excludes the argmax agent and the score's difficulty term is constant within a round. So the comparison is 'argmax beats uniform random', which is arithmetic, plus an effort literal. It is not evidence about self-selection, and d = 4.05 should not be cited as though it were."
+  }
+}
