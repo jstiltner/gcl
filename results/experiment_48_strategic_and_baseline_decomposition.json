@@ -1,16 +1,16 @@
 {
   "experiment": "48_strategic_and_baseline_decomposition",
   "targets": "claim 7; experiments/35a_rich_agents.py:118 (>=1 swallows level 2), :136-147 (unreachable), :76 (reputation never written), :157/159 (+/-0.1 effort). claim 8; experiments/35b_statistical_validation.py:101/108 (0.9 vs 0.8), :95-100 (self-selection is argmax, no central control arm)",
-  "timestamp": "2026-09-21T16:59:37.811246+00:00",
-  "runtime_seconds": 2.47,
+  "timestamp": "2026-09-23T02:27:45.944227+00:00",
+  "runtime_seconds": 8.72,
   "environment": {
     "python": "3.13.1",
     "numpy": "2.4.0",
-    "pythonhashseed": "42"
+    "pythonhashseed": "0"
   },
   "config": {
     "seeds_35a": 10,
-    "seeds_35b": 30,
+    "seeds_35b": 100,
     "rounds": 100,
     "agents": 30,
     "thresholds": [
@@ -133,33 +133,33 @@
   },
   "claim_8_35b": {
     "shipped_self_selection_vs_random": {
-      "diff": 0.23533333333333328,
+      "diff": 0.23120000000000002,
       "ci95": [
-        0.21099166666666658,
-        0.2593333333333334
+        0.21550000000000002,
+        0.24699999999999994
       ],
-      "cohens_d": 4.848039415976502,
+      "cohens_d": 4.046233482582557,
       "significant": true,
       "arrays_bit_identical": false,
-      "max_abs_per_seed_difference": 0.39
+      "max_abs_per_seed_difference": 0.4600000000000001
     },
     "effort_equalised_self_selection_vs_random": {
-      "diff": 0.17266666666666663,
+      "diff": 0.17430000000000007,
       "ci95": [
-        0.15133333333333332,
-        0.19466666666666665
+        0.15889999999999999,
+        0.19019999999999998
       ],
-      "cohens_d": 3.890798592100655,
+      "cohens_d": 3.1915472440336274,
       "significant": true,
       "arrays_bit_identical": false,
-      "max_abs_per_seed_difference": 0.29000000000000004
+      "max_abs_per_seed_difference": 0.4
     },
-    "share_of_d_that_is_the_effort_constant": 0.19744905965931336,
+    "share_of_d_that_is_the_effort_constant": 0.21123008403445265,
     "self_selection_vs_central_argmax_same_info": {
       "diff": 0.0,
       "ci95": [
-        -0.02499999999999991,
-        0.02567499999999982
+        -0.018102500000000056,
+        0.01880000000000004
       ],
       "cohens_d": 0.0,
       "significant": false,
@@ -167,9 +167,9 @@
       "max_abs_per_seed_difference": 0.0
     },
     "mean_cooperation": {
-      "self_selection": 0.5273333333333333,
-      "random": 0.29200000000000004,
-      "central_argmax": 0.5273333333333333
+      "self_selection": 0.5162,
+      "random": 0.285,
+      "central_argmax": 0.5162
     }
   },
   "analysis": {
@@ -180,6 +180,6 @@
       "P4_effort_constants_carry_a_material_share_of_both_effects": true,
       "P5_claim8_self_selection_arm_is_a_central_argmax": true
     },
-    "verdict": "CLAIM 7 DOWNGRADE. Its three-level comparison has two levels: the level-2 branch at 35a:136 is unreachable because :118 guards level 1 with `>= 1` and returns at :133, so levels 1 and 2 are bit-identical per seed (max difference 0.0000). The branch also reads `reputation`, which is never written anywhere in the file -- confirmed at runtime, not just by reading -- so the 'recursive theory-of-mind' arm would resolve to a constant 0.5 threshold even if it were reachable. And the surviving level-0-vs-level-1 difference is a threshold effect: swapping the whole strategic rule for a bare fixed threshold and sweeping it reproduces the published range monotonically, with the two levels landing on that curve at their effective thresholds of ~0.40 and ~0.60. 'Strategic reasoners do worse' means 'a higher volunteer threshold does worse', which is a statement about the threshold, not about reasoning. In both experiments a hardcoded effort literal carries part of the headline: 32% of claim 7's level-0/level-1 gap is the +/-0.1 swing in `calculate_effort` (35a:157/159), and 20% of claim 8's d = 4.05 is the 0.9-vs-0.8 difference at 35b:101/108. Both effects survive equalisation at reduced size; the corrected figures are +0.1520 and d = 3.89. CLAIM 8 RESTATE. Its self-selection arm is bit-identical per seed to a CENTRAL oracle taking argmax on the same capability signal at the same effort, because the volunteer filter never excludes the argmax agent and the score's difficulty term is constant within a round. So the comparison is 'argmax beats uniform random', which is arithmetic, plus an effort literal. It is not evidence about self-selection, and d = 4.05 should not be cited as though it were."
+    "verdict": "CLAIM 7 DOWNGRADE. Its three-level comparison has two levels: the level-2 branch at 35a:136 is unreachable because :118 guards level 1 with `>= 1` and returns at :133, so levels 1 and 2 are bit-identical per seed (max difference 0.0000). The branch also reads `reputation`, which is never written anywhere in the file -- confirmed at runtime, not just by reading -- so the 'recursive theory-of-mind' arm would resolve to a constant 0.5 threshold even if it were reachable. And the surviving level-0-vs-level-1 difference is a threshold effect: swapping the whole strategic rule for a bare fixed threshold and sweeping it reproduces the published range monotonically, with the two levels landing on that curve at their effective thresholds of ~0.40 and ~0.60. 'Strategic reasoners do worse' means 'a higher volunteer threshold does worse', which is a statement about the threshold, not about reasoning. In both experiments a hardcoded effort literal carries part of the headline: 32% of claim 7's level-0/level-1 gap is the +/-0.1 swing in `calculate_effort` (35a:157/159), and 21% of claim 8's d = 4.05 is the 0.9-vs-0.8 difference at 35b:101/108. Both effects survive equalisation at reduced size; the corrected figures are +0.1520 and d = 3.19. CLAIM 8 RESTATE. Its self-selection arm is bit-identical per seed to a CENTRAL oracle taking argmax on the same capability signal at the same effort, because the volunteer filter never excludes the argmax agent and the score's difficulty term is constant within a round. So the comparison is 'argmax beats uniform random', which is arithmetic, plus an effort literal. It is not evidence about self-selection, and d = 4.05 should not be cited as though it were."
   }
 }

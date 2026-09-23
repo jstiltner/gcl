@@ -1,5 +1,154 @@
 # Changelog
 
+## 2026-09-22 (two-arm decomposition) — eight claims re-run correctly; seven do not survive
+
+### Scope
+
+The 2026-09-21 pass identified eight claim rows whose experiments never import `gcl` and whose
+two arms looked like they might not differ in the way the claim says. Rather than retracting on
+the code defect alone, each was **re-run correctly** and the *holding* evaluated against the
+corrected run. Four new experiments:
+
+| exp | targets | published claim |
+|---|---|---|
+| `46_specialization_corrected.py` | claim 6 | specialization does not emerge |
+| `47_oracle_decomposition.py` | claims 1, 2, 3 | emergent motivation; information null; phase boundary |
+| `48_strategic_and_baseline_decomposition.py` | claims 7, 8 | simple beats strategic; self-selection vs baselines |
+| `49_marl_comparison_corrected.py` | claims 9a, 10a | mid-field vs MARL; sample efficiency |
+
+Outcome: **1 and 6 retracted, 9a and 10a retracted, 3 / 7 / 8 restated or downgraded, 2's
+conclusion kept on replaced evidence.** Every corrected experiment first reproduces its published
+number exactly, so nothing below floats free of the record.
+
+### Method
+
+One question found all eight: **in a two-arm comparison, what actually differs between the arms?**
+The decisive form is to make the arms identical in the one respect the claim is about and require
+the effect to go to **exactly** zero — `np.array_equal` on the per-seed arrays, not "close to".
+It came back bit-identical five times:
+
+| comparison | shipped effect | after equalising |
+|---|---|---|
+| claim 1: self-selection vs oracle, relabel the oracle's pick as volunteered | +0.0651, d = 1.68 | **+0.0000, bit-identical** |
+| claim 2: self-selection vs oracle at σ = 0 | +0.0000, CI [−0.013, +0.013] | **bit-identical — the CI is a bootstrap of an array against itself** |
+| claim 7: strategic level 1 vs level 2 | (published as distinct) | **bit-identical; `:136` is unreachable** |
+| claim 8: self-selection vs central argmax on the same signal | d = 4.05 vs random | **+0.0000, bit-identical** |
+| claim 9a: GCL vs a constant all-volunteer policy | GCL 3rd of 5 | **bit-identical, every seed, every episode** |
+
+### What each one turned out to be
+
+**Claim 1 — a boolean times a constant.** The advantage is the `volunteered` flag, which reaches
+the outcome through `ownership_bonus = 0.05 if volunteered else 0.0` (`40_corrected_oracle.py:75`)
+and a `commitment_level` update gated on the same flag (`:60-68`). Sweeping the bonus traces the
+headline monotonically (0.00 → +0.0304 … **0.05 → +0.0651** … 0.20 → +0.1277); remove the gate too
+and bonus 0.00 gives bit-identical arms. **+0.0304 of the effect is the gated commitment update,
++0.0347 is the bonus constant.** The premise is defensible; reporting it as a measured output with
+a CI is not.
+
+**Claim 2 — the only survivor.** At σ = 0 the two arms are one computation run twice, so the
+published null could not have come out otherwise. Re-tested on the diagonal of a 5×5 noise grid
+with equal but **independently drawn** noise: +0.0000 / +0.0024 / +0.0059 / −0.0270 / +0.0019,
+none significant. The conclusion stands; the evidence for it is new.
+
+**Claim 3 — the boundary is real and is about signal quality.** A *central* oracle assigning by
+argmax on the agents' own `perceived_capability` is bit-identical to self-selection at **all 25
+grid cells**. So the boundary sits at σ_oracle = σ_self because that is where the coordinator's
+estimate becomes the worse one. "Argmax on the better estimate wins" is true; it is not a finding
+about decentralisation.
+
+**Claim 6 — the correction runs *against* the repo.** Three layers. The published `HHI < 0.02` is
+**~17× below the metric's floor** of 1/3 for any agent that ever acts; it is reachable only via the
+`total == 0 → 0.0` sentinel, averaged over all 30 agents. Exactly **one** agent ever acts: `get_volunteers`
+returns a single `max(...)`, and the model's only capacity constraint is inert —
+`get_available_agents` filters on `resources > 0` (`structures/base.py:138-140`), but
+`Agent.resources` (`agents/agent.py:84`) is **written nowhere in the codebase** and that filter is
+its only reader. Nothing rotates, so the headline is 29 zeros averaged with one agent's real HHI.
+Corrected — cooldown to break the monopoly, score only active agents, compare against a
+**matched permutation null** holding each agent's task count and the global type mix fixed —
+specialization **does** emerge: Δ **+0.0390** / **+0.0634** / **+0.0399** at cooldown 1/3/10, all
+CIs excluding zero at 30 seeds. The "robust across sharing rates, horizons, scarcity" column is the
+same artefact repeated: Exp 33 reports 0.0333 / 0.01137 / 0.01140 / 0.01126 / 0.01134, 34C reports
+0.01127–0.01143 across its whole frontier, 34D's max is 0.01134, 34E gives 0.01131 / 0.01309 /
+0.01776 — one active agent's HHI over 30, with the first being **exactly 1/30**. A metric that is
+near-constant across four independent sweeps was editorial rule 4 firing and being read as
+robustness. **33b is the sole exception** (0.331–0.511, so more than one agent acts) and is
+untested against the null. A forced-assignment positive control gives Δ +0.4279, and a
+**type-blind mechanism ablation** collapses Δ to +0.0046 / −0.0033 / −0.0048, which is what shows
+the effect is the model's own feedback loop and not the cooldown. Reported with its magnitude:
+**6.0% / 10.2% / 7.4%** of the distance from the null to full specialization. The claim is
+contradicted by its own simulation.
+
+**Claim 7 — two levels, not three, and a third of the gap is a literal.** `35a_rich_agents.py:118`
+guards level 1 with `>= 1` and returns at `:133`, so `:136` is dead. The dead branch reads
+`self.reputation`, which is declared at `:76` and **never written** — confirmed at runtime.
+Repaired, level 2 scores 0.4490, between the other two. Swapping the whole strategic rule for a
+bare fixed threshold reproduces the published range monotonically (0.30 → 0.5560 … **0.60 →
+0.3060** … 0.70 → 0.2780), with level 1 landing on that curve to four decimals. **32%** of the
+0.224 gap is `calculate_effort`'s ±0.1 swing (`:157`/`:159`).
+
+**Claim 8 — argmax beats uniform random.** The self-selection arm is bit-identical to a central
+coordinator taking `max(agents, key=effective_capability)`, because the volunteer filter never
+excludes the argmax agent. **21%** of d = 4.05 is `effort = 0.9` (`35b:101`) against `0.8`
+(`:108`); equalised, d = 3.19. The p < 10⁻⁷² describes sampling noise around a conclusion fixed by
+the selection rule.
+
+**Claims 9a / 10a — the environment does the selecting, so the comparison cannot rank.** All five
+`step()` methods end `max(volunteers, key=capability)`, so a policy picks only the volunteer *set*,
+reward is monotone non-decreasing in that set, and "everyone volunteers" is optimal by
+construction. An `AllVolunteer` arm — no learning, no observation — reaches **0.5516** and is
+beaten on **0 of 240,000** paired episodes. GCL reaches 0.5516 and is **bit-identical** to it: its
+rule (`:67-69`) always admits the most capable agent and `max` discards the rest. The field spans
+**0.013** (IQL 0.5513 / QMIX 0.5396 / MAPPO 0.5388 / random 0.5384) above a single-volunteer floor
+of 0.3757. Separately, raising the random arm's `effort` from `0.8` (`:408`) to the `0.9` every
+other arm uses moves random **from last to second**. And the real `qmix.py` / `mappo.py` sitting in
+the same directory are **never imported by the runner** — `:35` imports only `Agent` — so "QMIX"
+and "MAPPO" are tabular stand-ins; wired in for real they land at 0.5229 and 0.5260, inside the
+same band. Row 10a's 25–50× multiples are a metric artefact: `episodes_to_50` is a **cumulative
+running mean** (`:453-455`), so a seed that succeeds on episode 1 scores 0 and the mean over seeds
+is set by the seeds that missed. Under the trailing-window rate the headline already uses, the
+worst ratio falls from 49.95× to **1.61×**.
+
+### Defects in this pass's own harnesses, found and fixed before publishing
+
+Three of Exp 49's five pre-registered predictions failed on the first run. All three failures were
+mine:
+
+1. The effort knob was initialised to `0.8` and never set to `0.9`, so the "effort-equalised" arm
+   silently re-ran the shipped one and produced an identical number.
+2. `SimpleMAPPO.get_actions` returns `(actions, log_probs)` while the other four arms return a
+   bare list, so the recorded action vector was a tuple and its volunteer set came out empty —
+   MAPPO scored 0.0000.
+3. P3 and P5 were scored on the shipped unpaired harness, where arms never see the same task
+   sequence and the reward is a coin. At 5 seeds its noise put the **ceiling arm below IQL** and
+   **real QMIX above the ceiling**, both impossible by construction. Fixed by adding a paired task
+   tape scored on the realised success probability rather than its coin flip, which also makes the
+   dominance checkable episode-by-episode instead of on average.
+
+Two predictions were amended rather than silently relaxed, with the reason and the observed
+numbers recorded in the source: Exp 46's P1 (`n_active == 1.0` → `<= 2.0`; 1 of 30 seeds had two
+actors) and P2/P4 (scored one-sided, since they are directional); Exp 49's P3 (moved to the paired
+run) and P4 (a median clause dropped that tested something row 10a never asserts). Where an
+amendment makes a prediction **easier** to confirm, that is stated in the file.
+
+### Reproducibility
+
+All four experiments are bit-identical across `PYTHONHASHSEED` 0, 1 and 42, compared on the
+per-seed arrays rather than on the summary statistics.
+
+### Still open, not addressed here
+
+- **33b** has not been re-run through the matched-permutation null. It is the only one of claim 6's
+  supporting experiments whose numbers are above the metric's floor, so it is the only one that
+  might carry real information; it is **unsupported, not refuted**. (33, 34C, 34D and 34E are all
+  the sentinel artefact and are covered by the retraction.)
+- 14 experiments have results but no row in `docs/CLAIMS.md`, in violation of that file's own
+  rule: 24, 25, 26, 26b, 27, 30, 31, 32, 34a, 34b, 35c, 35d, 35e, 38. (`35c` reuses claim 6's
+  broken HHI metric.)
+- Exps 37 and 38 define their own `QMIXAgent` classes and need the same "is the baseline real?"
+  check that sank 9a/10a. Row 17b already covers 37.
+- Claim 11 (Exp 09) does import `gcl` and was excluded from this pass; it is unaudited.
+- `ci-reproduce.yml` still has no `pull_request` trigger, so CI has never validated a PR here.
+
 ## 2026-09-21 (reproducibility) — the CI badge was never reproducible; claim 14 downgraded from Validated to not-evidence
 
 ### How this was found

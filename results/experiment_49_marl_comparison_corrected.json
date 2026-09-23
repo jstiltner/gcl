@@ -1,0 +1,1201 @@
+{
+  "experiment": "49_marl_comparison_corrected",
+  "targets": "claims 9a, 10a; experiments/36_marl_comparison/run_comparison.py :83-86/:151-154/:230-233/:318-321/:406-409 (harness does the selection), :408 (effort 0.8 vs 0.9), :453-455 (cumulative running mean), :35 (real qmix.py/mappo.py never imported)",
+  "timestamp": "2026-09-23T01:25:20.873678+00:00",
+  "runtime_seconds": 195.61,
+  "environment": {
+    "python": "3.13.1",
+    "numpy": "2.4.0",
+    "pythonhashseed": "0"
+  },
+  "config": {
+    "episodes": 2000,
+    "seeds": 20,
+    "agents": 30,
+    "real_episodes": 300,
+    "real_seeds": 3,
+    "skip_real": false
+  },
+  "note_on_pairing": "run_single_experiment draws difficulty from the global RNG after each constructor reseeds it, and the policies consume that same stream at different rates, so arms never see identical task sequences. The shipped behaviour is kept unchanged in `arms_shipped` / `arms_effort_equalised` / `arms_ceiling_and_floor` so the validity check against the published numbers stays exact. `arms_paired_expectation_scored` reruns every arm against one shared difficulty tape and scores the realised success PROBABILITY rather than its coin flip; P3 and P5 are scored there. The unpaired noise is not small: at 5 seeds it put the ceiling arm below iql and put real QMIX above the ceiling, both of which are impossible by construction. Any ranking read off the shipped harness at 20 seeds should be treated as within noise unless the paired run agrees.",
+  "arms_shipped": {
+    "gcl_self_selection": {
+      "final_cooperation": {
+        "mean": 0.5335000000000001,
+        "std": 0.060894645862644134,
+        "median": 0.555,
+        "iqr": [
+          0.4875,
+          0.57
+        ],
+        "min": 0.39,
+        "max": 0.63,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.05,
+        "std": 3.8997300851266754,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.0
+        ],
+        "min": 0.0,
+        "max": 15.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 105.55,
+        "std": 21.55403247166232,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 188.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.58,
+        0.57,
+        0.52,
+        0.47,
+        0.57,
+        0.45,
+        0.63,
+        0.47,
+        0.53,
+        0.6,
+        0.49,
+        0.48,
+        0.61,
+        0.57,
+        0.55,
+        0.56,
+        0.57,
+        0.56,
+        0.39,
+        0.5
+      ]
+    },
+    "qmix": {
+      "final_cooperation": {
+        "mean": 0.542,
+        "std": 0.06685412241747345,
+        "median": 0.565,
+        "iqr": [
+          0.4975,
+          0.5825
+        ],
+        "min": 0.34,
+        "max": 0.62,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 102.4,
+        "std": 446.6779600562356,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.5
+        ],
+        "min": 0.0,
+        "max": 2000.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 107.1,
+        "std": 17.713806687677867,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.75
+        ],
+        "min": 99.0,
+        "max": 157.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.61,
+        0.47,
+        0.34,
+        0.48,
+        0.55,
+        0.58,
+        0.47,
+        0.62,
+        0.56,
+        0.6,
+        0.49,
+        0.58,
+        0.57,
+        0.59,
+        0.59,
+        0.56,
+        0.57,
+        0.5,
+        0.53,
+        0.58
+      ]
+    },
+    "mappo": {
+      "final_cooperation": {
+        "mean": 0.522,
+        "std": 0.0610090588614338,
+        "median": 0.535,
+        "iqr": [
+          0.475,
+          0.5625
+        ],
+        "min": 0.39,
+        "max": 0.62,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.05,
+        "std": 3.8997300851266754,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.0
+        ],
+        "min": 0.0,
+        "max": 15.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 105.85,
+        "std": 22.316562176294564,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 191.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.58,
+        0.55,
+        0.5,
+        0.45,
+        0.56,
+        0.45,
+        0.62,
+        0.46,
+        0.53,
+        0.59,
+        0.46,
+        0.48,
+        0.61,
+        0.57,
+        0.54,
+        0.55,
+        0.55,
+        0.51,
+        0.39,
+        0.49
+      ]
+    },
+    "iql": {
+      "final_cooperation": {
+        "mean": 0.5525,
+        "std": 0.06781359900879996,
+        "median": 0.575,
+        "iqr": [
+          0.4975,
+          0.6
+        ],
+        "min": 0.37,
+        "max": 0.64,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 51.75,
+        "std": 220.19438182994972,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.5
+        ],
+        "min": 0.0,
+        "max": 987.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 106.7,
+        "std": 17.290398917805284,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 155.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.61,
+        0.48,
+        0.37,
+        0.48,
+        0.55,
+        0.58,
+        0.47,
+        0.64,
+        0.57,
+        0.62,
+        0.49,
+        0.59,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.57,
+        0.5,
+        0.53,
+        0.6
+      ]
+    },
+    "random": {
+      "final_cooperation": {
+        "mean": 0.47450000000000003,
+        "std": 0.044777226354476216,
+        "median": 0.46,
+        "iqr": [
+          0.4475,
+          0.5025
+        ],
+        "min": 0.41,
+        "max": 0.57,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.45,
+        "std": 5.933624081186986,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.5
+        ],
+        "min": 0.0,
+        "max": 27.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 172.55,
+        "std": 90.3900757244604,
+        "median": 159.5,
+        "iqr": [
+          99.0,
+          212.25
+        ],
+        "min": 99.0,
+        "max": 474.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.57,
+        0.44,
+        0.45,
+        0.43,
+        0.52,
+        0.45,
+        0.42,
+        0.49,
+        0.57,
+        0.46,
+        0.43,
+        0.47,
+        0.46,
+        0.5,
+        0.46,
+        0.46,
+        0.51,
+        0.51,
+        0.48,
+        0.41
+      ]
+    }
+  },
+  "arms_effort_equalised": {
+    "gcl_self_selection": {
+      "final_cooperation": {
+        "mean": 0.5335000000000001,
+        "std": 0.060894645862644134,
+        "median": 0.555,
+        "iqr": [
+          0.4875,
+          0.57
+        ],
+        "min": 0.39,
+        "max": 0.63,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.05,
+        "std": 3.8997300851266754,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.0
+        ],
+        "min": 0.0,
+        "max": 15.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 105.55,
+        "std": 21.55403247166232,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 188.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.58,
+        0.57,
+        0.52,
+        0.47,
+        0.57,
+        0.45,
+        0.63,
+        0.47,
+        0.53,
+        0.6,
+        0.49,
+        0.48,
+        0.61,
+        0.57,
+        0.55,
+        0.56,
+        0.57,
+        0.56,
+        0.39,
+        0.5
+      ]
+    },
+    "qmix": {
+      "final_cooperation": {
+        "mean": 0.542,
+        "std": 0.06685412241747345,
+        "median": 0.565,
+        "iqr": [
+          0.4975,
+          0.5825
+        ],
+        "min": 0.34,
+        "max": 0.62,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 102.4,
+        "std": 446.6779600562356,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.5
+        ],
+        "min": 0.0,
+        "max": 2000.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 107.1,
+        "std": 17.713806687677867,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.75
+        ],
+        "min": 99.0,
+        "max": 157.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.61,
+        0.47,
+        0.34,
+        0.48,
+        0.55,
+        0.58,
+        0.47,
+        0.62,
+        0.56,
+        0.6,
+        0.49,
+        0.58,
+        0.57,
+        0.59,
+        0.59,
+        0.56,
+        0.57,
+        0.5,
+        0.53,
+        0.58
+      ]
+    },
+    "mappo": {
+      "final_cooperation": {
+        "mean": 0.522,
+        "std": 0.0610090588614338,
+        "median": 0.535,
+        "iqr": [
+          0.475,
+          0.5625
+        ],
+        "min": 0.39,
+        "max": 0.62,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.05,
+        "std": 3.8997300851266754,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.0
+        ],
+        "min": 0.0,
+        "max": 15.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 105.85,
+        "std": 22.316562176294564,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 191.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.58,
+        0.55,
+        0.5,
+        0.45,
+        0.56,
+        0.45,
+        0.62,
+        0.46,
+        0.53,
+        0.59,
+        0.46,
+        0.48,
+        0.61,
+        0.57,
+        0.54,
+        0.55,
+        0.55,
+        0.51,
+        0.39,
+        0.49
+      ]
+    },
+    "iql": {
+      "final_cooperation": {
+        "mean": 0.5525,
+        "std": 0.06781359900879996,
+        "median": 0.575,
+        "iqr": [
+          0.4975,
+          0.6
+        ],
+        "min": 0.37,
+        "max": 0.64,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 51.75,
+        "std": 220.19438182994972,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.5
+        ],
+        "min": 0.0,
+        "max": 987.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 106.7,
+        "std": 17.290398917805284,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 155.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.61,
+        0.48,
+        0.37,
+        0.48,
+        0.55,
+        0.58,
+        0.47,
+        0.64,
+        0.57,
+        0.62,
+        0.49,
+        0.59,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.57,
+        0.5,
+        0.53,
+        0.6
+      ]
+    },
+    "random": {
+      "final_cooperation": {
+        "mean": 0.5475000000000001,
+        "std": 0.04929769931644617,
+        "median": 0.54,
+        "iqr": [
+          0.5175000000000001,
+          0.56
+        ],
+        "min": 0.48,
+        "max": 0.64,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.25,
+        "std": 5.937171043518958,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.5
+        ],
+        "min": 0.0,
+        "max": 27.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 104.65,
+        "std": 18.241869133224373,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 177.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.64,
+        0.52,
+        0.56,
+        0.49,
+        0.56,
+        0.52,
+        0.48,
+        0.54,
+        0.63,
+        0.51,
+        0.52,
+        0.53,
+        0.55,
+        0.55,
+        0.55,
+        0.49,
+        0.62,
+        0.54,
+        0.64,
+        0.51
+      ]
+    }
+  },
+  "arms_ceiling_and_floor": {
+    "all_volunteer": {
+      "final_cooperation": {
+        "mean": 0.5335000000000001,
+        "std": 0.060894645862644134,
+        "median": 0.555,
+        "iqr": [
+          0.4875,
+          0.57
+        ],
+        "min": 0.39,
+        "max": 0.63,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.05,
+        "std": 3.8997300851266754,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          1.0
+        ],
+        "min": 0.0,
+        "max": 15.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 105.55,
+        "std": 21.55403247166232,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 188.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.58,
+        0.57,
+        0.52,
+        0.47,
+        0.57,
+        0.45,
+        0.63,
+        0.47,
+        0.53,
+        0.6,
+        0.49,
+        0.48,
+        0.61,
+        0.57,
+        0.55,
+        0.56,
+        0.57,
+        0.56,
+        0.39,
+        0.5
+      ]
+    },
+    "single_random_volunteer": {
+      "final_cooperation": {
+        "mean": 0.38750000000000007,
+        "std": 0.05485627153130068,
+        "median": 0.395,
+        "iqr": [
+          0.35,
+          0.4125
+        ],
+        "min": 0.29,
+        "max": 0.49,
+        "n": 20
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 601.05,
+        "std": 939.6216749869402,
+        "median": 1.0,
+        "iqr": [
+          0.0,
+          2000.0
+        ],
+        "min": 0.0,
+        "max": 2000.0,
+        "n": 20
+      },
+      "episodes_to_50_windowed": {
+        "mean": 1567.7,
+        "std": 609.7813326793553,
+        "median": 2000.0,
+        "iqr": [
+          1280.25,
+          2000.0
+        ],
+        "min": 131.0,
+        "max": 2000.0,
+        "n": 20
+      },
+      "per_seed_final": [
+        0.4,
+        0.4,
+        0.29,
+        0.41,
+        0.31,
+        0.37,
+        0.45,
+        0.32,
+        0.4,
+        0.48,
+        0.42,
+        0.35,
+        0.35,
+        0.37,
+        0.4,
+        0.38,
+        0.39,
+        0.45,
+        0.49,
+        0.32
+      ]
+    }
+  },
+  "arms_paired_expectation_scored": {
+    "gcl_self_selection": {
+      "expected_cooperation": {
+        "mean": 0.551611918899134,
+        "std": 0.014389484563042478,
+        "median": 0.5523614525755416,
+        "iqr": [
+          0.5450763555559538,
+          0.5609505324882283
+        ],
+        "min": 0.5050763708893602,
+        "max": 0.5727209501526225,
+        "n": 20
+      },
+      "per_seed_expected": [
+        0.5600119854244531,
+        0.5451677613031317,
+        0.5050763708893602,
+        0.5442683098075698,
+        0.5645844916365528,
+        0.5496523235619859,
+        0.5576254071454452,
+        0.5606038775669065,
+        0.5554599893816365,
+        0.5630490385751679,
+        0.5458362604669333,
+        0.5495663046378049,
+        0.5473996620278944,
+        0.5619904972521939,
+        0.54480213831442,
+        0.5678528781440875,
+        0.5414863396554886,
+        0.5400132104499256,
+        0.5727209501526225,
+        0.5550705815890972
+      ]
+    },
+    "qmix": {
+      "expected_cooperation": {
+        "mean": 0.5396263672624195,
+        "std": 0.01592299745791435,
+        "median": 0.5423674597421508,
+        "iqr": [
+          0.5290510946304526,
+          0.5517772055735239
+        ],
+        "min": 0.5027157972296065,
+        "max": 0.5601918310413555,
+        "n": 20
+      },
+      "per_seed_expected": [
+        0.5583013247298162,
+        0.5219609199906902,
+        0.5027157972296065,
+        0.5321112368632968,
+        0.5583843417476791,
+        0.5243262693827117,
+        0.5512026613811327,
+        0.5442845146066084,
+        0.5535008381506978,
+        0.5563918492881058,
+        0.5193532696466218,
+        0.5404504048776934,
+        0.5397351783627696,
+        0.5470958739171122,
+        0.5306260363796996,
+        0.5479136941189789,
+        0.5221065975628484,
+        0.5316671535489754,
+        0.5601918310413555,
+        0.5502075524219903
+      ]
+    },
+    "mappo": {
+      "expected_cooperation": {
+        "mean": 0.5388269456842882,
+        "std": 0.0169275498362469,
+        "median": 0.5389602073637023,
+        "iqr": [
+          0.5294383704342149,
+          0.552790580486487
+        ],
+        "min": 0.4914556737166091,
+        "max": 0.5612062456710831,
+        "n": 20
+      },
+      "per_seed_expected": [
+        0.5530073240699591,
+        0.529662346626679,
+        0.4914556737166091,
+        0.5287664418568225,
+        0.5612062456710831,
+        0.5380648846986282,
+        0.5431435228183484,
+        0.5508981471973311,
+        0.5527183326253295,
+        0.5567247617855653,
+        0.5219635642434552,
+        0.5344127490253903,
+        0.5398555300287763,
+        0.5573324938389251,
+        0.5326968691571584,
+        0.5499342585993824,
+        0.525542036778391,
+        0.519730331948226,
+        0.5551077890063817,
+        0.5343156099933212
+      ]
+    },
+    "iql": {
+      "expected_cooperation": {
+        "mean": 0.5512718595167763,
+        "std": 0.014306839831297472,
+        "median": 0.5519438330210773,
+        "iqr": [
+          0.5444961669847013,
+          0.560826812025053
+        ],
+        "min": 0.5050476909761246,
+        "max": 0.5717156958524865,
+        "n": 20
+      },
+      "per_seed_expected": [
+        0.5597456416752111,
+        0.5444189352708833,
+        0.5050476909761246,
+        0.5441346342488489,
+        0.5645021452126548,
+        0.5496382347052284,
+        0.5571252887406061,
+        0.5604817555674613,
+        0.5554538428389185,
+        0.5626442706429301,
+        0.5455698897886059,
+        0.5495663046378049,
+        0.5471957655991762,
+        0.5618619813978282,
+        0.5445219108893073,
+        0.5672162934138533,
+        0.5411497778015566,
+        0.5391976997391128,
+        0.5717156958524865,
+        0.5542494313369261
+      ]
+    },
+    "random": {
+      "expected_cooperation": {
+        "mean": 0.5383927122520712,
+        "std": 0.017720884728401266,
+        "median": 0.5415304801708194,
+        "iqr": [
+          0.5295017200370364,
+          0.5513977148401581
+        ],
+        "min": 0.4876423797620323,
+        "max": 0.56256551496127,
+        "n": 20
+      },
+      "per_seed_expected": [
+        0.5544368979006404,
+        0.5267003782945191,
+        0.4876423797620323,
+        0.5302597691856278,
+        0.56256551496127,
+        0.5437152578140119,
+        0.5442464030675631,
+        0.5498445579104949,
+        0.5510855714333586,
+        0.5523341450605567,
+        0.5272275725912622,
+        0.5345165931197464,
+        0.5393457025276268,
+        0.5554891132719956,
+        0.5302817479178377,
+        0.5507047840145071,
+        0.5200110309958802,
+        0.518225896063469,
+        0.5573579942230239,
+        0.5318629349259986
+      ]
+    },
+    "all_volunteer": {
+      "expected_cooperation": {
+        "mean": 0.551611918899134,
+        "std": 0.014389484563042478,
+        "median": 0.5523614525755416,
+        "iqr": [
+          0.5450763555559538,
+          0.5609505324882283
+        ],
+        "min": 0.5050763708893602,
+        "max": 0.5727209501526225,
+        "n": 20
+      },
+      "per_seed_expected": [
+        0.5600119854244531,
+        0.5451677613031317,
+        0.5050763708893602,
+        0.5442683098075698,
+        0.5645844916365528,
+        0.5496523235619859,
+        0.5576254071454452,
+        0.5606038775669065,
+        0.5554599893816365,
+        0.5630490385751679,
+        0.5458362604669333,
+        0.5495663046378049,
+        0.5473996620278944,
+        0.5619904972521939,
+        0.54480213831442,
+        0.5678528781440875,
+        0.5414863396554886,
+        0.5400132104499256,
+        0.5727209501526225,
+        0.5550705815890972
+      ]
+    },
+    "single_random_volunteer": {
+      "expected_cooperation": {
+        "mean": 0.37566393095986467,
+        "std": 0.01843470964489363,
+        "median": 0.37273915182288236,
+        "iqr": [
+          0.36808788081552063,
+          0.38686881776671556
+        ],
+        "min": 0.3355120595766957,
+        "max": 0.41382986374396435,
+        "n": 20
+      },
+      "per_seed_expected": [
+        0.41382986374396435,
+        0.3705416478471982,
+        0.3355120595766957,
+        0.349862306427424,
+        0.3861653689373115,
+        0.370468958418716,
+        0.39203249342476637,
+        0.3912455969575543,
+        0.3648121127555984,
+        0.4040247541445019,
+        0.38169815628275233,
+        0.37409470807347023,
+        0.3691798035021614,
+        0.388910680109886,
+        0.378227005028762,
+        0.35430955473698605,
+        0.3713835955722945,
+        0.3596013066207388,
+        0.3861881969856587,
+        0.37119045005085183
+      ]
+    },
+    "_dominance": {
+      "episodes_compared": 240000,
+      "episodes_beating_ceiling": 0
+    },
+    "_bit_identical_to_ceiling": [
+      "gcl_self_selection"
+    ]
+  },
+  "arms_real_marl_reduced_scale": {
+    "qmix_real": {
+      "final_cooperation": {
+        "mean": 0.49333333333333335,
+        "std": 0.035118845842842465,
+        "median": 0.49,
+        "iqr": [
+          0.475,
+          0.51
+        ],
+        "min": 0.46,
+        "max": 0.53,
+        "n": 3
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 2.0,
+        "std": 2.6457513110645907,
+        "median": 1.0,
+        "iqr": [
+          0.5,
+          3.0
+        ],
+        "min": 0.0,
+        "max": 5.0,
+        "n": 3
+      },
+      "episodes_to_50_windowed": {
+        "mean": 99.0,
+        "std": 0.0,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 99.0,
+        "n": 3
+      },
+      "per_seed_final": [
+        0.53,
+        0.49,
+        0.46
+      ]
+    },
+    "mappo_real": {
+      "final_cooperation": {
+        "mean": 0.5499999999999999,
+        "std": 0.04358898943540671,
+        "median": 0.53,
+        "iqr": [
+          0.525,
+          0.565
+        ],
+        "min": 0.52,
+        "max": 0.6,
+        "n": 3
+      },
+      "episodes_to_50_shipped_cumulative": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0,
+        "iqr": [
+          1.0,
+          1.0
+        ],
+        "min": 1.0,
+        "max": 1.0,
+        "n": 3
+      },
+      "episodes_to_50_windowed": {
+        "mean": 99.0,
+        "std": 0.0,
+        "median": 99.0,
+        "iqr": [
+          99.0,
+          99.0
+        ],
+        "min": 99.0,
+        "max": 99.0,
+        "n": 3
+      },
+      "per_seed_final": [
+        0.6,
+        0.53,
+        0.52
+      ]
+    }
+  },
+  "arms_real_marl_paired_expectation_scored": {
+    "qmix_real": {
+      "expected_cooperation": {
+        "mean": 0.5229273731957489,
+        "std": 0.03188857698902512,
+        "median": 0.5183408035483599,
+        "iqr": [
+          0.5059606179798062,
+          0.5376008435879971
+        ],
+        "min": 0.4935804324112525,
+        "max": 0.5568608836276343,
+        "n": 3
+      },
+      "per_seed_expected": [
+        0.5568608836276343,
+        0.5183408035483599,
+        0.4935804324112525
+      ]
+    },
+    "mappo_real": {
+      "expected_cooperation": {
+        "mean": 0.5260385611953703,
+        "std": 0.03221683523464453,
+        "median": 0.5240740803977655,
+        "iqr": [
+          0.5094614992770867,
+          0.5416333827148514
+        ],
+        "min": 0.4948489181564079,
+        "max": 0.5591926850319372,
+        "n": 3
+      },
+      "per_seed_expected": [
+        0.5591926850319372,
+        0.5240740803977655,
+        0.4948489181564079
+      ]
+    }
+  },
+  "analysis": {
+    "preregistered_predictions": {
+      "P1_shipped_ranking_reproduces": true,
+      "P2_ranking_flips_when_effort_literal_is_equalised": true,
+      "P3_untrained_all_volunteer_ceiling_matches_or_beats_every_arm": true,
+      "P4_sample_efficiency_spread_is_a_running_mean_artefact": true,
+      "P5_real_marl_lands_in_the_same_band": true
+    },
+    "ranking_shipped": [
+      "iql",
+      "qmix",
+      "gcl_self_selection",
+      "mappo",
+      "random"
+    ],
+    "ranking_effort_equalised": [
+      "iql",
+      "random",
+      "qmix",
+      "gcl_self_selection",
+      "mappo"
+    ],
+    "paired_expected_ranking": [
+      "gcl_self_selection",
+      "all_volunteer",
+      "iql",
+      "qmix",
+      "mappo",
+      "random",
+      "single_random_volunteer"
+    ],
+    "paired_dominance_check": {
+      "episodes_compared": 240000,
+      "episodes_beating_ceiling": 0,
+      "bit_identical": [
+        "gcl_self_selection"
+      ]
+    },
+    "paired_arms_bit_identical_to_all_volunteer_ceiling": [
+      "gcl_self_selection"
+    ],
+    "episodes_to_50_median_shipped_metric": {
+      "gcl_self_selection": 1.0,
+      "qmix": 1.0,
+      "mappo": 1.0,
+      "iql": 1.0,
+      "random": 1.0
+    },
+    "episodes_to_50_ratio_vs_gcl_shipped_metric_means": {
+      "gcl_self_selection": 1.0,
+      "qmix": 49.95121951219513,
+      "mappo": 1.0,
+      "iql": 25.243902439024392,
+      "random": 1.1951219512195124
+    },
+    "episodes_to_50_ratio_vs_gcl_windowed_metric_medians": {
+      "gcl_self_selection": 1.0,
+      "qmix": 1.0,
+      "mappo": 1.0,
+      "iql": 1.0,
+      "random": 1.6111111111111112
+    },
+    "all_volunteer_ceiling": 0.551611918899134,
+    "single_random_volunteer_floor": 0.37566393095986467,
+    "verdict": "CLAIMS 9a AND 10a RETRACT. A constant policy that volunteers every agent every episode -- no learning, no observation, no coordination -- reaches 0.5516, at or above every arm in the comparison including GCL at 0.5516, and beats or matches every arm on 240,000 of 240,000 individually paired episodes. That is forced by the environment: all five `step()` methods assign the task with `max(volunteers, key=capability)`, so reward is monotone non-decreasing in the volunteer set and no policy can choose WHO acts. The comparison ranks how close each arm comes to volunteering more, not any coordination ability, so a mid-field placement for GCL is not a finding about GCL. The published ordering is also not robust to a single literal: with the random arm's effort raised from 0.8 (run_comparison.py:408) to the 0.9 every other arm uses, the ranking moves from ['iql', 'qmix', 'gcl_self_selection', 'mappo', 'random'] to ['iql', 'random', 'qmix', 'gcl_self_selection', 'mappo']. Stronger still: gcl_self_selection produces per-episode success probabilities BIT-IDENTICAL to the all-volunteer ceiling across every seed and episode (numpy array_equal). The GCL arm's volunteer rule (`capability > 0.5*difficulty` and `capability - 0.3*difficulty > 0.2`, run_comparison.py:67-69) always admits the most capable agent in the population, and `max` discards everyone else, so it is not approximately the constant policy -- it IS the constant policy. Row 10a's sample-efficiency multiples are an artefact of the metric: `episodes_to_50` is a cumulative running mean (:453-455), so one lucky first episode scores 0, and the MEAN over seeds is then dominated by the handful that did not. The MEAN spread reaches 50.0x on the shipped metric. Under a trailing-window rate -- the same quantity the headline already uses -- the worst ratio falls to 1.61x. The 25-50x figures should be struck, not restated. Substituting the REAL QMIXAgent and MAPPOAgent -- the replay buffer, mixing network, GAE and PPO code that run_comparison.py never imports -- does not change the picture: at the reduced scale run here (300 episodes, 3 seeds) they land inside the same band. That is expected rather than surprising, since the ceiling is set by the environment and not by the algorithm, but it does mean wiring in the real implementations would not rescue either row."
+  }
+}
