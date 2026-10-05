@@ -1,5 +1,13 @@
 # Experiment 37: Regime Change Robustness
 
+> **⚠️ PREMISE INVALID — annotated 2026-09-22.** The hypothesis below rests on Experiment 36, which
+> is now **withdrawn in full** (`docs/CLAIMS.md` rows 9a/10a, Experiment 49). There is no "25-50x
+> faster than MARL": the multiples are an artefact of a cumulative running mean (1.61× under a
+> trailing window), the arms named QMIX and MAPPO are ~40-line stand-ins, and the environment
+> assigns the task via `max(volunteers, key=capability)` for every arm, so the comparison cannot
+> rank policies at all. The non-stationarity claim was separately tested and every GCL−baseline
+> delta fell inside noise (`docs/CLAIMS.md` row 17b). Preserved as revision trail.
+
 ## Hypothesis
 
 GCL's sample efficiency advantage (25-50x faster than MARL) should translate to **superior performance in non-stationary environments** where regime changes occur. MARL methods must re-learn after each change, while GCL adapts immediately.

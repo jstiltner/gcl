@@ -1,10 +1,21 @@
 # Next Research Directions Analysis
 
+> **⚠️ HISTORICAL PLANNING DOCUMENT — annotated 2026-09-22.** The "Current State" below is wrong and
+> is preserved only as revision trail. Experiments 46–49 re-ran eight of these claims: seven did not
+> survive. In particular d = 4.05 describes argmax vs uniform random (the self-selection arm is
+> bit-identical to a central argmax coordinator, and 21% of the effect is an effort literal), and
+> the MARL direction proposed as Option A was executed as Experiment 36 and is now **withdrawn in
+> full** — the environment does the selecting for every arm, so the comparison cannot rank policies.
+> See [`../docs/CLAIMS.md`](../docs/CLAIMS.md) rows 8, 9a, 10a.
+
 ## Current State
-We have rigorously validated GCL's core claims:
-- Self-selection beats all tested baselines (including centralized optimal)
-- Effect is large (d=4.05) and highly significant (p<10^-72)
-- Mechanism is robust across agent complexity and effort parameters
+~~We have rigorously validated GCL's core claims:~~
+- ~~Self-selection beats all tested baselines (including centralized optimal)~~ — retracted; the
+  "centralized optimal" oracle was not optimal (Exp 40), and against a truly optimal one the
+  informational advantage is zero (Exp 47)
+- ~~Effect is large (d=4.05) and highly significant (p<10^-72)~~ — restated; see banner
+- ~~Mechanism is robust across agent complexity and effort parameters~~ — the agent-complexity arm
+  (35A) has two levels, not three (Exp 48)
 
 ## Two Candidate Directions
 

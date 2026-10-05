@@ -1,5 +1,24 @@
 # Experiment 40: Corrected Oracle and the Observability Phase Boundary
 
+> ## ⚠️ ALL THREE RESULTS SUPERSEDED — annotated 2026-09-22
+>
+> Experiment 47 decomposed this experiment's two arms. Nothing below is deleted; none of it
+> should be cited as it stands.
+>
+> - **The +0.065 / d = 1.68 emergent-motivation effect is RETRACTED.** It is the `volunteered`
+>   boolean. Label the oracle's pick as a volunteer — same agent, same round, same seed — and the
+>   per-seed arrays are **bit-identical**. The magnitude is set by the hardcoded
+>   `ownership_bonus = 0.05` at `40_corrected_oracle.py:75` plus a `commitment_level` update gated
+>   on the same flag (`:60-68`); sweeping that constant traces the headline monotonically.
+> - **The +0.000 information null holds, but not on this evidence.** At σ = 0 the two arms are one
+>   computation run twice, so the published `[−0.013, +0.013]` is a bootstrap of an array against
+>   itself. Re-tested with equal but *independently drawn* noise, it does hold.
+> - **The ±0.127 phase boundary is real and means something else.** A *central* oracle reading the
+>   agents' own `perceived_capability` is bit-identical to self-selection at all 25 grid cells, so
+>   the boundary is about which estimate is less noisy, not about who does the choosing.
+>
+> See [`CLAIMS.md`](CLAIMS.md) rows 1–3 and `experiments/47_oracle_decomposition.py`.
+
 **Date**: August 2026
 **Script**: `experiments/40_corrected_oracle.py`
 **Results**: `results/experiment_40_corrected_oracle.json`
