@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-28T14:09:52.267549+00:00",
-  "commit_sha": "b2d2e2755bba33a8e49eeac8822f8becb1fe2d85",
-  "workflow_run_url": "https://github.com/jstiltner/gcl/actions/runs/36433693893",
+  "generated_at": "2026-10-05T14:55:47.789440+00:00",
+  "commit_sha": "46202cb4289692a66930a50a99e74626a89fe981",
+  "workflow_run_url": "https://github.com/jstiltner/gcl/actions/runs/37328469927",
   "scale": "ci-small",
   "source": "experiments/derive_real_headline_stats.py",
   "punishment_paradox": {
