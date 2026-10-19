@@ -1,5 +1,14 @@
 # Experiment 41: LLM Self-Knowledge and Task Selection — Findings
 
+> **NOTE — annotated 2026-09-22.** This experiment's own results stand. But its comparison target
+> does not: the simulated "emergent motivation effect (+0.065, d = 1.68, Exp 40)" referenced below
+> was **retracted on 2026-09-22** (Experiment 47, `docs/CLAIMS.md` row 1) — the effect is the
+> `volunteered` boolean itself, reaching the outcome through a hardcoded `ownership_bonus` and a
+> commitment update gated on that flag. So 41b was measuring whether prompted LLMs reproduce an
+> effect that was a modelling input, not a finding. The null result is unaffected and its practical
+> advice is if anything strengthened: **choice framing is not an established mechanism in either
+> setting.**
+
 **Date**: August 2026
 **Script**: `experiments/41_llm_self_selection.py`
 **Results**: `results/experiment_41_llm_self_selection.json`

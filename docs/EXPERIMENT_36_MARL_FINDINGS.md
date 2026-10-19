@@ -1,6 +1,38 @@
 # Experiment 36: MARL Comparison - Findings
 
-> ## ⚠️ HEADLINE RETRACTED — annotated 2026-09-09
+> ## ⛔ WHOLE EXPERIMENT WITHDRAWN — annotated 2026-09-22
+>
+> **The 2026-09-09 banner below corrected the headline while preserving a false premise: that the
+> five arms are the algorithms they are named after, and that the comparison can rank them.**
+> Experiment 49 shows it cannot. Nothing in this document, including the "what survives" line
+> below, should be cited.
+>
+> - **The environment does the selecting for every arm.** All five `step()` methods end
+>   `best_idx = max(volunteers, key=lambda i: self.capabilities[i])` (`run_comparison.py:83-86`,
+>   `:151-154`, `:230-233`, `:318-321`, `:406-409`). A policy chooses only the volunteer *set*;
+>   reward is monotone non-decreasing in that set, so **"everyone volunteers" is optimal by
+>   construction** and no policy can choose *who* acts.
+> - **A constant policy matches the field.** An `AllVolunteer` arm — no learning, no observation,
+>   no coordination — reaches **0.5516** and is beaten on **0 of 240,000** paired episodes. The
+>   GCL arm's per-episode success probabilities are **bit-identical** to it (`np.array_equal`,
+>   every seed, every episode): its rule at `:67-69` always admits the most capable agent, and
+>   `max` discards the rest. All five arms span **0.013**.
+> - **The ordering is not robust to one literal.** Raising the random arm's `effort` from `0.8`
+>   (`:408`) to the `0.9` every other arm uses moves random from last to **second**.
+> - **The baselines are not the baselines.** Real `QMIXAgent` and `MAPPOAgent` implementations sit
+>   in this same directory and the runner **never imports them** — `:35` imports only `Agent`. The
+>   arms named QMIX and MAPPO are ~40-line tabular stand-ins. Wired in for real they land at
+>   0.5229 and 0.5260, inside the same band, as the ceiling argument predicts.
+> - **The sample-efficiency multiples are a metric artefact.** `episodes_to_50` is a cumulative
+>   running mean (`:453-455`), so a seed that succeeds on episode 1 scores **0**. Under the
+>   trailing-window rate this document's own headline metric already uses, the worst ratio falls
+>   from 49.95× to **1.61×**.
+>
+> **"GCL reaches mid-field with no training" does not survive either**: it is bit-identical to
+> `[1] * n_agents`, which also has nothing to train. See [`CLAIMS.md`](CLAIMS.md) rows 9a/10a and
+> `experiments/49_marl_comparison_corrected.py`.
+
+> ## ⚠️ HEADLINE RETRACTED — annotated 2026-09-09 (superseded by the banner above)
 >
 > **Both headline figures in this document are withdrawn.** Neither was miscalculated; both were
 > *selected comparisons* drawn from a subset of the baselines this same experiment ran. See
@@ -19,8 +51,11 @@
 > - The threshold itself is 50% cooperation, which the **random** baseline reaches at 0.475
 >   unaided. It barely discriminates and should not carry a headline.
 >
-> **What survives:** GCL reaches mid-field performance with **no training at all**, which is a real
-> and interesting property. It is not a claim of superiority over MARL.
+> ~~**What survives:** GCL reaches mid-field performance with **no training at all**, which is a real
+> and interesting property. It is not a claim of superiority over MARL.~~
+> **This too is withdrawn (2026-09-22) — see the banner above.** The GCL arm is bit-identical to a
+> constant all-volunteer policy, so "no training at all" describes a policy with nothing to train
+> and does not distinguish GCL from `[1] * n_agents`.
 
 ## Executive Summary
 

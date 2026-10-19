@@ -1,16 +1,53 @@
 # GCL Research Report: Experiments 30-39 (REVISED)
 ## Comprehensive Findings with Corrected Mechanism Analysis
 
-> **NOTICE: SUPERSEDED IN PART BY EXPERIMENT 40 (August 2026).**
+> ## ⛔ SIX MORE HEADLINE CLAIMS WITHDRAWN — annotated 2026-09-22
+>
+> Experiments 46–49 re-ran eight of this program's claims under corrected harnesses. **Seven did not
+> survive.** The two notices below are themselves partly superseded: the "emergent motivation effect
+> survives" line in the first one is withdrawn, and the second one's corrections did not go far
+> enough. Both are preserved unedited as revision trail. Nothing in the body of this report should be
+> cited without checking [`CLAIMS.md`](CLAIMS.md), which is authoritative.
+>
+> - **Emergent motivation (+0.065, d = 1.68) — RETRACTED.** The effect is the `volunteered` boolean.
+>   Relabel the oracle's pick as a volunteer — same agent, same round, same seed — and the per-seed
+>   arrays are bit-identical. Split: +0.0304 from a commitment update gated on the flag, +0.0347 from
+>   a hardcoded `ownership_bonus = 0.05`. (Exp 47, row 1.)
+> - **Observability phase boundary — RESTATED.** Magnitudes reproduce, but a *central* oracle
+>   assigning by argmax over the agents' own perceived capability is bit-identical to self-selection
+>   at all 25 grid cells. The boundary is about signal quality, not decentralisation. (Exp 47, row 3.)
+> - **Information-asymmetry null — CONCLUSION SURVIVES, EVIDENCE REPLACED.** At σ = 0 the two arms
+>   are one computation run twice, so `[−0.013, +0.013]` is a bootstrap of an array against itself.
+>   Re-tested on a matched-noise diagonal: +0.000 / +0.002 / +0.006 / −0.027 / +0.002, none
+>   significant. This is the only one of the eight to survive. (Exp 47, row 2.)
+> - **"Specialization does NOT emerge (HHI < 0.02)" — RETRACTED AND REVERSED.** That figure is ~17×
+>   below the metric's own floor of 1/3 for three task types; it is a sentinel average over 29 agents
+>   that never acted. Corrected: Δ +0.0390 / +0.0634 / +0.0399 at cooldown 1/3/10, all CIs excluding
+>   zero. (Exp 46, row 6.)
+> - **"Strategic reasoning hurts cooperation (0.530 vs 0.306)" — DOWNGRADED.** There are two levels,
+>   not three (a `>= 1` guard makes level 2 unreachable; it reads a `reputation` field never
+>   written). A bare fixed volunteer threshold reproduces the range; 32% of the gap is a hardcoded
+>   ±0.1 effort swing. (Exp 48, row 7.)
+> - **"d = 4.05, p < 10⁻⁷²" — RESTATED.** The self-selection arm is bit-identical to a central argmax
+>   coordinator; the comparison is argmax vs uniform random. 21% of d is an effort literal 0.9 vs
+>   0.8; equalised, d = 3.19. (Exp 48, row 8.)
+> - **The whole MARL comparison — WITHDRAWN.** The environment selects for every arm
+>   (`max(volunteers, key=capability)`), so no policy can choose *who* acts. A constant all-volunteer
+>   policy reaches 0.5516 and is beaten on 0 of 240,000 paired episodes; GCL is bit-identical to it.
+>   The arms named QMIX and MAPPO are ~40-line stand-ins. The 25–50× multiples are a running-mean
+>   artefact (1.61× under a trailing window). (Exp 49, rows 9a/10a.)
+
+> **NOTICE: SUPERSEDED IN PART BY EXPERIMENT 40 (August 2026)** — *and further superseded by the
+> banner above; the "emergent motivation effect survives" clause is withdrawn.*
 > The headline claims in this report — "self-selection beats optimal external
 > matching by 81%" and "information asymmetry accounts for ~75% of the
 > advantage" — are **RETRACTED**. Experiment 39's oracle was not optimal: it
 > scored candidates by closeness-of-fit, penalizing over-qualified agents under
 > a success model that is monotonically increasing in capability. Against a
 > truly optimal (argmax) oracle, the informational advantage is +0.000
-> [−0.013, +0.013]. The **emergent motivation effect survives** (+0.065,
+> [−0.013, +0.013]. ~~The **emergent motivation effect survives** (+0.065,
 > d = 1.68), and an **observability phase boundary** determines when
-> self-selection beats central assignment. See
+> self-selection beats central assignment.~~ **Both withdrawn 2026-09-22 — see the banner above.** See
 > `docs/EXPERIMENT_40_FINDINGS.md` and `docs/CLAIMS.md`. The remainder of this
 > report is preserved unedited as part of the revision trail.
 

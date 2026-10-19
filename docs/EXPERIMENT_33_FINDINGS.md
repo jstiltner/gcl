@@ -1,8 +1,36 @@
 # Experiment 33 Findings: Specialization and Template Dynamics
 
+> ## ⚠️ SUPERSEDED — annotated 2026-09-22
+>
+> Experiment 46 re-ran this measurement. **The conclusion is reversed, and the HHI column below
+> does not come from this experiment's own results file.**
+>
+> - **Exactly one agent ever acts.** `get_volunteers` returns a single `max(...)`, and the only
+>   capacity constraint is inert: `get_available_agents` filters on `resources > 0`
+>   (`social_structures/structures/base.py:138-140`), but `Agent.resources`
+>   (`agents/agent.py:84`) is **written nowhere in the codebase** and that filter is its only
+>   reader. Nothing rotates.
+> - **The published figure is a sentinel average.** `get_specialization_index` returns its
+>   `total == 0 → 0.0` branch for agents that never acted (`:129-140`) and
+>   `get_population_specialization` averages over **all 30 agents** (`:454-459`). This
+>   experiment's `final_specialization` is **0.0333 / 0.01137 / 0.01140 / 0.01126 / 0.01134** —
+>   29 zeros plus one agent's real HHI, with the first value being exactly 1/30. Per-agent HHI
+>   over 3 task types has a **floor of 1/3**; none of those values is attainable by an agent that
+>   acted. (The 0.363–0.511 column in the table below is Exp **33b**'s, not this one's.)
+> - **Corrected, specialization does emerge.** Break the monopoly with a cooldown, score only
+>   agents that acted, and compare against a matched permutation null holding each agent's task
+>   count and the global type mix fixed: Δ **+0.0390 / +0.0634 / +0.0399** at cooldown 1/3/10, all
+>   CIs excluding zero at 30 seeds. A type-blind ablation collapses Δ to ±0.005, so the effect is
+>   this model's own template-match and per-type-success feedback loop. It is **weak** — 6–10% of
+>   the distance from the null to full specialization, against 100% for a forced control.
+>
+> See [`CLAIMS.md`](CLAIMS.md) row 6 and `experiments/46_specialization_corrected.py`.
+
 ## Executive Summary
 
-**Key Finding: Specialization emerges only with innate agent differences, not from learning.**
+~~**Key Finding: Specialization emerges only with innate agent differences, not from learning.**~~
+**Reversed 2026-09-22 — see the banner above.** Specialization does emerge from learning, weakly,
+once the measurement is corrected.
 
 | Condition | Cooperation | Specialization (HHI) | % Specialized |
 |-----------|-------------|---------------------|---------------|

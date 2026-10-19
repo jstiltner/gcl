@@ -1,0 +1,954 @@
+{
+  "experiment": "47_oracle_decomposition",
+  "targets": "claims 1, 2, 3; experiments/40_corrected_oracle.py:75 (ownership_bonus), :60-68 (label-gated commitment), :108-117 vs :137-143 (same argmax), Part B grid (no signal-matched control)",
+  "timestamp": "2026-09-23T02:27:00.268174+00:00",
+  "runtime_seconds": 15.95,
+  "environment": {
+    "python": "3.13.1",
+    "numpy": "2.4.0",
+    "pythonhashseed": "0"
+  },
+  "config": {
+    "n_seeds": 50,
+    "n_rounds": 200,
+    "n_agents": 30,
+    "ownership_bonuses": [
+      0.0,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "noise_levels": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ]
+  },
+  "part_label_decomposition": {
+    "shipped_claim1_ss_vs_oracle_emergent": {
+      "diff": 0.06509999999999994,
+      "ci95": [
+        0.04999999999999993,
+        0.08020250000000001
+      ],
+      "cohens_d": 1.6757952350635053,
+      "significant": true,
+      "arrays_bit_identical": false,
+      "max_abs_per_seed_difference": 0.10999999999999999
+    },
+    "shipped_claim2_ss_vs_oracle_fixed": {
+      "diff": 0.0,
+      "ci95": [
+        -0.013000000000000012,
+        0.013202500000000061
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "relabelled_ss_vs_oracle_labelled_volunteer": {
+      "diff": 0.0,
+      "ci95": [
+        -0.015602499999999946,
+        0.01669999999999994
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "relabelled_ss_unlabelled_vs_oracle": {
+      "diff": 0.0,
+      "ci95": [
+        -0.013902500000000128,
+        0.01419999999999999
+      ],
+      "cohens_d": 0.0,
+      "significant": false,
+      "arrays_bit_identical": true,
+      "max_abs_per_seed_difference": 0.0
+    },
+    "mean_cooperation": {
+      "self_selection_emergent": 0.5989,
+      "argmax_oracle_emergent": 0.5338,
+      "argmax_oracle_emergent_relabelled_volunteer": 0.5989,
+      "self_selection_fixed": 0.5314,
+      "argmax_oracle_fixed": 0.5314
+    }
+  },
+  "part_ownership_bonus_sweep": {
+    "sweep": [
+      {
+        "ownership_bonus": 0.0,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": false,
+        "diff": 0.03039999999999987,
+        "ci95": [
+          0.015899999999999914,
+          0.04530000000000001
+        ],
+        "cohens_d": 0.8070628775551496,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.06499999999999995
+      },
+      {
+        "ownership_bonus": 0.01,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": false,
+        "diff": 0.037599999999999856,
+        "ci95": [
+          0.022797499999999936,
+          0.05269999999999997
+        ],
+        "cohens_d": 0.985070229076256,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.07999999999999996
+      },
+      {
+        "ownership_bonus": 0.02,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": false,
+        "diff": 0.04499999999999993,
+        "ci95": [
+          0.03009749999999991,
+          0.06019999999999992
+        ],
+        "cohens_d": 1.1757497016924299,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.08499999999999996
+      },
+      {
+        "ownership_bonus": 0.05,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": true,
+        "diff": 0.06509999999999994,
+        "ci95": [
+          0.04999999999999993,
+          0.08020250000000001
+        ],
+        "cohens_d": 1.6757952350635053,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.10999999999999999
+      },
+      {
+        "ownership_bonus": 0.1,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": false,
+        "diff": 0.10219999999999985,
+        "ci95": [
+          0.0858000000000001,
+          0.11849999999999994
+        ],
+        "cohens_d": 2.4796221590174317,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.15000000000000002
+      },
+      {
+        "ownership_bonus": 0.2,
+        "commitment_update_gated_on_volunteered": true,
+        "is_shipped_configuration": false,
+        "diff": 0.1276999999999998,
+        "ci95": [
+          0.11249749999999993,
+          0.14300000000000002
+        ],
+        "cohens_d": 3.282268205318429,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.18500000000000005
+      },
+      {
+        "ownership_bonus": 0.0,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.0,
+        "ci95": [
+          -0.015000000000000013,
+          0.015300000000000091
+        ],
+        "cohens_d": 0.0,
+        "significant": false,
+        "arrays_bit_identical": true,
+        "max_abs_per_seed_difference": 0.0
+      },
+      {
+        "ownership_bonus": 0.01,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.007199999999999984,
+        "ci95": [
+          -0.00789999999999991,
+          0.02299999999999991
+        ],
+        "cohens_d": 0.18123517500674927,
+        "significant": false,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.025000000000000022
+      },
+      {
+        "ownership_bonus": 0.02,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.014600000000000057,
+        "ci95": [
+          -0.0006025000000000382,
+          0.030299999999999994
+        ],
+        "cohens_d": 0.3665862050727639,
+        "significant": false,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.04500000000000004
+      },
+      {
+        "ownership_bonus": 0.05,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.034700000000000064,
+        "ci95": [
+          0.019299999999999984,
+          0.05049999999999988
+        ],
+        "cohens_d": 0.8593654843664802,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.06000000000000005
+      },
+      {
+        "ownership_bonus": 0.1,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.07179999999999997,
+        "ci95": [
+          0.05499749999999994,
+          0.08860000000000001
+        ],
+        "cohens_d": 1.682980216047338,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.125
+      },
+      {
+        "ownership_bonus": 0.2,
+        "commitment_update_gated_on_volunteered": false,
+        "is_shipped_configuration": false,
+        "diff": 0.09729999999999994,
+        "ci95": [
+          0.08179499999999999,
+          0.11320000000000008
+        ],
+        "cohens_d": 2.406319465151332,
+        "significant": true,
+        "arrays_bit_identical": false,
+        "max_abs_per_seed_difference": 0.15000000000000002
+      }
+    ]
+  },
+  "part_signal_grid": {
+    "noise_levels": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "grid": [
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.0,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0,
+          "ci95": [
+            -0.013000000000000012,
+            0.013202500000000061
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.013000000000000012,
+            0.013202500000000061
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.05,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.007899999999999907,
+          "ci95": [
+            -0.006399999999999853,
+            0.022299999999999986
+          ],
+          "cohens_d": 0.21552903380421362,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.09500000000000003
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.013700000000000045,
+            0.013599999999999945
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.1,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.039100000000000024,
+          "ci95": [
+            0.02150000000000002,
+            0.05709999999999993
+          ],
+          "cohens_d": 0.8448325628142719,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.175
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.013700000000000045,
+            0.013599999999999945
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.2,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0978,
+          "ci95": [
+            0.07169749999999998,
+            0.12420000000000003
+          ],
+          "cohens_d": 1.4554366008253088,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.4099999999999999
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.013700000000000045,
+            0.013599999999999945
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.0,
+        "sigma_oracle": 0.3,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.1274,
+          "ci95": [
+            0.10170000000000001,
+            0.15420249999999996
+          ],
+          "cohens_d": 1.880702302783727,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.4099999999999999
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.013700000000000045,
+            0.013599999999999945
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.05,
+        "sigma_oracle": 0.0,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.007899999999999907,
+          "ci95": [
+            -0.022100000000000012,
+            0.006299999999999975
+          ],
+          "cohens_d": -0.21552903380421362,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.09500000000000003
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.014799999999999924,
+            0.015199999999999991
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.05,
+        "sigma_oracle": 0.05,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0023999999999998467,
+          "ci95": [
+            -0.015702500000000043,
+            0.020702500000000013
+          ],
+          "cohens_d": 0.05138167308230687,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.08500000000000002
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.017599999999999952,
+            0.01739999999999997
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.05,
+        "sigma_oracle": 0.1,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.02949999999999997,
+          "ci95": [
+            0.0065949999999999455,
+            0.05310000000000009
+          ],
+          "cohens_d": 0.4898190986488161,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.17000000000000004
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.017599999999999952,
+            0.01739999999999997
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.05,
+        "sigma_oracle": 0.2,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.06499999999999995,
+          "ci95": [
+            0.03930000000000011,
+            0.0917
+          ],
+          "cohens_d": 0.9658207708103319,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.19999999999999996
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.017599999999999952,
+            0.01739999999999997
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.05,
+        "sigma_oracle": 0.3,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.11529999999999996,
+          "ci95": [
+            0.08619499999999995,
+            0.14489999999999997
+          ],
+          "cohens_d": 1.5368921935792113,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.425
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.017599999999999952,
+            0.01739999999999997
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.0,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.039100000000000024,
+          "ci95": [
+            -0.05709999999999999,
+            -0.02080000000000004
+          ],
+          "cohens_d": -0.8448325628142719,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.175
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.02089999999999992,
+            0.02200250000000004
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.05,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.021200000000000108,
+          "ci95": [
+            -0.04360250000000002,
+            0.0008999999999999064
+          ],
+          "cohens_d": -0.36570809231400564,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.16500000000000004
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.025102500000000062,
+            0.025804999999999974
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.1,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.005900000000000016,
+          "ci95": [
+            -0.021404999999999865,
+            0.03280000000000005
+          ],
+          "cohens_d": 0.08510648699390842,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.16500000000000004
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.025102500000000062,
+            0.025804999999999974
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.2,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.04139999999999999,
+          "ci95": [
+            0.012197499999999884,
+            0.07120000000000004
+          ],
+          "cohens_d": 0.5479690501373884,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.19999999999999996
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.025102500000000062,
+            0.025804999999999974
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.1,
+        "sigma_oracle": 0.3,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0917,
+          "ci95": [
+            0.059597499999999935,
+            0.12380250000000004
+          ],
+          "cohens_d": 1.1114568318156774,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.40499999999999997
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.025102500000000062,
+            0.025804999999999974
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.2,
+        "sigma_oracle": 0.0,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.0978,
+          "ci95": [
+            -0.1241000000000001,
+            -0.07149750000000005
+          ],
+          "cohens_d": -1.4554366008253088,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.4099999999999999
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.03430249999999999,
+            0.03560000000000002
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.2,
+        "sigma_oracle": 0.05,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.08960000000000012,
+          "ci95": [
+            -0.11710249999999998,
+            -0.062297500000000165
+          ],
+          "cohens_d": -1.2469505246158332,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.28
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.03489999999999999,
+            0.032802499999999964
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.2,
+        "sigma_oracle": 0.1,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.0625,
+          "ci95": [
+            -0.09369999999999995,
+            -0.03160000000000007
+          ],
+          "cohens_d": -0.7688188869637543,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.28
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.03489999999999999,
+            0.032802499999999964
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.2,
+        "sigma_oracle": 0.2,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.027000000000000024,
+          "ci95": [
+            -0.05999999999999989,
+            0.0062000000000000405
+          ],
+          "cohens_d": -0.3115458448975443,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.27999999999999997
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.03489999999999999,
+            0.032802499999999964
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.2,
+        "sigma_oracle": 0.3,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.023299999999999987,
+          "ci95": [
+            -0.011005000000000114,
+            0.061102500000000004
+          ],
+          "cohens_d": 0.25110939789957315,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.40499999999999997
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.03489999999999999,
+            0.032802499999999964
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.0,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.1274,
+          "ci95": [
+            -0.15379999999999988,
+            -0.10099999999999998
+          ],
+          "cohens_d": -1.880702302783727,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.4099999999999999
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.034499999999999975,
+            0.03520000000000001
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.05,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.11100000000000004,
+          "ci95": [
+            -0.1398999999999999,
+            -0.08119749999999998
+          ],
+          "cohens_d": -1.4830972237141489,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.41999999999999993
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.035599999999999854,
+            0.03650250000000005
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.1,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.08389999999999992,
+          "ci95": [
+            -0.11600250000000005,
+            -0.05080000000000007
+          ],
+          "cohens_d": -0.9994482151028652,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.41999999999999993
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.035599999999999854,
+            0.03650250000000005
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.2,
+        "on_diagonal": false,
+        "shipped_ss_vs_oracle": {
+          "diff": -0.04839999999999994,
+          "ci95": [
+            -0.0822025,
+            -0.014097499999999983
+          ],
+          "cohens_d": -0.5428581041664897,
+          "significant": true,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.41999999999999993
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.035599999999999854,
+            0.03650250000000005
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      },
+      {
+        "sigma_self": 0.3,
+        "sigma_oracle": 0.3,
+        "on_diagonal": true,
+        "shipped_ss_vs_oracle": {
+          "diff": 0.0019000000000000683,
+          "ci95": [
+            -0.033399999999999826,
+            0.040000000000000036
+          ],
+          "cohens_d": 0.01997455821104538,
+          "significant": false,
+          "arrays_bit_identical": false,
+          "max_abs_per_seed_difference": 0.41999999999999993
+        },
+        "control_ss_vs_central_oracle_same_signal": {
+          "diff": 0.0,
+          "ci95": [
+            -0.035599999999999854,
+            0.03650250000000005
+          ],
+          "cohens_d": 0.0,
+          "significant": false,
+          "arrays_bit_identical": true,
+          "max_abs_per_seed_difference": 0.0
+        }
+      }
+    ]
+  },
+  "analysis": {
+    "preregistered_predictions": {
+      "P1_shipped_claim1_reproduces": true,
+      "P2_claim1_effect_is_the_volunteered_boolean": true,
+      "P3_phase_boundary_is_signal_quality_not_centralization": true,
+      "P4_effect_size_is_a_readout_of_the_ownership_bonus_constant": true,
+      "P5_claim2_holding_survives_at_matched_nonzero_noise": true
+    },
+    "phase_boundary_direction_holds_where_significant": true,
+    "shipped_ownership_bonus": 0.05,
+    "verdict": "CLAIM 1 RETRACT. The +0.065 / d = 1.68 advantage is the `volunteered` boolean. Relabel the oracle's pick -- same agent, same round, same seed -- and the per-seed arrays become bit-identical, difference exactly 0.0000. The magnitude is set by the hardcoded `ownership_bonus = 0.05` at 40_corrected_oracle.py:75 and traces it monotonically; zero the bonus and ungate the commitment update and the two arms are the same computation. The premise 'agents who choose a task try harder' is a legitimate modelling assumption, but it is an INPUT here, and claim 1 reports it as an output with a CI and an effect size attached. CLAIM 2 HOLDING SURVIVES, EVIDENCE DOES NOT. At sigma = 0 the two arms are one computation run twice, so the published '+0.000, CI [-0.013, +0.013]' is a bootstrap of an array against itself and cannot be evidence of anything. Tested where it can fail -- equal but independently drawn noise on the diagonal of the grid -- the null does hold. Strike the number, keep the conclusion, and restate it against the diagonal cells. CLAIM 3 RESTATE. A central oracle reading the agents' own `perceived` signal is bit-identical to self-selection at every grid cell, so the boundary is about WHICH SIGNAL IS LESS NOISY and says nothing about self-selection or decentralisation. The finding is real but it is 'argmax on the better estimate wins', which is not what the row claims."
+  }
+}

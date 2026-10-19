@@ -1,10 +1,34 @@
 # Experiment 35: Rigorous Validation Suite - Findings
 
-> **NOTICE (Aug 2026)**: The 35E claim that self-selection "beats centralized
-> optimal" is superseded — the "centralized optimal" baseline was not optimal
+> ## ⚠️ 35A AND 35B ALSO SUPERSEDED — annotated 2026-09-22
+>
+> The notice below says "Findings 35A and 35B stand." **They do not.** Experiment 48 re-ran both;
+> each reproduces exactly and neither means what it says. Preserved unedited as revision trail.
+>
+> - **35A ("simple agents outperform strategic reasoners") has two levels, not three.**
+>   `35a_rich_agents.py:118` guards level 1 with `strategic_level >= 1` and returns
+>   unconditionally at `:133`, so the level-2 branch at `:136` is unreachable — levels 1 and 2 are
+>   **bit-identical per seed**. That dead branch reads `self.reputation`, declared at `:76` and
+>   **never written anywhere in the file** (confirmed at runtime), so it would have resolved to a
+>   constant threshold even if reached. Repaired, level 2 scores 0.4490, *between* the other two.
+>   What survives is a **threshold effect**: replacing the whole strategic rule with a bare fixed
+>   volunteer threshold and sweeping it reproduces the published range monotonically, with level 1
+>   landing on that curve at 0.60 to four decimals. And **32%** of the 0.530-vs-0.306 gap is the
+>   hardcoded ±0.1 swing in `calculate_effort` (`:157`/`:159`).
+> - **35B ("statistical robustness") measures argmax vs uniform random.** Its self-selection arm
+>   is **bit-identical** to a *central* coordinator taking `max(agents, key=effective_capability)`
+>   at the same effort, because the volunteer filter never excludes the argmax agent. **21%** of
+>   d = 4.05 is `effort = 0.9` (`:101`) against `0.8` (`:108`); equalised, d = 3.19. The
+>   p < 10⁻⁷² describes sampling noise around a conclusion fixed by the selection rule.
+>
+> See [`CLAIMS.md`](CLAIMS.md) rows 7 and 8 and
+> `experiments/48_strategic_and_baseline_decomposition.py`.
+
+> **NOTICE (Aug 2026)** — *superseded by the banner above*: The 35E claim that self-selection
+> "beats centralized optimal" is superseded — the "centralized optimal" baseline was not optimal
 > under the success model (same confound as Exp 39's oracle; see
-> `docs/EXPERIMENT_40_FINDINGS.md`). Findings 35A (simple agents best) and 35B
-> (statistical robustness vs the tested baseline set) stand. See
+> `docs/EXPERIMENT_40_FINDINGS.md`). ~~Findings 35A (simple agents best) and 35B
+> (statistical robustness vs the tested baseline set) stand.~~ See
 > `docs/CLAIMS.md`. Preserved unedited below as part of the revision trail.
 
 ## Executive Summary
